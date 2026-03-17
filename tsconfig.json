@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "components/Hero.jsx", "app/layout.tsx", "app/page.tsx"  ],
   "exclude": ["node_modules"]
 }
