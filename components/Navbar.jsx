@@ -1,8 +1,19 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Detect scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const sapServices = [
     "SAP ECC & S/4 HANA Rollout",
@@ -23,8 +34,10 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="w-full bg-[#1f2933] text-white px-6 py-4 flex items-center justify-between">
-      
+    <div
+      className={`w-full sticky top-0 z-50 px-6 py-4 flex items-center justify-between transition-all duration-300
+      ${scrolled ? "bg-[#1f2933] shadow-lg" : "bg-[#1f2933]/90 backdrop-blur"}`}
+    >
       {/* Logo */}
       <div className="flex items-center gap-2">
         <div className="w-8 h-8 border-2 border-teal-400 rounded-full flex items-center justify-center">
@@ -35,7 +48,6 @@ export default function Navbar() {
 
       {/* Menu */}
       <ul className="hidden md:flex gap-6 text-sm text-gray-300 items-center">
-        
         <li className="hover:text-white cursor-pointer">about</li>
 
         {/* SERVICES */}
@@ -51,11 +63,11 @@ export default function Navbar() {
           {/* DROPDOWN */}
           <div
             className={`absolute top-10 left-0 bg-white text-[#1a2a6c] shadow-2xl w-[700px] p-6 z-50 rounded-md
-            transform transition-all duration-500 ease-out
+            transform transition-all duration-300 ease-out
             ${
               open
                 ? "opacity-100 translate-y-0 scale-100 visible"
-                : "opacity-0 translate-y-6 scale-95 invisible"
+                : "opacity-0 translate-y-4 scale-95 invisible"
             }`}
           >
             {/* SAP SERVICES */}
@@ -95,7 +107,6 @@ export default function Navbar() {
                 </div>
               ))}
             </div>
-
           </div>
         </li>
 
@@ -107,10 +118,9 @@ export default function Navbar() {
       </ul>
 
       {/* Language */}
-      <div className="border border-gray-500 px-2 py-1 text-sm">
+      <div className="border border-gray-500 px-2 py-1 text-sm cursor-pointer hover:border-white transition">
         En ▾
       </div>
-
     </div>
   );
 }
