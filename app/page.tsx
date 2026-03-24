@@ -26,10 +26,8 @@ export default function Home() {
       <TestimonialSection/> 
       <StatsSection/>
       <LatestPost/>
-      
       <ContactUs/>
       <Footer/>
-      
     </main>
   );
 }

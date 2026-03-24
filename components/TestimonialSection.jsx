@@ -5,84 +5,174 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    name: "Lauren Contreras",
-    image: "/images/user1.jpg",
-    text: "They have awesome customer service. I wouldn’t recommend going to anyone else.",
+    name: "Rose Hopkins",
+    role: "Founder of Apple",
+    image: "/images/client1.jpg",
+    text: "Superb IT Services to understand customer behaviour...",
   },
   {
-    name: "Edward Alexander",
-    image: "/images/user2.jpg",
-    text: "All of you guys are awesome. Definitely love the way appscrip works.",
+    name: "Ruben Houston",
+    role: "CEO of Google",
+    image: "/images/client1.jpg",
+    text: "Superb IT Services to understand customer behaviour...",
   },
   {
-    name: "Diana Johnston",
-    image: "/images/user3.jpg",
-    text: "Amazing experience. Highly professional and very responsive team.",
+    name: "Monica Frazier",
+    role: "COO of Facebook",
+    image: "/images/client1.jpg",
+    text: "Superb IT Services to understand customer behaviour...",
+  },
+  {
+    name: "Ruben Houston",
+    role: "CEO of Google",
+    image: "/images/client1.jpg",
+    text: "Superb IT Services to understand customer behaviour...",
+  },
+  {
+    name: "Monica Frazier",
+    role: "COO of Facebook",
+    image: "/images/client1.jpg",
+    text: "Superb IT Services to understand customer behaviour...",
+  },
+  {
+    name: "Ruben Houston",
+    role: "CEO of Google",
+    image: "/images/client1.jpg",
+    text: "Superb IT Services to understand customer behaviour...",
+  },
+  {
+    name: "Monica Frazier",
+    role: "COO of Facebook",
+    image: "/images/client1.jpg",
+    text: "Superb IT Services to understand customer behaviour...",
   },
 ];
 
 export default function TestimonialSection() {
-  const [activeIndex, setActiveIndex] = useState(1);
+  const [active, setActive] = useState(0);
 
-  // 🔄 Auto rotate
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % testimonials.length);
+      setActive((prev) => (prev + 1) % testimonials.length);
     }, 3000);
 
     return () => clearInterval(interval);
   }, []);
 
+  const getPosition = (index) => {
+    const total = testimonials.length;
+
+    if (index === active) return "center";
+    if (index === (active - 1 + total) % total) return "left";
+    if (index === (active + 1) % total) return "right";
+    return "hidden";
+  };
+
   return (
-    <section className="py-20 bg-gray-100">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center px-4">
+    <section className="py-20 bg-slate-800 text-center overflow-hidden">
+      
+      {/* Heading */}
+      <p className="text-sm text-teal-300 font-semibold mb-2">
+        CLIENT SAY
+      </p>
 
-        {/* LEFT SIDE (CURVED USERS) */}
-        <div className="relative h-[400px] flex items-center justify-center">
-          {testimonials.map((user, index) => {
-            const positions = [
-              { top: "10%", left: "40%" },
-              { top: "40%", left: "10%" },
-              { top: "75%", left: "40%" },
-            ];
+      <h2 className="text-4xl font-bold mb-4 text-white">
+        Reviews Of Experts
+      </h2>
 
-            const isActive = index === activeIndex;
+      <div className="w-16 h-1 bg-teal-400 mx-auto mb-12 rounded"></div>
 
-            return (
-              <div
-                key={index}
-                onClick={() => setActiveIndex(index)}
-                className={`absolute cursor-pointer transition-all duration-500 ${
-                  isActive ? "scale-125 z-10" : "opacity-60"
-                }`}
-                style={positions[index]}
-              >
-                <div className="relative w-16 h-16 rounded-full overflow-hidden border-4 border-white shadow-lg">
+      {/* Slider */}
+      <div className="relative h-[400px] flex items-center justify-center">
+
+        {testimonials.map((item, index) => {
+          const position = getPosition(index);
+
+          return (
+            <div
+              key={index}
+              className={`absolute transition-all duration-700 ease-in-out w-[280px] md:w-[340px] p-8 rounded-xl bg-teal-500
+                
+                ${
+                  position === "center"
+                    ? "z-20 scale-110 opacity-100 translate-x-0 shadow-2xl"
+                    : ""
+                }
+
+                ${
+                  position === "left"
+                    ? "z-10 scale-90 opacity-50 -translate-x-[120%]"
+                    : ""
+                }
+
+                ${
+                  position === "right"
+                    ? "z-10 scale-90 opacity-50 translate-x-[120%]"
+                    : ""
+                }
+
+                ${
+                  position === "hidden"
+                    ? "opacity-0 scale-75 translate-x-[200%]"
+                    : ""
+                }
+              `}
+            >
+              {/* Avatar */}
+              <div className="flex justify-center -mt-16 mb-4">
+                <div
+                  className={`w-20 h-20 rounded-full overflow-hidden border-4 border-white transition-all duration-700
+                  ${
+                    position === "center"
+                      ? "scale-110 shadow-lg"
+                      : "scale-90 opacity-70"
+                  }`}
+                >
                   <Image
-                    src={user.image}
-                    alt={user.name}
-                    fill
+                    src={item.image}
+                    alt={item.name}
+                    width={80}
+                    height={80}
                     className="object-cover"
                   />
                 </div>
               </div>
-            );
-          })}
 
-          {/* Curve line */}
-          <div className="absolute w-[200px] h-[400px] border-l-2 border-gray-300 rounded-full left-1/2 transform -translate-x-1/2"></div>
-        </div>
+              {/* Text */}
+              <p
+                className={`italic mb-4 transition-all duration-700
+                ${
+                  position === "center"
+                    ? "text-white"
+                    : "text-white/70"
+                }`}
+              >
+                "{item.text}"
+              </p>
 
-        {/* RIGHT SIDE (TEXT) */}
-        <div className="transition-all duration-500">
-          <p className="text-2xl italic text-gray-700 mb-6 leading-relaxed">
-            “{testimonials[activeIndex].text}”
-          </p>
+              <p className="text-sm text-white/70 mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore.
+              </p>
 
-          <h3 className="text-lg font-semibold text-gray-900">
-            {testimonials[activeIndex].name}
-          </h3>
-        </div>
+              {/* Name */}
+              <h3
+                className={`font-semibold text-lg transition-all duration-500
+                ${
+                  position === "center"
+                    ? "text-white"
+                    : "text-white/70"
+                }`}
+              >
+                {item.name}
+              </h3>
+
+              <p className="text-white/70 text-sm">
+                {item.role}
+              </p>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
