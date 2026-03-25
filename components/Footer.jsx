@@ -51,26 +51,15 @@ export default function Footer() {
           <h3 className="text-xl font-semibold mb-5">Company</h3>
           <ul className="space-y-3 text-gray-300">
             <li className="hover:text-white cursor-pointer">About Us</li>
-            <li className="hover:text-white cursor-pointer">Meet Our Team</li>
-            <li className="hover:text-white cursor-pointer">News & Media</li>
-            <li className="hover:text-white cursor-pointer">Case Studies</li>
+            <li className="hover:text-white cursor-pointer">Services</li>
+            <li className="hover:text-white cursor-pointer">Training Programme</li>
             <li className="hover:text-white cursor-pointer">Contact Us</li>
-            <li className="hover:text-white cursor-pointer">Investors</li>
+            <li className="hover:text-white cursor-pointer">Carrier</li>
           </ul>
         </div>
 
         {/* SOLUTIONS */}
-        <div>
-          <h3 className="text-xl font-semibold mb-5">Solutions</h3>
-          <ul className="space-y-3 text-gray-300">
-            <li className="hover:text-white cursor-pointer">IT Management</li>
-            <li className="hover:text-white cursor-pointer">Cyber Security</li>
-            <li className="hover:text-white cursor-pointer">Cloud Computing</li>
-            <li className="hover:text-white cursor-pointer">IT Consulting</li>
-            <li className="hover:text-white cursor-pointer">Software Dev</li>
-            <li className="hover:text-white cursor-pointer">Backup & Recovery</li>
-          </ul>
-        </div>
+       
 
         {/* CONTACT */}
         <div>
