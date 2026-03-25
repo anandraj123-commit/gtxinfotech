@@ -35,20 +35,24 @@ export default function Navbar() {
 
   return (
     <div
-      className={`w-full sticky top-0 z-50 px-6 py-4 flex items-center justify-between transition-all duration-300
+      className={`w-full sticky top-0 z-50 px-6 py-4 flex items-center transition-all duration-300
       ${scrolled ? "bg-[#1f2933] shadow-lg" : "bg-[#1f2933]/90 backdrop-blur"}`}
     >
-      {/* Logo */}
+      {/* LEFT (Logo) */}
       <div className="flex items-center gap-2">
-        <div className="w-8 h-8 border-2 border-teal-400 rounded-full flex items-center justify-center">
-          <span className="text-teal-400 text-sm">⌀</span>
+        <div className="w-8 h-8  border-teal-400  flex items-center justify-center">
+          <img
+            src="/images/logo.jpg"   // 👈 your logo
+            alt="logo" width="10px"
+            className="w-15 h-15 object-contain"
+          />
         </div>
-        <h1 className="text-xl font-semibold">gtxinfotech</h1>
       </div>
 
-      {/* Menu */}
-      <ul className="hidden md:flex gap-6 text-sm text-gray-300 items-center">
-        <li className="hover:text-white cursor-pointer">about</li>
+      {/* CENTER (Menu) */}
+      <ul className="hidden md:flex gap-6 text-sm text-gray-300 items-center absolute left-1/2 transform -translate-x-1/2">
+      <li className="hover:text-white cursor-pointer">Home</li>
+        <li className="hover:text-white cursor-pointer">About</li>
 
         {/* SERVICES */}
         <li
@@ -57,7 +61,7 @@ export default function Navbar() {
           onMouseLeave={() => setOpen(false)}
         >
           <span className="hover:text-white flex items-center gap-1">
-            services ▾
+            Services ▾
           </span>
 
           {/* DROPDOWN */}
@@ -110,17 +114,18 @@ export default function Navbar() {
           </div>
         </li>
 
-        <li className="hover:text-white cursor-pointer">portfolio</li>
-        <li className="hover:text-white cursor-pointer">team</li>
-        <li className="hover:text-white cursor-pointer">pricing</li>
-        <li className="hover:text-white cursor-pointer">blog</li>
-        <li className="hover:text-white cursor-pointer">contact</li>
+        <li className="hover:text-white cursor-pointer">Training Programm</li>
+        <li className="hover:text-white cursor-pointer">Contact</li>
+        <li className="hover:text-white cursor-pointer">Carrier</li>
       </ul>
 
-      {/* Language */}
-      <div className="border border-gray-500 px-2 py-1 text-sm cursor-pointer hover:border-white transition">
+      {/* RIGHT (Empty space to balance layout) */}
+      <div className="w-8"></div>
+
+      {/* Language (kept as is) */}
+      {/* <div className="border border-gray-500 px-2 py-1 text-sm cursor-pointer hover:border-white transition">
         En ▾
-      </div>
+      </div> */}
     </div>
   );
 }

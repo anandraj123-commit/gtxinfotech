@@ -11,16 +11,22 @@ import LatestPost from '@/components/LatestPost';
 import TestimonialSection from '@/components/TestimonialSection';
 import StatsSection from '@/components/StatsSection';
 import Footer from '@/components/Footer';
+import OfferSection from '@/components/OfferSection';
+import StorySection from '@/components/StorySection';
+import SuccessSection from '@/components/SuccessSection';
 
 export default function Home() {
   return (
     <main>
       <Hero />
       <Navbar/>
-      <AboutSection />
+      {/* <AboutSection /> */}
+      <StorySection/>
+      <SuccessSection/>
       <WorkSection/>
       <SkillSection/>
       <ServicesSection/>
+      <OfferSection/>
       <TeamSection/>
       <CTASection/>
       <TestimonialSection/> 
