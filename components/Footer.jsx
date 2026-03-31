@@ -2,6 +2,7 @@
 
 import { FaApple, FaGooglePlay, FaPaperPlane } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -53,6 +54,10 @@ export default function Footer() {
             <li className="hover:text-white cursor-pointer">About Us</li>
             <li className="hover:text-white cursor-pointer">Services</li>
             <li className="hover:text-white cursor-pointer">Training Programme</li>
+            
+<li className="hover:text-white cursor-pointer">
+  <Link href="/blog">Blogs</Link>
+</li>
             <li className="hover:text-white cursor-pointer">Contact Us</li>
             <li className="hover:text-white cursor-pointer">Carrier</li>
           </ul>

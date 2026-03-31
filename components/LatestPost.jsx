@@ -1,28 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { posts } from "@/data/posts";
+import Link from "next/link";
 
 export default function LatestPost() {
-  const posts = [
-    {
-      title: "Are You Doing The Right Way",
-      desc: `Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.`,
-      image: "images/post1.jpg",
-    },
-    {
-      title: "How To Setup Meghna Hugo",
-      desc: `Install this template by following those simple steps:
-STEP-1 : Hugo Installation
-Check this link below for install hugo on your computer.`,
-      image: "images/post2.jpg",
-      highlight: true,
-    },
-    {
-      title: "Simple Blog Post",
-      desc: `Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus.`,
-      image: "images/post3.jpg",
-    },
-  ];
+  // ✅ Get first 3 posts
+  const latestPosts = posts.slice(0, 3);
 
   return (
     <section className="bg-[#3a434d] py-20 px-6">
@@ -41,9 +25,9 @@ Check this link below for install hugo on your computer.`,
 
       {/* Posts */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-        {posts.map((post, i) => (
+        {latestPosts.map((post, i) => (
           <motion.div
-            key={i}
+            key={post.id}
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             whileHover={{ y: -10 }}
@@ -53,40 +37,48 @@ Check this link below for install hugo on your computer.`,
             {/* Image */}
             <div className="relative overflow-hidden">
               <img
-                src={post.image}
-                alt=""
+                src={post.imgSrc}
+                alt={post.title}
                 className="w-full h-[220px] object-cover group-hover:scale-110 transition duration-500"
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
-                <span className="text-white text-lg tracking-wide">
-                  View Post
-                </span>
-              </div>
+              <Link href={`/blog/${post.id}`}>
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center cursor-pointer">
+                  <span className="text-white text-lg tracking-wide">
+                    View Post
+                  </span>
+                </div>
+              </Link>
             </div>
 
             {/* Content */}
             <div className="p-6 text-gray-300">
-              <h3 className="text-xl text-white mb-4 group-hover:text-teal-400 transition">
+              
+              {/* ✅ Title (NEW) */}
+              <h2 className="text-xl font-semibold text-white mb-2 group-hover:text-teal-400 transition">
                 {post.title}
+              </h2>
+
+              {/* ✅ Short Description (kept, styled better) */}
+              <h3 className="text-sm text-gray-400 mb-3">
+                {post.shortDesc}
               </h3>
 
-              <p
-                className={`text-sm leading-relaxed ${
-                  post.highlight ? "text-gray-400" : ""
-                }`}
-              >
-                {post.desc}
+              {/* Existing preview */}
+              <p className="text-sm leading-relaxed line-clamp-3">
+                {post.fullDesc}
               </p>
 
               {/* Button */}
-              <button className="mt-6 border border-gray-500 px-5 py-2 text-sm text-white relative overflow-hidden group/btn">
+              <Link
+                href={`/blog/${post.id}`}
+                className="inline-block mt-6 border border-gray-500 px-5 py-2 text-sm text-white relative overflow-hidden group/btn"
+              >
                 <span className="relative z-10">Read more</span>
 
-                {/* Button Hover Animation */}
                 <span className="absolute inset-0 bg-teal-400 scale-x-0 origin-left group-hover/btn:scale-x-100 transition duration-300"></span>
-              </button>
+              </Link>
             </div>
           </motion.div>
         ))}
@@ -94,16 +86,17 @@ Check this link below for install hugo on your computer.`,
 
       {/* View More Button */}
       <div className="flex justify-center mt-16">
-        <motion.button
-          whileHover={{ scale: 1.08 }}
-          whileTap={{ scale: 0.95 }}
-          className="border border-teal-400 text-white px-8 py-3 relative overflow-hidden group"
-        >
-          <span className="relative z-10">View More</span>
+        <Link href="/blog">
+          <motion.button
+            whileHover={{ scale: 1.08 }}
+            whileTap={{ scale: 0.95 }}
+            className="border border-teal-400 text-white px-8 py-3 relative overflow-hidden group"
+          >
+            <span className="relative z-10">View More</span>
 
-          {/* Fill Animation */}
-          <span className="absolute inset-0 bg-teal-400 scale-x-0 origin-left group-hover:scale-x-100 transition duration-300"></span>
-        </motion.button>
+            <span className="absolute inset-0 bg-teal-400 scale-x-0 origin-left group-hover:scale-x-100 transition duration-300"></span>
+          </motion.button>
+        </Link>
       </div>
     </section>
   );
