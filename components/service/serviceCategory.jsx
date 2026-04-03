@@ -50,7 +50,7 @@ export default function ServiceCategory() {
           {/* Heading */}
           <div className="flex items-center gap-4 mb-6">
             <h2 className="text-4xl md:text-5xl font-bold">
-              Quality Assurance
+            SAP ECC & S/4 HANA Rollout
             </h2>
 
             {/* Check Icon */}

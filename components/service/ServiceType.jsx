@@ -17,7 +17,7 @@ export default function ServiceType() {
           {/* Heading */}
           <div className="flex items-center gap-4 mb-6">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-              Method Development
+              SAP SERVICES
             </h2>
 
             {/* Small Circle Icon */}
