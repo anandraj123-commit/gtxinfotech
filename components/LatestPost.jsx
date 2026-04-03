@@ -31,7 +31,7 @@ export default function LatestPost() {
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             whileHover={{ y: -10 }}
-            transition={{ duration: 0.5, delay: i * 0.2 }}
+            transition={{ duration: 0.5, delay: i * 0.2 }}   
             className="bg-[#2f3842] overflow-hidden group shadow-lg hover:shadow-2xl transition"
           >
             {/* Image */}

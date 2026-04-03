@@ -1,11 +1,20 @@
 "use client";
 
-import { Monitor, Globe, Layout, Megaphone, Smartphone, Palette } from "lucide-react";
+import {services} from "../data/services";
 
 export default function ServicesSection() {
+  // 🔹 Merge all categories
+  const allServices = services.flatMap((group) =>
+    group.category.map((item) => ({
+      ...item,
+      type: group.type,
+    }))
+  );
+
   return (
     <section className="w-full bg-slate-800 text-white py-20">
       <div className="max-w-6xl mx-auto px-6">
+
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-semibold">
@@ -16,60 +25,53 @@ export default function ServicesSection() {
 
         {/* Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-          {services.map((service, i) => (
+          {allServices.map((service) => (
             <div
-              key={i}
-              className="relative p-10 border border-slate-700 bg-slate-800 group hover:border-teal-400 transition"
+              key={`${service.type}-${service.id}`}
+              className="relative h-64 p-6 flex flex-col justify-end overflow-hidden group border border-slate-700 hover:border-teal-400 transition"
+              
+              // 🔥 Background Image from array
+              style={{
+                backgroundImage: `url(${service.image})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
             >
-              {/* Corner Accent */}
-              <div className="absolute bottom-0 right-0 w-10 h-10 border-b-4 border-r-4 border-gray-300 opacity-60 group-hover:border-teal-400" />
+              {/* Dark Overlay */}
+              <div className="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition" />
 
-              <div className="mb-6 text-gray-400 group-hover:text-teal-400 transition">
-                {service.icon}
+              {/* Content */}
+              <div className="relative z-10">
+                {/* Icon */}
+                <img
+                  src={service.icon}
+                  alt={service.title}
+                  className="w-10 h-10 mb-3"
+                />
+
+                {/* Title */}
+                <h3 className="text-lg font-semibold">
+                  {service.title}
+                </h3>
+
+                 {/* Description */}
+                 <p className="text-sm text-gray-300 line-clamp-3 group-hover:line-clamp-none transition-all duration-300">
+                  {service.description || "High-quality solutions tailored to your business needs."}
+                </p>
+
+                {/* Type */}
+                <span className="text-xs text-teal-400 block mt-2">
+                  {service.type}
+                </span>
               </div>
 
-              <h3 className="text-xl mb-4 text-gray-200">
-                {service.title}
-              </h3>
-
-              <p className="text-gray-400 text-sm leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Sed id lorem eget orci dictum facilisis vel id tellus.
-                Nullam iaculis arcu at mauris dapibus consectetur.
-              </p>
+              {/* Corner Accent */}
+              <div className="absolute bottom-0 right-0 w-10 h-10 border-b-4 border-r-4 border-gray-300 opacity-60 group-hover:border-teal-400" />
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
 }
-
-const iconClass = "w-10 h-10";
-
-const services = [
-  {
-    title: "WordPress Theme",
-    icon: <Globe className={iconClass} />,
-  },
-  {
-    title: "Responsive Design",
-    icon: <Layout className={iconClass} />,
-  },
-  {
-    title: "Media & Advertisement",
-    icon: <Monitor className={iconClass} />,
-  },
-  {
-    title: "App Development",
-    icon: <Smartphone className={iconClass} />,
-  },
-  {
-    title: "Creative Design",
-    icon: <Palette className={iconClass} />,
-  },
-  {
-    title: "Marketing",
-    icon: <Megaphone className={iconClass} />,
-  },
-];
