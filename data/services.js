@@ -12,7 +12,6 @@ export const services = [
             title:'SAP ECC & S/4 HANA Rollout',
             description:'Unlock excellence with our Quality Assurance consulting firm. We specialize in meticulously ensuring and elevating the quality of your products or services. Our dedicated team employs advanced methodologies according to your needs. Partner with us for comprehensive quality assurance solutions that fortify your brand, build customer trust, and drive sustained success. What you will get:',
             items:['Efficiency enhancement','Adaptive & sustainability','Productivity boost','Cost reduction']
-
           },
           {  
             id:2,
@@ -70,7 +69,6 @@ export const services = [
                 description:'Elevate your business potential with our Method Development. Our strategic solutions are designed to adapt to dynamic business landscapes, ensuring your organization remains agile and competitive. Partner with us for comprehensive method development that propels your success and fosters lasting growth in an ever-evolving market. Here some benefit you will get:',
                 items:['Efficiency enhancement','Adaptive & sustainability','Productivity boost','Cost reduction']
               },
-    
               {  
                 id:2,
                 icon:"/images/services/icon.jpg",

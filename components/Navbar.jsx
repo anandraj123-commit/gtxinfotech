@@ -1,6 +1,8 @@
 "use client";
+
 import { useState, useEffect } from "react";
-import { services } from "@/data/services"; // 👈 adjust path
+import Link from "next/link";
+import { services } from "@/data/services";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -25,7 +27,7 @@ export default function Navbar() {
         <img
           src="/images/logo.jpg"
           alt="logo"
-          className="w-12 h-12 object-contain"
+          className="w-20 h-13 object-contain"
         />
       </div>
 
@@ -56,11 +58,12 @@ export default function Navbar() {
           >
             {services.map((serviceGroup, i) => (
               <div key={serviceGroup.id}>
-                {/* SECTION TITLE */}
+                
+                {/* 🔶 SERVICE TYPE */}
                 <h2
-                  className={`text-lg font-semibold mb-4 ${
-                    i !== 0 ? "border-t pt-4" : ""
-                  }`}
+                  className={`text-lg font-semibold mb-4 px-3 py-1 inline-block rounded
+                  bg-orange-500 text-white
+                  ${i !== 0 ? "mt-4" : ""}`}
                 >
                   {serviceGroup.type}
                 </h2>
@@ -69,10 +72,23 @@ export default function Navbar() {
                 <div className="grid grid-cols-3 gap-x-4 gap-y-3 text-[14px] mb-6">
                   {serviceGroup.category.map((item, index) => (
                     <div key={item.id} className="flex items-center">
-                      <span className="hover:text-blue-600 cursor-pointer transition">
-                        {item.title}
-                      </span>
 
+                      {/* 🔷 CATEGORY */}
+                      <Link
+                        href={`/services1/${serviceGroup.type}/${item.id}`}
+                        onClick={() => setOpen(false)}
+                        className="
+                          text-teal-500 
+                          hover:text-white 
+                          hover:bg-teal-500 
+                          px-2 py-1 rounded 
+                          transition-all duration-300
+                        "
+                      >
+                        {item.title}
+                      </Link>
+
+                      {/* Divider */}
                       {index % 3 !== 2 &&
                         index !== serviceGroup.category.length - 1 && (
                           <span className="mx-2 text-gray-400">|</span>
@@ -80,6 +96,7 @@ export default function Navbar() {
                     </div>
                   ))}
                 </div>
+
               </div>
             ))}
           </div>

@@ -3,7 +3,9 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-export default function ServiceCategory() {
+export default function ServiceCategory({ category }) {
+  if (!category) return null;
+
   return (
     <section className="bg-[#0f1f4b] py-20 px-6 md:px-12 lg:px-20 overflow-hidden">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
@@ -25,11 +27,11 @@ export default function ServiceCategory() {
             ))}
           </div>
 
-          {/* IMAGE */}
+          {/* IMAGE (dynamic) */}
           <div className="relative rounded-3xl overflow-hidden z-0">
             <Image
-              src="/images/services/handshake.jpg" // replace
-              alt="quality"
+              src={category.image}
+              alt={category.title}
               width={600}
               height={500}
               className="w-full h-full object-cover"
@@ -50,7 +52,7 @@ export default function ServiceCategory() {
           {/* Heading */}
           <div className="flex items-center gap-4 mb-6">
             <h2 className="text-4xl md:text-5xl font-bold">
-            SAP ECC & S/4 HANA Rollout
+              {category.title}
             </h2>
 
             {/* Check Icon */}
@@ -61,22 +63,12 @@ export default function ServiceCategory() {
 
           {/* Description */}
           <p className="text-gray-300 text-lg leading-relaxed mb-8">
-            Unlock excellence with our Quality Assurance consulting firm. We
-            specialize in meticulously ensuring and elevating the quality of
-            your products or services. Our dedicated team employs advanced
-            methodologies according to your needs. Partner with us for
-            comprehensive quality assurance solutions that fortify your brand,
-            build customer trust, and drive sustained success. What you will get:
+            {category.description}
           </p>
 
-          {/* FEATURES */}
+          {/* FEATURES (dynamic) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-10 mb-10">
-            {[
-              "Quality improvement",
-              "Enhanced customer trust",
-              "Competitive edge",
-              "Recovery cost reduction",
-            ].map((item, i) => (
+            {category.items.map((item, i) => (
               <div key={i} className="flex items-center gap-3">
                 <span className="w-4 h-4 border-2 border-orange-500 rounded-full"></span>
                 <p className="text-gray-200">{item}</p>

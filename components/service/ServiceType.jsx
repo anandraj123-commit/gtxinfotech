@@ -3,7 +3,9 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-export default function ServiceType() {
+export default function ServiceType({ service }) {
+  if (!service) return null;
+
   return (
     <section className="bg-[#f3f4f6] py-20 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
@@ -17,7 +19,7 @@ export default function ServiceType() {
           {/* Heading */}
           <div className="flex items-center gap-4 mb-6">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-              SAP SERVICES
+              {service.type}
             </h2>
 
             {/* Small Circle Icon */}
@@ -28,22 +30,12 @@ export default function ServiceType() {
 
           {/* Description */}
           <p className="text-gray-600 text-lg leading-relaxed mb-8">
-            Elevate your business potential with our Method Development. Our
-            strategic solutions are designed to adapt to dynamic business
-            landscapes, ensuring your organization remains agile and
-            competitive. Partner with us for comprehensive method development
-            that propels your success and fosters lasting growth in an
-            ever-evolving market. Here some benefit you will get:
+            {service.description}
           </p>
 
           {/* Features */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-10 mb-10">
-            {[
-              "Efficiency enhancement",
-              "Adaptive & sustainability",
-              "Productivity boost",
-              "Cost reduction",
-            ].map((item, i) => (
+            {service.items.map((item, i) => (
               <div key={i} className="flex items-center gap-3">
                 <span className="w-4 h-4 border-2 border-orange-500 rounded-full"></span>
                 <p className="text-gray-700">{item}</p>
@@ -67,15 +59,15 @@ export default function ServiceType() {
           {/* IMAGE */}
           <div className="relative rounded-2xl overflow-hidden z-0">
             <Image
-              src="/images/services/handshake.jpg" // replace with your image
-              alt="team work"
+              src="/images/services/handshake.jpg"
+              alt={service.type}
               width={600}
               height={500}
               className="w-full h-full object-cover"
             />
           </div>
 
-          {/* BORDER (OFFSET STYLE) */}
+          {/* BORDER */}
           <div className="absolute inset-0 border-2 border-orange-500 rounded-2xl translate-x-6 translate-y-6 z-10 pointer-events-none"></div>
 
           {/* DOT PATTERN */}
