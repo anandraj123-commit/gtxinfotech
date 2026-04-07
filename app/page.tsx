@@ -4,6 +4,7 @@ import AboutSection from "@/components/AboutSection";
 import WorkSection from '@/components/WorkSection';
 import SkillSection from '@/components/SkillsSection';
 import  ServicesSection from '@/components/ServicesSection';
+import  TrainingSection from '@/components/trainingSection';
 import CTASection from '@/components/CTASection';
 import ContactUs from '@/components/contact-us';
 import TeamSection from '@/components/TeamSection';
@@ -27,6 +28,7 @@ export default function Home() {
       <WorkSection/>
       <SkillSection/>
       <ServicesSection/>
+      <TrainingSection/>
       <OfferSection/>
       <TeamSection/>
       <CTASection/>

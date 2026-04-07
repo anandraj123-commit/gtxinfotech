@@ -3,9 +3,11 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { services } from "@/data/services";
+import {training} from "@/data/training";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [openTraining, setOpenTraining] = useState(false); // ✅ NEW
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -46,7 +48,6 @@ export default function Navbar() {
             Services ▾
           </span>
 
-          {/* DROPDOWN */}
           <div
             className={`absolute top-10 left-0 bg-white text-[#1a2a6c] shadow-2xl w-[700px] p-6 z-50 rounded-md
             transform transition-all duration-300 ease-out
@@ -58,8 +59,6 @@ export default function Navbar() {
           >
             {services.map((serviceGroup, i) => (
               <div key={serviceGroup.id}>
-                
-                {/* 🔶 SERVICE TYPE */}
                 <h2
                   className={`text-lg font-semibold mb-4 px-3 py-1 inline-block rounded
                   bg-orange-500 text-white
@@ -68,27 +67,17 @@ export default function Navbar() {
                   {serviceGroup.type}
                 </h2>
 
-                {/* GRID */}
                 <div className="grid grid-cols-3 gap-x-4 gap-y-3 text-[14px] mb-6">
                   {serviceGroup.category.map((item, index) => (
                     <div key={item.id} className="flex items-center">
-
-                      {/* 🔷 CATEGORY */}
                       <Link
                         href={`/services1/${serviceGroup.type}/${item.id}`}
                         onClick={() => setOpen(false)}
-                        className="
-                          text-teal-500 
-                          hover:text-white 
-                          hover:bg-teal-500 
-                          px-2 py-1 rounded 
-                          transition-all duration-300
-                        "
+                        className="text-teal-500 hover:text-white hover:bg-teal-500 px-2 py-1 rounded transition-all duration-300"
                       >
                         {item.title}
                       </Link>
 
-                      {/* Divider */}
                       {index % 3 !== 2 &&
                         index !== serviceGroup.category.length - 1 && (
                           <span className="mx-2 text-gray-400">|</span>
@@ -96,15 +85,63 @@ export default function Navbar() {
                     </div>
                   ))}
                 </div>
-
               </div>
             ))}
           </div>
         </li>
 
-        <li className="hover:text-white cursor-pointer">
-          Training Programm
+        {/* TRAINING PROGRAMM (✅ SAME IMPLEMENTATION) */}
+        <li
+          className="relative cursor-pointer"
+          onMouseEnter={() => setOpenTraining(true)}
+          onMouseLeave={() => setOpenTraining(false)}
+        >
+          <span className="hover:text-white flex items-center gap-1">
+            Training Programm ▾
+          </span>
+
+          <div
+  className={`absolute top-10 left-0 bg-white text-[#1a2a6c] shadow-2xl w-[700px] p-6 z-50 rounded-md
+  transform transition-all duration-300 ease-out
+  ${
+    openTraining
+      ? "opacity-100 translate-y-0 scale-100 visible"
+      : "opacity-0 translate-y-4 scale-95 invisible"
+  }`}
+>
+  {training.map((trainingGroup, i) => (
+    <div key={trainingGroup.id}>
+      <h2
+        className={`text-lg font-semibold mb-4 px-3 py-1 inline-block rounded
+        bg-orange-500 text-white
+        ${i !== 0 ? "mt-4" : ""}`}
+      >
+        {trainingGroup.type}
+      </h2>
+
+      <div className="grid grid-cols-3 gap-x-4 gap-y-3 text-[14px] mb-6">
+        {trainingGroup.category.map((item, index) => (
+          <div key={item.id} className="flex items-center">
+            <Link
+              href={`/trainingprogrammes/${trainingGroup.type}/${item.id}`}
+              onClick={() => setOpenTraining(false)}
+              className="text-teal-500 hover:text-white hover:bg-teal-500 px-2 py-1 rounded transition-all duration-300"
+            >
+              {item.title}
+            </Link>
+
+            {index % 3 !== 2 &&
+              index !== trainingGroup.category.length - 1 && (
+                <span className="mx-2 text-gray-400">|</span>
+              )}
+          </div>
+        ))}
+      </div>
+    </div>
+  ))}
+</div>
         </li>
+
         <li className="hover:text-white cursor-pointer">Contact</li>
         <li className="hover:text-white cursor-pointer">Carrier</li>
       </ul>
