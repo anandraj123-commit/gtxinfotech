@@ -2,13 +2,16 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation"; // ✅ IMPORTANT
 import { services } from "@/data/services";
-import {training} from "@/data/training";
+import { training } from "@/data/training";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [openTraining, setOpenTraining] = useState(false); // ✅ NEW
+  const [openTraining, setOpenTraining] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const pathname = usePathname(); // ✅ current route
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +21,12 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // ✅ Active class helper
+  const navLink = (path) =>
+    `cursor-pointer ${
+      pathname === path ? "text-white font-semibold" : "text-gray-300 hover:text-white"
+    }`;
 
   return (
     <div
@@ -34,17 +43,27 @@ export default function Navbar() {
       </div>
 
       {/* MENU */}
-      <ul className="hidden md:flex gap-6 text-sm text-gray-300 items-center absolute left-1/2 transform -translate-x-1/2">
-        <li className="hover:text-white cursor-pointer">Home</li>
-        <li className="hover:text-white cursor-pointer">About</li>
+      <ul className="hidden md:flex gap-6 text-sm items-center absolute left-1/2 transform -translate-x-1/2">
+        
+        <li>
+          <Link href="/" className={navLink("/")}>
+            Home
+          </Link>
+        </li>
+
+        <li>
+          <Link href="/about" className={navLink("/about")}>
+            About
+          </Link>
+        </li>
 
         {/* SERVICES */}
         <li
-          className="relative cursor-pointer"
+          className="relative"
           onMouseEnter={() => setOpen(true)}
           onMouseLeave={() => setOpen(false)}
         >
-          <span className="hover:text-white flex items-center gap-1">
+          <span className="text-gray-300 hover:text-white flex items-center gap-1 cursor-pointer">
             Services ▾
           </span>
 
@@ -60,9 +79,9 @@ export default function Navbar() {
             {services.map((serviceGroup, i) => (
               <div key={serviceGroup.id}>
                 <h2
-                  className={`text-lg font-semibold mb-4 px-3 py-1 inline-block rounded
-                  bg-orange-500 text-white
-                  ${i !== 0 ? "mt-4" : ""}`}
+                  className={`text-lg font-semibold mb-4 px-3 py-1 inline-block rounded bg-orange-500 text-white ${
+                    i !== 0 ? "mt-4" : ""
+                  }`}
                 >
                   {serviceGroup.type}
                 </h2>
@@ -73,7 +92,7 @@ export default function Navbar() {
                       <Link
                         href={`/services1/${serviceGroup.type}/${item.id}`}
                         onClick={() => setOpen(false)}
-                        className="text-teal-500 hover:text-white hover:bg-teal-500 px-2 py-1 rounded transition-all duration-300"
+                        className="text-teal-500 hover:text-white hover:bg-teal-500 px-2 py-1 rounded"
                       >
                         {item.title}
                       </Link>
@@ -90,60 +109,69 @@ export default function Navbar() {
           </div>
         </li>
 
-        {/* TRAINING PROGRAMM (✅ SAME IMPLEMENTATION) */}
+        {/* TRAINING */}
         <li
-          className="relative cursor-pointer"
+          className="relative"
           onMouseEnter={() => setOpenTraining(true)}
           onMouseLeave={() => setOpenTraining(false)}
         >
-          <span className="hover:text-white flex items-center gap-1">
+          <span className="text-gray-300 hover:text-white flex items-center gap-1 cursor-pointer">
             Training Programm ▾
           </span>
 
           <div
-  className={`absolute top-10 left-0 bg-white text-[#1a2a6c] shadow-2xl w-[700px] p-6 z-50 rounded-md
-  transform transition-all duration-300 ease-out
-  ${
-    openTraining
-      ? "opacity-100 translate-y-0 scale-100 visible"
-      : "opacity-0 translate-y-4 scale-95 invisible"
-  }`}
->
-  {training.map((trainingGroup, i) => (
-    <div key={trainingGroup.id}>
-      <h2
-        className={`text-lg font-semibold mb-4 px-3 py-1 inline-block rounded
-        bg-orange-500 text-white
-        ${i !== 0 ? "mt-4" : ""}`}
-      >
-        {trainingGroup.type}
-      </h2>
+            className={`absolute top-10 left-0 bg-white text-[#1a2a6c] shadow-2xl w-[700px] p-6 z-50 rounded-md
+            transform transition-all duration-300 ease-out
+            ${
+              openTraining
+                ? "opacity-100 translate-y-0 scale-100 visible"
+                : "opacity-0 translate-y-4 scale-95 invisible"
+            }`}
+          >
+            {training.map((trainingGroup, i) => (
+              <div key={trainingGroup.id}>
+                <h2
+                  className={`text-lg font-semibold mb-4 px-3 py-1 inline-block rounded bg-orange-500 text-white ${
+                    i !== 0 ? "mt-4" : ""
+                  }`}
+                >
+                  {trainingGroup.type}
+                </h2>
 
-      <div className="grid grid-cols-3 gap-x-4 gap-y-3 text-[14px] mb-6">
-        {trainingGroup.category.map((item, index) => (
-          <div key={item.id} className="flex items-center">
-            <Link
-              href={`/trainingprogrammes/${trainingGroup.type}/${item.id}`}
-              onClick={() => setOpenTraining(false)}
-              className="text-teal-500 hover:text-white hover:bg-teal-500 px-2 py-1 rounded transition-all duration-300"
-            >
-              {item.title}
-            </Link>
+                <div className="grid grid-cols-3 gap-x-4 gap-y-3 text-[14px] mb-6">
+                  {trainingGroup.category.map((item, index) => (
+                    <div key={item.id} className="flex items-center">
+                      <Link
+                        href={`/trainingprogrammes/${trainingGroup.type}/${item.id}`}
+                        onClick={() => setOpenTraining(false)}
+                        className="text-teal-500 hover:text-white hover:bg-teal-500 px-2 py-1 rounded"
+                      >
+                        {item.title}
+                      </Link>
 
-            {index % 3 !== 2 &&
-              index !== trainingGroup.category.length - 1 && (
-                <span className="mx-2 text-gray-400">|</span>
-              )}
+                      {index % 3 !== 2 &&
+                        index !== trainingGroup.category.length - 1 && (
+                          <span className="mx-2 text-gray-400">|</span>
+                        )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-    </div>
-  ))}
-</div>
         </li>
 
-        <li className="hover:text-white cursor-pointer">Contact</li>
-        <li className="hover:text-white cursor-pointer">Carrier</li>
+        <li>
+          <Link href="/contact" className={navLink("/contact")}>
+            Contact
+          </Link>
+        </li>
+
+        <li>
+          <Link href="/carrier" className={navLink("/carrier")}>
+           Carrier
+          </Link>
+        </li>
       </ul>
 
       <div className="w-8"></div>
