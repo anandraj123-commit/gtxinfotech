@@ -12,7 +12,7 @@ export default function TrainingSection() {
   );
 
   return (
-    <section className="w-full bg-[#0f172a] text-white py-20">
+    <section className="w-full bg-[#0f172a] text-white py-20" id="training-programs">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Header */}

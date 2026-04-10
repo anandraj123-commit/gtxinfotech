@@ -12,7 +12,7 @@ export default function ServicesSection() {
   );
 
   return (
-    <section className="w-full bg-slate-800 text-white py-20">
+    <section className="w-full bg-slate-800 text-white py-20" id="services">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Header */}
