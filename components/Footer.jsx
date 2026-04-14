@@ -76,10 +76,16 @@ export default function Footer() {
               <p>5919 Trussville Crossings Pkwy, Birmingham AL 35235</p>
             </div>
 
-            <div>
-              <p className="font-semibold text-white">EMAIL:</p>
-              <p>info@validtheme.com</p>
-            </div>
+            <div className="md:hidden mt-2">
+  <p className="font-semibold text-white text-sm">PHONE:</p>
+
+  <a
+    href="tel:+916360807351"
+    className="text-gray-300 text-sm hover:text-orange-400 transition"
+  >
+    +91 6360807351
+  </a>
+</div>
           </div>
 
       

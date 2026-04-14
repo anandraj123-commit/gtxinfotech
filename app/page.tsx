@@ -15,11 +15,13 @@ import OfferSection from '@/components/OfferSection';
 import StorySection from '@/components/StorySection';
 import SuccessSection from '@/components/SuccessSection';
 import FAQ from '@/components/Faqs';
+import TopBar from '../components/TopBar';
 
 
 export default function Home() {
   return (
     <main>
+      <TopBar/>
       <Hero />
       <Navbar/>
       {/* <AboutSection /> */}
