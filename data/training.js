@@ -19,7 +19,17 @@ export const training = [
                 "Hands-on Practical Training",
                 "Industry-Oriented Curriculum",
                 "Certification & Career Support"
-            ]
+            ],
+            courseContent:[
+              {
+              title:'material 1',
+              link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
+              },
+            {
+            title:'material 2',
+            link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
+          }],
+          joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
           },
           {  
             id:2,
@@ -32,7 +42,17 @@ export const training = [
                 "Hands-on Practical Training",
                 "Industry-Oriented Curriculum",
                 "Certification & Career Support"
-            ]
+            ],
+            courseContent:[
+              {
+              title:'material 1',
+              link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
+              },
+            {
+            title:'material 2',
+            link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
+          }],
+          joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
           },
           {  
             id:3,
@@ -45,7 +65,17 @@ export const training = [
                 "Hands-on Practical Training",
                 "Industry-Oriented Curriculum",
                 "Certification & Career Support"
-            ]
+            ],
+            courseContent:[
+              {
+              title:'material 1',
+              link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
+              },
+            {
+            title:'material 2',
+            link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
+          }],
+          joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
           },
           {  
             id:4,
@@ -58,7 +88,17 @@ export const training = [
                 "Hands-on Practical Training",
                 "Industry-Oriented Curriculum",
                 "Certification & Career Support"
-            ]
+            ],
+            courseContent:[
+              {
+              title:'material 1',
+              link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
+              },
+            {
+            title:'material 2',
+            link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
+          }],
+          joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
           },
           {  
             id:5,
@@ -71,7 +111,17 @@ export const training = [
                 "Hands-on Practical Training",
                 "Industry-Oriented Curriculum",
                 "Certification & Career Support"
-            ]
+            ],
+            courseContent:[
+              {
+              title:'material 1',
+              link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
+              },
+            {
+            title:'material 2',
+            link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
+          }],
+          joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
           },
           {  
             id:6,
@@ -84,7 +134,17 @@ export const training = [
                 "Hands-on Practical Training",
                 "Industry-Oriented Curriculum",
                 "Certification & Career Support"
-            ]
+            ],
+            courseContent:[
+              {
+              title:'material 1',
+              link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
+              },
+            {
+            title:'material 2',
+            link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link',
+            joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
+          }]
           },
           {  
             id:7,
@@ -97,7 +157,17 @@ export const training = [
                 "Hands-on Practical Training",
                 "Industry-Oriented Curriculum",
                 "Certification & Career Support"
-            ]
+            ],
+            courseContent:[
+              {
+              title:'material 1',
+              link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
+              },
+            {
+            title:'material 2',
+            link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
+          }],
+          joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
           },
           {  
             id:8,
@@ -110,7 +180,17 @@ export const training = [
                 "Hands-on Practical Training",
                 "Industry-Oriented Curriculum",
                 "Certification & Career Support"
-            ]
+            ],
+            courseContent:[
+              {
+              title:'material 1',
+              link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
+              },
+            {
+            title:'material 2',
+            link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
+          }],
+          joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
           },
           {  
             id:9,
@@ -123,7 +203,17 @@ export const training = [
                 "Hands-on Practical Training",
                 "Industry-Oriented Curriculum",
                 "Certification & Career Support"
-            ]
+            ],
+            courseContent:[
+              {
+              title:'material 1',
+              link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
+              },
+            {
+            title:'material 2',
+            link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
+          }],
+          joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
           },
           {  
             id:10,
@@ -136,7 +226,17 @@ export const training = [
                 "Hands-on Practical Training",
                 "Industry-Oriented Curriculum",
                 "Certification & Career Support"
-            ]
+            ],
+            courseContent:[
+              {
+              title:'material 1',
+              link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
+              },
+            {
+            title:'material 2',
+            link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
+          }],
+          joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
           }
     ]
     },
@@ -162,7 +262,17 @@ export const training = [
                     "Hands-on Practical Training",
                     "Industry-Oriented Curriculum",
                     "Certification & Career Support"
-                ]
+                ],
+                courseContent:[
+                  {
+                  title:'material 1',
+                  link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
+                  },
+                {
+                title:'material 2',
+                link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
+              }],
+              joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
               },
               {  
                 id:2,
@@ -175,7 +285,17 @@ export const training = [
                     "Hands-on Practical Training",
                     "Industry-Oriented Curriculum",
                     "Certification & Career Support"
-                ]
+                ],
+                courseContent:[
+                  {
+                  title:'material 1',
+                  link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
+                  },
+                {
+                title:'material 2',
+                link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
+              }],
+              joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
             },
               {  
                 id:3,
@@ -188,7 +308,17 @@ export const training = [
                     "Hands-on Practical Training",
                     "Industry-Oriented Curriculum",
                     "Certification & Career Support"
-                ]
+                ],
+                courseContent:[,
+                  {
+                  title:'material 1',
+                  link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
+                  },
+                {
+                title:'material 2',
+                link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
+              }],
+              joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
               },
               {  
                 id:4,
@@ -201,7 +331,17 @@ export const training = [
                     "Hands-on Practical Training",
                     "Industry-Oriented Curriculum",
                     "Certification & Career Support"
-                ]
+                ],
+                courseContent:[
+                  {
+                  title:'material 1',
+                  link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
+                  },
+                {
+                title:'material 2',
+                link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
+              }],
+              joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
               },
               {  
                 id:5,
@@ -214,7 +354,17 @@ export const training = [
                     "Hands-on Practical Training",
                     "Industry-Oriented Curriculum",
                     "Certification & Career Support"
-                ]
+                ],
+                courseContent:[
+                  {
+                  title:'material 1',
+                  link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
+                  },
+                {
+                title:'material 2',
+                link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
+              }],
+              joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
               },  
         ]
         }

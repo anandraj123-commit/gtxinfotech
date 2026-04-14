@@ -1,90 +1,194 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function TrainingCategory({ category }) {
+  const [activeTab, setActiveTab] = useState("Overview");
+
   if (!category) return null;
+
+  const tabs = ["Overview", "Course Content", "Join Us"];
 
   return (
     <section className="bg-[#0f1f4b] py-20 px-6 md:px-12 lg:px-20 overflow-hidden">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        
-        {/* LEFT IMAGE */}
-        <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }} // ✅ prevent repeat
-          transition={{ duration: 0.6 }}
-          className="relative"
-        >
-          {/* STRIPES */}
-          <div className="absolute left-[-20px] top-10 flex flex-col gap-3 z-20">
-            {Array.from({ length: 8 }).map((_, i) => (
-              <span
-                key={i}
-                className="w-12 h-[2px] bg-orange-500 rotate-[-25deg]"
-              ></span>
+      <div className="max-w-7xl mx-auto">
+
+        {/* ✅ ONE UNIT CARD */}
+        <div className="bg-white rounded-2xl shadow-xl overflow-hidden p-4 md:p-8">
+
+          {/* 🔥 CLEAN TABS */}
+          <div className="flex justify-center gap-2 md:gap-4 bg-gray-100 p-2 rounded-xl mb-8">
+            {tabs.map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className={`relative px-4 md:px-6 py-2 text-sm md:text-base font-medium rounded-lg transition
+                  ${activeTab === tab ? "text-white" : "text-gray-600 hover:text-black"}
+                `}
+              >
+                {activeTab === tab && (
+                  <motion.div
+                    layoutId="activeTab"
+                    className="absolute inset-0 bg-orange-500 rounded-lg"
+                    transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                  />
+                )}
+                <span className="relative z-10">{tab}</span>
+              </button>
             ))}
           </div>
 
-          {/* IMAGE */}
-          <div className="relative rounded-3xl overflow-hidden z-0">
-            <Image
-              src={category.image || "/images/services/handshake.jpg"} // ✅ fallback
-              alt={category.title || "Training Image"}
-              width={600}
-              height={500}
-              className="w-full h-full object-cover"
-            />
-          </div>
+          {/* 🔥 TAB CONTENT */}
 
-          {/* BORDER */}
-          <div className="absolute inset-0 border-2 border-orange-500 rounded-3xl translate-x-6 translate-y-6 z-10 pointer-events-none"></div>
-        </motion.div>
+          {/* ================= OVERVIEW ================= */}
+          {activeTab === "Overview" && (
+            <motion.div
+              key="overview"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="grid md:grid-cols-2 gap-12 items-center"
+            >
+              {/* IMAGE */}
+              <div className="relative">
+                <div className="absolute left-[-20px] top-10 flex flex-col gap-3 z-20">
+                  {Array.from({ length: 8 }).map((_, i) => (
+                    <span
+                      key={i}
+                      className="w-12 h-[2px] bg-orange-500 rotate-[-25deg]"
+                    ></span>
+                  ))}
+                </div>
 
-        {/* RIGHT CONTENT */}
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }} // ✅ smoother UX
-          transition={{ duration: 0.6 }}
-          className="text-white"
-        >
-          {/* Heading */}
-          <div className="flex items-center gap-4 mb-6">
-            <h2 className="text-4xl md:text-5xl font-bold">
-              {category.title}
-            </h2>
+                <div className="relative rounded-3xl overflow-hidden z-0">
+                  <Image
+                    src={category.image || "/images/services/handshake.jpg"}
+                    alt={category.title || "Training Image"}
+                    width={600}
+                    height={500}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
 
-            {/* Icon */}
-            <div className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center">
-              ✓
-            </div>
-          </div>
-
-          {/* Description */}
-          <p className="text-gray-300 text-lg leading-relaxed mb-8">
-            {category.description ||
-              "Our training programs are designed to provide practical knowledge and industry-relevant skills."}
-          </p>
-
-          {/* FEATURES */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-10 mb-10">
-            {(category.items || []).map((item, i) => (
-              <div key={i} className="flex items-center gap-3">
-                <span className="w-4 h-4 border-2 border-orange-500 rounded-full"></span>
-                <p className="text-gray-200">{item}</p>
+                <div className="absolute inset-0 border-2 border-orange-500 rounded-3xl translate-x-6 translate-y-6 z-10 pointer-events-none"></div>
               </div>
-            ))}
-          </div>
 
-          {/* BUTTON */}
-          <button className="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg text-lg font-semibold transition">
-            Join Us
-          </button>
-        </motion.div>
+              {/* CONTENT */}
+              <div className="text-black">
+                <div className="flex items-center gap-4 mb-6">
+                  <h2 className="text-3xl md:text-4xl font-bold">
+                    {category.title}
+                  </h2>
+                  <div className="w-10 h-10 rounded-full border border-gray-400 flex items-center justify-center">
+                    ✓
+                  </div>
+                </div>
 
+                <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                  {category.description ||
+                    "Our training programs are designed to provide practical knowledge and industry-relevant skills."}
+                </p>
+
+                {/* FEATURES */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-10 mb-10">
+                  {(category.items || []).map((item, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <span className="w-4 h-4 border-2 border-orange-500 rounded-full"></span>
+                      <p className="text-gray-700">{item}</p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* JOIN BUTTON */}
+                {category?.joinLink && (
+                  <a
+                    href={category.joinLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg text-lg font-semibold text-white transition"
+                  >
+                    Join Us
+                  </a>
+                )}
+              </div>
+            </motion.div>
+          )}
+
+          {/* ================= COURSE CONTENT ================= */}
+          {activeTab === "Course Content" && (
+            <motion.div
+              key="course"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="space-y-6"
+            >
+              <h3 className="text-2xl font-bold text-black mb-4">
+                Course Materials
+              </h3>
+
+              {category.courseContent?.length > 0 ? (
+                category.courseContent.map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-4 border rounded-lg shadow-sm hover:shadow-md transition"
+                  >
+                    <p className="text-gray-800 font-medium">
+                      {item.title}
+                    </p>
+
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-lg text-sm font-semibold transition"
+                    >
+                      Download
+                    </a>
+                  </div>
+                ))
+              ) : (
+                <p className="text-gray-500">
+                  No course materials available.
+                </p>
+              )}
+            </motion.div>
+          )}
+
+          {/* ================= JOIN US ================= */}
+          {activeTab === "Join Us" && (
+            <motion.div
+              key="join"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-center max-w-2xl mx-auto"
+            >
+              <h3 className="text-3xl font-bold text-black mb-4">
+                Enroll in {category.title}
+              </h3>
+
+              <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+                Ready to boost your career? Fill out the enrollment form and
+                get started with expert-led training, real-world projects, and
+                certification support.
+              </p>
+
+              {category?.joinLink ? (
+                <a
+                  href={category.joinLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg text-lg font-semibold transition"
+                >
+                  Apply Now
+                </a>
+              ) : (
+                <p className="text-red-500">Join link not available</p>
+              )}
+            </motion.div>
+          )}
+
+        </div>
       </div>
     </section>
   );
