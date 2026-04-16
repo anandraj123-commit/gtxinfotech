@@ -83,7 +83,7 @@ export default function ServicesSection() {
                   <p className="
                     text-sm text-gray-300 line-clamp-4 
                     transform transition-all duration-500 delay-75
-                    group-hover:text-white group-hover:translate-y-[-2px]
+                    group-hover:text-white group-hover:translate-y-[-2px] text-justify
                   ">
                     {service.description || "High-quality solutions tailored to your business needs."}
                   </p>

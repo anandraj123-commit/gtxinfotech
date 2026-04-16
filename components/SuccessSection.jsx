@@ -44,11 +44,11 @@ export default function SuccessSection() {
               Our Work Is For Your Success
             </h2>
 
-            <p className="text-gray-600 max-w-xl mb-4">
+            <p className="text-gray-600 max-w-xl mb-4 text-justify">
               Our commitment centers on empowering your journey to success. Whether you’re an organization seeking to enhance operational efficiency or an individual aspiring to establish a career in SAP, we deliver solutions designed to drive meaningful outcomes.
             </p>
 
-            <p className="text-gray-600 max-w-xl">
+            <p className="text-gray-600 max-w-xl text-justify">
               Leveraging extensive SAP expertise, industry insights, and cutting-edge IT services, we help you maintain a competitive edge in today’s digital landscape. Our process is straightforward: listen to your needs, craft tailored solutions, and achieve quantifiable outcomes.
             </p>
           </div>

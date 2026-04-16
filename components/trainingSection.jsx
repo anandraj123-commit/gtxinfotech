@@ -78,7 +78,7 @@ export default function TrainingSection() {
                     <p className="
                       text-sm text-gray-400 mt-3
                       transition-all duration-300
-                      group-hover:text-gray-200
+                      group-hover:text-gray-200 text-justify
                     ">
                       {item.description?.slice(0, 90) ||
                         "Practical training designed to enhance your real-world skills."}
