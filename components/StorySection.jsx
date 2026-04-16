@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function StorySection() {
   return (
@@ -14,15 +15,18 @@ export default function StorySection() {
             Know Our Story
           </h2>
 
-          <p className="text-gray-300 leading-relaxed mb-8 text-lg">
-            Founded in 2019, Lunaria is a leading web consulting firm based in
-            Malang, Indonesia. Our expert team specializes in web development,
-            design, digital marketing, and strategic consulting.
-          </p>
-
-          <button className="bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded-md text-white font-semibold">
-            Learn More
-          </button>
+          <p className="text-gray-300 leading-relaxed mb-8 text-lg text-justify">
+  At the core of GTX InfoTech is a commitment to empower organizations through next-generation SAP solutions and tailored IT services that align with strategic business goals, including SAP Training.
+  <br /><br />
+  Founded by a group of SAP experts, we leverage extensive industry knowledge to craft solutions that deliver measurable business benefits.
+  In a digital-first world, our approach focuses on agility, scalability, and long-term value for our clients.
+</p>
+         
+<Link href="/about">
+      <button className="bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded-md text-white font-semibold">
+        Learn More
+      </button>
+</Link>
         </div>
 
         {/* RIGHT IMAGE */}
