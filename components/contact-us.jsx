@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebookF, FaTwitter, FaYoutube, FaLinkedinIn, FaDribbble, FaPinterestP } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaYoutube, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 export default function ContactPage() {
   return (
@@ -66,25 +66,31 @@ export default function ContactPage() {
 
         {/* Social Icons */}
         <div className="flex justify-center gap-6 mt-16">
-          <div className="group w-12 h-12 flex items-center justify-center bg-[#2a333c] cursor-pointer transition hover:bg-[#1877F2]">
-            <FaFacebookF className="text-gray-400 group-hover:text-white" />
-          </div>
-          <div className="group w-12 h-12 flex items-center justify-center bg-[#2a333c] cursor-pointer transition hover:bg-[#1DA1F2]">
-            <FaTwitter className="text-gray-400 group-hover:text-white" />
-          </div>
-          <div className="group w-12 h-12 flex items-center justify-center bg-[#2a333c] cursor-pointer transition hover:bg-[#FF0000]">
-            <FaYoutube className="text-gray-400 group-hover:text-white" />
-          </div>
-          <div className="group w-12 h-12 flex items-center justify-center bg-[#2a333c] cursor-pointer transition hover:bg-[#0A66C2]">
-            <FaLinkedinIn className="text-gray-400 group-hover:text-white" />
-          </div>
-          <div className="group w-12 h-12 flex items-center justify-center bg-[#2a333c] cursor-pointer transition hover:bg-[#EA4C89]">
-            <FaDribbble className="text-gray-400 group-hover:text-white" />
-          </div>
-          <div className="group w-12 h-12 flex items-center justify-center bg-[#2a333c] cursor-pointer transition hover:bg-[#E60023]">
-            <FaPinterestP className="text-gray-400 group-hover:text-white" />
-          </div>
-        </div>
+
+  {/* <a href="https://www.linkedin.com/company/gtxinfotech-sapservices/" className="group w-12 h-12 flex items-center justify-center bg-[#2a333c] cursor-pointer transition hover:bg-[#1877F2]">
+    <FaFacebookF className="text-gray-400 group-hover:text-white" />
+  </a> */}
+
+  {/* <a href="#" className="group w-12 h-12 flex items-center justify-center bg-[#2a333c] cursor-pointer transition hover:bg-[#1DA1F2]">
+    <FaTwitter className="text-gray-400 group-hover:text-white" />
+  </a> */}
+
+  <a href="https://www.youtube.com/results?search_query=GTX+InfoTech" className="group w-12 h-12 flex items-center justify-center bg-[#2a333c] cursor-pointer transition hover:bg-[#FF0000]">
+    <FaYoutube className="text-gray-400 group-hover:text-white" />
+  </a>
+
+  <a href="https://www.linkedin.com/company/gtxinfotech-sapservices/" className="group w-12 h-12 flex items-center justify-center bg-[#2a333c] cursor-pointer transition hover:bg-[#0A66C2]">
+    <FaLinkedinIn className="text-gray-400 group-hover:text-white" />
+  </a>
+
+  <a href="https://www.instagram.com/gtxinfotech/" className="group w-12 h-12 flex items-center justify-center bg-[#2a333c] cursor-pointer transition hover:bg-[#EA4C89]">
+    <FaInstagram className="text-gray-400 group-hover:text-white" />
+  </a>
+
+  {/* <a href="#" className="group w-12 h-12 flex items-center justify-center bg-[#2a333c] cursor-pointer transition hover:bg-[#E60023]">
+    <FaPinterestP className="text-gray-400 group-hover:text-white" />
+  </a> */}
+</div>
         </div>
       </div>
   );

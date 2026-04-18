@@ -17,7 +17,7 @@ export default function About() {
      <TimelineSection/>
      <ValuesSection/>
      <TeamSection/>
-     <OfficeLocations/>
+     {/* <OfficeLocations/> */}
      </>
   )
 }

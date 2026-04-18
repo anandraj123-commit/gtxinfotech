@@ -112,9 +112,9 @@ export default function FAQ() {
               Contact Via Form
             </button>
 
-            <button className="border border-orange-500 text-orange-500 hover:bg-orange-50 px-6 py-3 rounded-md font-medium">
+            {/* <button className="border border-orange-500 text-orange-500 hover:bg-orange-50 px-6 py-3 rounded-md font-medium">
               Contact Nearest Office
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@ import {
   FaTwitter,
   FaLinkedinIn,
   FaInstagram,
+  FaYoutube,
 } from "react-icons/fa";
 import { Phone, Mail } from "lucide-react";
 
@@ -16,7 +17,22 @@ export default function TopBar() {
     setShow(true);
   }, []);
 
-  const logoColor = "#ff6a00"; // 🔥 CHANGE THIS TO YOUR LOGO COLOR
+  const logoColor = "#ff6a00";
+
+  const socialLinks = [
+    {
+      icon: FaLinkedinIn,
+      link: "https://www.linkedin.com/company/gtxinfotech-sapservices/",
+    },
+    {
+      icon: FaInstagram,
+      link: "https://www.instagram.com/gtxinfotech/",
+    },
+    {
+      icon: FaYoutube,
+      link: "https://www.youtube.com/@gtxinfotech"
+    },
+  ];
 
   return (
     <div
@@ -28,15 +44,18 @@ export default function TopBar() {
 
         {/* LEFT: SOCIAL ICONS */}
         <div className="flex items-center gap-3">
-          {[FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram].map(
-            (Icon, i) => (
-              <div
+          {socialLinks.map((item, i) => {
+            const Icon = item.icon;
+            return (
+              <a
                 key={i}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 flex items-center justify-center rounded-full
                 bg-white/10 backdrop-blur-md
                 transition-all duration-300 cursor-pointer shadow-md
                 hover:scale-110"
-                style={{}}
                 onMouseEnter={(e) =>
                   (e.currentTarget.style.backgroundColor = logoColor)
                 }
@@ -45,13 +64,14 @@ export default function TopBar() {
                 }
               >
                 <Icon size={14} />
-              </div>
-            )
-          )}
+              </a>
+            );
+          })}
         </div>
 
         {/* RIGHT: CONTACT INFO */}
-<div className="flex items-center gap-4 text-sm whitespace-nowrap">
+        <div className="flex items-center gap-4 text-sm whitespace-nowrap">
+          
           {/* PHONE */}
           <a
             href="tel:+919525285282"
@@ -62,7 +82,8 @@ export default function TopBar() {
               className="transition group-hover:scale-110"
               style={{ color: logoColor }}
             />
-            <span className="transition group-hover:text-[color:var(--logo)]"
+            <span
+              className="transition group-hover:text-[color:var(--logo)]"
               style={{ "--logo": logoColor }}
             >
               +91 9525285282
@@ -86,6 +107,7 @@ export default function TopBar() {
               info@gtxinfotech.com
             </span>
           </a>
+
         </div>
       </div>
     </div>

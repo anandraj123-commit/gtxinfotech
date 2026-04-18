@@ -27,7 +27,7 @@ export default function TeamSection() {
       {/* Header */}
       <div className="max-w-6xl mx-auto mb-16">
         <h2 className="text-4xl md:text-5xl font-bold mb-4">
-          Introduce The Key Players In Lunaria
+        Our Team
         </h2>
         <p className="text-gray-300 max-w-2xl">
           Meet the driving forces behind Lunaria, the key players whose dedication
@@ -82,9 +82,9 @@ export default function TeamSection() {
           Collaborate with Us
         </button>
 
-        <button className="border border-orange-500 px-8 py-3 rounded-lg text-orange-500 font-semibold hover:bg-orange-500 hover:text-white transition">
+        {/* <button className="border border-orange-500 px-8 py-3 rounded-lg text-orange-500 font-semibold hover:bg-orange-500 hover:text-white transition">
           See Other Members
-        </button>
+        </button> */}
       </div>
     </section>
   );

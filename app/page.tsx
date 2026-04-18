@@ -15,7 +15,7 @@ import OfferSection from '@/components/OfferSection';
 import StorySection from '@/components/StorySection';
 import SuccessSection from '@/components/SuccessSection';
 import FAQ from '@/components/Faqs';
-
+import WhyChooseGTX from '@/components/WhyChooseGTX';
 
 
 export default function Home() {
@@ -35,7 +35,8 @@ export default function Home() {
       <CTASection/>
       <TestimonialSection/> 
       <StatsSection/>
-      <LatestPost/>
+      {/* <LatestPost/> */}
+      <WhyChooseGTX/>
       <FAQ/>
       <ContactUs/>
     </main>

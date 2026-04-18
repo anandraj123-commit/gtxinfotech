@@ -35,7 +35,7 @@ export default function OfficeLocations() {
       {/* Header */}
       <div className="text-center mb-12">
         <h1 className="text-3xl md:text-4xl font-bold">
-          We Are Open To Visit At Any Time
+          Get in touch
         </h1>
         <p className="text-gray-500 mt-3 max-w-2xl mx-auto">
           Explore the authentic sentiments and experiences of our clients as they

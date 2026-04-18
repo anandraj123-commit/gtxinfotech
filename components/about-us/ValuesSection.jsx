@@ -2,25 +2,21 @@
 
 const values = [
   {
-    title: "Dedication",
-    desc: "Dedication at work is the key to sustained excellence and success.",
+    title: "Ethical Integrity",
+    desc: "We believe in doing the right thing—being honest, transparent, and accountable in every interaction to build lasting trust.",
   },
   {
-    title: "Clarity",
-    desc: "Clear objectives at work pave the way for strategic success.",
+    title: "Focused on Your Success",
+    desc: "Our clients’ and learners’ goals are our priority. We listen closely and tailor solutions that deliver real, measurable outcomes.",
   },
   {
-    title: "Innovation",
-    desc: "Work to push creativity, driving continual improvement and growth.",
+    title: "Innovate and Evolve",
+    desc: "We embrace the fast pace of technology by continuously updating our skills and exploring new ideas to keep you ahead.",
   },
   {
-    title: "Synergy",
-    desc: "Workplace synergy through teamwork cultivates a culture of collaboration.",
-  },
-  {
-    title: "Improvement",
-    desc: "Commitment to improvement fuels a culture of continuous success.",
-  },
+    title: "Excellence in Delivery",
+    desc: "Quality is non-negotiable. We commit to providing precise, reliable, and impactful SAP solutions and training that exceed expectations.",
+  }
 ];
 
 export default function ValuesSection() {
@@ -40,11 +36,10 @@ export default function ValuesSection() {
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
           <div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
-              The Values We Maintain At Work
+            Our Core Values
             </h2>
             <p className="mt-4 text-gray-600 max-w-2xl">
-              We are a team with a variety of skills, each member contributes their
-              expertise, and works professionally among members and clients.
+            Our values are the compass guiding our work and relationships. They fuel our passion and commitment to your success.
             </p>
           </div>
 
