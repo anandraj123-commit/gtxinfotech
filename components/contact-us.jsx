@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebookF, FaTwitter, FaYoutube, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaYoutube, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 export default function ContactPage() {
   return (
@@ -26,9 +26,9 @@ export default function ContactPage() {
 
             <div className="space-y-4 text-gray-400">
               <p>📍 Khaja Road, Bayzid, Chittagong, Bangladesh</p>
-              <p>📞 Phone: +880-31-000-000</p>
-              <p>📠 Fax: +880-31-000-000</p>
-              <p>✉️ Email: hello@meghna.com</p>
+              <p>📞 Phone: +91-9525285282</p>
+              {/* <p>📠 Fax: +880-31-000-000</p> */}
+              <p>✉️ Email: info@gtxinfotech.com</p>
             </div>
           </div>
 

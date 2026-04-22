@@ -8,17 +8,15 @@ export default function TrainingCategory({ category }) {
   const [activeTab, setActiveTab] = useState("Overview");
 
   if (!category) return null;
-
+  
   const tabs = ["Overview", "Course Content", "Join Us"];
 
   return (
     <section className="bg-[#0f1f4b] py-20 px-6 md:px-12 lg:px-20 overflow-hidden">
       <div className="max-w-7xl mx-auto">
-
-        {/* ✅ ONE UNIT CARD */}
+        {/* MAIN CARD */}
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden p-4 md:p-8">
-
-          {/* 🔥 CLEAN TABS */}
+          {/* TABS */}
           <div className="flex justify-center gap-2 md:gap-4 bg-gray-100 p-2 rounded-xl mb-8">
             {tabs.map((tab) => (
               <button
@@ -40,18 +38,16 @@ export default function TrainingCategory({ category }) {
             ))}
           </div>
 
-          {/* 🔥 TAB CONTENT */}
-
           {/* ================= OVERVIEW ================= */}
           {activeTab === "Overview" && (
             <motion.div
               key="overview"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              className="grid md:grid-cols-2 gap-12 items-center"
+              className="grid md:grid-cols-2 gap-12 items-stretch"
             >
               {/* IMAGE */}
-              <div className="relative">
+              <div className="relative h-full flex">
                 <div className="absolute left-[-20px] top-10 flex flex-col gap-3 z-20">
                   {Array.from({ length: 8 }).map((_, i) => (
                     <span
@@ -61,7 +57,7 @@ export default function TrainingCategory({ category }) {
                   ))}
                 </div>
 
-                <div className="relative rounded-3xl overflow-hidden z-0">
+                <div className="relative rounded-3xl overflow-hidden z-0 w-full h-full">
                   <Image
                     src={category.image || "/images/services/handshake.jpg"}
                     alt={category.title || "Training Image"}
@@ -75,23 +71,36 @@ export default function TrainingCategory({ category }) {
               </div>
 
               {/* CONTENT */}
-              <div className="text-black">
-                <div className="flex items-center gap-4 mb-6">
-                  <h2 className="text-3xl md:text-4xl font-bold">
-                    {category.title}
-                  </h2>
-                  <div className="w-10 h-10 rounded-full border border-gray-400 flex items-center justify-center">
-                    ✓
+              <div className="text-black flex flex-col justify-between max-h-[500px] overflow-y-auto pr-2">
+                <div>
+                  <div className="flex items-center gap-4 mb-6">
+                    <h2 className="text-3xl md:text-4xl font-bold">
+                      {category.title}
+                    </h2>
+                    <div className="w-10 h-10 rounded-full border border-gray-400 flex items-center justify-center">
+                      ✓
+                    </div>
                   </div>
+
+                  <div
+                    className="
+                      text-gray-600 text-lg leading-relaxed mb-8
+                      [&_*]:text-inherit
+                      [&_h2]:text-xl [&_h2]:font-semibold
+                      [&_h3]:text-lg [&_h3]:font-medium
+                      [&_ul]:list-disc [&_ul]:pl-5
+                      [&_li]:mb-2
+                    "
+                    dangerouslySetInnerHTML={{
+                      __html:
+                        category.description ||
+                        "Our training programs are designed to provide practical knowledge and industry-relevant skills.",
+                    }}
+                  />
                 </div>
 
-                <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                  {category.description ||
-                    "Our training programs are designed to provide practical knowledge and industry-relevant skills."}
-                </p>
-
                 {/* FEATURES */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-10 mb-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-10 mb-6">
                   {(category.items || []).map((item, i) => (
                     <div key={i} className="flex items-center gap-3">
                       <span className="w-4 h-4 border-2 border-orange-500 rounded-full"></span>
@@ -106,7 +115,7 @@ export default function TrainingCategory({ category }) {
                     href={category.joinLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg text-lg font-semibold text-white transition"
+                    className="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg text-lg font-semibold text-white transition w-fit"
                   >
                     Join Us
                   </a>
@@ -187,7 +196,6 @@ export default function TrainingCategory({ category }) {
               )}
             </motion.div>
           )}
-
         </div>
       </div>
     </section>

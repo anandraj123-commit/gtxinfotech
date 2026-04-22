@@ -8,14 +8,15 @@ export default function TrainingType({ training }) {
 
   return (
     <section className="bg-[#f3f4f6] py-20 px-6 md:px-12 lg:px-20">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-stretch">
         
         {/* LEFT CONTENT */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }} // ✅ prevents repeat animation
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          className="h-full flex flex-col"
         >
           {/* Heading */}
           <div className="flex items-center gap-4 mb-6">
@@ -23,29 +24,46 @@ export default function TrainingType({ training }) {
               {training.type}
             </h2>
 
-            {/* Circle Icon */}
             <div className="w-10 h-10 rounded-full border-2 border-orange-500 flex items-center justify-center">
               <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
             </div>
           </div>
 
-          {/* Description */}
-          <p className="text-gray-600 text-lg leading-relaxed mb-8">
-            {training.description || "Explore our professional training programs designed to enhance your skills and career growth."}
-          </p>
+          {/* 🔥 SCROLLABLE CONTENT */}
+          <div className="flex-1 overflow-y-auto pr-3 max-h-[500px]">
+            
+            {/* Description */}
+            <div
+              className="
+                text-gray-600 text-lg leading-relaxed mb-6
 
-          {/* Features */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-10 mb-10">
-            {(training.items || []).map((item, i) => (
-              <div key={i} className="flex items-center gap-3">
-                <span className="w-4 h-4 border-2 border-orange-500 rounded-full"></span>
-                <p className="text-gray-700">{item}</p>
-              </div>
-            ))}
+                [&_*]:text-inherit
+                [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:mb-3
+                [&_h3]:text-xl [&_h3]:font-medium [&_h3]:mb-2
+                [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:mt-3
+                [&_li]:mb-2
+              "
+              dangerouslySetInnerHTML={{
+                __html:
+                  training.description ||
+                  "Explore our professional training programs designed to enhance your skills and career growth.",
+              }}
+            />
+
+            {/* Features */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-10 mb-6">
+              {(training.items || []).map((item, i) => (
+                <div key={i} className="flex items-center gap-3">
+                  <span className="w-4 h-4 border-2 border-orange-500 rounded-full"></span>
+                  <p className="text-gray-700">{item}</p>
+                </div>
+              ))}
+            </div>
+
           </div>
 
-          {/* Button */}
-          <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg text-lg font-semibold transition">
+          {/* Button (Fixed) */}
+          <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg text-lg font-semibold transition mt-4">
             Join Us
           </button>
         </motion.div>
@@ -54,14 +72,14 @@ export default function TrainingType({ training }) {
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }} // ✅ smoother UX
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative"
+          className="relative h-full"
         >
           {/* IMAGE */}
-          <div className="relative rounded-2xl overflow-hidden z-0">
+          <div className="relative rounded-2xl overflow-hidden z-0 h-full min-h-[400px]">
             <Image
-              src={training.image || "/images/services/handshake.jpg"} // ✅ dynamic fallback
+              src={training.image || "/images/services/handshake.jpg"}
               alt={training.type}
               width={600}
               height={500}

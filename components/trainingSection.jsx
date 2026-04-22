@@ -75,14 +75,19 @@ export default function TrainingSection() {
                     </h3>
 
                     {/* ✅ Description always visible */}
-                    <p className="
-                      text-sm text-gray-400 mt-3
-                      transition-all duration-300
-                      group-hover:text-gray-200 text-justify
-                    ">
-                      {item.description?.slice(0, 90) ||
-                        "Practical training designed to enhance your real-world skills."}
-                    </p>
+                    <p
+  className="
+    text-sm text-gray-400 mt-3
+    transition-all duration-300
+    group-hover:text-gray-200 text-justify
+    line-clamp-3 text-white
+  "
+  dangerouslySetInnerHTML={{
+    __html:
+      item.description ||
+      "Practical training designed to enhance your real-world skills.",
+  }}
+/>
                   </div>
 
                   {/* Bottom */}

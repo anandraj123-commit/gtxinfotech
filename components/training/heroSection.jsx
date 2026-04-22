@@ -7,7 +7,6 @@ export default function HeroSection() {
   return (
     <section className="bg-[#0f1f4b] text-white py-16 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-        
         {/* LEFT CONTENT */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -15,19 +14,17 @@ export default function HeroSection() {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-  Empower Your Skills <br /> With Industry-Ready Training
+  Enhance Your Expertise  <br />  with Career-Ready Training
 </h1>
-
-<p className="text-gray-300 text-lg leading-relaxed mb-8">
-  Our training programs are crafted to accelerate your career by providing 
-  hands-on experience, expert guidance, and skills that are in high demand.
+<p className="text-gray-300 text-lg leading-relaxed mb-8 text-justify">
+GTX InfoTech believes in empowering you with skills that matter. Our courses combine real-world experience, seasoned guidance, and industry-focused curriculum to accelerate your journey toward a thriving SAP career.<br></br>
+We don’t just teach concepts — we prepare you to confidently handle real SAP challenges in the workplace. 
 </p>
-
           <button className="bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded-lg text-lg font-semibold">
             Join Us
           </button>
         </motion.div>
-
+        
         {/* RIGHT IMAGE */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}

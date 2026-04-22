@@ -63,12 +63,14 @@ export default function Navbar() {
       >
         {/* LOGO */}
         <div className="flex items-center gap-2 group cursor-pointer">
-          <img
-            src="/images/logo.jpg"
-            alt="logo"
-            className="w-20 h-13 object-contain transition duration-300 group-hover:scale-110 group-hover:brightness-125"
-          />
-        </div>
+  <Link href="/">
+    <img
+      src="/images/logo.jpg"
+      alt="logo"
+      className="w-20 h-13 object-contain transition duration-300 group-hover:scale-110 group-hover:brightness-125"
+    />
+  </Link>
+</div>
 
         {/* MOBILE BUTTON */}
         <div className="md:hidden ml-auto">

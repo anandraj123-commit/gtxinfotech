@@ -8,14 +8,12 @@ import Navbar from "@/components/Navbar";
 export default async function TrainingPage({ params }) {
   // ✅ unwrap params
   const resolvedParams = await params;
-
   const trainingType = decodeURIComponent(resolvedParams.trainingType)
     .replace(/\s+/g, " ")
     .trim()
     .toLowerCase();
 
   const categoryId = resolvedParams.categoryId;
-
   console.log("URL:", resolvedParams.trainingType);
   console.log("Decoded:", trainingType);
 
