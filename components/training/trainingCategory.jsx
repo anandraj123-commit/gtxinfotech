@@ -14,8 +14,8 @@ export default function TrainingCategory({ category }) {
   return (
     <section className="bg-[#0f1f4b] py-20 px-6 md:px-12 lg:px-20 overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        {/* MAIN CARD */}
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden p-4 md:p-8">
+
           {/* TABS */}
           <div className="flex justify-center gap-2 md:gap-4 bg-gray-100 p-2 rounded-xl mb-8">
             {tabs.map((tab) => (
@@ -50,10 +50,7 @@ export default function TrainingCategory({ category }) {
               <div className="relative h-full flex">
                 <div className="absolute left-[-20px] top-10 flex flex-col gap-3 z-20">
                   {Array.from({ length: 8 }).map((_, i) => (
-                    <span
-                      key={i}
-                      className="w-12 h-[2px] bg-orange-500 rotate-[-25deg]"
-                    ></span>
+                    <span key={i} className="w-12 h-[2px] bg-orange-500 rotate-[-25deg]"></span>
                   ))}
                 </div>
 
@@ -83,14 +80,7 @@ export default function TrainingCategory({ category }) {
                   </div>
 
                   <div
-                    className="
-                      text-gray-600 text-lg leading-relaxed mb-8
-                      [&_*]:text-inherit
-                      [&_h2]:text-xl [&_h2]:font-semibold
-                      [&_h3]:text-lg [&_h3]:font-medium
-                      [&_ul]:list-disc [&_ul]:pl-5
-                      [&_li]:mb-2
-                    "
+                    className="text-gray-600 text-lg leading-relaxed mb-8 [&_*]:text-inherit [&_h2]:text-xl [&_h2]:font-semibold [&_h3]:text-lg [&_h3]:font-medium [&_ul]:list-disc [&_ul]:pl-5 [&_li]:mb-2"
                     dangerouslySetInnerHTML={{
                       __html:
                         category.description ||
@@ -115,9 +105,12 @@ export default function TrainingCategory({ category }) {
                     href={category.joinLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg text-lg font-semibold text-white transition w-fit"
+                    className="relative overflow-hidden bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg text-lg font-semibold text-white transition w-fit group"
                   >
-                    Join Us
+                    <span className="relative z-20 group-hover:text-black transition duration-300">
+                      Join Us
+                    </span>
+                    <span className="absolute inset-0 bg-[var(--color-teal-400)] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-10"></span>
                   </a>
                 )}
               </div>
@@ -138,10 +131,7 @@ export default function TrainingCategory({ category }) {
 
               {category.courseContent?.length > 0 ? (
                 category.courseContent.map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-4 border rounded-lg shadow-sm hover:shadow-md transition"
-                  >
+                  <div key={index} className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-4 border rounded-lg shadow-sm hover:shadow-md transition">
                     <p className="text-gray-800 font-medium">
                       {item.title}
                     </p>
@@ -150,9 +140,12 @@ export default function TrainingCategory({ category }) {
                       href={item.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-lg text-sm font-semibold transition"
+                      className="relative overflow-hidden bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-lg text-sm font-semibold transition group"
                     >
-                      Download
+                      <span className="relative z-20 group-hover:text-black transition duration-300">
+                        Download
+                      </span>
+                      <span className="absolute inset-0 bg-[var(--color-teal-400)] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-10"></span>
                     </a>
                   </div>
                 ))
@@ -187,15 +180,19 @@ export default function TrainingCategory({ category }) {
                   href={category.joinLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg text-lg font-semibold transition"
+                  className="relative overflow-hidden inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg text-lg font-semibold transition group"
                 >
-                  Apply Now
+                  <span className="relative z-20 group-hover:text-black transition duration-300">
+                    Apply Now
+                  </span>
+                  <span className="absolute inset-0 bg-[var(--color-teal-400)] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-10"></span>
                 </a>
               ) : (
                 <p className="text-red-500">Join link not available</p>
               )}
             </motion.div>
           )}
+
         </div>
       </div>
     </section>

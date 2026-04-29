@@ -20,9 +20,15 @@ export default function HeroSection() {
 GTX InfoTech believes in empowering you with skills that matter. Our courses combine real-world experience, seasoned guidance, and industry-focused curriculum to accelerate your journey toward a thriving SAP career.<br></br>
 We don’t just teach concepts — we prepare you to confidently handle real SAP challenges in the workplace. 
 </p>
-          <button className="bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded-lg text-lg font-semibold">
-            Join Us
-          </button>
+<button className="relative overflow-hidden bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg text-lg font-semibold transition mt-4 group">
+  
+  <span className="relative z-10 group-hover:text-black transition duration-300">
+    Join Us
+  </span>
+
+  <span className="absolute inset-0 bg-[var(--color-teal-400)] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
+
+</button>
         </motion.div>
         
         {/* RIGHT IMAGE */}
