@@ -55,12 +55,16 @@ export default function ContactPage() {
               className="w-full p-3 bg-transparent border border-gray-600 text-gray-300 focus:outline-none"
             ></textarea>
 
-            <button
-              type="submit"
-              className="w-full bg-teal-400 text-white py-3 hover:bg-teal-500 transition"
-            >
-              Submit
-            </button>
+<button
+  type="submit"
+  className="relative overflow-hidden w-full bg-orange-500 text-white py-3 transition group"
+>
+  <span className="relative z-10 group-hover:text-black transition duration-300">
+    Submit
+  </span>
+
+  <span className="absolute inset-0 bg-[var(--color-teal-400)] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
+</button>
           </form>
         </div>
 

@@ -27,7 +27,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // ✅ Prevent background scroll (FIX)
+  // Prevent background scroll
   useEffect(() => {
     if (mobileMenu) {
       document.body.style.overflow = "hidden";
@@ -36,17 +36,19 @@ export default function Navbar() {
     }
   }, [mobileMenu]);
 
+  // ✅ UPDATED ACTIVE COLOR
   const navLink = (path) =>
     `cursor-pointer transition-all duration-200 ${
       pathname === path
-        ? "text-white font-semibold"
-        : "text-gray-300 hover:text-white"
+        ? "font-semibold text-[var(--color-teal-400)]"
+        : "text-gray-300 hover:text-[var(--color-teal-400)]"
     }`;
 
+  // ✅ UPDATED MOBILE ACTIVE
   const mobileNavLink = (path) =>
     `block py-2 px-3 rounded transition-all duration-200 ${
       pathname === path
-        ? "bg-orange-500 text-white"
+        ? "bg-[var(--color-teal-400)] text-white"
         : "text-gray-300 hover:bg-gray-700 hover:text-white"
     }`;
 
@@ -63,14 +65,14 @@ export default function Navbar() {
       >
         {/* LOGO */}
         <div className="flex items-center gap-2 group cursor-pointer">
-  <Link href="/">
-    <img
-      src="/images/logo.jpg"
-      alt="logo"
-      className="w-20 h-13 object-contain transition duration-300 group-hover:scale-110 group-hover:brightness-125"
-    />
-  </Link>
-</div>
+          <Link href="/">
+            <img
+              src="/images/logo.jpg"
+              alt="logo"
+              className="w-20 h-13 object-contain transition duration-300 group-hover:scale-110 group-hover:brightness-125"
+            />
+          </Link>
+        </div>
 
         {/* MOBILE BUTTON */}
         <div className="md:hidden ml-auto">
@@ -79,7 +81,7 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* DESKTOP MENU (UNCHANGED) */}
+        {/* DESKTOP MENU */}
         <ul className="hidden md:flex gap-6 text-sm items-center absolute left-1/2 transform -translate-x-1/2">
           <li><Link href="/" className={navLink("/")}>Home</Link></li>
           <li><Link href="/about" className={navLink("/about")}>About</Link></li>
@@ -90,7 +92,7 @@ export default function Navbar() {
             onMouseEnter={() => setOpen(true)}
             onMouseLeave={() => setOpen(false)}
           >
-            <span className="text-gray-300 hover:text-white flex items-center gap-1 cursor-pointer">
+            <span className="text-gray-300 hover:text-[var(--color-teal-400)] flex items-center gap-1 cursor-pointer">
               Services ▾
             </span>
 
@@ -131,7 +133,7 @@ export default function Navbar() {
             onMouseEnter={() => setOpenTraining(true)}
             onMouseLeave={() => setOpenTraining(false)}
           >
-            <span className="text-gray-300 hover:text-white flex items-center gap-1 cursor-pointer">
+            <span className="text-gray-300 hover:text-[var(--color-teal-400)] flex items-center gap-1 cursor-pointer">
               Training Programm ▾
             </span>
 
@@ -187,7 +189,6 @@ export default function Navbar() {
         transform transition-transform duration-300 ease-in-out
         ${mobileMenu ? "translate-x-0" : "-translate-x-[100%]"}`}
       >
-        {/* HEADER */}
         <div className="flex justify-between items-center mb-6">
           <img src="/images/logo.jpg" className="w-16" />
           <button onClick={() => setMobileMenu(false)} className="text-white text-xl">✕</button>
@@ -195,56 +196,6 @@ export default function Navbar() {
 
         <Link href="/" onClick={() => setMobileMenu(false)} className={mobileNavLink("/")}>Home</Link>
         <Link href="/about" onClick={() => setMobileMenu(false)} className={mobileNavLink("/about")}>About</Link>
-
-        {/* SERVICES */}
-        <div className="mt-4">
-          <button onClick={() => setMobileServices(!mobileServices)} className="w-full text-left text-gray-300">
-            Services ▾
-          </button>
-
-          <div className={`transition-all duration-300 overflow-hidden ${mobileServices ? "max-h-[500px] mt-2" : "max-h-0"}`}>
-            {services.map((group) => (
-              <div key={group.id} className="pl-2 mt-2">
-                <p className="text-orange-400 text-sm">{group.type}</p>
-                {group.category.map((item) => (
-                  <Link
-                    key={item.id}
-                    href={`/services1/${group.type}/${item.id}`}
-                    onClick={() => setMobileMenu(false)}
-                    className="block text-gray-400 text-sm"
-                  >
-                    {item.title}
-                  </Link>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* TRAINING */}
-        <div className="mt-4">
-          <button onClick={() => setMobileTraining(!mobileTraining)} className="w-full text-left text-gray-300">
-            Training Programm ▾
-          </button>
-
-          <div className={`transition-all duration-300 overflow-hidden ${mobileTraining ? "max-h-[500px] mt-2" : "max-h-0"}`}>
-            {training.map((group) => (
-              <div key={group.id} className="pl-2 mt-2">
-                <p className="text-orange-400 text-sm">{group.type}</p>
-                {group.category.map((item) => (
-                  <Link
-                    key={item.id}
-                    href={`/trainingprogrammes/${group.type}/${item.id}`}
-                    onClick={() => setMobileMenu(false)}
-                    className="block text-gray-400 text-sm"
-                  >
-                    {item.title}
-                  </Link>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
 
         <Link href="/contact" onClick={() => setMobileMenu(false)} className={mobileNavLink("/contact")}>Contact</Link>
         <Link href="/carrier" onClick={() => setMobileMenu(false)} className={mobileNavLink("/carrier")}>Carrier</Link>

@@ -100,7 +100,7 @@ export default function Footer() {
                 href="mailto:info@yourcompany.com"
                 className="hover:text-orange-400 transition"
               >
-                info@yourcompany.com
+                Info@gtxinfotech.com
               </a>
             </div>
 

@@ -126,11 +126,8 @@ In real-world scenarios, SAP SD interacts with multiple modules:
               {
               title:'material 1',
               link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
-              },
-            {
-            title:'material 2',
-            link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
-          }],
+              }
+          ],
           joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
           },
           {  
@@ -261,11 +258,8 @@ In real-world scenarios, SAP SD interacts with multiple modules:
               {
               title:'material 1',
               link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
-              },
-            {
-            title:'material 2',
-            link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
-          }],
+              }
+           ],
           joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
           },
           {  
@@ -408,11 +402,8 @@ In real-world scenarios, SAP SD interacts with multiple modules:
               {
               title:'material 1',
               link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
-              },
-            {
-            title:'material 2',
-            link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
-          }],
+              }
+           ],
           joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
           },
           {  
@@ -547,11 +538,8 @@ In real-world scenarios, SAP SD interacts with multiple modules:
               {
               title:'material 1',
               link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
-              },
-            {
-            title:'material 2',
-            link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
-          }],
+              }
+          ],
           joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
           },
           {  
@@ -685,11 +673,8 @@ With GTX InfoTech, you gain the confidence to work on real-time SAP implementati
               {
               title:'material 1',
               link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
-              },
-            {
-            title:'material 2',
-            link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
-          }],
+              }
+          ],
           joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
           },
           {  
@@ -823,12 +808,8 @@ With GTX InfoTech, you gain the confidence to work on real-time SAP implementati
               {
               title:'material 1',
               link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
-              },
-            {
-            title:'material 2',
-            link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link',
-            joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
-          }]
+              }
+          ]
           },
           {  
             id:7,
@@ -962,11 +943,8 @@ With GTX InfoTech, you gain the confidence to work on real-time SAP implementati
               {
               title:'material 1',
               link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
-              },
-            {
-            title:'material 2',
-            link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
-          }],
+              }
+           ],
           joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
           },
           {  
@@ -1101,11 +1079,8 @@ With GTX InfoTech, you gain the confidence to work on real-time SAP implementati
               {
               title:'material 1',
               link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
-              },
-            {
-            title:'material 2',
-            link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
-          }],
+              }
+           ],
           joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
           },
           {  
@@ -1240,11 +1215,8 @@ With GTX InfoTech, you gain the confidence to work on real-time SAP implementati
               {
               title:'material 1',
               link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
-              },
-            {
-            title:'material 2',
-            link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
-          }],
+              }
+           ],
           joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
           },
           {  
@@ -1378,11 +1350,8 @@ With GTX InfoTech, you gain the confidence to work on real-time SAP implementati
               {
               title:'material 1',
               link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
-              },
-            {
-            title:'material 2',
-            link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
-          }],
+              }
+          ],
           joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
           }
     ]
@@ -1577,11 +1546,8 @@ With GTX InfoTech, you gain the confidence to work on real-time SAP implementati
                   {
                   title:'material 1',
                   link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
-                  },
-                {
-                title:'material 2',
-                link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
-              }],
+                  }
+              ],
               joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
               },
               {  
@@ -1708,11 +1674,8 @@ With GTX InfoTech, you gain the confidence to work on real-time SAP implementati
                   {
                   title:'material 1',
                   link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
-                  },
-                {
-                title:'material 2',
-                link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
-              }],
+                  }
+               ],
               joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
             },
               {  
@@ -1834,11 +1797,8 @@ With GTX InfoTech, you gain the confidence to work on real-time SAP implementati
                   {
                   title:'material 1',
                   link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
-                  },
-                {
-                title:'material 2',
-                link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
-              }],
+                  }
+              ],
               joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
               },
               {  
@@ -1857,11 +1817,8 @@ With GTX InfoTech, you gain the confidence to work on real-time SAP implementati
                   {
                   title:'material 1',
                   link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
-                  },
-                {
-                title:'material 2',
-                link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
-              }],
+                  }
+               ],
               joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
               },
               {  
@@ -1987,11 +1944,8 @@ With GTX InfoTech, you gain the confidence to work on real-time SAP implementati
                   {
                   title:'material 1',
                   link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
-                  },
-                {
-                title:'material 2',
-                link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
-              }],
+                  }
+               ],
               joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
               },  
         ]

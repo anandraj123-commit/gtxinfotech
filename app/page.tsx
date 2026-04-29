@@ -21,8 +21,8 @@ import WhyChooseGTX from '@/components/WhyChooseGTX';
 export default function Home() {
   return (
     <main>
-      <Hero />
       <Navbar/>
+      <Hero />
       {/* <AboutSection /> */}
       <StorySection/>
       <SuccessSection/>
@@ -31,9 +31,10 @@ export default function Home() {
       <ServicesSection/>
       <TrainingSection/>
       <OfferSection/>
-      <TeamSection/>
-      <CTASection/>
+      {/* <TeamSection/> */}
+      
       <TestimonialSection/> 
+      <CTASection/>
       <StatsSection/>
       {/* <LatestPost/> */}
       <WhyChooseGTX/>

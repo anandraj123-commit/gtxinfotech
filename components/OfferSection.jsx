@@ -12,35 +12,30 @@ import {
 const services = [
   {
     icon: FaSyncAlt,
-    title: "Method Development",
-    desc: "Strategic method development for business excellence and progress.",
+    title: "Process Optimization",
+    desc: "We analyze your existing workflows and identify inefficiencies, then design streamlined, standardized processes that boost productivity and reduce operational friction.",
   },
   {
     icon: FaCheckCircle,
-    title: "Quality Assurance",
-    desc: "Quality excellence for optimal and sustainable business operation.",
+    title: "Tailored SAP Implementation & Support",
+    desc: "Our team customizes SAP solutions to fit your specific business requirements, ensuring seamless integration and maximum value from your technology investment.",
   },
   {
     icon: FaUserTie,
-    title: "Human Resources",
-    desc: "Optimize human resources for sustainable business growth.",
+    title: "Quality Assurance & Continuous Improvement",
+    desc: "Through rigorous testing and ongoing monitoring, we maintain high standards for all solutions, ensuring reliability, accuracy, and performance over time.",
   },
 
   // ✅ NEW ITEMS
   {
     icon: FaSearch,
-    title: "Policy Compliance",
-    desc: "Strategic policy compliance for seamless business operations.",
+    title: "Workforce Enablement",
+    desc: "We empower your HR and operations teams by integrating SAP and digital tools that simplify employee management, improve communication, and enhance overall productivity.",
   },
   {
     icon: FaChartBar,
-    title: "Business Strategies",
-    desc: "Unlocking growth potential using dynamic business strategies.",
-  },
-  {
-    icon: FaBullseye,
-    title: "Management System",
-    desc: "Maximize productivity with our advanced management structure.",
+    title: "Scalable Digital Transformation",
+    desc: "We develop flexible, future-ready IT frameworks that grow with your business, enabling you to adapt quickly to market changes and new opportunities.",
   },
 ];
 
@@ -58,13 +53,12 @@ export default function OfferSection() {
       <div className="max-w-6xl mx-auto px-6">
         
         {/* Heading */}
-        <div className="mb-16 max-w-xl">
+        <div className="mb-16  w-full">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            What We Can Offer You
+          What We Bring to Your Business
           </h2>
           <p className="text-gray-600 leading-relaxed">
-            Optimize your journey with our consulting services, delivering
-            personalized solutions for success.
+          At GTX InfoTech, we provide dependable, business-focused solutions designed to simplify your operations and support sustainable growth. Our blend of SAP expertise and IT innovation ensures your business runs efficiently and adapts to changing needs. 
           </p>
         </div>
 

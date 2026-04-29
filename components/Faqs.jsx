@@ -108,9 +108,15 @@ export default function FAQ() {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-md font-medium">
-              Contact Via Form
-            </button>
+          <button className="relative overflow-hidden bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-sm tracking-widest uppercase transition group">
+  
+  <span className="relative z-10 group-hover:text-black transition duration-300">
+    Contact Us
+  </span>
+
+  <span className="absolute inset-0 bg-[var(--color-teal-400)] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
+
+</button>
 
             {/* <button className="border border-orange-500 text-orange-500 hover:bg-orange-50 px-6 py-3 rounded-md font-medium">
               Contact Nearest Office

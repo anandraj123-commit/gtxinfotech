@@ -23,9 +23,15 @@ export default function StorySection() {
 </p>
          
 <Link href="/about">
-      <button className="bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded-md text-white font-semibold">
-        Learn More
-      </button>
+  <button className="relative overflow-hidden bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded-md text-white font-semibold group">
+    
+    <span className="relative z-10 group-hover:text-black transition duration-300">
+      Learn More
+    </span>
+
+    <span className="absolute inset-0 bg-[var(--color-teal-400)] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
+
+  </button>
 </Link>
         </div>
 

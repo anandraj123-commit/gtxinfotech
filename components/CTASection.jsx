@@ -20,9 +20,15 @@ export default function CTASection() {
           commodi nostrum.
         </p>
 
-        <button className="bg-teal-400 hover:bg-teal-500 text-white px-8 py-3 text-sm tracking-widest uppercase transition">
-          Start A Project With Us
-        </button>
+        <button className="relative overflow-hidden bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-sm tracking-widest uppercase transition group">
+  
+  <span className="relative z-10 group-hover:text-black transition duration-300">
+    Start A Project With Us
+  </span>
+
+  <span className="absolute inset-0 bg-[var(--color-teal-400)] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
+
+</button>
       </div>
     </section>
   );

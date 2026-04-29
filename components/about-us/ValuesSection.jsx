@@ -43,9 +43,9 @@ export default function ValuesSection() {
             </p>
           </div>
 
-          <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold">
+          {/* <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold">
             Collaborate with Us
-          </button>
+          </button> */}
         </div>
 
         {/* VALUES GRID */}
@@ -56,10 +56,10 @@ export default function ValuesSection() {
 
               {/* ICON */}
               <div className="flex justify-center">
-                <div className="w-20 h-20 rounded-full border-2 border-orange-500 flex items-center justify-center">
-                  <div className="w-8 h-8 bg-orange-400 rounded-sm"></div>
-                </div>
-              </div>
+  <div className="w-20 h-20 rounded-full border-2 border-teal-400 flex items-center justify-center">
+    <div className="w-8 h-8 bg-orange-400 rounded-sm"></div>
+  </div>
+</div>
 
               <h3 className="text-xl font-semibold text-gray-900">
                 {item.title}
@@ -75,11 +75,11 @@ export default function ValuesSection() {
           {values.slice(3).map((item, i) => (
             <div key={i} className="space-y-4">
 
-              <div className="flex justify-center">
-                <div className="w-20 h-20 rounded-full border-2 border-[#0f1c4d] flex items-center justify-center">
-                  <div className="w-8 h-8 bg-orange-400 rounded-sm"></div>
-                </div>
-              </div>
+<div className="flex justify-center">
+  <div className="w-20 h-20 rounded-full border-2 border-teal-400 flex items-center justify-center">
+    <div className="w-8 h-8 bg-orange-400 rounded-sm"></div>
+  </div>
+</div>
 
               <h3 className="text-xl font-semibold text-gray-900">
                 {item.title}

@@ -53,9 +53,16 @@ export default function SuccessSection() {
             </p>
           </div>
 
-          <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-md font-semibold shadow-md mx-auto">
-            Book an Appointment
-          </button>
+          {/* IMAGE REPLACING BUTTON */}
+          <div className="w-full md:w-[350px] h-[150px] relative">
+            <Image
+              src="/images/work.jpg" // change if needed
+              alt="Book Appointment"
+              fill
+              className="object-cover rounded-md shadow-md"
+            />
+          </div>
+
         </div>
 
         {/* MAIN GRID */}
@@ -110,11 +117,7 @@ export default function SuccessSection() {
                     </div>
 
                     <div className="w-14 h-14 flex items-center justify-center border-2 border-slate-800 rounded-full relative z-10 bg-white">
-                      {item.title.includes("Initiate") ? (
-                        <Icon className="text-slate-800 rotate-[-45deg]" />
-                      ) : (
-                        <Icon className="text-slate-800" />
-                      )}
+                      <Icon className="text-slate-800" />
                     </div>
                   </div>
 

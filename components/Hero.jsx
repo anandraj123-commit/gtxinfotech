@@ -21,9 +21,15 @@ export default function Hero() {
           We provide perfect IT solutions & technology.During this time, we’ve built a reputation for excellent clients satisfaction as evidenced by our
           </p>
   
-          <button className="border border-white px-6 py-3 hover:bg-white hover:text-black transition duration-300">
-            Explore Us
-          </button>
+          <button className="relative overflow-hidden border border-white px-6 py-3 text-white group">
+  
+  <span className="relative z-10 group-hover:text-black transition duration-300">
+    Explore Us
+  </span>
+
+  <span className="absolute inset-0 bg-[var(--color-teal-400)] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
+
+</button>
   
         </div>
       </section>
