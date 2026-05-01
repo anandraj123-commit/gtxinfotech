@@ -55,13 +55,23 @@ export default function ContactSection() {
             </p>
 
             <div className="flex gap-4">
-              <button className="bg-orange-500 px-6 py-3 rounded-lg font-semibold hover:bg-orange-600">
-                Collaborate with Us
-              </button>
+            <button className="relative overflow-hidden mt-8 bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded-lg font-semibold text-white shadow-lg group">
+  
+  <span className="relative z-10 group-hover:text-black transition duration-300">
+    Collaborate with Us
+  </span>
 
-              <button className="border border-orange-500 text-orange-500 px-6 py-3 rounded-lg hover:bg-orange-500 hover:text-white">
-                Learn More
-              </button>
+  <span className="absolute inset-0 bg-[var(--color-teal-400)] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
+</button>
+
+<button className="relative overflow-hidden mt-8 bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded-lg font-semibold text-white shadow-lg group">
+  
+  <span className="relative z-10 group-hover:text-black transition duration-300">
+    Learn More
+  </span>
+
+  <span className="absolute inset-0 bg-[var(--color-teal-400)] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
+</button>
             </div>
           </div>
 

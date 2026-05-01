@@ -85,7 +85,6 @@ export default function TeamSection() {
   </span>
 
   <span className="absolute inset-0 bg-[var(--color-teal-400)] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
-
 </button>
 
         {/* <button className="border border-orange-500 px-8 py-3 rounded-lg text-orange-500 font-semibold hover:bg-orange-500 hover:text-white transition">

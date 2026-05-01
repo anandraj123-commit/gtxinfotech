@@ -17,19 +17,21 @@ export default function TrainingCategory({ category }) {
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden p-4 md:p-8">
 
           {/* TABS */}
-          <div className="flex justify-center gap-2 md:gap-4 bg-gray-100 p-2 rounded-xl mb-8">
+          <div className="flex justify-center gap-2 md:gap-4 bg-[var(--color-orange-500)] p-2 rounded-xl mb-8">
             {tabs.map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
                 className={`relative px-4 md:px-6 py-2 text-sm md:text-base font-medium rounded-lg transition
-                  ${activeTab === tab ? "text-white" : "text-gray-600 hover:text-black"}
+                  ${activeTab === tab 
+                    ? "text-white bg-[var(--color-teal-400)]" 
+                    : "text-black bg-white"}
                 `}
               >
                 {activeTab === tab && (
                   <motion.div
                     layoutId="activeTab"
-                    className="absolute inset-0 bg-orange-500 rounded-lg"
+                    className="absolute inset-0 bg-[var(--color-teal-400)] rounded-lg"
                     transition={{ type: "spring", stiffness: 300, damping: 25 }}
                   />
                 )}
@@ -46,7 +48,6 @@ export default function TrainingCategory({ category }) {
               animate={{ opacity: 1, y: 0 }}
               className="grid md:grid-cols-2 gap-12 items-stretch"
             >
-              {/* IMAGE */}
               <div className="relative h-full flex">
                 <div className="absolute left-[-20px] top-10 flex flex-col gap-3 z-20">
                   {Array.from({ length: 8 }).map((_, i) => (
@@ -54,20 +55,44 @@ export default function TrainingCategory({ category }) {
                   ))}
                 </div>
 
-                <div className="relative rounded-3xl overflow-hidden z-0 w-full h-full">
-                  <Image
-                    src={category.image || "/images/services/handshake.jpg"}
-                    alt={category.title || "Training Image"}
-                    width={600}
-                    height={500}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+                <div className="relative rounded-3xl overflow-hidden z-0 w-full h-full bg-[var(--color-orange-500)] p-8 flex flex-col justify-center">
+  
+  <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
+    Key Benefits of Training
+  </h3>
+
+  <ul className="space-y-4">
+    <li className="flex items-start gap-3 text-white">
+      <span className="text-xl">✔</span>
+      <p>Gain industry-relevant skills with hands-on practical training</p>
+    </li>
+
+    <li className="flex items-start gap-3 text-white">
+      <span className="text-xl">✔</span>
+      <p>Learn from experienced professionals and certified trainers</p>
+    </li>
+
+    <li className="flex items-start gap-3 text-white">
+      <span className="text-xl">✔</span>
+      <p>Work on real-world projects to build strong portfolio</p>
+    </li>
+
+    <li className="flex items-start gap-3 text-white">
+      <span className="text-xl">✔</span>
+      <p>Get placement assistance and career guidance support</p>
+    </li>
+
+    <li className="flex items-start gap-3 text-white">
+      <span className="text-xl">✔</span>
+      <p>Receive certification to boost your career opportunities</p>
+    </li>
+  </ul>
+
+</div>
 
                 <div className="absolute inset-0 border-2 border-orange-500 rounded-3xl translate-x-6 translate-y-6 z-10 pointer-events-none"></div>
               </div>
 
-              {/* CONTENT */}
               <div className="text-black flex flex-col justify-between max-h-[500px] overflow-y-auto pr-2">
                 <div>
                   <div className="flex items-center gap-4 mb-6">
@@ -89,7 +114,6 @@ export default function TrainingCategory({ category }) {
                   />
                 </div>
 
-                {/* FEATURES */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-10 mb-6">
                   {(category.items || []).map((item, i) => (
                     <div key={i} className="flex items-center gap-3">
@@ -99,13 +123,12 @@ export default function TrainingCategory({ category }) {
                   ))}
                 </div>
 
-                {/* JOIN BUTTON */}
                 {category?.joinLink && (
                   <a
                     href={category.joinLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="relative overflow-hidden bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg text-lg font-semibold text-white transition w-fit group"
+                    className="relative overflow-hidden bg-[var(--color-teal-400)] px-6 py-3 rounded-lg text-lg font-semibold text-white transition w-fit group"
                   >
                     <span className="relative z-20 group-hover:text-black transition duration-300">
                       Join Us
@@ -140,7 +163,7 @@ export default function TrainingCategory({ category }) {
                       href={item.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="relative overflow-hidden bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-lg text-sm font-semibold transition group"
+                      className="relative overflow-hidden bg-[var(--color-teal-400)] text-white px-5 py-2 rounded-lg text-sm font-semibold transition group"
                     >
                       <span className="relative z-20 group-hover:text-black transition duration-300">
                         Download
@@ -180,7 +203,7 @@ export default function TrainingCategory({ category }) {
                   href={category.joinLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative overflow-hidden inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg text-lg font-semibold transition group"
+                  className="relative overflow-hidden inline-block bg-[var(--color-teal-400)] text-white px-8 py-3 rounded-lg text-lg font-semibold transition group"
                 >
                   <span className="relative z-20 group-hover:text-black transition duration-300">
                     Apply Now

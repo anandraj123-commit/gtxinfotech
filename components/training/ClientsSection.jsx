@@ -10,7 +10,7 @@ export default function ClientsSection() {
         {/* Left Text */}
         <div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-            Successful Clients With Our Help
+          Studer Testimonial
           </h2>
 
           <p className="mt-6 text-gray-600 text-lg leading-relaxed max-w-xl">
