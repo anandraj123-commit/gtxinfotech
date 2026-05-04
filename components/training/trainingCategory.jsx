@@ -46,73 +46,77 @@ export default function TrainingCategory({ category }) {
               key="overview"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              className="grid md:grid-cols-2 gap-12 items-stretch"
+              className="grid md:grid-cols-2 gap-12"
             >
-              <div className="relative h-full flex">
+              {/* LEFT BOX */}
+              <div className="relative flex">
                 <div className="absolute left-[-20px] top-10 flex flex-col gap-3 z-20">
                   {Array.from({ length: 8 }).map((_, i) => (
                     <span key={i} className="w-12 h-[2px] bg-orange-500 rotate-[-25deg]"></span>
                   ))}
                 </div>
 
-                <div className="relative rounded-3xl overflow-hidden z-0 w-full h-full bg-[var(--color-orange-500)] p-8 flex flex-col justify-center">
-  
-  <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
-    Key Benefits of Training
-  </h3>
+                <div className="relative rounded-3xl overflow-hidden z-0 w-full bg-white p-8 flex flex-col justify-center">
+                  <h3 className="text-2xl md:text-3xl font-bold text-black mb-6">
+                    Key Benefits of Training
+                  </h3>
 
-  <ul className="space-y-4">
-    <li className="flex items-start gap-3 text-white">
-      <span className="text-xl">✔</span>
-      <p>Gain industry-relevant skills with hands-on practical training</p>
-    </li>
-
-    <li className="flex items-start gap-3 text-white">
-      <span className="text-xl">✔</span>
-      <p>Learn from experienced professionals and certified trainers</p>
-    </li>
-
-    <li className="flex items-start gap-3 text-white">
-      <span className="text-xl">✔</span>
-      <p>Work on real-world projects to build strong portfolio</p>
-    </li>
-
-    <li className="flex items-start gap-3 text-white">
-      <span className="text-xl">✔</span>
-      <p>Get placement assistance and career guidance support</p>
-    </li>
-
-    <li className="flex items-start gap-3 text-white">
-      <span className="text-xl">✔</span>
-      <p>Receive certification to boost your career opportunities</p>
-    </li>
-  </ul>
-
-</div>
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3 text-gray-700">
+                      <span className="text-xl">✔</span>
+                      <p>Gain industry-relevant skills with hands-on practical training</p>
+                    </li>
+                    <li className="flex items-start gap-3 text-gray-700">
+                      <span className="text-xl">✔</span>
+                      <p>Learn from experienced professionals and certified trainers</p>
+                    </li>
+                    <li className="flex items-start gap-3 text-gray-700">
+                      <span className="text-xl">✔</span>
+                      <p>Work on real-world projects to build strong portfolio</p>
+                    </li>
+                    <li className="flex items-start gap-3 text-gray-700">
+                      <span className="text-xl">✔</span>
+                      <p>Get placement assistance and career guidance support</p>
+                    </li>
+                    <li className="flex items-start gap-3 text-gray-700">
+                      <span className="text-xl">✔</span>
+                      <p>Receive certification to boost your career opportunities</p>
+                    </li>
+                  </ul>
+                </div>
 
                 <div className="absolute inset-0 border-2 border-orange-500 rounded-3xl translate-x-6 translate-y-6 z-10 pointer-events-none"></div>
               </div>
 
-              <div className="text-black flex flex-col justify-between max-h-[500px] overflow-y-auto pr-2">
-                <div>
-                  <div className="flex items-center gap-4 mb-6">
-                    <h2 className="text-3xl md:text-4xl font-bold">
-                      {category.title}
-                    </h2>
-                    <div className="w-10 h-10 rounded-full border border-gray-400 flex items-center justify-center">
-                      ✓
-                    </div>
+              {/* RIGHT CONTENT (LIMITED HEIGHT AREA) */}
+              <div className="text-black pr-2">
+                <div className="flex items-center gap-4 mb-6">
+                  <h2 className="text-3xl md:text-4xl font-bold">
+                    {category.title}
+                  </h2>
+                  <div className="w-10 h-10 rounded-full border border-gray-400 flex items-center justify-center">
+                    ✓
                   </div>
-
-                  <div
-                    className="text-gray-600 text-lg leading-relaxed mb-8 [&_*]:text-inherit [&_h2]:text-xl [&_h2]:font-semibold [&_h3]:text-lg [&_h3]:font-medium [&_ul]:list-disc [&_ul]:pl-5 [&_li]:mb-2"
-                    dangerouslySetInnerHTML={{
-                      __html:
-                        category.description ||
-                        "Our training programs are designed to provide practical knowledge and industry-relevant skills.",
-                    }}
-                  />
                 </div>
+
+                <div
+                  className="text-gray-600 text-lg leading-relaxed mb-4 line-clamp-[12]"
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      category.description ||
+                      "Our training programs are designed to provide practical knowledge and industry-relevant skills.",
+                  }}
+                />
+              </div>
+
+              {/* BELOW CONTENT (FULL WIDTH) */}
+              <div className="md:col-span-2 text-black pr-2">
+                <div
+                  className="text-gray-600 text-lg leading-relaxed mb-8"
+                  dangerouslySetInnerHTML={{
+                    __html: category.description,
+                  }}
+                />
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-10 mb-6">
                   {(category.items || []).map((item, i) => (
@@ -124,18 +128,21 @@ export default function TrainingCategory({ category }) {
                 </div>
 
                 {category?.joinLink && (
-                  <a
-                    href={category.joinLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="relative overflow-hidden bg-[var(--color-teal-400)] px-6 py-3 rounded-lg text-lg font-semibold text-white transition w-fit group"
-                  >
-                    <span className="relative z-20 group-hover:text-black transition duration-300">
-                      Join Us
-                    </span>
-                    <span className="absolute inset-0 bg-[var(--color-teal-400)] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-10"></span>
-                  </a>
-                )}
+  <a
+    href={category.joinLink}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="relative overflow-hidden bg-[var(--color-orange-500)] px-6 py-3 rounded-lg text-lg font-semibold text-white inline-block group"
+  >
+    {/* Hover Background (Teal) */}
+    <span className="absolute inset-0 bg-[var(--color-teal-400)] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-0"></span>
+
+    {/* Text */}
+    <span className="relative z-10 group-hover:text-black transition duration-300">
+      Join Us
+    </span>
+  </a>
+)}
               </div>
             </motion.div>
           )}

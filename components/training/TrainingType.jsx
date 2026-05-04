@@ -29,8 +29,8 @@ export default function TrainingType({ training }) {
             </div>
           </div>
 
-          {/* 🔥 SCROLLABLE CONTENT */}
-          <div className="flex-1 overflow-y-auto pr-3 max-h-[500px]">
+          {/* CONTENT (NO SCROLL LIMIT) */}
+          <div className="flex-1 pr-3">
             
             {/* Description */}
             <div
@@ -62,16 +62,14 @@ export default function TrainingType({ training }) {
 
           </div>
 
-          {/* Button (Fixed) */}
-          <button className="relative overflow-hidden bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg text-lg font-semibold transition mt-4 group">
-  
-  <span className="relative z-10 group-hover:text-black transition duration-300">
-    Join Us
-  </span>
+          {/* Button */}
+          <button className="relative overflow-hidden bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg text-lg font-semibold transition mt-6 group">
+            <span className="relative z-10 group-hover:text-black transition duration-300">
+              Join Us
+            </span>
 
-  <span className="absolute inset-0 bg-[var(--color-teal-400)] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
-
-</button>
+            <span className="absolute inset-0 bg-[var(--color-teal-400)] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
+          </button>
         </motion.div>
 
         {/* RIGHT IMAGE */}

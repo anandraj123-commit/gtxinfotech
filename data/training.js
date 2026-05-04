@@ -128,7 +128,7 @@ In real-world scenarios, SAP SD interacts with multiple modules:
               link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
               }
           ],
-          joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
+          joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSeZ6O83NqFg-StFFXl0agqfdicvnjOqz-Zfu5b8Y0sGis4slQ/viewform'
           },
           {  
             id:2,
@@ -260,7 +260,7 @@ In real-world scenarios, SAP SD interacts with multiple modules:
               link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
               }
            ],
-          joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
+          joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSeZ6O83NqFg-StFFXl0agqfdicvnjOqz-Zfu5b8Y0sGis4slQ/viewform'
           },
           {  
             id:3,
@@ -404,7 +404,7 @@ In real-world scenarios, SAP SD interacts with multiple modules:
               link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
               }
            ],
-          joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
+          joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSeZ6O83NqFg-StFFXl0agqfdicvnjOqz-Zfu5b8Y0sGis4slQ/viewform'
           },
           {  
             id:4,
@@ -540,7 +540,7 @@ In real-world scenarios, SAP SD interacts with multiple modules:
               link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
               }
           ],
-          joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
+          joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSeZ6O83NqFg-StFFXl0agqfdicvnjOqz-Zfu5b8Y0sGis4slQ/viewform'
           },
           {  
             id:5,
@@ -675,7 +675,7 @@ With GTX InfoTech, you gain the confidence to work on real-time SAP implementati
               link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
               }
           ],
-          joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
+          joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSeZ6O83NqFg-StFFXl0agqfdicvnjOqz-Zfu5b8Y0sGis4slQ/viewform'
           },
           {  
             id:6,
@@ -809,7 +809,8 @@ With GTX InfoTech, you gain the confidence to work on real-time SAP implementati
               title:'material 1',
               link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
               }
-          ]
+          ],
+           joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSeZ6O83NqFg-StFFXl0agqfdicvnjOqz-Zfu5b8Y0sGis4slQ/viewform'
           },
           {  
             id:7,
@@ -945,7 +946,7 @@ With GTX InfoTech, you gain the confidence to work on real-time SAP implementati
               link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
               }
            ],
-          joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
+          joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSeZ6O83NqFg-StFFXl0agqfdicvnjOqz-Zfu5b8Y0sGis4slQ/viewform'
           },
           {  
             id:8,
@@ -1081,7 +1082,7 @@ With GTX InfoTech, you gain the confidence to work on real-time SAP implementati
               link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
               }
            ],
-          joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
+          joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSeZ6O83NqFg-StFFXl0agqfdicvnjOqz-Zfu5b8Y0sGis4slQ/viewform'
           },
           {  
             id:9,
@@ -1217,7 +1218,7 @@ With GTX InfoTech, you gain the confidence to work on real-time SAP implementati
               link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
               }
            ],
-          joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
+           joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSeZ6O83NqFg-StFFXl0agqfdicvnjOqz-Zfu5b8Y0sGis4slQ/viewform'
           },
           {  
             id:10,
@@ -1352,7 +1353,7 @@ With GTX InfoTech, you gain the confidence to work on real-time SAP implementati
               link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
               }
           ],
-          joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
+          joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSeZ6O83NqFg-StFFXl0agqfdicvnjOqz-Zfu5b8Y0sGis4slQ/viewform'
           }
     ]
     },
@@ -1548,7 +1549,7 @@ With GTX InfoTech, you gain the confidence to work on real-time SAP implementati
                   link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
                   }
               ],
-              joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
+              joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSeZ6O83NqFg-StFFXl0agqfdicvnjOqz-Zfu5b8Y0sGis4slQ/viewform'
               },
               {  
                 id:2,
@@ -1676,7 +1677,7 @@ With GTX InfoTech, you gain the confidence to work on real-time SAP implementati
                   link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
                   }
                ],
-              joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
+           joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSeZ6O83NqFg-StFFXl0agqfdicvnjOqz-Zfu5b8Y0sGis4slQ/viewform'
             },
               {  
                 id:3,
@@ -1799,7 +1800,7 @@ With GTX InfoTech, you gain the confidence to work on real-time SAP implementati
                   link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
                   }
               ],
-              joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
+              joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSeZ6O83NqFg-StFFXl0agqfdicvnjOqz-Zfu5b8Y0sGis4slQ/viewform'
               },
               {  
                 id:4,
@@ -1819,7 +1820,7 @@ With GTX InfoTech, you gain the confidence to work on real-time SAP implementati
                   link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
                   }
                ],
-              joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
+               joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSeZ6O83NqFg-StFFXl0agqfdicvnjOqz-Zfu5b8Y0sGis4slQ/viewform'
               },
               {  
                 id:5,
@@ -1946,7 +1947,7 @@ With GTX InfoTech, you gain the confidence to work on real-time SAP implementati
                   link:'https://drive.google.com/file/d/1fNAjngz3Tm__MVdKuVSrr_ZWh7YaC9Hc/view?usp=drive_link'
                   }
                ],
-              joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSfdCQjOgpHbebR8bXATNeIeeBU1A3LNu7sDZ9JYZJd_7HdBag/viewform?usp=publish-editor'
+               joinLink:'https://docs.google.com/forms/d/e/1FAIpQLSeZ6O83NqFg-StFFXl0agqfdicvnjOqz-Zfu5b8Y0sGis4slQ/viewform'
               },  
         ]
     }

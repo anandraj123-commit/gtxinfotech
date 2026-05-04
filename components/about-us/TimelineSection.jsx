@@ -21,34 +21,41 @@ export default function TimelineSection() {
             Our Achievements
           </h1>
 
+          <p className="text-gray-300 leading-relaxed max-w-xl">
+            Our milestones at GTX InfoTech showcase our unwavering commitment to excellence, client-focused results, and continual advancement. We are driven by a passion to deliver meaningful SAP and IT solutions.
+          </p>
+
           {/* STATS */}
+          <br></br>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center shadow-lg border border-white/10 hover:scale-105 transition">
+            <h2 className="text-3xl font-bold text-blue-400">500+</h2>
               <p className="text-sm text-gray-300 mt-2">Students Trained</p>
-              <h2 className="text-3xl font-bold text-blue-400">500+</h2>
+              
             </div>
 
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center shadow-lg border border-white/10 hover:scale-105 transition">
+            <h2 className="text-3xl font-bold text-blue-400">100+</h2>
             <p className="text-sm text-gray-300 mt-2">Enterprise Clients</p>
-              <h2 className="text-3xl font-bold text-blue-400">100+</h2>
+              
             </div>
 
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center shadow-lg border border-white/10 hover:scale-105 transition">
+            <h2 className="text-3xl font-bold text-blue-400">50+</h2>
             <p className="text-sm text-gray-300 mt-2">Projects Delivered</p>
-              <h2 className="text-3xl font-bold text-blue-400">50+</h2>
+              
             </div>
 
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center shadow-lg border border-white/10 hover:scale-105 transition">
+            <h2 className="text-3xl font-bold text-blue-400">10+</h2>
             <p className="text-sm text-gray-300 mt-2">Years of Experience</p>
-              <h2 className="text-3xl font-bold text-blue-400">10+</h2>
+              
             </div>
 
           </div>
 
           {/* TEXT */}
-          <p className="text-gray-300 leading-relaxed max-w-xl">
-            Our milestones at GTX InfoTech showcase our unwavering commitment to excellence, client-focused results, and continual advancement. We are driven by a passion to deliver meaningful SAP and IT solutions.
-          </p>
+        
         </div>
 
         {/* RIGHT IMAGE */}
