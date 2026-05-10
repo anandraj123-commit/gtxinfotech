@@ -9,7 +9,7 @@ export const services = [
             id:1,
             icon:"/images/services/icon.jpg",
             image:'/images/services/service.jpg',
-            title:'SAP ECC & S/4 HANA Rollout',
+            title:'SAP Rollout',
             description:'Unlock excellence with our Quality Assurance consulting firm. We specialize in meticulously ensuring and elevating the quality of your products or services. Our dedicated team employs advanced methodologies according to your needs. Partner with us for comprehensive quality assurance solutions that fortify your brand, build customer trust, and drive sustained success. What you will get:',
             items:['Efficiency enhancement','Adaptive & sustainability','Productivity boost','Cost reduction']
           },
@@ -17,7 +17,7 @@ export const services = [
             id:2,
             icon:"/images/services/icon.jpg",
             image:'/images/services/service.jpg',
-            title:'SAP Custom Development',
+            title:'SAP Custom solutions',
             description:'Unlock excellence with our Quality Assurance consulting firm. We specialize in meticulously ensuring and elevating the quality of your products or services. Our dedicated team employs advanced methodologies according to your needs. Partner with us for comprehensive quality assurance solutions that fortify your brand, build customer trust, and drive sustained success. What you will get:',
             items:['Efficiency enhancement','Adaptive & sustainability','Productivity boost','Cost reduction']
           },
@@ -25,7 +25,7 @@ export const services = [
             id:3,
             icon:"/images/services/icon.jpg",
             image:'/images/services/service.jpg',
-            title:'SAP Support & Maintenance',
+            title:'SAP Support',
             description:'Unlock excellence with our Quality Assurance consulting firm. We specialize in meticulously ensuring and elevating the quality of your products or services. Our dedicated team employs advanced methodologies according to your needs. Partner with us for comprehensive quality assurance solutions that fortify your brand, build customer trust, and drive sustained success. What you will get:',
             items:['Efficiency enhancement','Adaptive & sustainability','Productivity boost','Cost reduction']
           },
@@ -41,7 +41,7 @@ export const services = [
             id:5,
             icon:"/images/services/icon.jpg",
             image:'/images/services/service.jpg',
-            title:'SAP Data Migration',
+            title:'SAP Consulting',
             description:'Unlock excellence with our Quality Assurance consulting firm. We specialize in meticulously ensuring and elevating the quality of your products or services. Our dedicated team employs advanced methodologies according to your needs. Partner with us for comprehensive quality assurance solutions that fortify your brand, build customer trust, and drive sustained success. What you will get:',
             items:['Efficiency enhancement','Adaptive & sustainability','Productivity boost','Cost reduction']
           },
@@ -49,7 +49,15 @@ export const services = [
             id:6,
             icon:"/images/services/icon.jpg",
             image:'/images/services/service.jpg',
-            title:'SAP Consulting',
+            title:'SAP E-Invoice & E-way Bill',
+            description:'Unlock excellence with our Quality Assurance consulting firm. We specialize in meticulously ensuring and elevating the quality of your products or services. Our dedicated team employs advanced methodologies according to your needs. Partner with us for comprehensive quality assurance solutions that fortify your brand, build customer trust, and drive sustained success. What you will get:',
+            items:['Efficiency enhancement','Adaptive & sustainability','Productivity boost','Cost reduction']
+          },
+          {  
+            id:7,
+            icon:"/images/services/icon.jpg",
+            image:'/images/services/service.jpg',
+            title:'SAP Training',
             description:'Unlock excellence with our Quality Assurance consulting firm. We specialize in meticulously ensuring and elevating the quality of your products or services. Our dedicated team employs advanced methodologies according to your needs. Partner with us for comprehensive quality assurance solutions that fortify your brand, build customer trust, and drive sustained success. What you will get:',
             items:['Efficiency enhancement','Adaptive & sustainability','Productivity boost','Cost reduction']
           }

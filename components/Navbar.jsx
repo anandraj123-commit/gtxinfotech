@@ -134,7 +134,7 @@ export default function Navbar() {
             onMouseLeave={() => setOpenTraining(false)}
           >
             <span className="text-gray-300 hover:text-[var(--color-teal-400)] flex items-center gap-1 cursor-pointer">
-              Training Programm ▾
+              Training Programme ▾
             </span>
 
             <div

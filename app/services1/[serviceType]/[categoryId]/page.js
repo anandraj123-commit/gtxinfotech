@@ -3,6 +3,7 @@ import HeroSection from "@/components/service/heroSection";
 import ServiceType from "@/components/service/ServiceType";
 import ServiceCategory from "@/components/service/serviceCategory";
 import ClientsSection from "@/components/service/ClientsSection";
+import TestimonialSection from "@/components/TestimonialSection";
 import Navbar from "@/components/Navbar";
 
 export default async function Service({ params }) {
@@ -42,7 +43,8 @@ export default async function Service({ params }) {
 
       <ServiceCategory category={selectedCategory} />
 
-      <ClientsSection />
+      {/* <ClientsSection /> */}
+      <TestimonialSection />
     </>
   );
 }

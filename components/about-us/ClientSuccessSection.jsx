@@ -36,15 +36,15 @@ export default function ClientSuccessSection() {
         {/* LEFT */}
         <div className="text-white">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-          Our Commitment <br />to Client Success
+          Welcome to GTX InfoTech
           </h1>
 
-          <p className="mt-6 text-gray-300 text-lg leading-relaxed max-w-xl">
-          At GTX InfoTech, we measure our achievements by the success stories of the clients we serve. Each project we undertake—whether it’s designing a new solution, implementing a system, or delivering training—is focused on generating tangible value and impactful results.
+          <p className="mt-6 text-gray-300 text-lg leading-relaxed max-w-xl text-justify">
+          Transform Your Business with Tailored SAP Solutions:
           </p>
 
-          <p className="mt-6 text-gray-300 text-lg leading-relaxed max-w-xl">
-          We invest time in understanding the distinct challenges, objectives, and workflows of every client. This personalized approach allows us to develop customized SAP solutions and IT services including SAP Training that address immediate needs while laying a foundation for sustainable growth and scalability in the future.
+          <p className="mt-6 text-gray-300 text-lg leading-relaxed max-w-xl text-justify">
+          We focus on crafting scalable and efficient systems that drive process improvements, increase transparency, and boost growth. From strategy formulation to ongoing support, our team is committed to ensuring a smooth and impactful digital transformation.
           </p>
 
           <button className="relative overflow-hidden mt-8 bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded-lg font-semibold text-white shadow-lg group">

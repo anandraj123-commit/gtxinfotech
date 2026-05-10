@@ -1,7 +1,7 @@
 export const training = [
     {
     id:1,
-    type:'Training on SAP Functional Modules',
+    type:'Functional Modules',
     description: `
     <h2 class="text-black">Get Ahead in Your Career with Practical SAP Functional Skills</h2>
     

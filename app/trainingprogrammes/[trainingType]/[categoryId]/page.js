@@ -3,6 +3,7 @@ import HeroSection from "@/components/training/heroSection";
 import TrainingType from "@/components/training/TrainingType";
 import TrainingCategory from "@/components/training/trainingCategory";
 import ClientsSection from "@/components/service/ClientsSection";
+import StudentTestimonialSection from "@/components/StudentTestimonial";
 import Navbar from "@/components/Navbar";
 
 export default async function TrainingPage({ params }) {
@@ -45,7 +46,8 @@ export default async function TrainingPage({ params }) {
       <HeroSection />
       <TrainingType training={selectedTraining} />
       <TrainingCategory category={selectedCategory} />
-      <ClientsSection />
+      {/* <ClientsSection /> */}
+      <StudentTestimonialSection/>
     </>
   );
 }

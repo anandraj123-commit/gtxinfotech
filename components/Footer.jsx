@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-800 text-white relative overflow-hidden">
+    <footer className="bg-[#0f1f4b] text-white relative overflow-hidden">
       
       {/* Background world map */}
       <div className="absolute inset-0 opacity-10 bg-[url('/images/world-map.png')] bg-center bg-no-repeat bg-cover"></div>
