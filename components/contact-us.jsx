@@ -26,7 +26,7 @@ export default function ContactPage() {
 
             <div className="space-y-4 text-gray-400">
               <p>📍 Khaja Road, Bayzid, Chittagong, Bangladesh</p>
-              <p>📞 Phone: +91-9525285282</p>
+              <p>📞 Phone: +91-8797818499</p>
               {/* <p>📠 Fax: +880-31-000-000</p> */}
               <p>✉️ Email: info@gtxinfotech.com</p>
             </div>

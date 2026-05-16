@@ -74,7 +74,7 @@ export default function TopBar() {
           
           {/* PHONE */}
           <a
-            href="tel:+919525285282"
+            href="tel:+918797818499"
             className="flex items-center gap-2 group cursor-pointer"
           >
             <Phone
@@ -86,7 +86,7 @@ export default function TopBar() {
               className="transition group-hover:text-[color:var(--logo)]"
               style={{ "--logo": logoColor }}
             >
-              +91 9525285282
+              +91 8797818499
             </span>
           </a>
 

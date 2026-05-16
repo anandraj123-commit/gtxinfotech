@@ -26,6 +26,7 @@ export default function ClientSuccessSection() {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
     }, 3000);
+
     return () => clearInterval(interval);
   }, []);
 
@@ -36,33 +37,56 @@ export default function ClientSuccessSection() {
         {/* LEFT */}
         <div className="text-white">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-          Welcome to GTX InfoTech
+            Welcome to GTX InfoTech
           </h1>
 
           <p className="mt-6 text-gray-300 text-lg leading-relaxed max-w-xl text-justify">
-          Transform Your Business with Tailored SAP Solutions:
+            Transform Your Business with Tailored SAP Solutions:
           </p>
 
           <p className="mt-6 text-gray-300 text-lg leading-relaxed max-w-xl text-justify">
-          We focus on crafting scalable and efficient systems that drive process improvements, increase transparency, and boost growth. From strategy formulation to ongoing support, our team is committed to ensuring a smooth and impactful digital transformation.
+            We focus on crafting scalable and efficient systems that drive
+            process improvements, increase transparency, and boost growth.
+            From strategy formulation to ongoing support, our team is committed
+            to ensuring a smooth and impactful digital transformation.
+          </p>
+
+          {/* NEW CONTENT */}
+          <h2 className="mt-8 text-2xl md:text-3xl font-bold text-white">
+            Our Commitment to Client Success
+          </h2>
+
+          <p className="mt-4 text-gray-300 text-lg leading-relaxed max-w-xl text-justify">
+            At GTX InfoTech, we measure our achievements by the success stories
+            of the clients we serve. Each project we undertake—whether it’s
+            designing a new solution, implementing a system, or delivering
+            training—is focused on generating tangible value and impactful
+            results.
+          </p>
+
+          <p className="mt-4 text-gray-300 text-lg leading-relaxed max-w-xl text-justify">
+            We invest time in understanding the distinct challenges,
+            objectives, and workflows of every client. This personalized
+            approach allows us to develop customized SAP solutions and IT
+            services including SAP Training that address immediate needs while
+            laying a foundation for sustainable growth and scalability in the
+            future.
           </p>
 
           <button className="relative overflow-hidden mt-8 bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded-lg font-semibold text-white shadow-lg group">
-  
-  <span className="relative z-10 group-hover:text-black transition duration-300">
-    Collaborate with Us
-  </span>
+            <span className="relative z-10 group-hover:text-black transition duration-300">
+              Collaborate with Us
+            </span>
 
-  <span className="absolute inset-0 bg-[var(--color-teal-400)] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
-
-</button>
+            <span className="absolute inset-0 bg-[var(--color-teal-400)] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
+          </button>
         </div>
 
         {/* RIGHT SLIDER */}
         <div className="relative flex justify-center">
 
           {/* BORDER FRAME */}
-          <div className="absolute top-6 left-6 w-full h-full border-2 border-orange-500 rounded-2xl z-100"></div>
+          <div className="absolute top-6 left-6 w-full h-full border-2 border-orange-500 rounded-2xl z-10"></div>
 
           {/* SLIDER CARD */}
           <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl max-w-md w-full">
@@ -87,8 +111,11 @@ export default function ClientSuccessSection() {
                   <span
                     key={index}
                     onClick={() => setCurrent(index)}
-                    className={`w-2.5 h-2.5 rounded-full cursor-pointer ${current === index ? "bg-orange-500" : "bg-gray-400"
-                      }`}
+                    className={`w-2.5 h-2.5 rounded-full cursor-pointer ${
+                      current === index
+                        ? "bg-orange-500"
+                        : "bg-gray-400"
+                    }`}
                   ></span>
                 ))}
               </div>

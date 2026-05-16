@@ -73,7 +73,7 @@ export const services = [
                 id:1,
                 icon:"/images/services/icon.jpg",
                 image:'/images/services/service.jpg',
-                title:'App Development',
+                title:'CRM/ERP Solutions',
                 description:'Elevate your business potential with our Method Development. Our strategic solutions are designed to adapt to dynamic business landscapes, ensuring your organization remains agile and competitive. Partner with us for comprehensive method development that propels your success and fosters lasting growth in an ever-evolving market. Here some benefit you will get:',
                 items:['Efficiency enhancement','Adaptive & sustainability','Productivity boost','Cost reduction']
               },
@@ -81,7 +81,7 @@ export const services = [
                 id:2,
                 icon:"/images/services/icon.jpg",
                 image:'/images/services/service.jpg',
-                title:'Website Development',
+                title:'E-commerce Solutions',
                 description:'Elevate your business potential with our Method Development. Our strategic solutions are designed to adapt to dynamic business landscapes, ensuring your organization remains agile and competitive. Partner with us for comprehensive method development that propels your success and fosters lasting growth in an ever-evolving market. Here some benefit you will get:',
                 items:['Efficiency enhancement','Adaptive & sustainability','Productivity boost','Cost reduction']
               },
@@ -89,7 +89,7 @@ export const services = [
                 id:3,
                 icon:"/images/services/icon.jpg",
                 image:'/images/services/service.jpg',
-                title:'Blockchain',
+                title:'HRMS Solutions',
                 description:'Elevate your business potential with our Method Development. Our strategic solutions are designed to adapt to dynamic business landscapes, ensuring your organization remains agile and competitive. Partner with us for comprehensive method development that propels your success and fosters lasting growth in an ever-evolving market. Here some benefit you will get:',
                 items:['Efficiency enhancement','Adaptive & sustainability','Productivity boost','Cost reduction']
               },
@@ -105,7 +105,7 @@ export const services = [
                 id:5,
                 icon:"/images/services/icon.jpg",
                 image:'/images/services/service.jpg',
-                title:'E-Commerce Development',
+                title:'APP & Web Development',
                 description:'Elevate your business potential with our Method Development. Our strategic solutions are designed to adapt to dynamic business landscapes, ensuring your organization remains agile and competitive. Partner with us for comprehensive method development that propels your success and fosters lasting growth in an ever-evolving market. Here some benefit you will get:',
                 items:['Efficiency enhancement','Adaptive & sustainability','Productivity boost','Cost reduction']
               },
@@ -113,15 +113,7 @@ export const services = [
                 id:6,
                 icon:"/images/services/icon.jpg",
                 image:'/images/services/service.jpg',
-                title:'Custom HRMS',
-                description:'Elevate your business potential with our Method Development. Our strategic solutions are designed to adapt to dynamic business landscapes, ensuring your organization remains agile and competitive. Partner with us for comprehensive method development that propels your success and fosters lasting growth in an ever-evolving market. Here some benefit you will get:',
-                items:['Efficiency enhancement','Adaptive & sustainability','Productivity boost','Cost reduction']
-              },
-              {
-                id:7,
-                icon:"/images/services/icon.jpg",
-                image:'/images/services/service.jpg',
-                title:'CRM',
+                title:'Blockchain',
                 description:'Elevate your business potential with our Method Development. Our strategic solutions are designed to adapt to dynamic business landscapes, ensuring your organization remains agile and competitive. Partner with us for comprehensive method development that propels your success and fosters lasting growth in an ever-evolving market. Here some benefit you will get:',
                 items:['Efficiency enhancement','Adaptive & sustainability','Productivity boost','Cost reduction']
               }
