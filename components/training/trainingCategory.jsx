@@ -1,45 +1,54 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function TrainingCategory({ category }) {
   const [activeTab, setActiveTab] = useState("Overview");
 
+  // ✅ Only first accordion open
+  const [openIndexes, setOpenIndexes] = useState([0]);
+
   if (!category) return null;
-  
+
   const tabs = ["Overview", "Course Content", "Join Us"];
 
+  // 👉 Split accordion
+  const topItems = category.description?.slice(0, 4);
+  const bottomItems = category.description?.slice(4);
+
+  // ✅ Toggle accordion
+  const toggleAccordion = (index) => {
+    if (openIndexes.includes(index)) {
+      setOpenIndexes(openIndexes.filter((i) => i !== index));
+    } else {
+      setOpenIndexes([...openIndexes, index]);
+    }
+  };
+
   return (
-    <section className="bg-[#0f1f4b] py-20 px-6 md:px-12 lg:px-20 overflow-hidden">
+    <section className="bg-[#0f1f4b] py-20 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden p-4 md:p-8">
 
-          {/* TABS */}
-          <div className="flex justify-center gap-2 md:gap-4 bg-[var(--color-orange-500)] p-2 rounded-xl mb-8">
+          {/* 🔷 TABS */}
+          <div className="flex justify-center gap-2 md:gap-4 bg-orange-500 p-2 rounded-xl mb-8">
             {tabs.map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`relative px-4 md:px-6 py-2 text-sm md:text-base font-medium rounded-lg transition
-                  ${activeTab === tab 
-                    ? "text-white bg-[var(--color-teal-400)]" 
-                    : "text-black bg-white"}
-                `}
+                className={`px-4 md:px-6 py-2 rounded-lg transition
+                  ${activeTab === tab
+                    ? "text-white bg-teal-500"
+                    : "text-black bg-white"
+                  }`}
               >
-                {activeTab === tab && (
-                  <motion.div
-                    layoutId="activeTab"
-                    className="absolute inset-0 bg-[var(--color-teal-400)] rounded-lg"
-                    transition={{ type: "spring", stiffness: 300, damping: 25 }}
-                  />
-                )}
-                <span className="relative z-10">{tab}</span>
+                {tab}
               </button>
             ))}
           </div>
 
+          {/* ================= OVERVIEW ================= */}
           {/* ================= OVERVIEW ================= */}
           {activeTab === "Overview" && (
             <motion.div
@@ -88,67 +97,68 @@ export default function TrainingCategory({ category }) {
                 <div className="absolute inset-0 border-2 border-orange-500 rounded-3xl translate-x-6 translate-y-6 z-10 pointer-events-none"></div>
               </div>
 
-              {/* RIGHT CONTENT (LIMITED HEIGHT AREA) */}
-              <div className="text-black pr-2">
-                <div className="flex items-center gap-4 mb-6">
-                  <h2 className="text-3xl md:text-4xl font-bold">
-                    {category.title}
-                  </h2>
-                  <div className="w-10 h-10 rounded-full border border-gray-400 flex items-center justify-center">
-                    ✓
+              {/* 🟢 RIGHT INLINE ACCORDION */}
+              <div className="space-y-4 max-h-[420px] overflow-y-auto pr-2 mt-[25px]">
+                {topItems?.map((item, index) => (
+                  <div key={index} className="border rounded-lg overflow-hidden">
+
+                    <button
+                      onClick={() => toggleAccordion(index)}
+                      className="w-full p-4 bg-gray-100 flex justify-between items-center"
+                    >
+                      <span dangerouslySetInnerHTML={{ __html: item.title }} />
+                      <span className="text-xl font-bold">
+                        {openIndexes.includes(index) ? "−" : "+"}
+                      </span>
+                    </button>
+
+                    {openIndexes.includes(index) && (
+                      <div
+                        className="p-4 bg-white"
+                        dangerouslySetInnerHTML={{
+                          __html: item.description,
+                        }}
+                      />
+                    )}
                   </div>
-                </div>
-
-                <div
-                  className="text-gray-600 text-lg leading-relaxed mb-4 line-clamp-[12]"
-                  dangerouslySetInnerHTML={{
-                    __html:
-                      category.description ||
-                      "Our training programs are designed to provide practical knowledge and industry-relevant skills.",
-                  }}
-                />
+                ))}
               </div>
 
-              {/* BELOW CONTENT (FULL WIDTH) */}
-              <div className="md:col-span-2 text-black pr-2">
-                <div
-                  className="text-gray-600 text-lg leading-relaxed mb-8"
-                  dangerouslySetInnerHTML={{
-                    __html: category.description,
-                  }}
-                />
+              {/* 🔵 BELOW FULL WIDTH */}
+              <div className="md:col-span-2 space-y-4 mt-4">
+                {bottomItems?.map((item, index) => {
+                  const actualIndex = index + 3;
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-10 mb-6">
-                  {(category.items || []).map((item, i) => (
-                    <div key={i} className="flex items-center gap-3">
-                      <span className="w-4 h-4 border-2 border-orange-500 rounded-full"></span>
-                      <p className="text-gray-700">{item}</p>
+                  return (
+                    <div key={actualIndex} className="border rounded-lg overflow-hidden">
+                      <button
+                        onClick={() => toggleAccordion(actualIndex)}
+                        className="w-full p-4 bg-gray-100 flex justify-between items-center"
+                      >
+                        <span dangerouslySetInnerHTML={{ __html: item.title }} />
+                        <span className="text-xl font-bold">
+                          {openIndexes.includes(actualIndex) ? "−" : "+"}
+                        </span>
+                      </button>
+
+                      {openIndexes.includes(actualIndex) && (
+                        <div
+                          className="p-4 bg-white"
+                          dangerouslySetInnerHTML={{
+                            __html: item.description,
+                          }}
+                        />
+                      )}
                     </div>
-                  ))}
-                </div>
-
-                {category?.joinLink && (
-  <a
-    href={category.joinLink}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="relative overflow-hidden bg-[var(--color-orange-500)] px-6 py-3 rounded-lg text-lg font-semibold text-white inline-block group"
-  >
-    {/* Hover Background (Teal) */}
-    <span className="absolute inset-0 bg-[var(--color-teal-400)] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-0"></span>
-
-    {/* Text */}
-    <span className="relative z-10 group-hover:text-black transition duration-300">
-      Join Us
-    </span>
-  </a>
-)}
+                  );
+                })}
               </div>
+
             </motion.div>
           )}
 
-          {/* ================= COURSE CONTENT ================= */}
-          {activeTab === "Course Content" && (
+              {/* ================= COURSE CONTENT ================= */}
+              {activeTab === "Course Content" && (
             <motion.div
               key="course"
               initial={{ opacity: 0, y: 20 }}
