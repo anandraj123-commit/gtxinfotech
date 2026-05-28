@@ -100,7 +100,7 @@ export default function ServicesSection() {
 
                     {/* 🔥 Arrow Animation */}
                     <span className="
-                      text-lg transform transition-all duration-500
+                       transform transition-all duration-500
                       group-hover:translate-x-2 group-hover:scale-125
                     ">
                       →

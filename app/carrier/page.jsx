@@ -10,10 +10,10 @@ export default function CareerPage() {
       {/* Hero Section */}
       <section className="flex flex-col md:flex-row items-center min-h-screen">
         <div className="w-full md:w-1/2 p-10 md:p-20">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
             Build Your Career With Us
           </h1>
-          <p className="text-lg mb-6 text-gray-600">
+          <p className="mb-6 text-gray-600">
             Join our team and work on exciting projects that make a real impact.
             We believe in innovation, collaboration, and growth.
           </p>

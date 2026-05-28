@@ -16,11 +16,11 @@ export default function HeroSection() {
           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
   Enhance Your Expertise  <br />  with Career-Ready Training
 </h1>
-<p className="text-gray-300 text-lg leading-relaxed mb-8 text-justify">
+<p className="text-gray-300  leading-relaxed mb-8 text-justify">
 GTX InfoTech believes in empowering you with skills that matter. Our courses combine real-world experience, seasoned guidance, and industry-focused curriculum to accelerate your journey toward a thriving SAP career.<br></br>
 We don’t just teach concepts — we prepare you to confidently handle real SAP challenges in the workplace. 
 </p>
-<button className="relative overflow-hidden bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg text-lg font-semibold transition mt-4 group">
+<button className="relative overflow-hidden bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg  font-semibold transition mt-4 group">
   
   <span className="relative z-10 group-hover:text-black transition duration-300">
     Join Us

@@ -54,7 +54,7 @@ export default function SuccessSection() {
           </div>
 
           {/* IMAGE REPLACING BUTTON */}
-          <div className="w-full md:w-[350px] h-[150px] relative">
+          <div className="w-full md:w-[601px] h-[201px] relative">
             <Image
               src="/images/work.jpg" // change if needed
               alt="Book Appointment"

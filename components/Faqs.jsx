@@ -58,7 +58,7 @@ function FAQItemComponent({ item }) {
         onClick={() => setOpen(!open)}
         className="w-full flex justify-between items-center text-left"
       >
-        <span className="text-lg font-semibold text-gray-900">
+        <span className=" font-semibold text-gray-900">
           {item.question}
         </span>
 

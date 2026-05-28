@@ -157,7 +157,7 @@ export default function TestimonialSection() {
 
               {/* Name */}
               <h3
-                className={`font-semibold text-lg transition-all duration-500
+                className={`font-semibold  transition-all duration-500
                 ${
                   position === "center"
                     ? "text-white"

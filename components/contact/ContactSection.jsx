@@ -44,7 +44,7 @@ export default function ContactSection() {
           
           {/* LEFT CONTENT */}
           <div>
-            <h1 className="text-5xl font-bold leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Masterminds To <br /> Your Positive Goal
             </h1>
 
@@ -55,14 +55,14 @@ export default function ContactSection() {
             </p>
 
             <div className="flex gap-4">
-            <button className="relative overflow-hidden mt-8 bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded-lg font-semibold text-white shadow-lg group">
+            {/* <button className="relative overflow-hidden mt-8 bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded-lg font-semibold text-white shadow-lg group">
   
   <span className="relative z-10 group-hover:text-black transition duration-300">
     Collaborate with Us
   </span>
 
   <span className="absolute inset-0 bg-[var(--color-teal-400)] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
-</button>
+</button> */}
 
 <button className="relative overflow-hidden mt-8 bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded-lg font-semibold text-white shadow-lg group">
   

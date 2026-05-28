@@ -40,11 +40,11 @@ export default function ClientSuccessSection() {
             Welcome to GTX InfoTech
           </h1>
 
-          <p className="mt-6 text-gray-300 text-lg leading-relaxed max-w-xl text-justify">
+          <p className="mt-6 text-gray-30  leading-relaxed max-w-xl text-justify">
             Transform Your Business with Tailored SAP Solutions:
           </p>
 
-          <p className="mt-6 text-gray-300 text-lg leading-relaxed max-w-xl text-justify">
+          <p className="mt-6 text-gray-300  leading-relaxed max-w-xl text-justify">
             We focus on crafting scalable and efficient systems that drive
             process improvements, increase transparency, and boost growth.
             From strategy formulation to ongoing support, our team is committed
@@ -56,7 +56,7 @@ export default function ClientSuccessSection() {
             Our Commitment to Client Success
           </h2>
 
-          <p className="mt-4 text-gray-300 text-lg leading-relaxed max-w-xl text-justify">
+          <p className="mt-4 text-gray-300  leading-relaxed max-w-xl text-justify">
             At GTX InfoTech, we measure our achievements by the success stories
             of the clients we serve. Each project we undertake—whether it’s
             designing a new solution, implementing a system, or delivering
@@ -64,7 +64,7 @@ export default function ClientSuccessSection() {
             results.
           </p>
 
-          <p className="mt-4 text-gray-300 text-lg leading-relaxed max-w-xl text-justify">
+          <p className="mt-4 text-gray-300  leading-relaxed max-w-xl text-justify">
             We invest time in understanding the distinct challenges,
             objectives, and workflows of every client. This personalized
             approach allows us to develop customized SAP solutions and IT
@@ -73,13 +73,13 @@ export default function ClientSuccessSection() {
             future.
           </p>
 
-          <button className="relative overflow-hidden mt-8 bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded-lg font-semibold text-white shadow-lg group">
+          {/* <button className="relative overflow-hidden mt-8 bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded-lg font-semibold text-white shadow-lg group">
             <span className="relative z-10 group-hover:text-black transition duration-300">
               Collaborate with Us
             </span>
 
             <span className="absolute inset-0 bg-[var(--color-teal-400)] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
-          </button>
+          </button> */}
         </div>
 
         {/* RIGHT SLIDER */}

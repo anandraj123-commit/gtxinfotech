@@ -65,7 +65,7 @@ export default function ContactFormSection() {
             <div className="flex justify-end pt-4">
               <button
                 type="submit"
-                className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg text-lg font-medium transition"
+                className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg  font-medium transition"
               >
                 Submit Form
               </button>

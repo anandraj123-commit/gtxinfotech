@@ -26,7 +26,7 @@ const BlogCard = ({ post }) => {
         </h2>
 
         {/* Existing (kept) */}
-        <h3 className="text-gray-300 text-lg mb-3">
+        <h3 className="text-gray-300 mb-3">
           {post.shortDesc}
         </h3>
 

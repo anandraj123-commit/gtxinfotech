@@ -81,7 +81,7 @@ export default function WhyChooseGTX() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="text-gray-300 text-lg mb-14"
+          className="text-gray-300  mb-14"
         >
           Focused on Delivering Value Through SAP & IT Solutions
         </motion.p>
@@ -114,7 +114,7 @@ export default function WhyChooseGTX() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg font-semibold text-white mb-3">
+                <h3 className="font-semibold text-white mb-3">
                   {item.title}
                 </h3>
 

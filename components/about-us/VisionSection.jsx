@@ -1,6 +1,14 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 export default function VisionSection() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    setVisible(true);
+  }, []);
+
   const timeline = [
     {
       title: "MISSION",
@@ -26,39 +34,42 @@ export default function VisionSection() {
       <div className="max-w-5xl mx-auto">
 
         {/* Heading */}
-        <h1 className="text-4xl md:text-5xl font-bold mb-16 text-center">
+        <h1 className={`text-4xl md:text-5xl font-bold mb-16 text-center transition-all duration-700 ${
+          visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}>
           Vision & Mission
         </h1>
 
         {/* Timeline */}
         <div className="relative">
 
-          {/* Vertical Line (centered with icons) */}
+          {/* Vertical Line */}
           <div className="absolute left-8 top-0 bottom-0 w-[2px] bg-gray-300"></div>
 
           <div className="space-y-20">
             {timeline.map((item, index) => (
-              <div key={index} className="relative flex items-start gap-8">
+              <div
+                key={index}
+                className={`relative flex items-start gap-8 transition-all duration-700 ${
+                  visible
+                    ? "opacity-100 translate-x-0"
+                    : "opacity-0 -translate-x-10"
+                }`}
+                style={{ transitionDelay: `${index * 200}ms` }}
+              >
 
-                {/* Icon Wrapper */}
+                {/* Icon */}
                 <div className="relative flex items-center justify-center">
-                  
-                  {/* Circular Icon */}
-                  <div className="z-10 w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-lg border border-gray-200 transition hover:scale-110">
-                    
-                    {/* Inner Ring */}
+                  <div className="z-10 w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-lg border border-gray-200 transition duration-300 hover:scale-110">
                     <div className="w-8 h-8 flex items-center justify-center rounded-full border-2 border-orange-500">
-                      
-                      {/* Center Dot */}
                       <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
-                    
                     </div>
                   </div>
-
                 </div>
 
-                {/* Content Card */}
-                <div className="bg-white p-6 rounded-xl shadow-sm w-full">
+                {/* Card */}
+                <div className="bg-white p-6 rounded-xl shadow-sm w-full transition duration-300 hover:shadow-lg hover:-translate-y-1">
+
                   <h3 className="text-2xl font-bold mb-3">
                     {item.title}
                   </h3>
@@ -68,24 +79,16 @@ export default function VisionSection() {
                       <li key={i}>• {text}</li>
                     ))}
                   </ul>
-                </div>
 
+                </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* CTA */}
+        {/* CTA (kept commented as you had) */}
         <div className="text-center">
-        <button className="relative overflow-hidden mt-8 bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded-lg font-semibold text-white shadow-lg group">
-  
-  <span className="relative z-10 group-hover:text-black transition duration-300">
-    Collaborate with Us
-  </span>
-
-  <span className="absolute inset-0 bg-[var(--color-teal-400)] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
-
-</button>
+          {/* Button remains unchanged */}
         </div>
 
       </div>

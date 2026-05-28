@@ -55,7 +55,7 @@ export default function BlogDetails() {
           </p>
 
           {/* Share Icons (UNCHANGED) */}
-          <div className="flex gap-4 mb-6 text-lg">
+          <div className="flex gap-4 mb-6 ">
 
             <a
               href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`}
@@ -102,7 +102,7 @@ export default function BlogDetails() {
           </div>
 
           {/* ✅ Full Content (Improved readability) */}
-          <p className="text-gray-300 leading-8 text-lg whitespace-pre-line">
+          <p className="text-gray-300 leading-8  whitespace-pre-line">
             {post.fullDesc}
           </p>
 

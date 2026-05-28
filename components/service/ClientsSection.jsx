@@ -13,7 +13,7 @@ export default function ClientsSection() {
           Student Testimonial
           </h2>
 
-          <p className="mt-6 text-gray-600 text-lg leading-relaxed max-w-xl">
+          <p className="mt-6 text-gray-600  leading-relaxed max-w-xl">
             Spotlighting clients’ triumphs, achieved through collaboration with our consulting firm.
             Witness success through exceptional partnerships.
           </p>

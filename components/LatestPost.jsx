@@ -45,7 +45,7 @@ export default function LatestPost() {
               {/* Overlay */}
               <Link href={`/blog/${post.id}`}>
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center cursor-pointer">
-                  <span className="text-white text-lg tracking-wide">
+                  <span className="text-white  tracking-wide">
                     View Post
                   </span>
                 </div>

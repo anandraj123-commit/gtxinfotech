@@ -107,7 +107,7 @@ export default function Navbar() {
             >
               {services.map((group) => (
                 <div key={group.id}>
-                  <h2 className="text-lg font-semibold mb-4 px-3 py-1 inline-block rounded bg-orange-500 text-white">
+                  <h2 className=" font-semibold mb-4 px-3 py-1 inline-block rounded bg-orange-500 text-white">
                     {group.type}
                   </h2>
 
@@ -148,7 +148,7 @@ export default function Navbar() {
             >
               {training.map((group) => (
                 <div key={group.id}>
-                  <h2 className="text-lg font-semibold mb-4 px-3 py-1 inline-block rounded bg-orange-500 text-white">
+                  <h2 className="font-semibold mb-4 px-3 py-1 inline-block rounded bg-orange-500 text-white">
                     {group.type}
                   </h2>
 

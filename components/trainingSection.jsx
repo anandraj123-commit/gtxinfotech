@@ -83,9 +83,10 @@ export default function TrainingSection() {
     line-clamp-3 text-white
   "
   dangerouslySetInnerHTML={{
-    __html:
-      item.description ||
-      "Practical training designed to enhance your real-world skills.",
+    __html: Array.isArray(item.description)
+      ? item.description.map((d) => d.description).join("")
+      : item.description ||
+        "Practical training designed to enhance your real-world skills.",
   }}
 />
                   </div>
@@ -100,7 +101,7 @@ export default function TrainingSection() {
                     </span>
 
                     <span className="
-                      text-lg transform transition-all duration-500
+                       transform transition-all duration-500
                       group-hover:translate-x-2 group-hover:scale-110
                     ">
                       →

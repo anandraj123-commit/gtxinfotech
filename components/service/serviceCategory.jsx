@@ -62,7 +62,7 @@ export default function ServiceCategory({ category }) {
           </div>
 
           {/* Description */}
-          <p className="text-gray-300 text-lg leading-relaxed mb-8">
+          <p className="text-gray-300  leading-relaxed mb-8">
             {category.description}
           </p>
 
@@ -77,7 +77,7 @@ export default function ServiceCategory({ category }) {
           </div>
 
           {/* BUTTON */}
-          <button className="relative overflow-hidden bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded-lg text-lg font-semibold text-white group">
+          {/* <button className="relative overflow-hidden bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded-lg  font-semibold text-white group">
   
   <span className="relative z-10 group-hover:text-black transition duration-300">
     Collaborate with Us
@@ -85,7 +85,7 @@ export default function ServiceCategory({ category }) {
 
   <span className="absolute inset-0 bg-[var(--color-teal-400)] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
 
-</button>
+</button> */}
         </motion.div>
 
       </div>
