@@ -1,34 +1,127 @@
 "use client";
 
-export default function CTASection() {
-  return (
-    <section
-      className="w-full py-24 bg-cover bg-center relative"
-      style={{ backgroundImage: "url('images/ctasection.jpg')" }} // put image in /public/cta-bg.jpg
-    >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-white/80" />
+import { useState } from "react";
+import { Plus, Minus } from "lucide-react";
 
-      <div className="relative max-w-4xl mx-auto text-center px-6">
-        <h2 className="text-3xl md:text-4xl font-semibold text-gray-800 mb-6">
-          Great Design & Incredible Features
+const leftFAQs = [
+  {
+    question: "What Services Do You Offer?",
+    answer: "We offer consulting, strategy, and digital transformation services.",
+  },
+  {
+    question: "How Can Your Firm Help Improve Our Business?",
+    answer: "We analyze your processes and provide data-driven improvements.",
+  },
+  {
+    question: "What Experience Do You Have In Our Industry?",
+    answer: "We have worked across multiple industries with proven results.",
+  },
+  {
+    question: "What Is Your Approach Or Methodology?",
+    answer: "We follow a structured, agile, and collaborative approach.",
+  },
+  {
+    question: "Can You Provide References Or Case Studies?",
+    answer: "Yes, we can share case studies upon request.",
+  },
+];
+
+const rightFAQs = [
+  {
+    question: "How Do You Determine The Cost Of Services?",
+    answer: "Pricing depends on scope, complexity, and timeline.",
+  },
+  {
+    question: "What Sets Your Firm Apart From Competitors?",
+    answer: "We focus on measurable outcomes and client collaboration.",
+  },
+  {
+    question: "How Long Does Consulting Engagement Last?",
+    answer: "It varies from weeks to months depending on project size.",
+  },
+  {
+    question: "Can You Explain Your Team's Expertise?",
+    answer: "Our team consists of industry experts and strategists.",
+  },
+  {
+    question: "How You Measure The Success Of Your Service?",
+    answer: "We track KPIs, ROI, and business impact.",
+  },
+];
+
+function FAQItemComponent({ item }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="border-b border-white/20 py-5">
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex justify-between items-center text-left"
+      >
+        <span className="text-white">
+          {item.question}
+        </span>
+
+        <span className="text-orange-400">
+          {open ? <Minus size={20} /> : <Plus size={20} />}
+        </span>
+      </button>
+
+      {open && (
+        <p className="mt-3 text-gray-300 text-sm leading-relaxed">
+          {item.answer}
+        </p>
+      )}
+    </div>
+  );
+}
+
+export default function FAQ() {
+  return (
+    <section className="bg-[#0f1c4d] py-16 px-6">
+      <div className="max-w-6xl mx-auto">
+        
+        {/* Title */}
+        <h2 className="text-4xl font-bold text-white mb-10">
+          Most Asked Question To Us
         </h2>
 
-        <p className="text-gray-600 mb-10">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-          tenetur odio impedit incidunt? Omnis accusantium ea reiciendis, fugit
-          commodi nostrum.
-        </p>
+        {/* Grid */}
+        <div className="grid md:grid-cols-2 gap-10">
+          <div>
+            {leftFAQs.map((item, i) => (
+              <FAQItemComponent key={i} item={item} />
+            ))}
+          </div>
 
-        <button className="relative overflow-hidden bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-sm tracking-widest uppercase transition group">
+          <div>
+            {rightFAQs.map((item, i) => (
+              <FAQItemComponent key={i} item={item} />
+            ))}
+          </div>
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="text-center mt-16">
+          <p className="text-gray-300 mb-6">
+            If you haven’t found the answer you’re looking for, we’re here to
+            help. Here’s a method for getting help!
+          </p>
+
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            
+            <button className="relative overflow-hidden bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-sm tracking-widest uppercase transition group">
   
-  <span className="relative z-10 group-hover:text-black transition duration-300">
-    Start A Project With Us
-  </span>
+              <span className="relative z-10 group-hover:text-black transition duration-300">
+                Contact Us
+              </span>
 
-  <span className="absolute inset-0 bg-[var(--color-teal-400)] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
+              <span className="absolute inset-0 bg-teal-400 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
 
-</button>
+            </button>
+
+          </div>
+        </div>
       </div>
     </section>
   );

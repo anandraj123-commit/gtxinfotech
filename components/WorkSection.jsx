@@ -16,7 +16,7 @@ export default function WorkSection() {
       </div>
 
       {/* Right Content */}
-      <div className="w-full md:w-1/2 bg-slate-800 text-white flex items-center">
+      <div className="w-full md:w-1/2 bg-[#0f1c4d] text-white flex items-center">
         <div className="max-w-xl mx-auto px-6 py-16">
           <h1 className="text-4xl md:text-5xl font-semibold mb-6">
             We’re A Digital SAP & IT Solutions Agency

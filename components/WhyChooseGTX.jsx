@@ -1,5 +1,3 @@
-// components/WhyChooseGTX.jsx
-
 "use client";
 
 import { motion } from "framer-motion";
@@ -57,11 +55,11 @@ const cardVariants = {
 
 export default function WhyChooseGTX() {
   return (
-    <section className="relative py-20 px-6 bg-[#0f172a] overflow-hidden">
+    <section className="relative py-20 px-6 bg-[#0f1c4d] overflow-hidden">
       
-      {/* Gradient Glow Background */}
-      <div className="absolute w-96 h-96 bg-[#22d3ee]/20 blur-3xl top-10 left-10"></div>
-      <div className="absolute w-96 h-96 bg-[#ff6a00]/20 blur-3xl bottom-10 right-10"></div>
+      {/* Softer Gradient Glow */}
+      <div className="absolute w-96 h-96 bg-[#1e3a8a]/30 blur-3xl top-10 left-10"></div>
+      <div className="absolute w-96 h-96 bg-[#f97316]/20 blur-3xl bottom-10 right-10"></div>
 
       <div className="max-w-7xl mx-auto text-center relative z-10">
         
@@ -72,7 +70,7 @@ export default function WhyChooseGTX() {
           className="text-4xl md:text-5xl font-extrabold mb-4"
         >
           <span className="text-white">Why Choose </span>
-          <span className="bg-gradient-to-r from-[#ff6a00] to-[#22d3ee] bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
             GTX InfoTech?
           </span>
         </motion.h2>
@@ -81,7 +79,7 @@ export default function WhyChooseGTX() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="text-gray-300  mb-14"
+          className="text-gray-300 mb-14"
         >
           Focused on Delivering Value Through SAP & IT Solutions
         </motion.p>
@@ -103,12 +101,12 @@ export default function WhyChooseGTX() {
                 whileHover={{ scale: 1.05, y: -8 }}
                 className="group relative p-6 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl shadow-lg hover:shadow-2xl transition duration-300"
               >
-                {/* Animated Border Glow */}
-                <div className="absolute inset-0 rounded-3xl border border-transparent group-hover:border-[#22d3ee]/40 group-hover:shadow-[0_0_25px_#22d3ee33] transition"></div>
+                {/* Hover Glow */}
+                <div className="absolute inset-0 rounded-3xl border border-transparent group-hover:border-cyan-400/40 group-hover:shadow-[0_0_25px_rgba(34,211,238,0.3)] transition"></div>
 
                 {/* Icon */}
                 <div className="mb-5 flex justify-center">
-                  <div className="p-4 rounded-full bg-gradient-to-br from-[#ff6a00] to-[#22d3ee] shadow-lg group-hover:scale-110 transition">
+                  <div className="p-4 rounded-full bg-gradient-to-br from-orange-400 to-cyan-400 shadow-lg group-hover:scale-110 transition">
                     <Icon size={28} className="text-white" />
                   </div>
                 </div>
@@ -123,8 +121,8 @@ export default function WhyChooseGTX() {
                   {item.description}
                 </p>
 
-                {/* Bottom Hover Line */}
-                <div className="mt-4 h-1 w-0 bg-gradient-to-r from-[#ff6a00] to-[#22d3ee] group-hover:w-full transition-all duration-300"></div>
+                {/* Bottom Line */}
+                <div className="mt-4 h-1 w-0 bg-gradient-to-r from-orange-400 to-cyan-400 group-hover:w-full transition-all duration-300"></div>
               </motion.div>
             );
           })}

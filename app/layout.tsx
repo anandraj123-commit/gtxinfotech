@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import "./globals.css";
 import TopBar from '../components/TopBar';
 import WhatsAppButton from '../components/WhatsAppButton';
+import RouteLoader from "@/components/RouteLoader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <RouteLoader />
         <TopBar/>
         {children}
         <Footer/>

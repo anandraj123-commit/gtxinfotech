@@ -69,18 +69,18 @@ export default function TestimonialSection() {
   };
 
   return (
-    <section className="py-20 bg-slate-800 text-center overflow-hidden">
+    <section className="py-20 bg-white text-center overflow-hidden">
       
       {/* Heading */}
-      <p className="text-sm text-teal-300 font-semibold mb-2">
+      <p className="text-sm text-teal-600 font-semibold mb-2">
         CLIENT SAY
       </p>
 
-      <h2 className="text-4xl font-bold mb-4 text-white">
+      <h2 className="text-4xl font-bold mb-4 text-gray-900">
         Reviews Of Experts
       </h2>
 
-      <div className="w-16 h-1 bg-teal-400 mx-auto mb-12 rounded"></div>
+      <div className="w-16 h-1 bg-teal-500 mx-auto mb-12 rounded"></div>
 
       {/* Slider */}
       <div className="relative h-[400px] flex items-center justify-center">
@@ -101,13 +101,13 @@ export default function TestimonialSection() {
 
                 ${
                   position === "left"
-                    ? "z-10 scale-90 opacity-50 -translate-x-[120%]"
+                    ? "z-10 scale-90 opacity-60 -translate-x-[120%]"
                     : ""
                 }
 
                 ${
                   position === "right"
-                    ? "z-10 scale-90 opacity-50 translate-x-[120%]"
+                    ? "z-10 scale-90 opacity-60 translate-x-[120%]"
                     : ""
                 }
 
@@ -150,14 +150,14 @@ export default function TestimonialSection() {
                 "{item.text}"
               </p>
 
-              <p className="text-sm text-white/70 mb-4">
+              <p className="text-sm text-white/80 mb-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 sed do eiusmod tempor incididunt ut labore.
               </p>
 
               {/* Name */}
               <h3
-                className={`font-semibold  transition-all duration-500
+                className={`font-semibold transition-all duration-500
                 ${
                   position === "center"
                     ? "text-white"

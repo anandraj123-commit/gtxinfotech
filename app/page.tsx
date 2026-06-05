@@ -34,11 +34,12 @@ export default function Home() {
       {/* <TeamSection/> */}
       
       <TestimonialSection/> 
-      <CTASection/>
+      <WhyChooseGTX/>
       <StatsSection/>
       {/* <LatestPost/> */}
-      <WhyChooseGTX/>
-      <FAQ/>
+      
+      {/* <FAQ/> */}
+      <CTASection/>
       <ContactUs/>
     </main>
   );

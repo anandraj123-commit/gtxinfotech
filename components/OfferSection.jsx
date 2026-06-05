@@ -25,8 +25,6 @@ const services = [
     title: "Quality Assurance & Continuous Improvement",
     desc: "Through rigorous testing and ongoing monitoring, we maintain high standards for all solutions, ensuring reliability, accuracy, and performance over time.",
   },
-
-  // ✅ NEW ITEMS
   {
     icon: FaSearch,
     title: "Workforce Enablement",
@@ -37,28 +35,33 @@ const services = [
     title: "Scalable Digital Transformation",
     desc: "We develop flexible, future-ready IT frameworks that grow with your business, enabling you to adapt quickly to market changes and new opportunities.",
   },
+  {
+    icon: FaBullseye,
+    title: "Strategic IT Consulting",
+    desc: "We provide expert guidance to align your technology roadmap with business goals, helping you make informed decisions and achieve long-term success.",
+  },
 ];
 
 export default function OfferSection() {
   return (
-    <section className="bg-gray-100 py-20 relative overflow-hidden">
+    <section className="bg-[#0f1c4d] py-20 relative overflow-hidden">
       
       {/* Decorative dots */}
-      <div className="absolute top-10 right-10 grid grid-cols-10 gap-2 opacity-30">
+      <div className="absolute top-10 right-10 grid grid-cols-10 gap-2 opacity-20">
         {[...Array(50)].map((_, i) => (
-          <div key={i} className="w-1.5 h-1.5 bg-slate-800 rounded-full"></div>
+          <div key={i} className="w-1.5 h-1.5 bg-white rounded-full"></div>
         ))}
       </div>
 
       <div className="max-w-6xl mx-auto px-6">
         
         {/* Heading */}
-        <div className="mb-16  w-full">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-          What We Bring to Your Business
+        <div className="mb-16 w-full">
+          <h2 className="text-4xl font-bold text-white mb-4">
+            What We Bring to Your Business
           </h2>
-          <p className="text-gray-600 leading-relaxed">
-          At GTX InfoTech, we provide dependable, business-focused solutions designed to simplify your operations and support sustainable growth. Our blend of SAP expertise and IT innovation ensures your business runs efficiently and adapts to changing needs. 
+          <p className="text-gray-300 leading-relaxed">
+            At GTX InfoTech, we provide dependable, business-focused solutions designed to simplify your operations and support sustainable growth. Our blend of SAP expertise and IT innovation ensures your business runs efficiently and adapts to changing needs. 
           </p>
         </div>
 
@@ -70,19 +73,22 @@ export default function OfferSection() {
             return (
               <div key={index} className="text-center group">
                 
-                <div className="mx-auto mb-6 w-20 h-20 flex items-center justify-center rounded-full border-4 border-slate-800 relative">
+                {/* ICON */}
+                <div className="mx-auto mb-6 w-20 h-20 flex items-center justify-center rounded-full border-4 border-white relative">
                   
                   {/* Rotating border */}
-                  <div className="absolute w-full h-full rounded-full border-4 border-orange-500 border-t-transparent border-l-transparent animate-spin-slow"></div>
+                  <div className="absolute w-full h-full rounded-full border-4 border-orange-400 border-t-transparent border-l-transparent animate-spin-slow"></div>
 
-                  <Icon className="text-2xl text-slate-800 relative z-10" />
+                  <Icon className="text-2xl text-white relative z-10" />
                 </div>
 
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                {/* TITLE */}
+                <h3 className="text-xl font-semibold text-white mb-3">
                   {item.title}
                 </h3>
 
-                <p className="text-gray-600 text-sm leading-relaxed">
+                {/* DESCRIPTION */}
+                <p className="text-gray-300 text-sm leading-relaxed">
                   {item.desc}
                 </p>
               </div>

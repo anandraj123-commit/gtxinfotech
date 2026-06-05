@@ -41,7 +41,7 @@ export default function Navbar() {
     `cursor-pointer transition-all duration-200 ${
       pathname === path
         ? "font-semibold text-[var(--color-teal-400)]"
-        : "text-gray-300 hover:text-[var(--color-teal-400)]"
+        : "text-black hover:text-[var(--color-teal-400)]"
     }`;
 
   // ✅ UPDATED MOBILE ACTIVE
@@ -56,13 +56,13 @@ export default function Navbar() {
     <>
       {/* NAVBAR */}
       <div
-        className={`w-full sticky top-0 z-50 px-6 py-4 flex items-center transition-all duration-300
-        ${
-          scrolled
-            ? "bg-[#1f2933] shadow-lg"
-            : "bg-[#1f2933]/90 backdrop-blur"
-        }`}
-      >
+  className={`w-full sticky top-0 z-50 px-6 py-4 flex items-center transition-all duration-300
+  ${
+    scrolled
+  ? "bg-white/70 backdrop-blur-md shadow-lg"
+  : "bg-transparent"
+  }`}
+>
         {/* LOGO */}
         <div className="flex items-center gap-2 group cursor-pointer">
           <Link href="/">
@@ -77,7 +77,7 @@ export default function Navbar() {
         {/* MOBILE BUTTON */}
         <div className="md:hidden ml-auto">
           <button onClick={() => setMobileMenu(true)}>
-            <span className="text-white text-2xl">☰</span>
+          <span className="text-black text-2xl">☰</span>
           </button>
         </div>
 
@@ -92,7 +92,7 @@ export default function Navbar() {
             onMouseEnter={() => setOpen(true)}
             onMouseLeave={() => setOpen(false)}
           >
-            <span className="text-gray-300 hover:text-[var(--color-teal-400)] flex items-center gap-1 cursor-pointer">
+            <span className="text-black hover:text-[var(--color-teal-400)] flex items-center gap-1 cursor-pointer">
               Services ▾
             </span>
 
@@ -133,7 +133,7 @@ export default function Navbar() {
             onMouseEnter={() => setOpenTraining(true)}
             onMouseLeave={() => setOpenTraining(false)}
           >
-            <span className="text-gray-300 hover:text-[var(--color-teal-400)] flex items-center gap-1 cursor-pointer">
+            <span className="text-black hover:text-[var(--color-teal-400)] flex items-center gap-1 cursor-pointer">
               Training Programme ▾
             </span>
 
