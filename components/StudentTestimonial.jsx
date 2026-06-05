@@ -69,14 +69,14 @@ export default function StudentTestimonialSection() {
   };
 
   return (
-    <section className="py-20 bg-slate-800 text-center overflow-hidden">
+    <section className="py-20 bg-white text-center overflow-hidden">
       
       {/* Heading */}
       <p className="text-sm text-teal-300 font-semibold mb-2">
         Student SAY
       </p>
 
-      <h2 className="text-4xl font-bold mb-4 text-white">
+      <h2 className="text-4xl font-bold mb-4 text-black">
         Reviews Of Students
       </h2>
 

@@ -22,7 +22,6 @@ export default function TrainingCategory({ category }) {
     }
   };
 
-  // 🔥 Animation Variants
   const container = {
     hidden: {},
     show: {
@@ -81,63 +80,13 @@ export default function TrainingCategory({ category }) {
                 initial="hidden"
                 animate="show"
                 exit={{ opacity: 0, y: 20 }}
-                className="grid md:grid-cols-2 gap-12"
+                className="space-y-6"
               >
 
-                {/* LEFT BOX */}
-                <motion.div variants={item} className="relative flex">
-                  <div className="absolute left-[-20px] top-10 flex flex-col gap-3 z-20">
-                    {Array.from({ length: 8 }).map((_, i) => (
-                      <motion.span
-                        key={i}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: i * 0.05 }}
-                        className="w-12 h-[2px] bg-orange-500 rotate-[-25deg]"
-                      ></motion.span>
-                    ))}
-                  </div>
-
-                  <motion.div
-                    whileHover={{ y: -6 }}
-                    className="relative rounded-3xl overflow-hidden z-0 w-full bg-white p-8 flex flex-col justify-center"
-                  >
-                    <h3 className="text-2xl md:text-3xl font-bold text-black mb-6">
-                      Key Benefits of Training
-                    </h3>
-
-                    <ul className="space-y-4">
-                      {[
-                        "Gain industry-relevant skills with hands-on practical training",
-                        "Learn from experienced professionals and certified trainers",
-                        "Work on real-world projects to build strong portfolio",
-                        "Get placement assistance and career guidance support",
-                        "Receive certification to boost your career opportunities",
-                      ].map((text, i) => (
-                        <motion.li
-                          key={i}
-                          variants={item}
-                          whileHover={{ x: 5 }}
-                          className="flex items-start gap-3 text-gray-700"
-                        >
-                          <span className="text-xl">✔</span>
-                          <p>{text}</p>
-                        </motion.li>
-                      ))}
-                    </ul>
-                  </motion.div>
-
-                  <motion.div
-                    animate={{ x: [0, 6, 0], y: [0, 6, 0] }}
-                    transition={{ repeat: Infinity, duration: 6 }}
-                    className="absolute inset-0 border-2 border-orange-500 rounded-3xl translate-x-6 translate-y-6 z-10 pointer-events-none"
-                  ></motion.div>
-                </motion.div>
-
-                {/* RIGHT ACCORDION */}
+                {/* 🔥 FULL WIDTH ACCORDION (TOP) */}
                 <motion.div
                   variants={container}
-                  className="space-y-4 max-h-[420px] overflow-y-auto pr-2 mt-[25px]"
+                  className="space-y-4"
                 >
                   {topItems?.map((itemData, index) => (
                     <motion.div
@@ -145,7 +94,6 @@ export default function TrainingCategory({ category }) {
                       variants={item}
                       className="border rounded-lg overflow-hidden"
                     >
-
                       <button
                         onClick={() => toggleAccordion(index)}
                         className="w-full p-4 bg-gray-100 flex justify-between items-center"
@@ -177,10 +125,10 @@ export default function TrainingCategory({ category }) {
                   ))}
                 </motion.div>
 
-                {/* BELOW FULL */}
+                {/* 🔥 BELOW FULL WIDTH (remaining accordion) */}
                 <motion.div
                   variants={container}
-                  className="md:col-span-2 space-y-4 mt-4"
+                  className="space-y-4"
                 >
                   {bottomItems?.map((itemData, index) => {
                     const actualIndex = index + 3;
@@ -217,6 +165,82 @@ export default function TrainingCategory({ category }) {
                       </motion.div>
                     );
                   })}
+                </motion.div>
+
+                {/* 🔥 KEY BENEFITS (NOW BELOW ACCORDION) */}
+                <motion.div variants={item} className="relative flex mt-10">
+                
+
+<motion.div
+  variants={container}
+  initial="hidden"
+  animate="show"
+  className="w-full bg-white rounded-3xl p-8 md:p-12"
+>
+  {/* TITLE */}
+  <motion.h3
+    variants={item}
+    className="text-2xl md:text-3xl font-bold text-black mb-10 text-center"
+  >
+    Key Benefits of Training
+  </motion.h3>
+
+  {/* GRID */}
+  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+  {[
+    {
+      icon: "🚀",
+      text: "Gain industry-relevant skills with hands-on practical training",
+      color: "from-blue-100 to-blue-200",
+    },
+    {
+      icon: "🎯",
+      text: "Learn from experienced professionals and certified trainers",
+      color: "from-purple-100 to-purple-200",
+    },
+    {
+      icon: "💼",
+      text: "Work on real-world projects to build strong portfolio",
+      color: "from-green-100 to-green-200",
+    },
+    {
+      icon: "📈",
+      text: "Get placement assistance and career guidance support",
+      color: "from-yellow-100 to-yellow-200",
+    },
+    {
+      icon: "🏆",
+      text: "Receive certification to boost your career opportunities",
+      color: "from-pink-100 to-pink-200",
+    },
+  ].map((itemData, i) => (
+    <motion.div
+      key={i}
+      variants={item}
+      whileHover={{ y: -8, scale: 1.03 }}
+      className={`group relative p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-500 bg-gradient-to-br ${itemData.color} hover:bg-white`}
+    >
+      {/* ICON */}
+      <div className="text-4xl mb-4 transform group-hover:scale-110 transition duration-300">
+        {itemData.icon}
+      </div>
+
+      {/* TEXT */}
+      <p className="text-gray-700 group-hover:text-gray-800 leading-relaxed transition duration-300">
+        {itemData.text}
+      </p>
+    </motion.div>
+  ))}
+
+</div>
+</motion.div>
+
+                  <motion.div
+                    animate={{ x: [0, 6, 0], y: [0, 6, 0] }}
+                    transition={{ repeat: Infinity, duration: 6 }}
+                    className="absolute inset-0  rounded-3xl translate-x-6 translate-y-6 z-10 pointer-events-none"
+                  ></motion.div>
                 </motion.div>
 
               </motion.div>

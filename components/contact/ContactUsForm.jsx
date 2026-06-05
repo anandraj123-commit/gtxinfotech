@@ -20,13 +20,13 @@ export default function ContactUsForm() {
       </div>
 
       {/* Right Side */}
-      <div className="w-full md:w-1/2 p-6 md:p-16 bg-[#e9ecf5] flex">
+      <div className="w-full md:w-1/2 p-6 md:p-16 bg-[#0f1c4d]  flex">
         <div className="w-full flex flex-col justify-center">
-          <h1 className="text-2xl md:text-3xl font-bold mb-8 text-gray-900">
+          <h1 className="text-2xl md:text-3xl font-bold mb-8 text-white">
             We Will Be Happy To Help You
           </h1>
 
-          <form className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <form className="grid grid-cols-1 md:grid-cols-2 gap-5 text-white">
             <div>
               <label className="block mb-1 font-semibold">Full Name *</label>
               <input

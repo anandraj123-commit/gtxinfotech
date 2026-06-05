@@ -37,10 +37,10 @@ export default function ContactSection() {
 
   return (
     <>
-      <div className="bg-[#0b1c4a] text-white">
+      <div className="text-white">
         
         {/* ================= HERO SECTION ================= */}
-        <div className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
+        <div className=" bg-[#0b1c4a] max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
           
           {/* LEFT CONTENT */}
           <div>
@@ -94,39 +94,40 @@ export default function ContactSection() {
         </div>
 
         {/* ================= STATS SECTION ================= */}
-        <div className="max-w-7xl mx-auto px-6 py-16 border-t border-gray-700 grid md:grid-cols-5 gap-8 items-center">
-          
-          {/* LEFT TEXT */}
-          <div className="md:col-span-2">
-            <h2 className="text-4xl font-bold mb-4">
-              This Is Our Result
-            </h2>
-            <p className="text-gray-300">
-              How capable we are at work shines through in every endeavor.
-            </p>
-          </div>
+        <div className="text-black max-w-7xl mx-auto px-6 py-16 border-t border-gray-700 flex flex-nowrap justify-between items-center gap-8 overflow-x-auto">
+  
+  {/* LEFT TEXT */}
+  <div className="min-w-[250px]">
+    <h2 className="text-3xl font-bold mb-2 whitespace-nowrap">
+      This Is Our Result
+    </h2>
+    <p className="text-black whitespace-nowrap">
+      How capable we are at work shines through in every endeavor.
+    </p>
+  </div>
 
-          {/* STATS */}
-          <div className="text-center">
-            <h3 className="text-5xl font-bold">{counts.clients}</h3>
-            <p className="text-gray-300 mt-2">Client Projects</p>
-          </div>
+  {/* STATS */}
+  <div className="text-center min-w-[150px]">
+    <h3 className="text-5xl font-bold">{counts.clients}</h3>
+    <p className="text-black mt-2 whitespace-nowrap">Client Projects</p>
+  </div>
 
-          <div className="text-center">
-            <h3 className="text-5xl font-bold">{counts.projects}</h3>
-            <p className="text-gray-300 mt-2">Successful Projects</p>
-          </div>
+  <div className="text-center min-w-[150px]">
+    <h3 className="text-5xl font-bold">{counts.projects}</h3>
+    <p className="text-black mt-2 whitespace-nowrap">Successful Projects</p>
+  </div>
 
-          <div className="text-center">
-            <h3 className="text-5xl font-bold">{counts.team}+</h3>
-            <p className="text-gray-300 mt-2">Team Members</p>
-          </div>
+  <div className="text-center min-w-[150px]">
+    <h3 className="text-5xl font-bold">{counts.team}+</h3>
+    <p className="text-black mt-2 whitespace-nowrap">Team Members</p>
+  </div>
 
-          <div className="text-center">
-            <h3 className="text-5xl font-bold">{counts.revenue}M</h3>
-            <p className="text-gray-300 mt-2">Total Revenue</p>
-          </div>
-        </div>
+  <div className="text-center min-w-[150px]">
+    <h3 className="text-5xl font-bold">{counts.revenue}M</h3>
+    <p className="text-black mt-2 whitespace-nowrap">Total Revenue</p>
+  </div>
+
+</div>
 
       </div>
     </>
