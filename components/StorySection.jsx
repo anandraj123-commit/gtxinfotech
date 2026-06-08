@@ -33,7 +33,7 @@ export default function StorySection() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-black leading-relaxed mb-8 text-justify"
           >
-            At the core of Nisan Tech Solutions is a commitment to empower organizations through next-generation SAP solutions and tailored IT services that align with strategic business goals, including SAP Training.
+            At the core of Zisan Tech Solutions is a commitment to empower organizations through next-generation SAP solutions and tailored IT services that align with strategic business goals, including SAP Training.
             <br /><br />
             Founded by a group of SAP experts, we leverage extensive industry knowledge to craft solutions that deliver measurable business benefits.
             In a digital-first world, our approach focuses on agility, scalability, and long-term value for our clients.

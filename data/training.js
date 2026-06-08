@@ -250,13 +250,13 @@ In real-world scenarios, SAP SD interacts with multiple modules:
             </p>
             
             <p class="mt-5">
-            With Nisan Tech Solutions, you gain the confidence to work on real-time SAP projects and deliver effective business solutions.
+            With Zisan Tech Solutions, you gain the confidence to work on real-time SAP projects and deliver effective business solutions.
             </p>`
           },
           {
             title:`<h2 class="mt-5">🔑 Start Your SAP MM Journey Today</h2>`,
             description:`<p class="mt-5">
-            👉 Join Nisan Tech Solutions and develop skills that are essential for modern supply chain management.
+            👉 Join Zisan Tech Solutions and develop skills that are essential for modern supply chain management.
             </p>`
           }
         ]
@@ -283,7 +283,7 @@ In real-world scenarios, SAP SD interacts with multiple modules:
             description: [{
               title:`<h2 class="">SAP PP (Production Planning) Training Program - Learn How to Use SAP in Real Time to Master Production Processes</h2>`,
               description:` <p class="mt-5">
-            Our SAP PP training at Nisan Tech Solutions will teach you how manufacturing companies use SAP to plan, execute, and manage their production operations.
+            Our SAP PP training at Zisan Tech Solutions will teach you how manufacturing companies use SAP to plan, execute, and manage their production operations.
             </p>
             
             <p class="mt-5">
@@ -396,13 +396,13 @@ In real-world scenarios, SAP SD interacts with multiple modules:
             </p>
             
             <p class="mt-5">
-            With Nisan Tech Solutions, you gain hands-on experience to confidently manage real-time production scenarios using SAP.
+            With Zisan Tech Solutions, you gain hands-on experience to confidently manage real-time production scenarios using SAP.
             </p>`
       },
       {
         title:` <h2 class="mt-5">🔑 Begin Your SAP PP Journey Today</h2>`,
         description:`<p class="mt-5">
-            👉 Join Nisan Tech Solutions and master one of the most critical SAP modules for manufacturing excellence.
+            👉 Join Zisan Tech Solutions and master one of the most critical SAP modules for manufacturing excellence.
             </p>`
       }
     ]
@@ -428,7 +428,7 @@ In real-world scenarios, SAP SD interacts with multiple modules:
             description: [{
               title:`<h2 class="">SAP QM (Quality Management) Training Program - Ensure Product Quality with Real-Time SAP Expertise</h2>`,
               description:`<p class="mt-5">
-            Our SAP QM training at Nisan Tech Solutions helps you understand how organizations maintain and control product quality across procurement, production, and delivery processes using SAP.
+            Our SAP QM training at Zisan Tech Solutions helps you understand how organizations maintain and control product quality across procurement, production, and delivery processes using SAP.
             </p>
             
             <p class="mt-5">
@@ -539,7 +539,7 @@ In real-world scenarios, SAP SD interacts with multiple modules:
             </p>
             
             <p class="mt-5">
-            With Nisan Tech Solutions, you gain the confidence to handle real-time quality management scenarios using SAP.
+            With Zisan Tech Solutions, you gain the confidence to handle real-time quality management scenarios using SAP.
             </p>`
             }
           ]
@@ -567,7 +567,7 @@ In real-world scenarios, SAP SD interacts with multiple modules:
 `,
               description:`
 <p class="mt-5">
-Our SAP FICO training at Nisan Tech Solutions is designed to help you understand how organizations manage financial transactions, reporting, and cost control using SAP systems.
+Our SAP FICO training at Zisan Tech Solutions is designed to help you understand how organizations manage financial transactions, reporting, and cost control using SAP systems.
 </p>
 
 <p class="mt-5">
@@ -676,7 +676,7 @@ SAP FICO professionals help organizations maintain accurate financial records, e
 </p>
 
 <p class="mt-5">
-With Nisan Tech Solutions, you gain the confidence to work on real-time SAP implementations and financial operations.
+With Zisan Tech Solutions, you gain the confidence to work on real-time SAP implementations and financial operations.
 </p>`
 }
 ]
@@ -705,7 +705,7 @@ With Nisan Tech Solutions, you gain the confidence to work on real-time SAP impl
                 title: `<h2>SAP HCM (Human Capital Management) Training Program - Manage Workforce Efficiently with Real-Time SAP Skills</h2>`,
                 description: `
                   <p class="mt-5">
-                    Our SAP HCM training at Nisan Tech Solutions helps you understand how organizations manage employee data, payroll, and HR operations using SAP systems.
+                    Our SAP HCM training at Zisan Tech Solutions helps you understand how organizations manage employee data, payroll, and HR operations using SAP systems.
                   </p>
             
                   <p class="mt-5">
@@ -831,7 +831,7 @@ With Nisan Tech Solutions, you gain the confidence to work on real-time SAP impl
                   </p>
             
                   <p class="mt-5">
-                    With Nisan Tech Solutions, you gain the confidence to handle real-time HR operations and SAP implementations.
+                    With Zisan Tech Solutions, you gain the confidence to handle real-time HR operations and SAP implementations.
                   </p>
                 `
               }
@@ -860,7 +860,7 @@ With Nisan Tech Solutions, you gain the confidence to work on real-time SAP impl
                 title: `<h2 class="">SAP LE (Logistics Execution) Training Program - Master Logistics & Delivery Operations with Real-Time SAP Skills</h2>`,
                 description: `
                   <p class="mt-5">
-                    Our SAP LE training at Nisan Tech Solutions helps you understand how organizations manage transportation, shipping, and delivery operations using SAP systems.
+                    Our SAP LE training at Zisan Tech Solutions helps you understand how organizations manage transportation, shipping, and delivery operations using SAP systems.
                   </p>
             
                   <p class="mt-5">
@@ -987,7 +987,7 @@ With Nisan Tech Solutions, you gain the confidence to work on real-time SAP impl
                   </p>
             
                   <p class="mt-5">
-                    With Nisan Tech Solutions, you gain the confidence to work on real-time logistics execution scenarios using SAP.
+                    With Zisan Tech Solutions, you gain the confidence to work on real-time logistics execution scenarios using SAP.
                   </p>
                 `
               }
@@ -1015,7 +1015,7 @@ With Nisan Tech Solutions, you gain the confidence to work on real-time SAP impl
                 title: `<h2 class="">SAP TM (Transportation Management) Training Program - Plan, Optimize & Control Transportation with SAP</h2>`,
                 description: `
                   <p class="mt-5">
-                    Our SAP TM training at Nisan Tech Solutions helps you understand how modern businesses manage transportation networks, reduce logistics costs, and improve delivery efficiency using SAP.
+                    Our SAP TM training at Zisan Tech Solutions helps you understand how modern businesses manage transportation networks, reduce logistics costs, and improve delivery efficiency using SAP.
                   </p>
             
                   <p class="mt-5">
@@ -1142,7 +1142,7 @@ With Nisan Tech Solutions, you gain the confidence to work on real-time SAP impl
                   </p>
             
                   <p class="mt-5">
-                    With Nisan Tech Solutions, you gain practical knowledge to confidently handle real-world transportation management scenarios using SAP.
+                    With Zisan Tech Solutions, you gain practical knowledge to confidently handle real-world transportation management scenarios using SAP.
                   </p>
                 `
               }
@@ -1170,7 +1170,7 @@ With Nisan Tech Solutions, you gain the confidence to work on real-time SAP impl
                 title: `<h2 class="">SAP EWM (Extended Warehouse Management) Training Program - Optimize Warehouse Operations with Real-Time SAP Skills</h2>`,
                 description: `
                   <p class="mt-5">
-                    Our SAP EWM training at Nisan Tech Solutions helps you understand how organizations manage complex warehouse operations, track inventory, and execute logistics efficiently using SAP.
+                    Our SAP EWM training at Zisan Tech Solutions helps you understand how organizations manage complex warehouse operations, track inventory, and execute logistics efficiently using SAP.
                   </p>
             
                   <p class="mt-5">
@@ -1297,7 +1297,7 @@ With Nisan Tech Solutions, you gain the confidence to work on real-time SAP impl
                   </p>
             
                   <p class="mt-5">
-                    With Nisan Tech Solutions, you gain the confidence to manage real-time warehouse operations using SAP.
+                    With Zisan Tech Solutions, you gain the confidence to manage real-time warehouse operations using SAP.
                   </p>
                 `
               }
@@ -1326,7 +1326,7 @@ With Nisan Tech Solutions, you gain the confidence to work on real-time SAP impl
                 title: `<h2 class="">SAP Ariba Training Program - Transform Procurement with Cloud-Based SAP Solutions</h2>`,
                 description: `
                   <p class="mt-5">
-                    Our SAP Ariba training at Nisan Tech Solutions helps you understand how organizations use cloud-based SAP solutions to digitize procurement, supplier collaboration, and sourcing processes.
+                    Our SAP Ariba training at Zisan Tech Solutions helps you understand how organizations use cloud-based SAP solutions to digitize procurement, supplier collaboration, and sourcing processes.
                   </p>
             
                   <p class="mt-5">
@@ -1452,7 +1452,7 @@ With Nisan Tech Solutions, you gain the confidence to work on real-time SAP impl
                   </p>
             
                   <p class="mt-5">
-                    With Nisan Tech Solutions, you gain the confidence to work on real-time cloud procurement scenarios using SAP Ariba.
+                    With Zisan Tech Solutions, you gain the confidence to work on real-time cloud procurement scenarios using SAP Ariba.
                   </p>
                 `
               }
@@ -1549,7 +1549,7 @@ With Nisan Tech Solutions, you gain the confidence to work on real-time SAP impl
                     title: `<h2 class="">SAP ABAP (Advanced Business Application Programming) Training Program - Build Technical Expertise in SAP Development</h2>`,
                     description: `
                       <p class="mt-5">
-                        Our SAP ABAP training at Nisan Tech Solutions is designed to help you learn the technical side of SAP systems through hands-on, real-world experience.
+                        Our SAP ABAP training at Zisan Tech Solutions is designed to help you learn the technical side of SAP systems through hands-on, real-world experience.
                       </p>
                 
                       <p class="mt-5">
@@ -1661,7 +1661,7 @@ With Nisan Tech Solutions, you gain the confidence to work on real-time SAP impl
                       </p>
                 
                       <p class="mt-5">
-                        With Nisan Tech Solutions, you gain the confidence to work on real-time SAP development projects and deliver effective technical solutions.
+                        With Zisan Tech Solutions, you gain the confidence to work on real-time SAP development projects and deliver effective technical solutions.
                       </p>
                 
                       <p class="mt-5">
@@ -1694,7 +1694,7 @@ With Nisan Tech Solutions, you gain the confidence to work on real-time SAP impl
                     title: `<h2 class="">SAP BASIS Training Program - Master SAP System Administration & Management</h2>`,
                     description: `
                       <p class="mt-5">
-                        Our SAP BASIS training at Nisan Tech Solutions helps you gain hands-on, real-time experience in managing and administering SAP systems.
+                        Our SAP BASIS training at Zisan Tech Solutions helps you gain hands-on, real-time experience in managing and administering SAP systems.
                       </p>
                 
                       <p class="mt-5">
@@ -1807,7 +1807,7 @@ With Nisan Tech Solutions, you gain the confidence to work on real-time SAP impl
                       </p>
                 
                       <p class="mt-5">
-                        With Nisan Tech Solutions, you gain the confidence to manage real-time SAP landscapes and system environments.
+                        With Zisan Tech Solutions, you gain the confidence to manage real-time SAP landscapes and system environments.
                       </p>
                 
                       <p class="mt-5">
@@ -1840,7 +1840,7 @@ With Nisan Tech Solutions, you gain the confidence to work on real-time SAP impl
                     title: `<h2 class="">SAP PI/PO (Process Integration / Process Orchestration) Training Program - Master SAP System Integration</h2>`,
                     description: `
                       <p class="mt-5">
-                        Our SAP PI/PO training at Nisan Tech Solutions helps you understand how organizations integrate SAP with other systems and automate business processes using real-world scenarios.
+                        Our SAP PI/PO training at Zisan Tech Solutions helps you understand how organizations integrate SAP with other systems and automate business processes using real-world scenarios.
                       </p>
                 
                       <p class="mt-5">
@@ -1952,7 +1952,7 @@ With Nisan Tech Solutions, you gain the confidence to work on real-time SAP impl
                       </p>
                 
                       <p class="mt-5">
-                        With Nisan Tech Solutions, you gain the confidence to work on real-time SAP integration projects and enterprise solutions.
+                        With Zisan Tech Solutions, you gain the confidence to work on real-time SAP integration projects and enterprise solutions.
                       </p>
                     `
                   }
@@ -1981,7 +1981,7 @@ With Nisan Tech Solutions, you gain the confidence to work on real-time SAP impl
                     title: `<h2 class="">SAP CPI (Process Integration / Process Orchestration) Training Program - Master SAP System Integration</h2>`,
                     description: `
                       <p class="mt-5">
-                        Our SAP CPI training at Nisan Tech Solutions helps you understand how organizations integrate SAP with other systems and automate business processes using real-world scenarios.
+                        Our SAP CPI training at Zisan Tech Solutions helps you understand how organizations integrate SAP with other systems and automate business processes using real-world scenarios.
                       </p>
                 
                       <p class="mt-5">
@@ -2093,7 +2093,7 @@ With Nisan Tech Solutions, you gain the confidence to work on real-time SAP impl
                       </p>
                 
                       <p class="mt-5">
-                        With Nisan Tech Solutions, you gain the confidence to work on real-time SAP integration projects and enterprise solutions.
+                        With Zisan Tech Solutions, you gain the confidence to work on real-time SAP integration projects and enterprise solutions.
                       </p>
                     `
                   }
@@ -2122,7 +2122,7 @@ With Nisan Tech Solutions, you gain the confidence to work on real-time SAP impl
                     title: `<h2 class="">SAP CPI (Cloud Platform Integration) Training Program - Master Cloud Integration</h2>`,
                     description: `
                       <p class="mt-5">
-                        Our SAP CPI training at Nisan Tech Solutions is designed to help you learn how to integrate cloud and on-premise systems using SAP’s modern integration platform.
+                        Our SAP CPI training at Zisan Tech Solutions is designed to help you learn how to integrate cloud and on-premise systems using SAP’s modern integration platform.
                       </p>
                 
                       <p class="mt-5">
@@ -2234,7 +2234,7 @@ With Nisan Tech Solutions, you gain the confidence to work on real-time SAP impl
                       </p>
                 
                       <p class="mt-5">
-                        With Nisan Tech Solutions, you gain hands-on experience and confidence to work on real-time SAP cloud integration projects.
+                        With Zisan Tech Solutions, you gain hands-on experience and confidence to work on real-time SAP cloud integration projects.
                       </p>
                 
                       <p class="mt-5">

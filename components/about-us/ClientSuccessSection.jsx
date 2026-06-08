@@ -41,7 +41,7 @@ export default function ClientSuccessSection() {
   <span
     className="bg-gradient-to-r from-white via-orange-300 to-orange-500 bg-clip-text text-transparent"
   >
-    GTX InfoTech
+    Zisan Tech Solutions
   </span>
 </h1>
 
@@ -61,7 +61,7 @@ export default function ClientSuccessSection() {
           </h2>
 
           <p className="mt-4 text-white/60 leading-relaxed max-w-xl">
-            At GTX InfoTech, we measure success by client outcomes. Every
+            At Zisan Tech Solutions, we measure success by client outcomes. Every
             project—whether solution design, implementation, or training—is
             focused on real business impact.
           </p>

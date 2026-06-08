@@ -61,7 +61,7 @@ export default function OfferSection() {
             What We Bring to Your Business
           </h2>
           <p className="text-gray-300 leading-relaxed">
-            At Nisan Tech Solutions , we provide dependable, business-focused solutions designed to simplify your operations and support sustainable growth. Our blend of SAP expertise and IT innovation ensures your business runs efficiently and adapts to changing needs. 
+            At Zisan Tech Solutions , we provide dependable, business-focused solutions designed to simplify your operations and support sustainable growth. Our blend of SAP expertise and IT innovation ensures your business runs efficiently and adapts to changing needs. 
           </p>
         </div>
 
