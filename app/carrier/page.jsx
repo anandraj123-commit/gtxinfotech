@@ -19,7 +19,7 @@ export default function CareerPage() {
   ];
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <div className="text-white">
 

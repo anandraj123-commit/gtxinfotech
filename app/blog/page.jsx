@@ -20,7 +20,7 @@ export default function BlogPage() {
 
   return (
     <>
-    <Navbar/>
+    {/* <Navbar/> */}
    
     <section className="bg-[#343f48] min-h-screen py-20 px-6">
       

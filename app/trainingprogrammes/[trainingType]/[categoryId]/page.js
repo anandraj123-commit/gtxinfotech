@@ -42,7 +42,7 @@ export default async function TrainingPage({ params }) {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <HeroSection />
       <TrainingType training={selectedTraining} />
       <TrainingCategory category={selectedCategory} />

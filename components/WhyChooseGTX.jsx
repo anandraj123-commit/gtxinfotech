@@ -71,7 +71,7 @@ export default function WhyChooseGTX() {
         >
           <span className="text-white">Why Choose </span>
           <span className="bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-            GTX InfoTech?
+            Nisan Tech Solutions?
           </span>
         </motion.h2>
 

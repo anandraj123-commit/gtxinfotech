@@ -1,5 +1,4 @@
 import Hero from "@/components/Hero";
-import Navbar from "@/components/Navbar";
 import AboutSection from "@/components/AboutSection";
 import WorkSection from '@/components/WorkSection';
 import SkillSection from '@/components/SkillsSection';
@@ -16,13 +15,15 @@ import StorySection from '@/components/StorySection';
 import SuccessSection from '@/components/SuccessSection';
 import FAQ from '@/components/Faqs';
 import WhyChooseGTX from '@/components/WhyChooseGTX';
+import WorkforceBanner from '@/components/WorkforceBanner';
+
 
 
 export default function Home() {
   return (
     <main>
-      <Navbar/>
-      <Hero />
+      <WorkforceBanner/>
+      {/* <Hero /> */}
       {/* <AboutSection /> */}
       <StorySection/>
       <SuccessSection/>

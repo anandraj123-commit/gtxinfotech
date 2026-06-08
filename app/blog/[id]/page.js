@@ -29,7 +29,7 @@ export default function BlogDetails() {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <section className="bg-[#343f48] min-h-screen py-20 px-6">
         <div className="max-w-4xl mx-auto text-white">

@@ -57,11 +57,7 @@ export default function Navbar() {
       {/* NAVBAR */}
       <div
   className={`w-full sticky top-0 z-50 px-6 py-4 flex items-center transition-all duration-300
-  ${
-    scrolled
-  ? "bg-white/70 backdrop-blur-md shadow-lg"
-  : "bg-transparent"
-  }`}
+  ${scrolled ? "bg-white/70 backdrop-blur-md shadow-lg" : "bg-white"}`}
 >
         {/* LOGO */}
         <div className="flex items-center gap-2 group cursor-pointer">

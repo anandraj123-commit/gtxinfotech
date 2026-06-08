@@ -35,7 +35,7 @@ export default async function Service({ params }) {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <HeroSection />
 

@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 
 export default function StorySection() {
   return (
-    <section className="bg-[#0f1c4d] py-20 relative overflow-hidden">
+    <section className="bg-[white] py-20 relative overflow-hidden">
       
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center text-black">
         
         {/* LEFT CONTENT */}
         <motion.div
@@ -16,7 +16,7 @@ export default function StorySection() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="text-white"
+          className="text-black"
         >
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
@@ -31,9 +31,9 @@ export default function StorySection() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-gray-300 leading-relaxed mb-8 text-justify"
+            className="text-black leading-relaxed mb-8 text-justify"
           >
-            At the core of GTX InfoTech is a commitment to empower organizations through next-generation SAP solutions and tailored IT services that align with strategic business goals, including SAP Training.
+            At the core of Nisan Tech Solutions is a commitment to empower organizations through next-generation SAP solutions and tailored IT services that align with strategic business goals, including SAP Training.
             <br /><br />
             Founded by a group of SAP experts, we leverage extensive industry knowledge to craft solutions that deliver measurable business benefits.
             In a digital-first world, our approach focuses on agility, scalability, and long-term value for our clients.

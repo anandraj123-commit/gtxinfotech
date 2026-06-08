@@ -52,7 +52,7 @@ export default function TimelineSection() {
           </h1>
 
           <p className="text-gray-300 leading-relaxed max-w-xl">
-            Our milestones at GTX InfoTech showcase our unwavering commitment to excellence, client-focused results, and continual advancement. We are driven by a passion to deliver meaningful SAP and IT solutions.
+            Our milestones at Nisan Tech Solutions showcase our unwavering commitment to excellence, client-focused results, and continual advancement. We are driven by a passion to deliver meaningful SAP and IT solutions.
           </p>
 
           <br />
