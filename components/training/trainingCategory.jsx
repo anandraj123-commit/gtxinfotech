@@ -52,7 +52,7 @@ export default function TrainingCategory({ category }) {
         >
 
           {/* 🔷 TABS */}
-          <div className="flex justify-center gap-2 md:gap-4 bg-orange-500 p-2 rounded-xl mb-8">
+          <div className="flex justify-center gap-2 md:gap-4 bg-white p-2 rounded-xl mb-8">
             {tabs.map((tab) => (
               <motion.button
                 key={tab}
@@ -168,80 +168,7 @@ export default function TrainingCategory({ category }) {
                 </motion.div>
 
                 {/* 🔥 KEY BENEFITS (NOW BELOW ACCORDION) */}
-                <motion.div variants={item} className="relative flex mt-10">
                 
-
-<motion.div
-  variants={container}
-  initial="hidden"
-  animate="show"
-  className="w-full bg-white rounded-3xl p-8 md:p-12"
->
-  {/* TITLE */}
-  <motion.h3
-    variants={item}
-    className="text-2xl md:text-3xl font-bold text-black mb-10 text-center"
-  >
-    Key Benefits of Training
-  </motion.h3>
-
-  {/* GRID */}
-  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-  {[
-    {
-      icon: "🚀",
-      text: "Gain industry-relevant skills with hands-on practical training",
-      color: "from-blue-100 to-blue-200",
-    },
-    {
-      icon: "🎯",
-      text: "Learn from experienced professionals and certified trainers",
-      color: "from-purple-100 to-purple-200",
-    },
-    {
-      icon: "💼",
-      text: "Work on real-world projects to build strong portfolio",
-      color: "from-green-100 to-green-200",
-    },
-    {
-      icon: "📈",
-      text: "Get placement assistance and career guidance support",
-      color: "from-yellow-100 to-yellow-200",
-    },
-    {
-      icon: "🏆",
-      text: "Receive certification to boost your career opportunities",
-      color: "from-pink-100 to-pink-200",
-    },
-  ].map((itemData, i) => (
-    <motion.div
-      key={i}
-      variants={item}
-      whileHover={{ y: -8, scale: 1.03 }}
-      className={`group relative p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-500 bg-gradient-to-br ${itemData.color} hover:bg-white`}
-    >
-      {/* ICON */}
-      <div className="text-4xl mb-4 transform group-hover:scale-110 transition duration-300">
-        {itemData.icon}
-      </div>
-
-      {/* TEXT */}
-      <p className="text-gray-700 group-hover:text-gray-800 leading-relaxed transition duration-300">
-        {itemData.text}
-      </p>
-    </motion.div>
-  ))}
-
-</div>
-</motion.div>
-
-                  <motion.div
-                    animate={{ x: [0, 6, 0], y: [0, 6, 0] }}
-                    transition={{ repeat: Infinity, duration: 6 }}
-                    className="absolute inset-0  rounded-3xl translate-x-6 translate-y-6 z-10 pointer-events-none"
-                  ></motion.div>
-                </motion.div>
 
               </motion.div>
             )}
@@ -323,6 +250,81 @@ export default function TrainingCategory({ category }) {
 
         </motion.div>
       </div>
+
+      <motion.div variants={item} className="relative flex mt-10">
+                
+
+<motion.div
+  variants={container}
+  initial="hidden"
+  animate="show"
+  className="w-full bg-white rounded-3xl p-8 md:p-12"
+>
+  {/* TITLE */}
+  <motion.h3
+    variants={item}
+    className="text-2xl md:text-3xl font-bold text-black mb-10 text-center"
+  >
+    Key Benefits of Training
+  </motion.h3>
+
+  {/* GRID */}
+  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+  {[
+    {
+      icon: "🚀",
+      text: "Gain industry-relevant skills with hands-on practical training",
+      color: "from-blue-100 to-blue-200",
+    },
+    {
+      icon: "🎯",
+      text: "Learn from experienced professionals and certified trainers",
+      color: "from-purple-100 to-purple-200",
+    },
+    {
+      icon: "💼",
+      text: "Work on real-world projects to build strong portfolio",
+      color: "from-green-100 to-green-200",
+    },
+    {
+      icon: "📈",
+      text: "Get placement assistance and career guidance support",
+      color: "from-yellow-100 to-yellow-200",
+    },
+    {
+      icon: "🏆",
+      text: "Receive certification to boost your career opportunities",
+      color: "from-pink-100 to-pink-200",
+    },
+  ].map((itemData, i) => (
+    <motion.div
+      key={i}
+      variants={item}
+      whileHover={{ y: -8, scale: 1.03 }}
+      className={`group relative p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-500 bg-gradient-to-br ${itemData.color} hover:bg-white`}
+    >
+      {/* ICON */}
+      <div className="text-4xl mb-4 transform group-hover:scale-110 transition duration-300">
+        {itemData.icon}
+      </div>
+
+      {/* TEXT */}
+      <p className="text-gray-700 group-hover:text-gray-800 leading-relaxed transition duration-300">
+        {itemData.text}
+      </p>
+    </motion.div>
+  ))}
+
+</div>
+</motion.div>
+
+                  <motion.div
+                    animate={{ x: [0, 6, 0], y: [0, 6, 0] }}
+                    transition={{ repeat: Infinity, duration: 6 }}
+                    className="absolute inset-0  rounded-3xl translate-x-6 translate-y-6 z-10 pointer-events-none"
+                  ></motion.div>
+                </motion.div>
     </section>
   );
 }
