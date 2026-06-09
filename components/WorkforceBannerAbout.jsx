@@ -1,7 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
-export default function WorkforceBanner() {
-
+import Link from "next/link";
+export default function WorkforceBannerAbout() {
+    
 
   const [count, setCount] = useState(0);
 
@@ -55,17 +56,17 @@ export default function WorkforceBanner() {
         <div className="max-w-[950px] text-white">
 
           {/* Heading */}
-          <h1 className="text-[44px] lg:text-[72px] font-bold leading-[1.1] max-w-[900px]">
-            Your Trusted{" "}
-            <span className="animated-text">
-              SAP Training & IT Services Partner
-            </span>
-          </h1>
+          <h1 className="text-[44px] lg:text-[72px] font-bold leading-[1.1] max-w-[900px]" style={{ fontSize: "55px" }}>
+  10+ Years of Excellence 
+  in{" "}
+  <span className="animated-text">
+    Technology & Learning
+  </span>
+</h1>
 
           {/* Description */}
           <p className="mt-6 text-[18px] lg:text-[22px] text-white/80 max-w-[800px]">
-            Empowering professionals and businesses with industry-leading SAP
-            training and innovative IT solutions.
+          Zisan Tech Solutions is committed to delivering quality SAP Training and innovative IT services that create lasting business value.
           </p>
 
           {/* Features */}
@@ -77,15 +78,14 @@ export default function WorkforceBanner() {
           </div>
 
           {/* Button */}
-          <button
-            onClick={() => {
-              document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="mt-12 rounded-xl px-10 py-3 text-lg font-semibold text-white shadow-lg transition hover:scale-[1.05]"
-            style={{ backgroundColor: "var(--color-orange-500)" }}
-          >
-            Explore Services
-          </button>
+          <Link href="/#services">
+  <button
+    className="mt-12 rounded-xl px-10 py-3 text-lg font-semibold text-white shadow-lg transition hover:scale-[1.05]"
+    style={{ backgroundColor: "var(--color-orange-500)" }}
+  >
+    Explore Services
+  </button>
+</Link>
         </div>
 
         {/* RIGHT SIDE */}

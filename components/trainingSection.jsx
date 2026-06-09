@@ -19,7 +19,6 @@ export default function TrainingSection() {
       ...item,
       type: group.type,
 
-      // same like services
       rating: (4 + Math.random()).toFixed(2),
       reviews: Math.floor(Math.random() * 20000 + 10000),
       learners: Math.floor(Math.random() * 90000 + 20000),
@@ -36,13 +35,13 @@ export default function TrainingSection() {
 
         {/* HEADER */}
         <div className="text-center mb-16 text-white">
-
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-semibold">
-          <span className="text-black">Our Training</span> <span className="text-teal-500"> Programs</span>
-          </h2>
-          <div className="w-16 h-1 bg-teal-500 mx-auto mt-4 rounded" />
-        </div>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-semibold">
+              <span className="text-black">Our Training</span>{" "}
+              <span className="text-teal-500"> Programs</span>
+            </h2>
+            <div className="w-16 h-1 bg-teal-500 mx-auto mt-4 rounded" />
+          </div>
         </div>
 
         {/* GRID */}
@@ -54,28 +53,33 @@ export default function TrainingSection() {
             >
               <div
                 className={`
-                  relative rounded-xl p-6 h-56 flex flex-col justify-between
+                  group relative rounded-xl p-6 h-56 flex flex-col justify-between
                   bg-gradient-to-r ${item.gradient}
-                  shadow-md
+                  shadow-md transition-all duration-300
+                  hover:-translate-y-3 hover:scale-[1.03] hover:shadow-2xl
+                  cursor-pointer overflow-hidden
                 `}
               >
+                {/* HOVER OVERLAY */}
+                <div className="absolute inset-0 bg-[#0f1c4d] opacity-0 group-hover:opacity-90 transition duration-300"></div>
+
                 {/* LEFT BORDER */}
                 <div className={`absolute left-0 top-6 h-12 w-1 ${item.borderColor}`} />
 
                 {/* TOP */}
-                <div>
-                  <h3 className="text-lg font-semibold text-black mb-1">
+                <div className="relative z-10">
+                  <h3 className="text-lg font-semibold text-black group-hover:text-white mb-1 transition">
                     {item.title}
                   </h3>
 
-                  <span className="text-xs text-gray-700">
+                  <span className="text-xs text-gray-700 group-hover:text-gray-300 transition">
                     {item.type}
                   </span>
                 </div>
 
                 {/* DESCRIPTION */}
                 <p
-                  className="text-sm text-gray-700 line-clamp-3 mt-2"
+                  className="relative z-10 text-sm text-gray-700 group-hover:text-gray-300 line-clamp-3 mt-2 transition"
                   dangerouslySetInnerHTML={{
                     __html: Array.isArray(item.description)
                       ? item.description.map((d) => d.description).join("")
@@ -85,7 +89,7 @@ export default function TrainingSection() {
                 />
 
                 {/* BOTTOM */}
-                <div className="flex items-center justify-between text-sm text-gray-800 mt-4">
+                <div className="relative z-10 flex items-center justify-between text-sm text-gray-800 group-hover:text-gray-300 mt-4 transition">
 
                   {/* ⭐ RATING */}
                   <div className="flex items-center gap-2">

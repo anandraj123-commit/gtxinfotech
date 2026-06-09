@@ -29,44 +29,44 @@ export default function ClientSuccessSection() {
   }, []);
 
   return (
-    <section className="w-full min-h-screen bg-[#0f1c4d] flex items-center justify-center px-6 lg:px-20 py-16">
+    <section className="w-full min-h-screen bg-[white] flex items-center justify-center px-6 lg:px-20 py-16">
 
       <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
 
         {/* LEFT */}
-        <div className="text-white">
+        <div className="text-black">
 
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
   Welcome to{" "}
   <span
-    className="bg-gradient-to-r from-white via-orange-300 to-orange-500 bg-clip-text text-transparent"
+    className="bg-gradient-to-r from-orange-500  via-orange-300 to-white bg-clip-text text-transparent"
   >
     Zisan Tech Solutions
   </span>
 </h1>
 
-          <p className="mt-6 text-white/70 leading-relaxed max-w-xl">
+          <p className="mt-6 text-black leading-relaxed max-w-xl">
             Transform Your Business with Tailored SAP Solutions:
           </p>
 
-          <p className="mt-5 text-white/60 leading-relaxed max-w-xl">
+          <p className="mt-5 text-black leading-relaxed max-w-xl">
             We focus on crafting scalable and efficient systems that drive
             process improvements, increase transparency, and boost growth.
             From strategy formulation to ongoing support, our team ensures a
             smooth digital transformation.
           </p>
 
-          <h2 className="mt-10 text-2xl md:text-3xl font-semibold text-white">
+          <h2 className="mt-10 text-2xl md:text-3xl font-semibold text-black">
             Our Commitment to Client Success
           </h2>
 
-          <p className="mt-4 text-white/60 leading-relaxed max-w-xl">
+          <p className="mt-4 text-black leading-relaxed max-w-xl">
             At Zisan Tech Solutions, we measure success by client outcomes. Every
             project—whether solution design, implementation, or training—is
             focused on real business impact.
           </p>
 
-          <p className="mt-4 text-white/60 leading-relaxed max-w-xl">
+          <p className="mt-4 text-black leading-relaxed max-w-xl">
             We deeply understand client workflows and build tailored SAP &
             IT solutions that support immediate needs and long-term growth.
           </p>

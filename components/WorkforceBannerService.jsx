@@ -1,7 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
-export default function WorkforceBanner() {
-
+import Link from "next/link";
+export default function WorkforceBannerAbout() {
+    
 
   const [count, setCount] = useState(0);
 
@@ -55,37 +56,35 @@ export default function WorkforceBanner() {
         <div className="max-w-[950px] text-white">
 
           {/* Heading */}
-          <h1 className="text-[44px] lg:text-[72px] font-bold leading-[1.1] max-w-[900px]">
-            Your Trusted{" "}
-            <span className="animated-text">
-              SAP Training & IT Services Partner
-            </span>
-          </h1>
+          <h1 className="text-[44px] lg:text-[72px] font-bold leading-[1.1] max-w-[900px]" style={{ fontSize: "55px" }}>
+          Driving Business Growth{" "}
+  <span className="animated-text">
+   Through Technology
+  </span>
+</h1>
 
           {/* Description */}
           <p className="mt-6 text-[18px] lg:text-[22px] text-white/80 max-w-[800px]">
-            Empowering professionals and businesses with industry-leading SAP
-            training and innovative IT solutions.
+          Delivering reliable SAP consulting, implementation, support, and custom IT solutions to help businesses succeed.
           </p>
 
           {/* Features */}
           <div className="mt-10 grid grid-cols-2 gap-x-12 gap-y-6">
-            <Feature text="SAP Certified Trainers" />
-            <Feature text="Real-Time Project Exposure" />
-            <Feature text="Corporate Training Programs" />
-            <Feature text="End-to-End IT Services" />
+            <Feature text="SAP Consulting & Support" />
+            <Feature text="Application Development" />
+            <Feature text="System Integration" />
+            <Feature text="Managed IT Services" />
           </div>
 
           {/* Button */}
-          <button
-            onClick={() => {
-              document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="mt-12 rounded-xl px-10 py-3 text-lg font-semibold text-white shadow-lg transition hover:scale-[1.05]"
-            style={{ backgroundColor: "var(--color-orange-500)" }}
-          >
-            Explore Services
-          </button>
+          <Link href="/#services">
+  <button
+    className="mt-12 rounded-xl px-10 py-3 text-lg font-semibold text-white shadow-lg transition hover:scale-[1.05]"
+    style={{ backgroundColor: "var(--color-orange-500)" }}
+  >
+    Explore Services
+  </button>
+</Link>
         </div>
 
         {/* RIGHT SIDE */}

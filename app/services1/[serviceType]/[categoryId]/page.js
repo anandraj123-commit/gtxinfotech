@@ -1,11 +1,11 @@
 import { services } from "@/data/services";
-import HeroSection from "@/components/service/heroSection";
+import  HeroSection from "@/components/service/heroSection";
 import ServiceType from "@/components/service/ServiceType";
 import ServiceCategory from "@/components/service/serviceCategory";
 import ClientsSection from "@/components/service/ClientsSection";
 import TestimonialSection from "@/components/TestimonialSection";
 import Navbar from "@/components/Navbar";
-
+import WorkforceBannerService from "@/components/WorkforceBannerService";
 export default async function Service({ params }) {
   // ✅ Await params (IMPORTANT)
   const resolvedParams = await params;
@@ -36,13 +36,10 @@ export default async function Service({ params }) {
   return (
     <>
       {/* <Navbar /> */}
-
+         <WorkforceBannerService/>
       <HeroSection />
-
       <ServiceType service={selectedService} />
-
       <ServiceCategory category={selectedCategory} />
-
       {/* <ClientsSection /> */}
       <TestimonialSection />
     </>

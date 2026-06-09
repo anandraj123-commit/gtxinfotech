@@ -6,12 +6,13 @@ import ValuesSection from "../../components/about-us/ValuesSection";
 import Navbar from '../../components/Navbar';
 import TeamSection from "../../components/about-us/TeamSection";
 import OfficeLocations from "../../components/about-us/OfficeLocations";
-import WorkforceBanner from "../../components/WorkforceBanner";
+import WorkforceBannerAbout from "../../components/WorkforceBannerAbout";
 export default function About() {
   return (
    <>
    {/* <Navbar/> */}
    {/* <WorkforceBanner/> */}
+    <WorkforceBannerAbout/>
      <ClientSuccessSection/>
      {/* <ContactFormSection/> */}
      <VisionSection/>

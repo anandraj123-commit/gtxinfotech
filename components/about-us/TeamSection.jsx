@@ -22,14 +22,14 @@ const team = [
 
 export default function TeamSection() {
   return (
-    <section className="bg-[#0e1a4d] text-white py-20 px-6 md:px-16 relative overflow-hidden">
+    <section className="bg-[white] text-black py-20 px-6 md:px-16 relative overflow-hidden">
       
       {/* Header */}
       <div className="max-w-6xl mx-auto mb-16">
         <h2 className="text-4xl md:text-5xl font-bold mb-4">
         Our Team
         </h2>
-        <p className="text-gray-300 max-w-2xl">
+        <p className="text-black max-w-2xl">
           Meet the driving forces behind Lunaria, the key players whose dedication
           and expertise fuel our success and innovation every day.
         </p>

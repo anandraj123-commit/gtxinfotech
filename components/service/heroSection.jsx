@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
-    <section className="bg-[#0f1f4b] text-white py-16 px-6 md:px-12 lg:px-20">
+    <section className="bg-[white] text-black py-16 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         
         {/* LEFT CONTENT */}
@@ -18,7 +18,7 @@ export default function HeroSection() {
             We Create Best <br /> Solution For You
           </h1>
 
-          <p className="text-gray-300  leading-relaxed mb-8">
+          <p className="text-black  leading-relaxed mb-8">
             We specialize in crafting bespoke solutions tailored to your unique
             needs, ensuring that our services not only meet but exceed your
             expectations, bringing the best results for your satisfaction.
