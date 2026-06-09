@@ -44,49 +44,33 @@ export default function ServiceCategory({ category }) {
 
         {/* RIGHT CONTENT */}
         <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-white"
-        >
-          {/* Heading */}
-          <div className="flex items-center gap-4 mb-6">
-            <h2 className="text-4xl md:text-5xl font-bold">
-              {category.title}
-            </h2>
+  initial={{ opacity: 0, x: -40 }}   // 👈 changed direction (comes from left)
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.6 }}
+  className="text-white flex-1 text-left"   // 👈 added flex-1 + alignment
+>
+  {/* Heading */}
+  <div className="flex items-center gap-4 mb-6">
+    <h2 className="text-4xl md:text-5xl font-bold">
+      {category.title}
+    </h2>
+  </div>
 
-            {/* Check Icon */}
-            <div className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center">
-              ✓
-            </div>
-          </div>
+  {/* Description */}
+  <p className="text-gray-300 leading-relaxed mb-8">
+    {category.description}
+  </p>
 
-          {/* Description */}
-          <p className="text-gray-300  leading-relaxed mb-8">
-            {category.description}
-          </p>
-
-          {/* FEATURES (dynamic) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-10 mb-10">
-            {category.items.map((item, i) => (
-              <div key={i} className="flex items-center gap-3">
-                <span className="w-4 h-4 border-2 border-orange-500 rounded-full"></span>
-                <p className="text-gray-200">{item}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* BUTTON */}
-          {/* <button className="relative overflow-hidden bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded-lg  font-semibold text-white group">
-  
-  <span className="relative z-10 group-hover:text-black transition duration-300">
-    Collaborate with Us
-  </span>
-
-  <span className="absolute inset-0 bg-[var(--color-teal-400)] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
-
-</button> */}
-        </motion.div>
+  {/* FEATURES (dynamic) */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-10 mb-10">
+    {category.items.map((item, i) => (
+      <div key={i} className="flex items-center gap-3">
+        <span className="w-4 h-4 border-2 border-orange-500 rounded-full"></span>
+        <p className="text-gray-200">{item}</p>
+      </div>
+    ))}
+  </div>
+</motion.div>
 
       </div>
     </section>
