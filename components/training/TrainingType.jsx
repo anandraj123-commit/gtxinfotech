@@ -5,6 +5,15 @@ import { motion } from "framer-motion";
 export default function TrainingType({ training }) {
   if (!training) return null;
 
+  const colors = [
+    "from-orange-100 to-orange-200",
+    "from-blue-100 to-blue-200",
+    "from-green-100 to-green-200",
+    "from-purple-100 to-purple-200",
+    "from-pink-100 to-pink-200",
+    "from-yellow-100 to-yellow-200",
+  ];
+
   return (
     <section className="relative bg-[#f3f4f6] py-24 px-6 md:px-12 lg:px-20 overflow-hidden font-sans">
 
@@ -56,20 +65,22 @@ export default function TrainingType({ training }) {
           />
 
           {/* FEATURES */}
-          <motion.div className="grid grid-cols-1 sm:grid-cols-2 gap-y-5 gap-x-12 mb-10">
-            {(training.items || []).map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                whileHover={{ x: 8 }}
-                className="flex items-center gap-3"
-              >
-               
-                <p className="text-gray-700">{item}</p>
-              </motion.div>
-            ))}
-          </motion.div>
+          <motion.div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+  {(training.items || []).map((item, i) => (
+    <motion.div
+      key={i}
+      initial={{ opacity: 0, x: -30 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      whileHover={{ scale: 1.05, y: -5 }}
+      transition={{ duration: 0.3 }}
+      className={`p-5 rounded-xl shadow-md bg-gradient-to-br ${
+        colors[i % colors.length]
+      }`}
+    >
+      <p className="text-gray-800 font-medium">{item}</p>
+    </motion.div>
+  ))}
+</motion.div>
 
           {/* BUTTON */}
           <motion.button
