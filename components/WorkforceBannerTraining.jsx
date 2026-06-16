@@ -1,9 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-export default function WorkforceBannerAbout() {
+export default function WorkforceBannerTraining() {
     
-
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -57,32 +56,32 @@ export default function WorkforceBannerAbout() {
 
           {/* Heading */}
           <h1 className="text-[44px] lg:text-[72px] font-bold leading-[1.1] max-w-[900px]" style={{ fontSize: "55px" }}>
-          Driving Business Growth{" "}
+         Build Your SAP Career{" "}
   <span className="animated-text">
-   Through Technology
+   with Expert-Led Training
   </span>
 </h1>
 
           {/* Description */}
           <p className="mt-6 text-[18px] lg:text-[22px] text-white/80 max-w-[800px]">
-          Delivering reliable SAP consulting, implementation, support, and custom IT solutions to help businesses succeed.
+          Gain practical skills through hands-on SAP training designed for students, professionals, and enterprises.
           </p>
 
           {/* Features */}
           <div className="mt-10 grid grid-cols-2 gap-x-12 gap-y-6">
-            <Feature text="SAP Consulting & Support" />
-            <Feature text="Application Development" />
-            <Feature text="System Integration" />
-            <Feature text="Managed IT Services" />
+            <Feature text="SAP SD,MM,FICO,CPI,CCM & More" />
+            <Feature text="Live Instructor-Led Sessions" />
+            <Feature text="Real Project Scenarios" />
+            <Feature text="Placement Assistance" />
           </div>
 
           {/* Button */}
-          <Link href="/#services">
+          <Link href="/#training-programs">
   <button
     className="mt-12 rounded-xl px-10 py-3 text-lg font-semibold text-white shadow-lg transition hover:scale-[1.05]"
     style={{ backgroundColor: "var(--color-orange-500)" }}
   >
-    Explore Services
+    View Courses
   </button>
 </Link>
         </div>

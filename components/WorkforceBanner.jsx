@@ -8,7 +8,7 @@ export default function WorkforceBanner() {
   useEffect(() => {
     let start = 0;
     const end = 10; // change to 25 if needed
-    const duration = 2000; // 2 sec
+    const duration = 500; // 2 sec
     const incrementTime = 50;
 
     const step = Math.ceil(end / (duration / incrementTime));

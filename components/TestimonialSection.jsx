@@ -5,47 +5,23 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    name: "Rose Hopkins",
-    role: "Founder of Apple",
+    name: "Rahul Sharma",
+    role: " IT Manager",
     image: "/images/client1.jpg",
-    text: "Superb IT Services to understand customer behaviour...",
+    text: "Zisan Tech Solutions delivered exceptional SAP consulting services. Their technical clarity and execution were outstanding.",
   },
   {
-    name: "Ruben Houston",
-    role: "CEO of Google",
+    name: "Amit Singh",
+    role: "Operation head",
     image: "/images/client1.jpg",
-    text: "Superb IT Services to understand customer behaviour...",
+    text: "Reliable IT partner with scalable enterprise solutions. Helped us improve operational efficiency significantly.",
   },
   {
-    name: "Monica Frazier",
-    role: "COO of Facebook",
+    name: "Anjali Verma",
+    role: "SAP Consultant",
     image: "/images/client1.jpg",
-    text: "Superb IT Services to understand customer behaviour...",
-  },
-  {
-    name: "Ruben Houston",
-    role: "CEO of Google",
-    image: "/images/client1.jpg",
-    text: "Superb IT Services to understand customer behaviour...",
-  },
-  {
-    name: "Monica Frazier",
-    role: "COO of Facebook",
-    image: "/images/client1.jpg",
-    text: "Superb IT Services to understand customer behaviour...",
-  },
-  {
-    name: "Ruben Houston",
-    role: "CEO of Google",
-    image: "/images/client1.jpg",
-    text: "Superb IT Services to understand customer behaviour...",
-  },
-  {
-    name: "Monica Frazier",
-    role: "COO of Facebook",
-    image: "/images/client1.jpg",
-    text: "Superb IT Services to understand customer behaviour...",
-  },
+    text: "The SAP training program exceeded our expectations. Practical sessions, real-world scenarios, and industry standard implementation approach. ",
+  }
 ];
 
 export default function TestimonialSection() {
@@ -150,10 +126,10 @@ export default function TestimonialSection() {
                 "{item.text}"
               </p>
 
-              <p className="text-sm text-white/80 mb-4">
+              {/* <p className="text-sm text-white/80 mb-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 sed do eiusmod tempor incididunt ut labore.
-              </p>
+              </p> */}
 
               {/* Name */}
               <h3

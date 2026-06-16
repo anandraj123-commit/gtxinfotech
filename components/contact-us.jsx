@@ -22,16 +22,14 @@ export default function ContactPage() {
           <div>
             <h2 className="text-2xl text-gray-900 mb-4">Contact Details</h2>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam,
-              vero, provident, eum eligendi blanditiis ex explicabo vitae nostrum
-              facilis asperiores dolorem illo officiis ratione vel fugiat dicta
-              laboriosam labore adipisci.
+            Ready to transform your business with innovative  technology solutions? 
+            Contact Zisan Tech Solutions today and let our experts help you achieve your goals.
             </p>
 
             <div className="space-y-4 text-gray-600">
-              <p>📍 Khaja Road, Bayzid, Chittagong, Bangladesh</p>
+              <p>📍 Delhi</p>
               <p>📞 Phone: +91-8797818499</p>
-              <p>✉️ Email: info@gtxinfotech.com</p>
+              <p>✉️ Email: Info@zisantech.com</p>
             </div>
           </div>
 

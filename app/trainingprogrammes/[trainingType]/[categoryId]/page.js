@@ -5,6 +5,7 @@ import TrainingCategory from "@/components/training/trainingCategory";
 import ClientsSection from "@/components/service/ClientsSection";
 import StudentTestimonialSection from "@/components/StudentTestimonial";
 import Navbar from "@/components/Navbar";
+import WorkforceBannerTraining from '@/components/WorkforceBannerTraining.jsx'
 
 export default async function TrainingPage({ params }) {
   // ✅ unwrap params
@@ -43,6 +44,8 @@ export default async function TrainingPage({ params }) {
   return (
     <>
       {/* <Navbar /> */}
+      <WorkforceBannerTraining/>
+    
       <HeroSection />
       <TrainingType training={selectedTraining} />
       <TrainingCategory category={selectedCategory} />

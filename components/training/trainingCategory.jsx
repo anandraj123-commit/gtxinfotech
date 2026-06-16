@@ -265,56 +265,91 @@ export default function TrainingCategory({ category }) {
     variants={item}
     className="text-2xl md:text-3xl font-bold text-black mb-10 text-center"
   >
-    Key Benefits of Training
+    Key benefit of training with Zisan Tech Solutions.
   </motion.h3>
 
   {/* GRID */}
-  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  {/* GRID */}
+<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-  {[
-    {
-      icon: "🚀",
-      text: "Gain industry-relevant skills with hands-on practical training",
-      color: "from-blue-100 to-blue-200",
-    },
-    {
-      icon: "🎯",
-      text: "Learn from experienced professionals and certified trainers",
-      color: "from-purple-100 to-purple-200",
-    },
-    {
-      icon: "💼",
-      text: "Work on real-world projects to build strong portfolio",
-      color: "from-green-100 to-green-200",
-    },
-    {
-      icon: "📈",
-      text: "Get placement assistance and career guidance support",
-      color: "from-yellow-100 to-yellow-200",
-    },
-    {
-      icon: "🏆",
-      text: "Receive certification to boost your career opportunities",
-      color: "from-pink-100 to-pink-200",
-    },
-  ].map((itemData, i) => (
-    <motion.div
-      key={i}
-      variants={item}
-      whileHover={{ y: -8, scale: 1.03 }}
-      className={`group relative p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-500 bg-gradient-to-br ${itemData.color} hover:bg-white`}
-    >
-      {/* ICON */}
-      <div className="text-4xl mb-4 transform group-hover:scale-110 transition duration-300">
-        {itemData.icon}
-      </div>
+{[
+  {
+    icon: "👨‍🏫",
+    title: "Trainers with Industry Experience",
+    desc: "Learn directly from qualified experts who have real-time project experience.",
+    color: "from-indigo-100 to-indigo-200",
+  },
+  {
+    icon: "🧠",
+    title: "Real-World Experiential Learning",
+    desc: "Gain practical expertise through case studies and hands-on exercises.",
+    color: "from-teal-100 to-teal-200",
+  },
+  {
+    icon: "📚",
+    title: "Updated Course Materials",
+    desc: "Content is regularly revised to match current industry standards.",
+    color: "from-orange-100 to-orange-200",
+  },
+  {
+    icon: "🛠️",
+    title: "Real-Time Project Exposure",
+    desc: "Understand real business workflows and project execution methods.",
+    color: "from-cyan-100 to-cyan-200",
+  },
+  {
+    icon: "🎤",
+    title: "Interview Preparation Support",
+    desc: "Resume building, mock interviews, and expert guidance included.",
+    color: "from-rose-100 to-rose-200",
+  },
+  {
+    icon: "⏰",
+    title: "Flexible Learning Options",
+    desc: "Choose from online, offline, weekday, or weekend batches.",
+    color: "from-lime-100 to-lime-200",
+  },
+  {
+    icon: "🎥",
+    title: "Recorded Sessions Access",
+    desc: "Revise anytime with full access to session recordings.",
+    color: "from-amber-100 to-amber-200",
+  },
+  {
+    icon: "📜",
+    title: "Certification Guidance",
+    desc: "Complete support for exam preparation and certifications.",
+    color: "from-fuchsia-100 to-fuchsia-200",
+  },
+  {
+    icon: "🤝",
+    title: "Placement Support",
+    desc: "Career counseling and job assistance to kickstart your career.",
+    color: "from-emerald-100 to-emerald-200",
+  },
+].map((item, i) => (
+  <motion.div
+    key={i}
+    variants={item}
+    whileHover={{ y: -8, scale: 1.03 }}
+    className={`group p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-500 bg-gradient-to-br ${item.color} hover:bg-white`}
+  >
+    {/* ICON */}
+    <div className="text-4xl mb-4 group-hover:scale-110 transition duration-300">
+      {item.icon}
+    </div>
 
-      {/* TEXT */}
-      <p className="text-gray-700 group-hover:text-gray-800 leading-relaxed transition duration-300">
-        {itemData.text}
-      </p>
-    </motion.div>
-  ))}
+    {/* TITLE */}
+    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+      {item.title}
+    </h3>
+
+    {/* DESCRIPTION */}
+    <p className="text-gray-600 text-sm leading-relaxed">
+      {item.desc}
+    </p>
+  </motion.div>
+))}
 
 </div>
 </motion.div>

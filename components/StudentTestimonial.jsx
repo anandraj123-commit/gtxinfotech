@@ -5,46 +5,39 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    name: "Rose Hopkins",
-    role: "Founder of Apple",
+    name: "Udit Singh",
     image: "/images/client1.jpg",
-    text: "Superb IT Services to understand customer behaviour...",
+    text: "My educational experience with Zisan Tech Solutions was excellent. The training featured real-world examples that are immediately applicable in the industry, and the course material was well-structured. Securing new opportunities was greatly aided by the career assistance and interview preparation.",
   },
   {
-    name: "Ruben Houston",
-    role: "CEO of Google",
+    name: "Mahesh",
     image: "/images/client1.jpg",
-    text: "Superb IT Services to understand customer behaviour...",
+    text: "Zisan Tech Solutions SAP training surpassed my expectations.The instructor was very informed and always willing to answer questions. Case studies, practical projects, and in-the-moment project conversations made the learning process interesting and productive. To anyone hoping to pursue a career in SAP, I heartily recommend Zisan Tech Solutions.",
   },
+  // {
+  //   name: "Monica Frazier",
+  //   image: "/images/client1.jpg",
+  //   text: "Superb IT Services to understand customer behaviour...",
+  // },
+  // {
+  //   name: "Ruben Houston",
+  //   image: "/images/client1.jpg",
+  //   text: "Superb IT Services to understand customer behaviour...",
+  // },
+  // {
+  //   name: "Monica Frazier",
+  //   image: "/images/client1.jpg",
+  //   text: "Superb IT Services to understand customer behaviour...",
+  // },
+  // {
+  //   name: "Ruben Houston",
+  //   image: "/images/client1.jpg",
+  //   text: "Superb IT Services to understand customer behaviour...",
+  // },
   {
-    name: "Monica Frazier",
-    role: "COO of Facebook",
+    name: "Rohini Mhake",
     image: "/images/client1.jpg",
-    text: "Superb IT Services to understand customer behaviour...",
-  },
-  {
-    name: "Ruben Houston",
-    role: "CEO of Google",
-    image: "/images/client1.jpg",
-    text: "Superb IT Services to understand customer behaviour...",
-  },
-  {
-    name: "Monica Frazier",
-    role: "COO of Facebook",
-    image: "/images/client1.jpg",
-    text: "Superb IT Services to understand customer behaviour...",
-  },
-  {
-    name: "Ruben Houston",
-    role: "CEO of Google",
-    image: "/images/client1.jpg",
-    text: "Superb IT Services to understand customer behaviour...",
-  },
-  {
-    name: "Monica Frazier",
-    role: "COO of Facebook",
-    image: "/images/client1.jpg",
-    text: "Superb IT Services to understand customer behaviour...",
+    text: "Zisan Tech Solutions offered top-notch SAP training, emphasizing real-time business scenarios. The instructor gave insightful project experience and clarified difficult ideas. My confidence and SAP abilities improved as a result of the practical practice sessions.",
   },
 ];
 
@@ -150,10 +143,10 @@ export default function StudentTestimonialSection() {
                 "{item.text}"
               </p>
 
-              <p className="text-sm text-white/70 mb-4">
+              {/* <p className="text-sm text-white/70 mb-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 sed do eiusmod tempor incididunt ut labore.
-              </p>
+              </p> */}
 
               {/* Name */}
               <h3
@@ -167,9 +160,9 @@ export default function StudentTestimonialSection() {
                 {item.name}
               </h3>
 
-              <p className="text-white/70 text-sm">
+              {/* <p className="text-white/70 text-sm">
                 {item.role}
-              </p>
+              </p> */}
             </div>
           );
         })}

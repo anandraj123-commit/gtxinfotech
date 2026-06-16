@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
-    <section className="bg-[#0f1f4b] text-white py-16 px-6 md:px-12 lg:px-20">
+    <section className="bg-[white] text-black py-16 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         {/* LEFT CONTENT */}
         <motion.div
@@ -16,7 +16,7 @@ export default function HeroSection() {
           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
   Enhance Your Expertise  <br />  with Career-Ready Training
 </h1>
-<p className="text-gray-300  leading-relaxed mb-8 text-justify">
+<p className="text-black  leading-relaxed mb-8 text-justify">
 Zisan Tech Solutions believes in empowering you with skills that matter. Our courses combine real-world experience, seasoned guidance, and industry-focused curriculum to accelerate your journey toward a thriving SAP career.<br></br>
 We don’t just teach concepts — we prepare you to confidently handle real SAP challenges in the workplace. 
 </p>

@@ -27,8 +27,7 @@ export default function Footer() {
           </div>
 
           <p className="text-gray-300 mb-6 leading-relaxed">
-            Happen active county. Winding for the morning am shyness evident to poor.
-            Garrets because elderly new.
+          Zisan Tech Solutions is a leading technology solutions provider specializing in SAP consulting, training, and enterprise software solutions. 
           </p>
 
           {/* Email Input */}
