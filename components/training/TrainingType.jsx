@@ -18,7 +18,7 @@ export default function TrainingType({ training }) {
     <section className="relative bg-[#f3f4f6] py-24 px-6 md:px-12 lg:px-20 overflow-hidden font-sans">
 
       {/* GRID BACKGROUND */}
-      <div className="absolute inset-0 opacity-[0.04] bg-[linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] bg-[size:40px_40px]" />
+      <div className="absolute inset-0 opacity-[0.04]" />
 
       <div className="max-w-7xl mx-auto relative z-10">
 
@@ -83,13 +83,13 @@ export default function TrainingType({ training }) {
 </motion.div>
 
           {/* BUTTON */}
-          <motion.button
+          {/* <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             className="bg-orange-500 hover:bg-orange-600 text-white px-7 py-3 rounded-xl font-semibold"
           >
             Join Us
-          </motion.button>
+          </motion.button> */}
 
         </motion.div>
       </div>

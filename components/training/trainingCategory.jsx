@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import PlacementSupport from "../placementData";
 
 export default function TrainingCategory({ category }) {
   const [activeTab, setActiveTab] = useState("Overview");
@@ -42,17 +43,17 @@ export default function TrainingCategory({ category }) {
   };
 
   return (
-    <section className="bg-[#0f1f4b] py-20 px-6 md:px-12 lg:px-20">
+    <section className="  bg-gray-100  px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, scale: 0.97 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
-          className="bg-white rounded-2xl shadow-xl overflow-hidden p-4 md:p-8"
+          className=" rounded-2xl  overflow-hidden p-4 md:p-8"
         >
 
           {/* 🔷 TABS */}
-          <div className="flex justify-center gap-2 md:gap-4 bg-white p-2 rounded-xl mb-8">
+          <div className="flex justify-center gap-2 md:gap-4  p-2 rounded-xl mb-8">
             {tabs.map((tab) => (
               <motion.button
                 key={tab}
@@ -258,7 +259,8 @@ export default function TrainingCategory({ category }) {
   variants={container}
   initial="hidden"
   animate="show"
-  className="w-full bg-white rounded-3xl p-8 md:p-12"
+  className="w-full  rounded-3xl p-8 md:p-12"
+  bg-white
 >
   {/* TITLE */}
   <motion.h3
@@ -274,55 +276,46 @@ export default function TrainingCategory({ category }) {
 
 {[
   {
-    icon: "👨‍🏫",
     title: "Trainers with Industry Experience",
     desc: "Learn directly from qualified experts who have real-time project experience.",
     color: "from-indigo-100 to-indigo-200",
   },
   {
-    icon: "🧠",
     title: "Real-World Experiential Learning",
     desc: "Gain practical expertise through case studies and hands-on exercises.",
     color: "from-teal-100 to-teal-200",
   },
   {
-    icon: "📚",
     title: "Updated Course Materials",
     desc: "Content is regularly revised to match current industry standards.",
     color: "from-orange-100 to-orange-200",
   },
   {
-    icon: "🛠️",
     title: "Real-Time Project Exposure",
     desc: "Understand real business workflows and project execution methods.",
     color: "from-cyan-100 to-cyan-200",
   },
   {
-    icon: "🎤",
     title: "Interview Preparation Support",
     desc: "Resume building, mock interviews, and expert guidance included.",
     color: "from-rose-100 to-rose-200",
   },
   {
-    icon: "⏰",
     title: "Flexible Learning Options",
     desc: "Choose from online, offline, weekday, or weekend batches.",
     color: "from-lime-100 to-lime-200",
   },
   {
-    icon: "🎥",
     title: "Recorded Sessions Access",
     desc: "Revise anytime with full access to session recordings.",
     color: "from-amber-100 to-amber-200",
   },
   {
-    icon: "📜",
     title: "Certification Guidance",
     desc: "Complete support for exam preparation and certifications.",
     color: "from-fuchsia-100 to-fuchsia-200",
   },
   {
-    icon: "🤝",
     title: "Placement Support",
     desc: "Career counseling and job assistance to kickstart your career.",
     color: "from-emerald-100 to-emerald-200",
@@ -334,10 +327,10 @@ export default function TrainingCategory({ category }) {
     whileHover={{ y: -8, scale: 1.03 }}
     className={`group p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-500 bg-gradient-to-br ${item.color} hover:bg-white`}
   >
-    {/* ICON */}
-    <div className="text-4xl mb-4 group-hover:scale-110 transition duration-300">
-      {item.icon}
-    </div>
+    {/* NUMBER */}
+    <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white shadow font-bold text-lg mb-4">
+  {i + 1}
+</div>
 
     {/* TITLE */}
     <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -359,7 +352,8 @@ export default function TrainingCategory({ category }) {
                     transition={{ repeat: Infinity, duration: 6 }}
                     className="absolute inset-0  rounded-3xl translate-x-6 translate-y-6 z-10 pointer-events-none"
                   ></motion.div>
-                </motion.div>
+      </motion.div>
+      <PlacementSupport/>
     </section>
   );
 }

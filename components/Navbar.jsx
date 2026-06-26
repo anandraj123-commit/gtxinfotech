@@ -165,7 +165,7 @@ export default function Navbar() {
           </li>
 
           <li><Link href="/contact" className={navLink("/contact")}>Contact</Link></li>
-          <li><Link href="/carrier" className={navLink("/carrier")}>Carrier</Link></li>
+          <li><Link href="/career" className={navLink("/career")}>Career</Link></li>
         </ul>
 
         <div className="w-8"></div>
@@ -194,7 +194,7 @@ export default function Navbar() {
         <Link href="/about" onClick={() => setMobileMenu(false)} className={mobileNavLink("/about")}>About</Link>
 
         <Link href="/contact" onClick={() => setMobileMenu(false)} className={mobileNavLink("/contact")}>Contact</Link>
-        <Link href="/carrier" onClick={() => setMobileMenu(false)} className={mobileNavLink("/carrier")}>Carrier</Link>
+        <Link href="/career" onClick={() => setMobileMenu(false)} className={mobileNavLink("/career")}>Career</Link>
       </div>
     </>
   );

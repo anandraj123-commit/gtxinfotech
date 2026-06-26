@@ -33,9 +33,9 @@
                 <a href="tel:+918797818499" className="flex items-center gap-1 md:gap-2 group cursor-pointer" > 
                     <Phone size={14} className="md:w-4 md:h-4 transition group-hover:scale-110" style={{ color: logoColor }} />
                      <span className="transition group-hover:text-[color:var(--logo)]" style={{ "--logo": logoColor }} > +91 8797818499 </span> 
-                     </a> {/* EMAIL */} <a href="mailto:info@gtxinfotech.com" className="flex items-center gap-1 md:gap-2 group cursor-pointer" >
+                     </a> {/* EMAIL */} <a href="mailto:info@zisantech.com" className="flex items-center gap-1 md:gap-2 group cursor-pointer" >
                          <Mail size={14} className="md:w-4 md:h-4 transition group-hover:scale-110" style={{ color: logoColor }} /> 
-                         <span className="transition group-hover:text-[color:var(--logo)]" style={{ "--logo": logoColor }} > info@gtxinfotech.com </span> 
+                         <span className="transition group-hover:text-[color:var(--logo)]" style={{ "--logo": logoColor }} > info@zisantech.com </span> 
                          </a> </div> 
                          </div> 
                          </div> ); }

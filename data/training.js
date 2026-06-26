@@ -1019,7 +1019,7 @@ With Zisan Tech Solutions, you gain the confidence to work on real-time SAP impl
                   </p>
             
                   <p class="mt-5">
-                    You will gain real-world insights into how organizations plan shipments, select carriers, and track goods movement across the supply chain.
+                    You will gain real-world insights into how organizations plan shipments, select career, and track goods movement across the supply chain.
                   </p>
                 `
               },
@@ -1051,7 +1051,7 @@ With Zisan Tech Solutions, you gain the confidence to work on real-time SAP impl
                     <li>Transportation planning and scheduling</li>
                     <li>Managing freight units and freight orders</li>
                     <li>Route optimization and load planning</li>
-                    <li>Carrier selection and tendering processes</li>
+                    <li>Career selection and tendering processes</li>
                     <li>Freight cost calculation and settlement</li>
                     <li>Real-time shipment tracking and monitoring</li>
                   </ul>

@@ -64,7 +64,7 @@ export default function Footer() {
               <Link href="/contact">Contact Us</Link>
             </li>
             <li className="hover:text-white cursor-pointer">
-              <Link href="/carrier">Carrier</Link>
+              <Link href="/career">Career</Link>
             </li>
           </ul>
         </div>
@@ -99,7 +99,7 @@ export default function Footer() {
                 href="mailto:info@yourcompany.com"
                 className="hover:text-orange-400 transition"
               >
-                Info@gtxinfotech.com
+                Info@zisantech.com
               </a>
             </div>
 

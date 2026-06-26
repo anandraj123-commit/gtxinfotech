@@ -95,7 +95,7 @@ export default function TestimonialSection() {
               `}
             >
               {/* Avatar */}
-              <div className="flex justify-center -mt-16 mb-4">
+              {/* <div className="flex justify-center -mt-16 mb-4">
                 <div
                   className={`w-20 h-20 rounded-full overflow-hidden border-4 border-white transition-all duration-700
                   ${
@@ -112,7 +112,7 @@ export default function TestimonialSection() {
                     className="object-cover"
                   />
                 </div>
-              </div>
+              </div> */}
 
               {/* Text */}
               <p
