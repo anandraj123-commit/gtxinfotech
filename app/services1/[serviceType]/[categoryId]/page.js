@@ -6,6 +6,7 @@ import ClientsSection from "@/components/service/ClientsSection";
 import TestimonialSection from "@/components/TestimonialSection";
 import Navbar from "@/components/Navbar";
 import WorkforceBannerService from "@/components/WorkforceBannerService";
+import DeliveryMethodology from "@/components/DeliveryMethodology";
 export default async function Service({ params }) {
   // ✅ Await params (IMPORTANT)
   const resolvedParams = await params;
@@ -36,10 +37,11 @@ export default async function Service({ params }) {
   return (
     <>
       {/* <Navbar /> */}
-         <WorkforceBannerService/>
+      <WorkforceBannerService/>
       <HeroSection />
       <ServiceType service={selectedService} />
       <ServiceCategory category={selectedCategory} />
+      <DeliveryMethodology/>
       {/* <ClientsSection /> */}
       <TestimonialSection />
     </>

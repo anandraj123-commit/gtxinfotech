@@ -45,7 +45,7 @@ export default function TestimonialSection() {
   };
 
   return (
-    <section className="py-20 bg-white text-center overflow-hidden">
+    <section className="py-20 bg-[#f3f4f6] text-center overflow-hidden">
       
       {/* Heading */}
       <p className="text-sm text-teal-600 font-semibold mb-2">

@@ -50,7 +50,7 @@ export default function ServiceType({ service }) {
         >
           {/* Heading */}
           <div className="flex items-center gap-4 mb-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+            <h2 className="text-2xl md:text-5xl font-semibold text-gray-900">
               {service.type}
             </h2>
           </div>
