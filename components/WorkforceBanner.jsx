@@ -81,7 +81,7 @@ export default function WorkforceBanner() {
             onClick={() => {
               document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="mt-12 rounded-xl px-10 py-3 text-lg font-semibold text-white shadow-lg transition hover:scale-[1.05]"
+            className="mt-12 rounded-xl px-4 py-3 text-lg font-semibold text-white shadow-lg transition hover:scale-[1.05]"
             style={{ backgroundColor: "var(--color-orange-500)" }}
           >
             Explore Services

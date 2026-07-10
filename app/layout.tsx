@@ -6,7 +6,8 @@ import TopBar from '../components/TopBar';
 import Navbar from '../components/Navbar';
 import WhatsAppButton from '../components/WhatsAppButton';
 import RouteLoader from "@/components/RouteLoader";
-
+import SocialSidebar from "@/components/SocialSidebar";
+import SocialExpandable from "@/components/SocialExpandable";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,8 +35,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <RouteLoader />
-        <TopBar/>
+        {/* <TopBar/> */}
         <Navbar/>
+        {/* <SocialSidebar /> */}
+        <SocialExpandable/>
         {children}
         <Footer/>
         <WhatsAppButton/>

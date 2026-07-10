@@ -109,14 +109,14 @@ export const services = [
                 description:'Elevate your business potential with our Method Development. Our strategic solutions are designed to adapt to dynamic business landscapes, ensuring your organization remains agile and competitive. Partner with us for comprehensive method development that propels your success and fosters lasting growth in an ever-evolving market. Here some benefit you will get:',
                 items:['Efficiency enhancement','Adaptive & sustainability','Productivity boost','Cost reduction']
               },
-              {  
-                id:6,
-                icon:"/images/services/icon.jpg",
-                image:'/images/services/team.jpg',
-                title:'Blockchain',
-                description:'Elevate your business potential with our Method Development. Our strategic solutions are designed to adapt to dynamic business landscapes, ensuring your organization remains agile and competitive. Partner with us for comprehensive method development that propels your success and fosters lasting growth in an ever-evolving market. Here some benefit you will get:',
-                items:['Efficiency enhancement','Adaptive & sustainability','Productivity boost','Cost reduction']
-              }
+              // {  
+              //   id:6,
+              //   icon:"/images/services/icon.jpg",
+              //   image:'/images/services/team.jpg',
+              //   title:'Blockchain',
+              //   description:'Elevate your business potential with our Method Development. Our strategic solutions are designed to adapt to dynamic business landscapes, ensuring your organization remains agile and competitive. Partner with us for comprehensive method development that propels your success and fosters lasting growth in an ever-evolving market. Here some benefit you will get:',
+              //   items:['Efficiency enhancement','Adaptive & sustainability','Productivity boost','Cost reduction']
+              // }
         ]
         }
 ]

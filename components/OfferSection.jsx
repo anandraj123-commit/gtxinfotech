@@ -77,7 +77,7 @@ export default function OfferSection() {
                 <div className="mx-auto mb-6 w-20 h-20 flex items-center justify-center rounded-full border-4 border-white relative">
                   
                   {/* Rotating border */}
-                  <div className="absolute w-full h-full rounded-full border-4 border-orange-400 border-t-transparent border-l-transparent animate-spin-slow"></div>
+                  <div className="absolute w-full h-full rounded-full border-4 border-orange-500  border-t-transparent border-l-transparent animate-spin-slow"></div>
 
                   <Icon className="text-2xl text-white relative z-10" />
                 </div>

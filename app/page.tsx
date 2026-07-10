@@ -17,15 +17,18 @@ import FAQ from '@/components/Faqs';
 import WhyChooseGTX from '@/components/WhyChooseGTX';
 import WorkforceBanner from '@/components/WorkforceBanner';
 
-
+import HeroSection from '@/components/HeroSection';
 
 export default function Home() {
   return (
     <main>
-      <WorkforceBanner/>
+
+      {/* <WorkforceBanner/> */}
       {/* <Hero /> */}
       {/* <AboutSection /> */}
+      <HeroSection />
       <StorySection/>
+      <img src="/images/sap-services-training-programes.png" alt="SAP Services Training Programmes" className="w-full h-auto"/>
       <SuccessSection/>
       <WorkSection/>
       <SkillSection/>
@@ -33,6 +36,7 @@ export default function Home() {
       <TrainingSection/>
       <OfferSection/>
       {/* <TeamSection/> */}
+      <img src="/images/stay-connected.png" alt="stay connected" className="w-full h-auto"/>
       
       <TestimonialSection/> 
       <WhyChooseGTX/>
