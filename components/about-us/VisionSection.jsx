@@ -9,89 +9,100 @@ export default function VisionSection() {
     setVisible(true);
   }, []);
 
-  const timeline = [
-    {
-      title: "MISSION",
-      content: [
-        "We are dedicated to empowering organizations and professionals by providing dependable SAP consulting, hands-on SAP training, and cutting-edge IT solutions.",
-        "Drive Real-World Solutions – solving authentic business problems.",
-        "Prepare Industry-Ready Experts – practical skills for enterprise.",
-        "Cultivate Enduring Trust – long-term partnerships.",
-      ],
-    },
-    {
-      title: "VISION",
-      content: [
-        "Our goal is to become a trusted global leader in technology solutions.",
-        "Empowering Growth Through Technology.",
-        "Bridging Global Practices with Local Needs.",
-      ],
-    },
-  ];
-
   return (
-    <section className="w-full bg-[#f5f5f5] px-6 lg:px-20 py-20">
-      <div className="max-w-5xl mx-auto">
-
-        {/* Heading */}
-        <h1 className={`text-4xl md:text-5xl font-bold mb-16 text-center transition-all duration-700 ${
-          visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}>
-          Vision & Mission
+    <section className="w-full bg-gradient-to-br from-[#f8fafc] to-[#eef2ff] py-24 px-6 lg:px-20 overflow-hidden">
+      
+      {/* HEADER */}
+      <div className="max-w-6xl mx-auto text-center mb-20">
+        <h1
+          className={`text-4xl md:text-5xl font-bold transition-all duration-700 ${
+            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          <span className="text-orange-500">Our Vision & </span><span className="text-teal-400">Mission</span> 
         </h1>
 
-        {/* Timeline */}
-        <div className="relative">
+        <p
+          className={`mt-6 text-gray-600 max-w-2xl mx-auto transition-all duration-700 delay-200 ${
+            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          Driving innovation, empowering businesses, and shaping the future through intelligent SAP solutions.
+        </p>
+      </div>
 
-          {/* Vertical Line */}
-          <div className="absolute left-8 top-0 bottom-0 w-[2px] bg-gray-300"></div>
+      {/* GRID */}
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
 
-          <div className="space-y-20">
-            {timeline.map((item, index) => (
-              <div
-                key={index}
-                className={`relative flex items-start gap-8 transition-all duration-700 ${
-                  visible
-                    ? "opacity-100 translate-x-0"
-                    : "opacity-0 -translate-x-10"
-                }`}
-                style={{ transitionDelay: `${index * 200}ms` }}
-              >
+        {/* MISSION CARD */}
+        <div
+          className={`group relative p-[1px] rounded-3xl bg-gradient-to-r from-orange-500 to-pink-500 transition-all duration-700 ${
+            visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+          }`}
+        >
+          <div className="rounded-3xl bg-white/70 backdrop-blur-xl p-8 h-full shadow-xl group-hover:shadow-2xl transition duration-500">
 
-                {/* Icon */}
-                <div className="relative flex items-center justify-center">
-                  <div className="z-10 w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-lg border border-gray-200 transition duration-300 hover:scale-110">
-                    <div className="w-8 h-8 flex items-center justify-center rounded-full border-2 border-orange-500">
-                      <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
-                    </div>
-                  </div>
-                </div>
+            <h2 className="text-2xl font-bold mb-6 text-gray-800">
+              🚀 Mission
+            </h2>
 
-                {/* Card */}
-                <div className="bg-white p-6 rounded-xl shadow-sm w-full transition duration-300 hover:shadow-lg hover:-translate-y-1">
+            <ul className="space-y-4 text-gray-600 leading-relaxed">
+              <li>
+                We empower organizations with dependable SAP consulting, training, and IT solutions.
+              </li>
+              <li>
+                ✔ Drive real-world business problem solving
+              </li>
+              <li>
+                ✔ Build industry-ready professionals
+              </li>
+              <li>
+                ✔ Deliver scalable and efficient systems
+              </li>
+              <li>
+                ✔ Foster long-term partnerships
+              </li>
+            </ul>
 
-                  <h3 className="text-2xl font-bold mb-3">
-                    {item.title}
-                  </h3>
-
-                  <ul className="space-y-2 text-gray-600 leading-relaxed">
-                    {item.content.map((text, i) => (
-                      <li key={i}>• {text}</li>
-                    ))}
-                  </ul>
-
-                </div>
-              </div>
-            ))}
           </div>
         </div>
 
-        {/* CTA (kept commented as you had) */}
-        <div className="text-center">
-          {/* Button remains unchanged */}
+        {/* VISION CARD */}
+        <div
+          className={`group relative p-[1px] rounded-3xl bg-gradient-to-r from-blue-500 to-indigo-500 transition-all duration-700 delay-200 ${
+            visible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
+          }`}
+        >
+          <div className="rounded-3xl bg-white/70 backdrop-blur-xl p-8 h-full shadow-xl group-hover:shadow-2xl transition duration-500">
+
+            <h2 className="text-2xl font-bold mb-6 text-gray-800">
+              🌍 Vision
+            </h2>
+
+            <ul className="space-y-4 text-gray-600 leading-relaxed">
+              <li>
+                To become a trusted global leader in technology solutions.
+              </li>
+              <li>
+                ✔ Empowering growth through innovation
+              </li>
+              <li>
+                ✔ Bridging global practices with local needs
+              </li>
+              <li>
+                ✔ Creating future-ready enterprises
+              </li>
+            </ul>
+
+          </div>
         </div>
 
       </div>
+
+      {/* DECORATIVE BLUR ELEMENTS */}
+      <div className="absolute top-10 left-10 w-72 h-72 bg-orange-300/30 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-10 right-10 w-72 h-72 bg-indigo-300/30 rounded-full blur-3xl"></div>
+
     </section>
   );
 }

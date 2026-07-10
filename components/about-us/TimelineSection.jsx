@@ -85,7 +85,7 @@ export default function TimelineSection() {
         <div className="relative flex justify-center">
 
           {/* DELAYED BORDER */}
-          <div className="absolute top-5 left-5 w-full h-full border-2 border-orange-500 rounded-2xl z-0 animate-borderShift"></div>
+          {/* <div className="absolute top-5 left-5 w-full h-full border-2 border-orange-500 rounded-2xl z-0 animate-borderShift"></div> */}
 
           {/* IMAGE */}
           <div className="relative rounded-2xl overflow-hidden max-w-md w-full shadow-2xl z-10 animate-imagePhase">

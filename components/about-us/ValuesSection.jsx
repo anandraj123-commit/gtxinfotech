@@ -66,7 +66,7 @@ export default function ValuesSection() {
         {Array.from({ length: 40 }).map((_, i) => (
           <span
             key={i}
-            className="absolute w-2 h-2 bg-orange-400 rounded-full opacity-30 animate-[orbit_20s_linear_infinite]"
+            className="absolute w-2 h-2 bg-orange-500 rounded-full opacity-30 animate-[orbit_20s_linear_infinite]"
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
@@ -118,15 +118,7 @@ export default function ValuesSection() {
       </div>
 
       {/* STRIPES */}
-      <div className="absolute bottom-6 left-6 flex gap-3">
-        {Array.from({ length: 10 }).map((_, i) => (
-          <span
-            key={i}
-            className="block w-[2px] h-10 bg-orange-500 transform skew-x-[-20deg] animate-pulse"
-            style={{ animationDelay: `${i * 0.1}s` }}
-          ></span>
-        ))}
-      </div>
+   
 
       {/* KEYFRAMES */}
       <style jsx>{`

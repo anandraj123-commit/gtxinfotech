@@ -29,99 +29,117 @@ export default function ClientSuccessSection() {
   }, []);
 
   return (
-    <section className="w-full min-h-screen bg-[white] flex items-center justify-center px-6 lg:px-20 py-16">
+    <section className="w-full min-h-screen bg-white flex items-center justify-center px-6 lg:px-20 py-20">
 
-      <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+      <div className="max-w-7xl w-full">
 
-        {/* LEFT */}
-        <div className="text-black">
+        {/* TOP HEADING */}
+        <div className="text-center mb-16">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
+            Welcome to{" "}
+            <span className="text-orange-500">Zisan</span>{" "}
+            <span className="text-teal-400">Tech Solutions</span>
+          </h1>
 
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
-  Welcome to{" "}
-  <span
-    className="bg-gradient-to-r from-orange-500  via-orange-300 to-white bg-clip-text text-transparent"
-  >
-    Zisan Tech Solutions
-  </span>
-</h1>
-
-          <p className="mt-6 text-black leading-relaxed max-w-xl">
-            Transform Your Business with Tailored SAP Solutions:
-          </p>
-
-          <p className="mt-5 text-black leading-relaxed max-w-xl">
-            We focus on crafting scalable and efficient systems that drive
-            process improvements, increase transparency, and boost growth.
-            From strategy formulation to ongoing support, our team ensures a
-            smooth digital transformation.
-          </p>
-
-          <h2 className="mt-10 text-2xl md:text-3xl font-semibold text-black">
-            Our Commitment to Client Success
-          </h2>
-
-          <p className="mt-4 text-black leading-relaxed max-w-xl">
-            At Zisan Tech Solutions, we measure success by client outcomes. Every
-            project—whether solution design, implementation, or training—is
-            focused on real business impact.
-          </p>
-
-          <p className="mt-4 text-black leading-relaxed max-w-xl">
-            We deeply understand client workflows and build tailored SAP &
-            IT solutions that support immediate needs and long-term growth.
+          <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+            Transform Your Business with Tailored SAP Solutions
           </p>
         </div>
 
-        {/* RIGHT SLIDER */}
-        <div className="flex justify-center">
+        {/* MAIN GRID */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
 
-          <div className="relative w-full max-w-md">
+          {/* LEFT CONTENT */}
+          <div className="text-black">
 
-            {/* Glow Frame */}
-            <div className="absolute -inset-3 rounded-2xl bg-orange-500/20 blur-xl"></div>
+            <p className="leading-relaxed max-w-xl text-justify">
+              We focus on crafting scalable and efficient systems that drive
+              process improvements, increase transparency, and boost growth.
+              From strategy formulation to ongoing support, our team ensures a
+              smooth digital transformation.
+            </p>
 
-            {/* Main Card */}
-            <div className="relative rounded-2xl overflow-hidden bg-white shadow-2xl group">
+            <h2 className="mt-10 text-2xl md:text-3xl font-semibold">
+              Our Commitment to Client Success
+            </h2>
 
-              {/* IMAGE */}
-              <div className="overflow-hidden">
-                <img
-                  src={slides[current].image}
-                  alt="slide"
-                  className="w-full h-[380px] object-cover transition-transform duration-700 group-hover:scale-105"
-                />
+            <p className="mt-4 leading-relaxed max-w-xl text-justify">
+              At Zisan Tech Solutions, we measure success by client outcomes.
+              Every project—whether solution design, implementation, or training—
+              is focused on real business impact.
+            </p>
+
+            <p className="mt-4 leading-relaxed max-w-xl text-justify">
+              We deeply understand client workflows and build tailored SAP & IT
+              solutions that support immediate needs and long-term growth.
+            </p>
+
+          </div>
+
+          {/* RIGHT STACKED SLIDER */}
+          <div className="flex justify-center">
+            <div className="relative w-full max-w-md h-[420px] flex items-center justify-center">
+
+              {slides.map((slide, index) => {
+                const position =
+                  index === current
+                    ? "z-30 scale-100 opacity-100"
+                    : index === (current + 1) % slides.length
+                    ? "z-20 scale-90 translate-x-16 opacity-60"
+                    : index === (current - 1 + slides.length) % slides.length
+                    ? "z-20 scale-90 -translate-x-16 opacity-60"
+                    : "z-10 scale-75 opacity-0";
+
+                return (
+                  <div
+                    key={index}
+                    className={`absolute w-full h-full transition-all duration-700 ease-in-out ${position}`}
+                  >
+                    <div className="w-full h-full rounded-3xl overflow-hidden shadow-2xl bg-white">
+
+                      <div className="relative h-full">
+                        <img
+                          src={slide.image}
+                          alt="slide"
+                          className="w-full h-full object-cover"
+                        />
+
+                        {/* OVERLAY */}
+                        <div className="absolute inset-0 bg-black/40"></div>
+
+                        {/* CAPTION */}
+                        <div className="absolute bottom-0 p-6 text-white">
+                          <p className="text-lg font-semibold">
+                            {slide.caption}
+                          </p>
+                        </div>
+
+                      </div>
+
+                    </div>
+                  </div>
+                );
+              })}
+
+              {/* DOTS */}
+              <div className="absolute -bottom-10 flex gap-2">
+                {slides.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrent(index)}
+                    className={`h-2.5 rounded-full transition-all duration-300 ${
+                      current === index
+                        ? "w-6 bg-orange-500"
+                        : "w-2.5 bg-gray-300"
+                    }`}
+                  />
+                ))}
               </div>
 
-              {/* CAPTION */}
-              <div className="bg-[#0f1c4d] text-white px-5 py-4 text-center">
-                <p className="text-sm md:text-base font-medium tracking-wide">
-                  {slides[current].caption}
-                </p>
-
-                {/* DOTS */}
-                <div className="flex justify-center gap-2 mt-3">
-                  {slides.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrent(index)}
-                      className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                        current === index
-                          ? "bg-orange-500 scale-125"
-                          : "bg-white/30 hover:bg-white/60"
-                      }`}
-                    />
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Floating Badge */}
-            <div className="absolute -top-4 -right-4 bg-orange-500 text-white text-xs px-3 py-1 rounded-full shadow-lg">
-              Live Updates
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </section>
   );
