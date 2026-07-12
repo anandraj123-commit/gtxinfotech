@@ -47,7 +47,7 @@ export default function ServicesSection() {
                 {/* IMAGE */}
                 <div className="w-full h-32 overflow-hidden">
                   <img
-                    src={"/images/img2.png" || "/default-service.jpg"}
+                    src={`${service.image}` || "/default-service.jpg"}
                     alt={service.title}
                     layout="fill"
                     objectFit="cover"
