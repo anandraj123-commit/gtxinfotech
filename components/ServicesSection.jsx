@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 import { services } from "../data/services";
 
 export default function ServicesSection() {
@@ -46,9 +47,11 @@ export default function ServicesSection() {
                 {/* IMAGE */}
                 <div className="w-full h-32 overflow-hidden">
                   <img
-                    src={service.image || "/default-service.jpg"}
+                    src={"/images/img2.png" || "/default-service.jpg"}
                     alt={service.title}
-                    className="w-full h-full object-cover transition duration-300 group-hover:scale-110 group-hover:brightness-75"
+                    layout="fill"
+                    objectFit="cover"
+                    className="transition duration-300 group-hover:scale-110 group-hover:brightness-75"
                   />
                 </div>
 

@@ -110,7 +110,7 @@ export default function TrainingSection() {
                 <div className="relative w-full h-40 overflow-hidden">
 
                   <img
-                    src={item.image || "/default-service.jpg"}
+                    src={'/images/img2.png' || "/default-service.jpg"}
                     alt={item.title}
                     className="
                       w-full h-full object-cover
