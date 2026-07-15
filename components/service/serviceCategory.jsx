@@ -6,97 +6,89 @@ import { motion } from "framer-motion";
 export default function ServiceCategory({ category }) {
   if (!category) return null;
 
-  const container = {
-    hidden: {},
-    show: {
-      transition: {
-        staggerChildren: 0.15,
-      },
-    },
-  };
-
-  const item = {
-    hidden: { opacity: 0, y: 30 },
-    show: { opacity: 1, y: 0 },
-  };
-
   return (
-    <section className="relative w-full h-[700px] md:h-[800px] overflow-hidden">
+    <section className="w-full py-20 bg-[#f3f4f6]  px-6 md:px-12 lg:px-20">
+      <div className="max-w-7xl mx-auto space-y-16">
 
-      {/* BACKGROUND IMAGE */}
-      <div className="absolute inset-0 z-0">
+        {/* SECTION HEADING */}
+        <div className="mb-4   pl-4">
+          <h2 className="text-4xl font-bold mb-4 text-center text-gray-900 opacity-100 translate-y-0">
+            <span className="text-orange-500">Welcome to </span>
+            <span className="text-teal-500">{category.title}</span>
+          </h2>
+        </div>
+
+        {/* TOP ROW */}
+        <div className="grid md:grid-cols-2 gap-12 items-start mt-20">
+
+{/* LEFT - IMAGE */}
+<motion.div
+  initial={{ opacity: 0, x: -60 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8 }}
+  className="relative flex justify-start"
+>
+  <div className="relative rounded-3xl p-2 w-full">
+    <div className="relative w-full h-[350px] md:h-[450px] rounded-2xl overflow-hidden">
+      <Image
+        src={category.image}
+        alt={category.title}
+        fill
+        className="object-cover"
+        priority
+      />
+    </div>
+  </div>
+</motion.div>
+
+{/* RIGHT - CONTENT */}
+<motion.div
+  initial={{ opacity: 0, x: 60 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8 }}
+  className="flex flex-col justify-start h-full"
+>
+  {category.description?.trim() !== "" && (
+    <p className="text-gray-600 text-lg leading-relaxed max-w-xl">
+      {category.description}
+    </p>
+  )}
+</motion.div>
+
+</div>
+
+        {/* FEATURES BELOW IMAGE */}
         <motion.div
-          initial={{ scale: 1.1 }}
-          whileInView={{ scale: 1 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-          className="w-full h-full"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          <Image
-            src={category.image}
-            alt={category.title}
-            fill
-            className="object-cover"
-            priority
-          />
+          {category.items.map((text, i) => (
+            <div
+              key={i}
+              className="flex items-start gap-3 p-5 rounded-xl border border-gray-100 hover:shadow-lg transition bg-white"
+            >
+              <span className="mt-2 w-2 h-2 bg-teal-500 rounded-full" />
+
+              <div>
+                {typeof text === "string" ? (
+                  <p className="text-gray-700">{text}</p>
+                ) : (
+                  <>
+                    <p className="font-semibold text-black">
+                      {text.title}
+                    </p>
+                    <p className="text-sm text-gray-500">
+                      {text.description}
+                    </p>
+                  </>
+                )}
+              </div>
+            </div>
+          ))}
         </motion.div>
-      </div>
 
-      {/* DARK OVERLAY */}
-      <div className="absolute inset-0 bg-black/50 z-10"></div>
-
-      {/* CONTENT */}
-      <div className="relative z-20 max-w-6xl mx-auto h-full flex items-center px-6 md:px-12 lg:px-20">
-        
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="max-w-2xl"
-        >
-
-          {/* HEADING */}
-          <motion.h2
-            variants={item}
-            className="text-4xl md:text-6xl font-semibold text-white leading-tight mb-6"
-          >
-            {category.title}
-          </motion.h2>
-
-          {/* DESCRIPTION */}
-          <motion.p
-            variants={item}
-            className="text-gray-200 text-lg leading-relaxed mb-10"
-          >
-            {category.description}
-          </motion.p>
-
-          {/* FEATURES */}
-          <motion.div variants={container} className="space-y-5">
-            {category.items.map((text, i) => (
-              <motion.div
-                key={i}
-                variants={item}
-                whileHover={{ x: 6 }}
-                className="flex items-start gap-4"
-              >
-                {/* LINE */}
-                <motion.span
-                  initial={{ width: 0 }}
-                  whileInView={{ width: 24 }}
-                  transition={{ duration: 0.4 }}
-                  className="h-[2px] bg-orange-500 mt-3"
-                />
-
-                {/* TEXT */}
-                <p className="text-gray-100 leading-relaxed">
-                  {text}
-                </p>
-              </motion.div>
-            ))}
-          </motion.div>
-
-        </motion.div>
       </div>
     </section>
   );

@@ -39,7 +39,7 @@ export default async function Service({ params }) {
       {/* <Navbar /> */}
       <WorkforceBannerService/>
       <HeroSection />
-      <ServiceType service={selectedService} />
+      {/* <ServiceType service={selectedService} /> */}
       <ServiceCategory category={selectedCategory} />
       <DeliveryMethodology/>
       {/* <ClientsSection /> */}

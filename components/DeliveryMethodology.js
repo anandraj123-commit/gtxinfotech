@@ -55,7 +55,7 @@ export default function DeliveryMethodology() {
         {/* HEADER */}
         <div className="text-center mb-16">
           <h2
-            className={`text-2xl md:text-5xl font-semibold transition-all duration-500 ${
+            className={`text-4xl font-bold mb-4 text-gray-900 ${
               visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >
