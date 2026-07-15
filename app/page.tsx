@@ -28,7 +28,7 @@ export default function Home() {
       {/* <AboutSection /> */}
       <HeroSection />
       <StorySection/>
-      <img src="/images/sap-services-training-programes.png" alt="SAP Services Training Programmes" className="w-full h-auto"/>
+      <img src="/images/SAP service - training program.png" alt="SAP Services Training Programmes" className="w-full h-auto"/>
       <SuccessSection/>
       <WorkSection/>
       <SkillSection/>
