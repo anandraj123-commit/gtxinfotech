@@ -43,7 +43,7 @@ export default function TrainingCategory({ category }) {
   };
 
   return (
-    <section className="  bg-gray-100  px-6 md:px-12 lg:px-20">
+    <section className=" bg-white  px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, scale: 0.97 }}
@@ -181,7 +181,7 @@ export default function TrainingCategory({ category }) {
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
-                className="space-y-6"
+                className="space-y-6 bg-gray-100 p-10"
               >
                 <h3 className="text-2xl font-bold text-black mb-4">
                   Course Materials
@@ -220,7 +220,7 @@ export default function TrainingCategory({ category }) {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0 }}
-                className="text-center max-w-2xl mx-auto"
+                className="text-center max-w-full bg-gray-100 p-10 mx-auto"
               >
                 <h3 className="text-3xl font-bold text-black mb-4">
                   Enroll in {category.title}

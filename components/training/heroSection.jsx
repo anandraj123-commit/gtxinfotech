@@ -13,8 +13,8 @@ export default function HeroSection() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-  Enhance Your Expertise  <br />  with Career-Ready Training
+          <h1 className="text-4xl  font-semibold mb-4 text-gray-900 opacity-100 translate-y-0">
+  Enhance Your Expertise with Career-Ready Training
 </h1>
 <p className="text-black  leading-relaxed mb-8 text-justify">
 Zisan Tech Solutions believes in empowering you with skills that matter. Our courses combine real-world experience, seasoned guidance, and industry-focused curriculum to accelerate your journey toward a thriving SAP career.<br></br>

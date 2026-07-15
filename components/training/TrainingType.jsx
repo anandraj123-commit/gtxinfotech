@@ -35,7 +35,7 @@ export default function TrainingType({ training }) {
             whileInView={{ opacity: 1, y: 0 }}
             className="flex items-center justify-center gap-4 mb-10 text-center"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+            <h2 className="text-4xl  font-semibold mb-4 text-gray-900 opacity-100 translate-y-0">
               {training.type}
             </h2>
           </motion.div>

@@ -5,8 +5,6 @@ export const training = [
     description: `
     <h2 class="text-black">Get Ahead in Your Career with Practical SAP Functional Skills</h2>
     
-    <hr class="my-4 border-gray-300" />
-    
     <p class="mt-5">
     Our SAP Functional Module training is designed to provide you with a deep understanding of key business processes and how to configure SAP systems using real-life scenarios.
     </p>
