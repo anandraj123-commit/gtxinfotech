@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
-    <section className="bg-[white] text-black py-16 px-6 md:px-12 lg:px-20">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    <section className="w-full bg-[white] text-black py-20 px-6">
+      <div className="mx-auto grid md:grid-cols-2 gap-10 items-center">
         {/* LEFT CONTENT */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}

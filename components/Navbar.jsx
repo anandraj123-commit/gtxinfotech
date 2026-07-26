@@ -117,37 +117,84 @@ export default function Navbar() {
               <div className="grid grid-cols-2 gap-10">
                 {/* SAP SERVICES */}
                 <div>
-                  <h3 className="text-orange-500 font-bold mb-6">
-                    SAP SERVICES →
-                  </h3>
+  {/* Sticky Heading */}
+  <h3 className="text-orange-500 font-bold mb-4 sticky top-0 bg-white z-10">
+    SAP SERVICES →
+  </h3>
 
-                  {services[0]?.category.map((item) => (
-                    <Link
-                      key={item.id}
-                      href={`/services1/${services[0].type}/${item.id}`}
-                      className="block mb-3 px-4 py-3 rounded-md text-gray-700 bg-white shadow border hover:bg-[var(--color-teal-400)] hover:text-white"
-                    >
-                      {item.title}
-                    </Link>
-                  ))}
-                </div>
+  {/* Scroll Container */}
+  <div className="relative">
+    <div className="max-h-[300px] overflow-y-auto pr-2 space-y-4 scrollbar-custom">
+      {services[0]?.category.map((item) => (
+        <Link
+          key={item.id}
+          href={`/services1/${services[0].type}/${item.id}`}
+          className="group relative block px-5 py-4 rounded-xl text-gray-700 bg-white
+                     
+                     shadow-sm border border-gray-200
+                     
+                     transition-all duration-300 ease-out
+                     hover:-translate-y-1 hover:shadow-lg
+                     hover:bg-[var(--color-teal-400)] hover:text-white
+
+                     after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-5px]
+                     after:w-[70%] after:h-[8px]
+                     after:bg-white/40 after:blur-lg after:rounded-full
+                     after:opacity-50 after:transition-all after:duration-300
+                     
+                     group-hover:after:w-[85%] group-hover:after:opacity-80"
+        >
+          <span className="flex items-center justify-between">
+            {item.title}
+            <span className="transition-transform duration-300 group-hover:translate-x-1">
+              →
+            </span>
+          </span>
+        </Link>
+      ))}
+    </div>
+
+    {/* Bottom Fade Effect (premium touch) */}
+    <div className="pointer-events-none absolute bottom-0 left-0 w-full h-10 bg-gradient-to-t from-white to-transparent" />
+  </div>
+</div>
 
                 {/* OTHER SERVICES */}
                 <div>
-                  <h3 className="text-orange-500 font-bold mb-6">
-                    OTHER SERVICES →
-                  </h3>
+  <h3 className="text-orange-500 font-bold mb-4 sticky top-0 bg-white z-10">
+    OTHER SERVICES →
+  </h3>
 
-                  {services[1]?.category.map((item) => (
-                    <Link
-                      key={item.id}
-                      href={`/services1/${services[1].type}/${item.id}`}
-                      className="block mb-3 px-4 py-3 rounded-md text-gray-700 bg-white shadow border hover:bg-[var(--color-teal-400)] hover:text-white"
-                    >
-                      {item.title}
-                    </Link>
-                  ))}
-                </div>
+  <div className="max-h-[300px] overflow-y-auto pr-2 space-y-4 scrollbar-custom">
+    {services[1]?.category.map((item) => (
+      <Link
+        key={item.id}
+        href={`/services1/${services[1].type}/${item.id}`}
+        className="group relative block px-5 py-4 rounded-xl text-gray-700 bg-white
+                   
+                   shadow-sm border border-gray-200
+                   
+                   transition-all duration-300 ease-out
+                   hover:-translate-y-1 hover:shadow-lg
+                   hover:bg-[var(--color-teal-400)] hover:text-white
+
+                   after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-5px]
+                   after:w-[70%] after:h-[8px]
+                   after:bg-white/40 after:blur-lg after:rounded-full
+                   after:opacity-50 after:transition-all after:duration-300
+                   
+                   group-hover:after:w-[85%] group-hover:after:opacity-80"
+      >
+        <span className="flex items-center justify-between">
+          {item.title}
+          <span className="transition-transform duration-300 group-hover:translate-x-1">
+            →
+          </span>
+        </span>
+      </Link>
+    ))}
+  </div>
+</div>
               </div>
             </div>
           </li>
@@ -171,23 +218,39 @@ export default function Navbar() {
               }`}
             >
               <div className="grid grid-cols-2 gap-10">
-                {training.map((group) => (
-                  <div key={group.id}>
-                    <h3 className="text-orange-500 font-bold mb-6">
-                      {group.type} →
-                    </h3>
+              {training.map((group) => (
+  <div key={group.id}>
+    <h3 className="text-orange-500 font-bold mb-6">
+      {group.type} →
+    </h3>
 
-                    {group.category.map((item) => (
-                      <Link
-                        key={item.id}
-                        href={`/trainingprogrammes/${group.type}/${item.id}`}
-                        className="block mb-3 px-4 py-3 rounded-md text-gray-700 bg-white shadow border hover:bg-[var(--color-teal-400)] hover:text-white"
-                      >
-                        {item.title}
-                      </Link>
-                    ))}
-                  </div>
-                ))}
+    {/* Scroll container */}
+    <div className="max-h-[300px] scrollbar-custom overflow-y-auto pr-2 space-y-4">
+      {group.category.map((item) => (
+        <Link
+          key={item.id}
+          href={`/trainingprogrammes/${group.type}/${item.id}`}
+          className="relative block px-5 py-4 rounded-xl text-gray-700 bg-white
+                     
+                     shadow-md border border-gray-200
+                     
+                     transition-all duration-300
+                     hover:-translate-y-1 hover:shadow-xl
+                     hover:bg-[var(--color-teal-400)] hover:text-white
+
+                     after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-6px]
+                     after:w-[80%] after:h-[10px]
+                     after:bg-white/60 after:blur-md after:rounded-full
+                     after:opacity-70
+                     
+                     hover:after:opacity-100"
+        >
+          {item.title}
+        </Link>
+      ))}
+    </div>
+  </div>
+))}
               </div>
             </div>
           </li>

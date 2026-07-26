@@ -78,8 +78,8 @@ function FAQItemComponent({ item }) {
 
 export default function FAQ() {
   return (
-    <section className="bg-gray-100 py-16 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section className="w-full bg-gray-100 py-16 px-6">
+      <div className="mx-auto">
         {/* Title */}
         <h2 className="text-4xl font-bold text-gray-900 mb-10">
           Most Asked Question To Us

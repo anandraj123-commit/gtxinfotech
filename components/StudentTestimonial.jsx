@@ -62,7 +62,7 @@ export default function StudentTestimonialSection() {
   };
 
   return (
-    <section className="py-20 bg-white text-center overflow-hidden">
+    <section className="w-full px-6 py-20 bg-[#f3f4f6] text-center overflow-hidden">
       
       {/* Heading */}
       <p className="text-sm text-teal-300 font-semibold mb-2">
@@ -76,7 +76,7 @@ export default function StudentTestimonialSection() {
       <div className="w-16 h-1 bg-teal-400 mx-auto mb-12 rounded"></div>
 
       {/* Slider */}
-      <div className="relative h-[400px] flex items-center justify-center">
+      <div className="relative h-[400px] py-5 flex items-center justify-center">
 
         {testimonials.map((item, index) => {
           const position = getPosition(index);

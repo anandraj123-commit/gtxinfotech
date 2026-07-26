@@ -59,7 +59,7 @@ export default function ValuesSection() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full bg-[#f3f4f6] px-6 lg:px-20 py-24 overflow-hidden"
+      className="relative w-full bg-[#f3f4f6] px-6  py-20 overflow-hidden"
     >
       {/* PARTICLE BACKGROUND */}
       <div className="absolute inset-0">
@@ -76,7 +76,7 @@ export default function ValuesSection() {
         ))}
       </div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="mx-auto relative z-10">
 
         {/* HEADER */}
         <div className="text-center mb-16">
@@ -89,12 +89,12 @@ export default function ValuesSection() {
         </div>
 
         {/* ONE ROW */}
-        <div className="flex gap-8 justify-center flex-wrap lg:flex-nowrap">
+        <div className="flex gap-12 justify-center flex-wrap lg:flex-nowrap">
 
           {values.map((item, i) => (
             <div
               key={i}
-              className="mag-card relative min-w-[260px] max-w-[280px] bg-white rounded-2xl p-6 shadow-md transition duration-500"
+              className="mag-card relative  bg-white rounded-2xl p-6 shadow-md transition duration-500"
               style={{
                 animation: `float ${6 + i}s ease-in-out infinite`,
               }}

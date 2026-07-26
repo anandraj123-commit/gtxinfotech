@@ -26,8 +26,8 @@ const placementData = [
 
 export default function PlacementSupport() {
   return (
-    <section className=" py-16 px-6 mt-5">
-      <div className="max-w-7xl mx-auto">
+    <section className="w-full bg-white py-16 px-6">
+      <div className="mx-auto">
 
         {/* HEADING */}
         <div className="text-center mb-12">
@@ -41,7 +41,7 @@ export default function PlacementSupport() {
         </div>
 
         {/* GRID */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 py-5 gap-6">
           {placementData.map((item, i) => (
             <motion.div
               key={i}

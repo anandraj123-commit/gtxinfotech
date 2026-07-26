@@ -37,10 +37,10 @@ export default function ContactSection() {
 
   return (
     <>
-      <div className="text-white">
+      <div className="text-white w-full">
         
         {/* ================= HERO SECTION ================= */}
-        <div className=" bg-[#0b1c4a] max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
+        <div className=" bg-[#0b1c4a]  mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
           
           {/* LEFT CONTENT */}
           <div>
@@ -67,7 +67,7 @@ export default function ContactSection() {
 <button className="relative overflow-hidden mt-8 bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded-lg font-semibold text-white shadow-lg group">
   
   <span className="relative z-10 group-hover:text-black transition duration-300">
-    Learn More
+    Contact Us
   </span>
 
   <span className="absolute inset-0 bg-[var(--color-teal-400)] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
@@ -94,7 +94,7 @@ export default function ContactSection() {
         </div>
 
         {/* ================= STATS SECTION ================= */}
-        <div className="text-black max-w-7xl mx-auto px-6 py-16 border-t border-gray-700 flex flex-nowrap justify-between items-center gap-8 overflow-x-auto">
+        <div className="text-black  mx-auto px-6 py-16 border-t border-gray-700 flex flex-nowrap justify-between items-center gap-8 overflow-x-auto">
   
   {/* LEFT TEXT */}
   <div className="min-w-[250px]">

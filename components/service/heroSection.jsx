@@ -23,13 +23,11 @@ export default function HeroSection() {
     className="flex flex-col justify-start h-full"
   >
     <h2 className="text-3xl font-bold mb-4 text-gray-900 leading-tight">
-      We Create Best Solution For You
+    Accelerate business success through SAP excellence and technology
     </h2>
 
     <p className="text-black leading-relaxed mb-8">
-      We specialize in crafting bespoke solutions tailored to your unique
-      needs, ensuring that our services not only meet but exceed your
-      expectations, bringing the best results for your satisfaction.
+    Zisan Tech Solutions is a comprehensive SAP Consulting and IT Solutions provider that is built to streamline operations, boost productivity and empower organizations with robust technology. We partner with businesses to help them confidently achieve their digital goals, from implementation to ongoing support.
     </p>
   </motion.div>
 

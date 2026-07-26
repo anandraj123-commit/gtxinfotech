@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
+import Link from "next/link";
 
 const leftFAQs = [
   {
@@ -79,7 +80,7 @@ function FAQItemComponent({ item }) {
 export default function FAQ() {
   return (
     <section className="bg-[#0f1c4d] py-16 px-6">
-      <div className="max-w-6xl mx-auto">
+      <div className="w-full mx-auto">
         
         {/* Title */}
         <h2 className="text-4xl font-bold text-white mb-10">
@@ -107,20 +108,17 @@ export default function FAQ() {
             If you haven’t found the answer you’re looking for, we’re here to
             help. Here’s a method for getting help!
           </p>
+          <Link
+  href="/contact#contact-us-form"
+  scroll={true}
+  className="relative inline-block overflow-hidden bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-sm tracking-widest uppercase transition group"
+>
+  <span className="relative z-10 group-hover:text-black transition duration-300">
+    Contact Us
+  </span>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            
-            <button className="relative overflow-hidden bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-sm tracking-widest uppercase transition group">
-  
-              <span className="relative z-10 group-hover:text-black transition duration-300">
-                Contact Us
-              </span>
-
-              <span className="absolute inset-0 bg-teal-400 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
-
-            </button>
-
-          </div>
+  <span className="absolute inset-0 bg-teal-400 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
+</Link>
         </div>
       </div>
     </section>

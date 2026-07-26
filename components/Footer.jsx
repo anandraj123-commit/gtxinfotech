@@ -6,12 +6,12 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0e1a4d]  text-white relative overflow-hidden">
+    <footer className="w-full py-20 px-6 bg-[#0e1a4d]  text-white relative overflow-hidden">
       
       {/* Background world map */}
       <div className="absolute inset-0 opacity-10 bg-[url('/images/world-map.png')] bg-center bg-no-repeat bg-cover"></div>
 
-      <div className="relative max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="relative  mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         
         {/* LEFT BOX */}
         <div className="border border-white/10 p-8 rounded-md bg-white/5 backdrop-blur-md">

@@ -49,7 +49,7 @@ export default function WorkforceBannerTraining() {
         </svg>
       </div>
 
-      <div className="mx-auto flex min-h-[620px] max-w-[1920px] items-center justify-between px-10 lg:px-24">
+      <div className="mx-auto flex min-h-[620px] max-w-[1920px] items-center justify-between px-6">
 
         {/* LEFT CONTENT */}
         <div className="max-w-[950px] text-white">

@@ -7,6 +7,7 @@ import TestimonialSection from "@/components/TestimonialSection";
 import Navbar from "@/components/Navbar";
 import WorkforceBannerService from "@/components/WorkforceBannerService";
 import DeliveryMethodology from "@/components/DeliveryMethodology";
+import WhyChooseGTX from "@/components/WhyChooseGTX";
 export default async function Service({ params }) {
   // ✅ Await params (IMPORTANT)
   const resolvedParams = await params;
@@ -42,6 +43,7 @@ export default async function Service({ params }) {
       {/* <ServiceType service={selectedService} /> */}
       <ServiceCategory category={selectedCategory} />
       <DeliveryMethodology/>
+      <WhyChooseGTX/>
       {/* <ClientsSection /> */}
       <TestimonialSection />
     </>

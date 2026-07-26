@@ -65,7 +65,7 @@ export default function AboutHeroImage() {
         </svg>
       </div>
 
-      <div className="relative mx-auto flex min-h-[620px] max-w-[1920px] items-center px-10 py-16 lg:px-24">
+      <div className="relative mx-auto flex min-h-[620px] max-w-[1920px] items-center px-16 py-16">
         <div className="max-w-[780px] text-white">
           {/* <motion.p
             initial={{ opacity: 0, y: 20 }}

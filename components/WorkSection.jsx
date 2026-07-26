@@ -21,7 +21,7 @@ export default function WorkSection() {
       </div>
 
       {/* RIGHT CONTENT */}
-      <div className="w-full md:w-1/2 bg-white flex items-center">
+      <div className="w-full md:w-1/2 bg-gray-50 flex items-center">
         <div className="max-w-xl mx-auto px-6 py-16">
           
           {/* HEADING */}

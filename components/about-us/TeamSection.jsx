@@ -22,10 +22,10 @@ const team = [
 
 export default function TeamSection() {
   return (
-    <section className="bg-[white] text-black py-20 px-6 md:px-16 relative overflow-hidden">
+    <section className="bg-[white] w-full text-black py-20 px-6 md:px-16 relative overflow-hidden">
       
       {/* Header */}
-      <div className="max-w-6xl mx-auto mb-16">
+      <div className="mx-auto mb-16">
         <h2 className="text-4xl md:text-5xl font-bold mb-4">
         Our Team
         </h2>
@@ -36,7 +36,7 @@ export default function TeamSection() {
       </div>
 
       {/* Cards */}
-      <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+      <div className="grid md:grid-cols-3 gap-10  mx-auto">
         {team.map((member, index) => (
           <div key={index} className="relative group">
             

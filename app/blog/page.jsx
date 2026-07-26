@@ -22,7 +22,7 @@ export default function BlogPage() {
     <>
     {/* <Navbar/> */}
    
-    <section className="bg-[#343f48] min-h-screen py-20 px-6">
+    <section className="w-full bg-[#343f48] min-h-screen py-20 px-6">
       
       {/* Heading */}
       <div className="text-center mb-16">

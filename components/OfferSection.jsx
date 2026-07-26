@@ -44,7 +44,7 @@ const services = [
 
 export default function OfferSection() {
   return (
-    <section className="bg-[#0f1c4d] py-20 relative overflow-hidden">
+    <section className="bg-[#0f1c4d] w-full py-20 px-6 relative overflow-hidden">
       
       {/* Decorative dots */}
       <div className="absolute top-10 right-10 grid grid-cols-10 gap-2 opacity-20">
@@ -53,7 +53,7 @@ export default function OfferSection() {
         ))}
       </div>
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className=" mx-auto px-6">
         
         {/* Heading */}
         <div className="mb-16 w-full">

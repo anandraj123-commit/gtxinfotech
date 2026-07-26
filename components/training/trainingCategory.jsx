@@ -43,17 +43,25 @@ export default function TrainingCategory({ category }) {
   };
 
   return (
-    <section className=" bg-white  px-6 md:px-12 lg:px-20">
-      <div className="max-w-7xl mx-auto">
+    <section className="w-full bg-white  px-6 py-20">
+
+       {/* HEADING */}
+       <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-gray-900">
+          Discover | Learn | Join the Journey
+          </h2>
+
+        </div> 
+      <div className="mx-auto">
         <motion.div
           initial={{ opacity: 0, scale: 0.97 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
-          className=" rounded-2xl  overflow-hidden p-4 md:p-8"
+          className=" rounded-2xl  overflow-hidden"
         >
 
           {/* 🔷 TABS */}
-          <div className="flex justify-center gap-2 md:gap-4  p-2 rounded-xl mb-8">
+          <div className="flex justify-center gap-2 md:gap-4  rounded-xl mb-8">
             {tabs.map((tab) => (
               <motion.button
                 key={tab}
@@ -81,7 +89,7 @@ export default function TrainingCategory({ category }) {
                 initial="hidden"
                 animate="show"
                 exit={{ opacity: 0, y: 20 }}
-                className="space-y-6"
+                className="py-5"
               >
 
                 {/* 🔥 FULL WIDTH ACCORDION (TOP) */}
@@ -129,7 +137,7 @@ export default function TrainingCategory({ category }) {
                 {/* 🔥 BELOW FULL WIDTH (remaining accordion) */}
                 <motion.div
                   variants={container}
-                  className="space-y-4"
+                  className="py-5"
                 >
                   {bottomItems?.map((itemData, index) => {
                     const actualIndex = index + 3;
@@ -259,7 +267,7 @@ export default function TrainingCategory({ category }) {
   variants={container}
   initial="hidden"
   animate="show"
-  className="w-full  rounded-3xl p-8 md:p-12"
+  className="w-full  bg-[#f3f4f6] rounded-3xl py-20 px-6 "
   bg-white
 >
   {/* TITLE */}
@@ -272,7 +280,7 @@ export default function TrainingCategory({ category }) {
 
   {/* GRID */}
   {/* GRID */}
-<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 py-5">
 
 {[
   {

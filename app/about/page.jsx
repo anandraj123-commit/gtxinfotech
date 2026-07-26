@@ -7,6 +7,7 @@ import Navbar from '../../components/Navbar';
 import TeamSection from "../../components/about-us/TeamSection";
 import OfficeLocations from "../../components/about-us/OfficeLocations";
 import AboutHeroImage from "../../components/about-us/AboutHeroImage";
+import DigitalTransformationSection from '../../components/DigitalTransformationSection';
 export default function About() {
   return (
    <>
@@ -18,8 +19,7 @@ export default function About() {
      <VisionSection/>
      <TimelineSection/>
      <ValuesSection/>
-     <TeamSection/>
-     {/* <OfficeLocations/> */}
+    <DigitalTransformationSection/>
      </>
   )
 }

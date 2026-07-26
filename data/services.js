@@ -10,6 +10,7 @@ export const services = [
             icon:"/images/services/icon.jpg",
             image:'/images/services/SAP Rollout.png',
             title:'SAP Rollout',
+
             title2:'',
             description:'Use a systematic, scalable rollout methodology to accelerate your global SAP growth.Our SAP Rollout services help organizations extend their SAP systems to new countries, business units and sites with process consistency, compliance and operational effectiveness.We provide end-to-end rollout support including global template adoption, localization, setup, testing, data migration, user training and go-live support. Our proven approach reduces implementation risk and accelerates cross-region business transformation.',
             description2:'You can foster seamless adoption of SAP across your company with a rollout plan that is designed for quality, speed, and long-term success.',
@@ -19,7 +20,34 @@ export const services = [
               {title:'Assistance with configuration and customization',description:''},
               {title:'Data migration and validation',decription:''},
               {title:'Integration and Testing Management',desciption:''},
-              {title:'Go-live support and cutover planning post-implementation stabilization',desciption:''}]
+              {title:'Go-live support and cutover planning post-implementation stabilization',desciption:''}],
+              benefits:[{
+                name:'Accelerate Digital Transformation',
+                description:'Modernize your business with intelligent digital solutions and automation.'
+              },
+              {
+                name:'Expert SAP Consulting Services',
+          description:'Leverage certified SAP consultants for successful implementation and optimization.'
+              },
+              {
+          name:'AI-Driven Business Innovation',
+          description:'Transform business operations using Artificial Intelligence and smart analytics.'
+              },
+              {
+                
+          name:'Seamless System Integration',
+          description:'Connect SAP, cloud platforms, and third-party applications effortlessly.'
+              },
+          
+              {
+                name:'Business Process Optimization',
+                description:'Improve operational efficiency through streamlined and automated workflows'
+              },
+              {
+                name:'Cloud-Ready Enterprise Solutions',
+                description:'Enable secure, scalable, and future-ready cloud transformation'
+              }
+            ]
           },
           {  
             id:2,
@@ -29,7 +57,35 @@ export const services = [
             title2:'SAP Solutions Customized to Meet Your Business Requirements.',
             description:'Every company has different procedures, difficulties, and expansion goals. With scalable, effective, and business-focused solutions that exactly match operational requirements, our SAP Custom Solutions services assist enterprises in expanding and improving their SAP landscape.We provide solutions that boost corporate performance while upholding SAP best practices and future preparation, from integrations and automation to bespoke developments and process improvements.',
             decription2:'Our Proficiency in SAP Custom Solutions and Custom SAP Development create specialized SAP applications, improvements, reports, interfaces, and functionality to meet particular business needs that go beyond what SAP can do.',
-            items:[{title:'Efficiency enhancement',description:''},{title:'Adaptive & sustainability',desciption:''},{title:'Productivity boost',description:''},{title:'Cost reduction',description:''}]
+            items:[{title:'Efficiency enhancement',description:''},{title:'Adaptive & sustainability',desciption:''},{title:'Productivity boost',description:''},{title:'Cost reduction',description:''}],
+            benefits:[
+              {
+              name:'Accelerate Digital Transformation',
+              description:'Modernize your business with intelligent digital solutions and automation.'
+            },
+            {
+              name:'Expert SAP Consulting Services',
+        description:'Leverage certified SAP consultants for successful implementation and optimization.'
+            },
+            {
+        name:'AI-Driven Business Innovation',
+        description:'Transform business operations using Artificial Intelligence and smart analytics.'
+            },
+            {
+              
+        name:'Seamless System Integration',
+        description:'Connect SAP, cloud platforms, and third-party applications effortlessly.'
+            },
+        
+            {
+              name:'Business Process Optimization',
+              description:'Improve operational efficiency through streamlined and automated workflows'
+            },
+            {
+              name:'Cloud-Ready Enterprise Solutions',
+              description:'Enable secure, scalable, and future-ready cloud transformation'
+            }
+          ]
           },
           {  
             id:3,
@@ -58,7 +114,34 @@ export const services = [
               {
                 title:'SAP Upgrade and Migration Support',
                 description:'Ensure seamless SAP upgrades, system changes and transformation initiatives with minimal business disruption.'
-              }]
+              }],
+              benefits:[{
+                name:'Accelerate Digital Transformation',
+                description:'Modernize your business with intelligent digital solutions and automation.'
+              },
+              {
+                name:'Expert SAP Consulting Services',
+          description:'Leverage certified SAP consultants for successful implementation and optimization.'
+              },
+              {
+          name:'AI-Driven Business Innovation',
+          description:'Transform business operations using Artificial Intelligence and smart analytics.'
+              },
+              {
+                
+          name:'Seamless System Integration',
+          description:'Connect SAP, cloud platforms, and third-party applications effortlessly.'
+              },
+          
+              {
+                name:'Business Process Optimization',
+                description:'Improve operational efficiency through streamlined and automated workflows'
+              },
+              {
+                name:'Cloud-Ready Enterprise Solutions',
+                description:'Enable secure, scalable, and future-ready cloud transformation'
+              }
+            ]
           },
           {
             id: 4,
@@ -87,7 +170,34 @@ export const services = [
                 title: "Integration Monitoring & Performance Optimization",
                 description: "Continuously monitor integration processes, resolve issues proactively, and optimize performance to ensure uninterrupted business operations.",
               }
-            ]
+            ],
+            benefits:[{
+              name:'Accelerate Digital Transformation',
+              description:'Modernize your business with intelligent digital solutions and automation.'
+            },
+            {
+              name:'Expert SAP Consulting Services',
+        description:'Leverage certified SAP consultants for successful implementation and optimization.'
+            },
+            {
+        name:'AI-Driven Business Innovation',
+        description:'Transform business operations using Artificial Intelligence and smart analytics.'
+            },
+            {
+              
+        name:'Seamless System Integration',
+        description:'Connect SAP, cloud platforms, and third-party applications effortlessly.'
+            },
+        
+            {
+              name:'Business Process Optimization',
+              description:'Improve operational efficiency through streamlined and automated workflows'
+            },
+            {
+              name:'Cloud-Ready Enterprise Solutions',
+              description:'Enable secure, scalable, and future-ready cloud transformation'
+            }
+          ]
           },
           {
             id: 5,
@@ -95,7 +205,7 @@ export const services = [
             image: "/images/services/SAP Consulting.png",
             title: "SAP Consulting",
             description:
-              "Unlock excellence with our Quality Assurance consulting firm. We specialize in ensuring and elevating the quality of your products or services using advanced methodologies tailored to your needs. Partner with us for comprehensive solutions that strengthen your brand, build customer trust, and drive sustained success. What you will get:",
+              "Transforming Companies to Smart Business Zisan Tech Solutions is an end-to-end SAP consulting service provider who matches technology and business objectives. Certified SAP experts help businesses navigate every phase of digital transformation, from legacy system modernization to cloud-first strategies and intelligent automation integration. It’s not about implementing, but about collaboratively building intelligent organisations that are powered by real-time information, efficient processes and future-proof designs.",
             items: [
               {
                 title: "SAP S/4HANA Support & Migration",
@@ -128,6 +238,33 @@ export const services = [
                   "Utilize Application Management Services (AMS), proactive monitoring, regular updates, and ongoing optimization to deliver continuous value beyond go-live. Maximize ROI and support long-term business growth.",
               },
             ],
+            benefits:[{
+              name:'Accelerate Digital Transformation',
+              description:'Modernize your business with intelligent digital solutions and automation.'
+            },
+            {
+              name:'Expert SAP Consulting Services',
+        description:'Leverage certified SAP consultants for successful implementation and optimization.'
+            },
+            {
+        name:'AI-Driven Business Innovation',
+        description:'Transform business operations using Artificial Intelligence and smart analytics.'
+            },
+            {
+              
+        name:'Seamless System Integration',
+        description:'Connect SAP, cloud platforms, and third-party applications effortlessly.'
+            },
+        
+            {
+              name:'Business Process Optimization',
+              description:'Improve operational efficiency through streamlined and automated workflows'
+            },
+            {
+              name:'Cloud-Ready Enterprise Solutions',
+              description:'Enable secure, scalable, and future-ready cloud transformation'
+            }
+          ]
           },
           {
             id: 6,
@@ -183,6 +320,33 @@ export const services = [
                   "Reduce penalties, compliance risks, and administrative costs.",
               },
             ],
+            benefits:[{
+              name:'Accelerate Digital Transformation',
+              description:'Modernize your business with intelligent digital solutions and automation.'
+            },
+            {
+              name:'Expert SAP Consulting Services',
+        description:'Leverage certified SAP consultants for successful implementation and optimization.'
+            },
+            {
+        name:'AI-Driven Business Innovation',
+        description:'Transform business operations using Artificial Intelligence and smart analytics.'
+            },
+            {
+              
+        name:'Seamless System Integration',
+        description:'Connect SAP, cloud platforms, and third-party applications effortlessly.'
+            },
+        
+            {
+              name:'Business Process Optimization',
+              description:'Improve operational efficiency through streamlined and automated workflows'
+            },
+            {
+              name:'Cloud-Ready Enterprise Solutions',
+              description:'Enable secure, scalable, and future-ready cloud transformation'
+            }
+          ]
           },
           {
             id: 7,
@@ -213,6 +377,33 @@ export const services = [
                   "Adopt AI solutions that evolve with your business needs.",
               },
             ],
+            benefits:[{
+              name:'Accelerate Digital Transformation',
+              description:'Modernize your business with intelligent digital solutions and automation.'
+            },
+            {
+              name:'Expert SAP Consulting Services',
+        description:'Leverage certified SAP consultants for successful implementation and optimization.'
+            },
+            {
+        name:'AI-Driven Business Innovation',
+        description:'Transform business operations using Artificial Intelligence and smart analytics.'
+            },
+            {
+              
+        name:'Seamless System Integration',
+        description:'Connect SAP, cloud platforms, and third-party applications effortlessly.'
+            },
+        
+            {
+              name:'Business Process Optimization',
+              description:'Improve operational efficiency through streamlined and automated workflows'
+            },
+            {
+              name:'Cloud-Ready Enterprise Solutions',
+              description:'Enable secure, scalable, and future-ready cloud transformation'
+            }
+          ]
           }
   ]
   },
@@ -241,6 +432,33 @@ export const services = [
           "Process Automation",
           "Real-Time Reporting",
         ],
+        benefits:[{
+          name:'Accelerate Digital Transformation',
+          description:'Modernize your business with intelligent digital solutions and automation.'
+        },
+        {
+          name:'Expert SAP Consulting Services',
+    description:'Leverage certified SAP consultants for successful implementation and optimization.'
+        },
+        {
+    name:'AI-Driven Business Innovation',
+    description:'Transform business operations using Artificial Intelligence and smart analytics.'
+        },
+        {
+          
+    name:'Seamless System Integration',
+    description:'Connect SAP, cloud platforms, and third-party applications effortlessly.'
+        },
+    
+        {
+          name:'Business Process Optimization',
+          description:'Improve operational efficiency through streamlined and automated workflows'
+        },
+        {
+          name:'Cloud-Ready Enterprise Solutions',
+          description:'Enable secure, scalable, and future-ready cloud transformation'
+        }
+      ]
       },
       {
         id: 2,
@@ -255,6 +473,33 @@ export const services = [
           "Inventory Management",
           "Scalable Architecture",
         ],
+        benefits:[{
+          name:'Accelerate Digital Transformation',
+          description:'Modernize your business with intelligent digital solutions and automation.'
+        },
+        {
+          name:'Expert SAP Consulting Services',
+    description:'Leverage certified SAP consultants for successful implementation and optimization.'
+        },
+        {
+    name:'AI-Driven Business Innovation',
+    description:'Transform business operations using Artificial Intelligence and smart analytics.'
+        },
+        {
+          
+    name:'Seamless System Integration',
+    description:'Connect SAP, cloud platforms, and third-party applications effortlessly.'
+        },
+    
+        {
+          name:'Business Process Optimization',
+          description:'Improve operational efficiency through streamlined and automated workflows'
+        },
+        {
+          name:'Cloud-Ready Enterprise Solutions',
+          description:'Enable secure, scalable, and future-ready cloud transformation'
+        }
+      ]
       },
       {
         id: 3,
@@ -269,6 +514,33 @@ export const services = [
           "Attendance Tracking",
           "Performance Analytics",
         ],
+        benefits:[{
+          name:'Accelerate Digital Transformation',
+          description:'Modernize your business with intelligent digital solutions and automation.'
+        },
+        {
+          name:'Expert SAP Consulting Services',
+    description:'Leverage certified SAP consultants for successful implementation and optimization.'
+        },
+        {
+    name:'AI-Driven Business Innovation',
+    description:'Transform business operations using Artificial Intelligence and smart analytics.'
+        },
+        {
+          
+    name:'Seamless System Integration',
+    description:'Connect SAP, cloud platforms, and third-party applications effortlessly.'
+        },
+    
+        {
+          name:'Business Process Optimization',
+          description:'Improve operational efficiency through streamlined and automated workflows'
+        },
+        {
+          name:'Cloud-Ready Enterprise Solutions',
+          description:'Enable secure, scalable, and future-ready cloud transformation'
+        }
+      ]
       },
       {
         id: 4,
@@ -283,6 +555,33 @@ export const services = [
           "Lead Generation",
           "Analytics & Reporting",
         ],
+        benefits:[{
+          name:'Accelerate Digital Transformation',
+          description:'Modernize your business with intelligent digital solutions and automation.'
+        },
+        {
+          name:'Expert SAP Consulting Services',
+    description:'Leverage certified SAP consultants for successful implementation and optimization.'
+        },
+        {
+    name:'AI-Driven Business Innovation',
+    description:'Transform business operations using Artificial Intelligence and smart analytics.'
+        },
+        {
+          
+    name:'Seamless System Integration',
+    description:'Connect SAP, cloud platforms, and third-party applications effortlessly.'
+        },
+    
+        {
+          name:'Business Process Optimization',
+          description:'Improve operational efficiency through streamlined and automated workflows'
+        },
+        {
+          name:'Cloud-Ready Enterprise Solutions',
+          description:'Enable secure, scalable, and future-ready cloud transformation'
+        }
+      ]
       },
       {
         id: 5,
@@ -297,6 +596,33 @@ export const services = [
           "High Performance",
           "Secure Architecture",
         ],
+        benefits:[{
+          name:'Accelerate Digital Transformation',
+          description:'Modernize your business with intelligent digital solutions and automation.'
+        },
+        {
+          name:'Expert SAP Consulting Services',
+    description:'Leverage certified SAP consultants for successful implementation and optimization.'
+        },
+        {
+    name:'AI-Driven Business Innovation',
+    description:'Transform business operations using Artificial Intelligence and smart analytics.'
+        },
+        {
+          
+    name:'Seamless System Integration',
+    description:'Connect SAP, cloud platforms, and third-party applications effortlessly.'
+        },
+    
+        {
+          name:'Business Process Optimization',
+          description:'Improve operational efficiency through streamlined and automated workflows'
+        },
+        {
+          name:'Cloud-Ready Enterprise Solutions',
+          description:'Enable secure, scalable, and future-ready cloud transformation'
+        }
+      ]
       },
     ],
   }

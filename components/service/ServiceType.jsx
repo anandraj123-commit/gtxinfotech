@@ -7,8 +7,8 @@ export default function ServiceType({ service }) {
   if (!service) return null;
 
   return (
-    <section className="bg-[#f3f4f6] py-20 px-6 md:px-12 lg:px-20">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <section className="bg-[#f3f4f6] py-20 px-6">
+      <div className="mx-auto grid md:grid-cols-2 gap-12 items-center">
         
         {/* LEFT IMAGE */}
         <motion.div

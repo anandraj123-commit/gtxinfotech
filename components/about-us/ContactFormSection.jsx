@@ -29,7 +29,7 @@ export default function ContactFormSection() {
         </div>
 
         {/* RIGHT SIDE */}
-        <div>
+        <div id="contact-us-form">
           <h2 className="text-[36px] font-semibold text-[#0F172A] mb-10">
             We Will Be Happy To Help You
           </h2>

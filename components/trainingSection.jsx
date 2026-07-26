@@ -27,10 +27,10 @@ export default function TrainingSection() {
 
   return (
     <section
-      className="w-full bg-gradient-to-br from-gray-50 via-white to-gray-100 py-20"
+      className="w-full bg-gradient-to-br from-gray-50 via-white to-gray-100 py-20 px-6"
       id="training-programs"
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="mx-auto">
 
         {/* HEADER */}
         <div className="text-center mb-16">

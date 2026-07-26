@@ -33,8 +33,8 @@ We focus on equipping you with the SAP expertise necessary for real-world achiev
 
 export default function SuccessSection() {
   return (
-    <section className="bg-gray-50 py-24 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className=" w-full bg-gray-50 py-20 px-6 relative overflow-hidden">
+      <div className="mx-auto">
 
         {/* HEADER */}
         <motion.div

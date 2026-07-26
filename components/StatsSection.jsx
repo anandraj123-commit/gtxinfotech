@@ -32,9 +32,9 @@ export default function StatsSection() {
   return (
     <section
       ref={ref}
-      className="bg-[url('/images/ctasection.jpg')] bg-cover bg-center py-20"
+      className="bg-[url('/images/ctasection.jpg')] bg-cover px-6 bg-center py-20"
     >
-      <div className="max-w-6xl mx-auto px-4 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="w-full mx-auto px-4 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         {stats.map((item, i) => (
           <Card key={i} {...item} start={start} />
         ))}

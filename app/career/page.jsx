@@ -1,6 +1,8 @@
 'use client';
 import Image from 'next/image';
 import Navbar from '../../components/Navbar';
+import Link from "next/link";
+
 
 export default function CareerPage() {
   const cards = [
@@ -21,11 +23,11 @@ export default function CareerPage() {
     <>
       {/* <Navbar /> */}
 
-      <div className="text-white">
+      <div className="w-full text-white">
 
         {/* Hero Section */}
         <section className="bg-[#0f1c4d] text-white flex flex-col md:flex-row items-center min-h-screen">
-          <div className="w-full md:w-1/2 p-10 md:p-20">
+          <div className="md:w-1/2 px-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Build Your Career With Us
             </h1>
@@ -47,7 +49,7 @@ export default function CareerPage() {
         </section>
 
         {/* Why Join Us */}
-        <section className="py-16 px-6 md:px-20 text-black">
+        <section className="py-16 px-6  text-black">
           <h2 className="text-3xl font-bold text-center mb-12">
             Why Join Us?
           </h2>
@@ -72,7 +74,7 @@ export default function CareerPage() {
         </section>
 
         {/* Image Section */}
-        <section className="bg-[#0f1c4d] py-16 px-6 md:px-20 text-white">
+        <section className="bg-[#0f1c4d] py-16 px-6  text-white">
           <div className="grid md:grid-cols-2 gap-10 items-center">
 
             <div className="relative h-[300px] md:h-[400px]">
@@ -104,24 +106,26 @@ export default function CareerPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 px-6 md:px-20 text-center text-black">
+        <section className="py-16 px-6  text-center text-black">
           <h2 className="text-3xl font-bold mb-4">
             Didn’t find your role?
           </h2>
 
-          <p className="text-black mb-6">
+          {/* <p className="text-black mb-6">
             Send us your resume and we’ll get in touch with you.
-          </p>
+          </p> */}
 
-          <button className="relative overflow-hidden mt-8 bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg font-semibold text-white shadow-lg group">
+<Link href="/contact">
+  <button className="relative overflow-hidden mt-8 bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg font-semibold text-white shadow-lg group">
 
-            <span className="relative z-10 group-hover:text-black transition duration-300">
-              Contact Us
-            </span>
+    <span className="relative z-10 group-hover:text-black transition duration-300">
+      Contact Us
+    </span>
 
-            <span className="absolute inset-0 bg-teal-400 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
+    <span className="absolute inset-0 bg-teal-400 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
 
-          </button>
+  </button>
+</Link>
         </section>
 
       </div>

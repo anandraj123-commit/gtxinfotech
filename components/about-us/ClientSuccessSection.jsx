@@ -29,9 +29,9 @@ export default function ClientSuccessSection() {
   }, []);
 
   return (
-    <section className="w-full min-h-screen bg-white flex items-center justify-center px-6 lg:px-20 py-20">
+    <section className="w-full min-h-screen bg-white flex items-center justify-center px-6  py-20">
 
-      <div className="max-w-7xl w-full">
+      <div className="w-full">
 
         {/* TOP HEADING */}
         <div className="text-center mb-16">

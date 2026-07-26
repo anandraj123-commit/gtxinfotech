@@ -61,7 +61,7 @@ export default function WhyChooseGTX() {
       <div className="absolute w-96 h-96 bg-[#1e3a8a]/30 blur-3xl top-10 left-10"></div>
       <div className="absolute w-96 h-96 bg-[#f97316]/20 blur-3xl bottom-10 right-10"></div>
 
-      <div className="max-w-7xl mx-auto text-center relative z-10">
+      <div className="w-full mx-auto text-center relative z-10">
         
         {/* Heading */}
         <motion.h2

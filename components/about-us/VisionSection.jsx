@@ -10,10 +10,10 @@ export default function VisionSection() {
   }, []);
 
   return (
-    <section className="w-full bg-gradient-to-br from-[#f8fafc] to-[#eef2ff] py-24 px-6 lg:px-20 overflow-hidden">
+    <section className="w-full bg-gradient-to-br from-[#f8fafc] to-[#eef2ff] py-20 px-6  overflow-hidden">
       
       {/* HEADER */}
-      <div className="max-w-6xl mx-auto text-center mb-20">
+      <div className="mx-auto text-center mb-20">
         <h1
           className={`text-4xl md:text-5xl font-bold transition-all duration-700 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -32,7 +32,7 @@ export default function VisionSection() {
       </div>
 
       {/* GRID */}
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+      <div className="mx-auto grid md:grid-cols-2 gap-10">
 
         {/* MISSION CARD */}
         <div

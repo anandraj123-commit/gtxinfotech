@@ -6,12 +6,12 @@ import { motion } from "framer-motion";
 
 export default function StorySection() {
   return (
-    <section className="bg-white py-24 relative overflow-hidden">
+    <section className="w-full bg-white py-20 px-6 relative overflow-hidden">
 
       {/* subtle gradient glow */}
       <div className="absolute inset-0 bg-gradient-to-tr from-orange-50 via-white to-teal-50 opacity-60 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10 text-black">
+      <div className="mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10 text-black">
         
         {/* LEFT CONTENT */}
         <motion.div

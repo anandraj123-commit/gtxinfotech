@@ -45,7 +45,7 @@ export default function TestimonialSection() {
   };
 
   return (
-    <section className="py-20 bg-[#f3f4f6] text-center overflow-hidden">
+    <section className="w-full py-20 px-6 bg-[#f3f4f6] text-center overflow-hidden">
       
       {/* Heading */}
       <p className="text-sm text-teal-600 font-semibold mb-2">
@@ -59,7 +59,7 @@ export default function TestimonialSection() {
       <div className="w-16 h-1 bg-teal-500 mx-auto mb-12 rounded"></div>
 
       {/* Slider */}
-      <div className="relative h-[400px] flex items-center justify-center">
+      <div className="relative h-[260px]  flex items-center justify-center">
 
         {testimonials.map((item, index) => {
           const position = getPosition(index);
@@ -94,27 +94,6 @@ export default function TestimonialSection() {
                 }
               `}
             >
-              {/* Avatar */}
-              {/* <div className="flex justify-center -mt-16 mb-4">
-                <div
-                  className={`w-20 h-20 rounded-full overflow-hidden border-4 border-white transition-all duration-700
-                  ${
-                    position === "center"
-                      ? "scale-110 shadow-lg"
-                      : "scale-90 opacity-70"
-                  }`}
-                >
-                  <Image
-                    src={item.image}
-                    alt={item.name}
-                    width={80}
-                    height={80}
-                    className="object-cover"
-                  />
-                </div>
-              </div> */}
-
-              {/* Text */}
               <p
                 className={`italic mb-4 transition-all duration-700
                 ${
@@ -126,12 +105,7 @@ export default function TestimonialSection() {
                 "{item.text}"
               </p>
 
-              {/* <p className="text-sm text-white/80 mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore.
-              </p> */}
-
-              {/* Name */}
+            
               <h3
                 className={`font-semibold transition-all duration-500
                 ${

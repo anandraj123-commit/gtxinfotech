@@ -27,7 +27,7 @@ export default function WorkforceBannerAbout() {
     return () => clearInterval(timer);
   }, []);
   return (
-    <section className="relative overflow-hidden bg-[#03175A] min-h-[620px] w-full">
+    <section className="relative w-full overflow-hidden bg-[#03175A] px-6 min-h-[620px]">
 
       {/* Top Right Dots */}
       <div className="absolute right-0 top-0 opacity-90">
@@ -50,10 +50,10 @@ export default function WorkforceBannerAbout() {
         </svg>
       </div>
 
-      <div className="mx-auto flex min-h-[620px] max-w-[1920px] items-center justify-between px-10 lg:px-24">
+      <div className="mx-auto flex min-h-[620px]  items-center justify-between">
 
         {/* LEFT CONTENT */}
-        <div className="max-w-[950px] text-white">
+        <div className="text-white">
 
           {/* Heading */}
           <h1 className="text-[44px] lg:text-[72px] font-bold leading-[1.1] max-w-[900px]" style={{ fontSize: "55px" }}>

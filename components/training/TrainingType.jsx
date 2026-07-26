@@ -15,12 +15,12 @@ export default function TrainingType({ training }) {
   ];
 
   return (
-    <section className="relative bg-[#f3f4f6] py-24 px-6 md:px-12 lg:px-20 overflow-hidden font-sans">
+    <section className="relative w-full bg-[#f3f4f6] py-20 px-6 overflow-hidden font-sans">
 
       {/* GRID BACKGROUND */}
       <div className="absolute inset-0 opacity-[0.04]" />
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className=" mx-auto relative z-10">
 
         <motion.div
           initial={{ opacity: 0, y: 80 }}
