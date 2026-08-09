@@ -5,13 +5,12 @@ import { motion } from "framer-motion";
 
 export default function ServiceCategory({ category }) {
   if (!category) return null;
-
   return (
-    <section className="w-full py-20 bg-[#f3f4f6]  px-6">
+    <section className="w-full py-20 bg-[#f3f4f6] px-6">
       <div className="mx-auto space-y-16">
 
         {/* SECTION HEADING */}
-        <div className="mb-4   pl-4">
+        <div className="mb-4 pl-4">
           <h2 className="text-4xl font-bold mb-4 text-center text-gray-900 opacity-100 translate-y-0">
             {/* <span className="text-orange-500">Welcome to </span> */}
             <span className="text-teal-500">{category.title}</span>
@@ -49,7 +48,7 @@ export default function ServiceCategory({ category }) {
   className="flex flex-col justify-start h-full"
 >
   {category.description?.trim() !== "" && (
-    <p className="text-gray-600 leading-relaxed max-w-xl">
+    <p className="text-gray-600 leading-relaxed max-w-full text-justify">
       {category.description}
     </p>
   )}

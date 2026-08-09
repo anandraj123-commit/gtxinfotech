@@ -1,129 +1,106 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import Image from "next/image";
+import { useState } from "react";
 
 const testimonials = [
   {
     name: "Rahul Sharma",
-    role: " IT Manager",
-    image: "/images/client1.jpg",
-    text: "Zisan Tech Solutions delivered exceptional SAP consulting services. Their technical clarity and execution were outstanding.",
+    role: "IT Manager",
+    text: "Zisan Tech Solutions delivered exceptional SAP consulting services.",
   },
   {
     name: "Amit Singh",
-    role: "Operation head",
-    image: "/images/client1.jpg",
-    text: "Reliable IT partner with scalable enterprise solutions. Helped us improve operational efficiency significantly.",
+    role: "Operations Head",
+    text: "Reliable IT partner with scalable enterprise solutions.",
   },
   {
     name: "Anjali Verma",
     role: "SAP Consultant",
-    image: "/images/client1.jpg",
-    text: "The SAP training program exceeded our expectations. Practical sessions, real-world scenarios, and industry standard implementation approach. ",
-  }
+    text: "Training program exceeded expectations with practical sessions.",
+  },
+  {
+    name: "Priya Mehta",
+    role: "HR Manager",
+    text: "HRMS solution simplified employee management and payroll.",
+  },
+  {
+    name: "Vikram Patel",
+    role: "Business Analyst",
+    text: "Improved reporting and analytics significantly.",
+  },
+  {
+    name: "Neha Kapoor",
+    role: "Marketing Lead",
+    text: "Digital marketing boosted our online presence.",
+  },
 ];
 
+// duplicate for seamless loop
+const loopData = [...testimonials, ...testimonials];
+
 export default function TestimonialSection() {
-  const [active, setActive] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActive((prev) => (prev + 1) % testimonials.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const getPosition = (index) => {
-    const total = testimonials.length;
-
-    if (index === active) return "center";
-    if (index === (active - 1 + total) % total) return "left";
-    if (index === (active + 1) % total) return "right";
-    return "hidden";
-  };
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section className="w-full py-20 px-6 bg-[#f3f4f6] text-center overflow-hidden">
+    <section className="py-16 bg-gray-50 overflow-hidden">
       
       {/* Heading */}
-      <p className="text-sm text-teal-600 font-semibold mb-2">
+      <p className="text-sm text-teal-600 font-semibold text-center mb-2">
         CLIENT SAY
       </p>
 
-      <h2 className="text-4xl font-bold mb-4 text-gray-900">
+      <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">
         Reviews Of Experts
       </h2>
 
       <div className="w-16 h-1 bg-teal-500 mx-auto mb-12 rounded"></div>
 
-      {/* Slider */}
-      <div className="relative h-[260px]  flex items-center justify-center">
-
-        {testimonials.map((item, index) => {
-          const position = getPosition(index);
-
-          return (
+      {/* SCROLLER */}
+      <div
+        className="relative w-full overflow-hidden"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <div
+          className={`flex gap-6 w-max ${
+            isHovered ? "" : "animate-scroll"
+          }`}
+        >
+          {loopData.map((item, index) => (
             <div
               key={index}
-              className={`absolute transition-all duration-700 ease-in-out w-[280px] md:w-[340px] p-8 rounded-xl bg-teal-500
-                
-                ${
-                  position === "center"
-                    ? "z-20 scale-110 opacity-100 translate-x-0 shadow-2xl"
-                    : ""
-                }
-
-                ${
-                  position === "left"
-                    ? "z-10 scale-90 opacity-60 -translate-x-[120%]"
-                    : ""
-                }
-
-                ${
-                  position === "right"
-                    ? "z-10 scale-90 opacity-60 translate-x-[120%]"
-                    : ""
-                }
-
-                ${
-                  position === "hidden"
-                    ? "opacity-0 scale-75 translate-x-[200%]"
-                    : ""
-                }
-              `}
+              className="min-w-[300px] max-w-[300px] p-6 rounded-xl bg-teal-500 text-white shadow-md transition-all duration-300 hover:shadow-2xl hover:scale-105"
             >
-              <p
-                className={`italic mb-4 transition-all duration-700
-                ${
-                  position === "center"
-                    ? "text-white"
-                    : "text-white/70"
-                }`}
-              >
+              <p className="italic mb-4 text-white/90">
                 "{item.text}"
               </p>
 
-            
-              <h3
-                className={`font-semibold transition-all duration-500
-                ${
-                  position === "center"
-                    ? "text-white"
-                    : "text-white/70"
-                }`}
-              >
-                {item.name}
-              </h3>
-
-              <p className="text-white/70 text-sm">
-                {item.role}
-              </p>
+              <div className="mt-4">
+                <h3 className="font-semibold">{item.name}</h3>
+                <p className="text-sm text-white/80">
+                  {item.role}
+                </p>
+              </div>
             </div>
-          );
-        })}
+          ))}
+        </div>
       </div>
+
+      {/* ANIMATION STYLE */}
+      <style jsx>{`
+        .animate-scroll {
+          animation: scroll 20s linear infinite;
+        }
+
+        @keyframes scroll {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
     </section>
   );
 }

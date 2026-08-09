@@ -7,7 +7,7 @@ export const services = [
     category:[
           {  
             id:1,
-            icon:"/images/services/icon.jpg",
+            icon: "https://cdn.jsdelivr.net/npm/@material-icons/svg@1.0.28/svg/public/baseline.svg",
             image:'/images/services/SAP Rollout.png',
             title:'SAP Rollout',
 
@@ -51,7 +51,7 @@ export const services = [
           },
           {  
             id:2,
-            icon:"/images/services/icon.jpg",
+            icon: "https://cdn.jsdelivr.net/npm/@material-icons/svg@1.0.28/svg/build/baseline.svg",
             image:'/images/services/SAP Custom Solutions.png',
             title:'SAP Custom solutions',
             title2:'SAP Solutions Customized to Meet Your Business Requirements.',
@@ -89,7 +89,7 @@ export const services = [
           },
           {  
             id:3,
-            icon:"/images/services/icon.jpg",
+            icon: "https://cdn.jsdelivr.net/npm/@material-icons/svg@1.0.28/svg/support_agent/baseline.svg",
             image:'/images/services/SAP Support.png',
             title:'SAP Support',
             title2:'Reliable & Proactive Support to Empower Your SAP Landscape',
@@ -145,7 +145,7 @@ export const services = [
           },
           {
             id: 4,
-            icon: "/images/services/icon.jpg",
+            icon: "https://cdn.jsdelivr.net/npm/@material-icons/svg@1.0.28/svg/device_hub/baseline.svg",
             image: "/images/services/SAP Integration.png",
             title: "SAP Integration",
             description: "Simplifying SAP Integration Across Your Business, smooth data exchange is essential for efficient business operations. Our SAP Integration Services enable secure, scalable, and intelligent connectivity between SAP and non-SAP applications, cloud platforms, on-premise systems, and external partners. We help organizations streamline business processes, improve data accuracy, and accelerate digital transformation through reliable integration solutions." ,
@@ -201,7 +201,7 @@ export const services = [
           },
           {
             id: 5,
-            icon: "/images/services/icon.jpg",
+            icon: "https://cdn.jsdelivr.net/npm/@material-icons/svg@1.0.28/svg/psychology/baseline.svg",
             image: "/images/services/SAP Consulting.png",
             title: "SAP Consulting",
             description:
@@ -268,7 +268,7 @@ export const services = [
           },
           {
             id: 6,
-            icon: "/images/services/icon.jpg",
+            icon: "https://cdn.jsdelivr.net/npm/@material-icons/svg@1.0.28/svg/receipt_long/baseline.svg",
             image: "/images/services/SAP E-Invoice & E-way bill.png",
             title: "SAP E-Invoice & E-Way Bill",
             description:
@@ -350,7 +350,7 @@ export const services = [
           },
           {
             id: 7,
-            icon: "/images/services/icon.jpg",
+            icon: "https://cdn.jsdelivr.net/npm/@material-icons/svg@1.0.28/svg/memory/baseline.svg",
             image: "/images/services/SAP AI.png",
             title: "SAP AI",
             description:
@@ -421,7 +421,7 @@ export const services = [
     category: [
       {
         id: 1,
-        icon: "/images/services/icon.jpg",
+        icon: "https://cdn.jsdelivr.net/npm/@material-icons/svg@1.0.28/svg/business_center/baseline.svg",
         image: "/images/services/CRM  ERP Solutions.png",
         title: "CRM / ERP Solutions",
         description:
@@ -462,7 +462,7 @@ export const services = [
       },
       {
         id: 2,
-        icon: "/images/services/icon.jpg",
+        icon: "https://cdn.jsdelivr.net/npm/@material-icons/svg@1.0.28/svg/shopping_cart/baseline.svg",
         image: "/images/services/E-commerce solutions.png",
         title: "E-commerce Solutions",
         description:
@@ -503,7 +503,7 @@ export const services = [
       },
       {
         id: 3,
-        icon: "/images/services/icon.jpg",
+        icon: "https://cdn.jsdelivr.net/npm/@material-icons/svg@1.0.28/svg/groups/baseline.svg",
         image: "/images/services/HRMS Solutions.png",
         title: "HRMS Solutions",
         description:
@@ -544,7 +544,7 @@ export const services = [
       },
       {
         id: 4,
-        icon: "/images/services/icon.jpg",
+        icon: "https://cdn.jsdelivr.net/npm/@material-icons/svg@1.0.28/svg/campaign/baseline.svg",
         image: "/images/services/Digital Marketing.png",
         title: "Digital Marketing",
         description:
@@ -585,7 +585,7 @@ export const services = [
       },
       {
         id: 5,
-        icon: "/images/services/icon.jpg",
+        icon: "https://cdn.jsdelivr.net/npm/@material-icons/svg@1.0.28/svg/code/baseline.svg",
         image: "/images/services/APP & Web Development.png",
         title: "App & Web Development",
         description:

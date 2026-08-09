@@ -21,8 +21,8 @@ export default function WorkSection() {
       </div>
 
       {/* RIGHT CONTENT */}
-      <div className="w-full md:w-1/2 bg-gray-50 flex items-center">
-        <div className="max-w-xl mx-auto px-6 py-16">
+      <div className="w-full md:w-1/2 bg-gray-50 flex">
+        <div className="mx-auto px-16">
           
           {/* HEADING */}
           <motion.h1
@@ -140,5 +140,15 @@ const features = [
     icon: "📣",
     title: "Our Approach",
     desc: "Analyze → Design → Deploy → Support with real-world impact.",
+  },
+  {
+    icon: "🔐",
+    title: "Data Security",
+    desc: "Robust data protection strategies ensuring secure transactions and compliance with industry standards.",
+  },
+  {
+    icon: "☁️",
+    title: "Cloud Integration",
+    desc: "Scalable cloud solutions enabling flexible, cost-effective, and future-ready business operations.",
   },
 ];

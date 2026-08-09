@@ -5,15 +5,15 @@ import { FaYoutube, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-white text-gray-700 flex items-center justify-center">
-      <div className="w-full px-6 py-20">
+    <div className=" bg-white text-gray-700 flex px-6 py-20">
+      <div className="w-full">
         
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-semibold text-gray-900">
             Contact <span className="text-teal-500">Us</span>
           </h1>
-          <div className="w-16 h-1 bg-teal-500 mx-auto mt-4"></div>
+          <div className="w-16 h-1 bg-teal-500 mx-auto"></div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">

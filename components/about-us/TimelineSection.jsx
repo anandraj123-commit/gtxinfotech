@@ -76,7 +76,7 @@ export default function TimelineSection() {
         ))}
       </div>
 
-      <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className=" max-w-7xl  mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
         {/* LEFT */}
         <div>

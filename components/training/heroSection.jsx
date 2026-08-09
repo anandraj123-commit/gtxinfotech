@@ -20,6 +20,15 @@ export default function HeroSection() {
 Zisan Tech Solutions believes in empowering you with skills that matter. Our courses combine real-world experience, seasoned guidance, and industry-focused curriculum to accelerate your journey toward a thriving SAP career.<br></br>
 We don’t just teach concepts — we prepare you to confidently handle real SAP challenges in the workplace. 
 </p>
+<p className="text-black leading-relaxed mb-8 text-justify">
+Zisan Tech Solutions is committed to shaping future-ready professionals by delivering training that goes beyond traditional learning. Our programs are designed to bridge the gap between theoretical knowledge and real-world application, ensuring you gain skills that are directly relevant to today’s SAP industry.
+
+We combine hands-on experience, expert mentorship, and practical case studies to create a learning environment that mirrors real business scenarios. This approach helps you build confidence and develop the ability to solve complex SAP challenges effectively.
+
+Our curriculum is continuously updated to align with current industry demands, enabling you to stay competitive and job-ready. Whether you are a beginner or looking to upskill, our structured learning paths guide you every step of the way.
+
+At Zisan Tech Solutions, we focus not just on teaching, but on transforming your career. We empower you with the knowledge, tools, and mindset required to succeed in dynamic workplace environments and achieve long-term professional growth.
+</p>
 <button className="relative overflow-hidden bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg  font-semibold transition mt-4 group">
   
   <span className="relative z-10 group-hover:text-black transition duration-300">

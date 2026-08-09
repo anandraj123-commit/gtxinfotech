@@ -6,18 +6,18 @@ import { Phone, Mail } from "lucide-react";
 
 export default function DigitalTransformationSection() {
   return (
-    <section className="w-full py-20 px-6 bg-white">
-      <div className=" mx-auto  flex flex-col md:flex-row gap-12 items-stretch">
+    <section className="py-20 px-6 bg-gradient-to-br from-white via-gray-50 to-teal-50">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
 
         {/* LEFT CONTENT */}
         <motion.div
           initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex-1 flex flex-col justify-between space-y-6"
+          className="flex-1 space-y-8"
         >
-          <div className="space-y-6">
-            <h2 className="text-3xl  font-bold text-gray-900 leading-snug">
+          <div className="space-y-5">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-snug">
               Start Your Digital Transformation Journey with{" "}
               <span className="text-orange-500">
                 Zisan Tech Solutions
@@ -26,16 +26,16 @@ export default function DigitalTransformationSection() {
 
             <p className="text-gray-600 text-lg leading-relaxed">
               Unlock the power of SAP Consulting, Artificial Intelligence,
-              Cloud Solutions, and Digital Innovation. Our experienced
-              consultants help businesses streamline operations, improve
-              productivity, and build future-ready enterprises through smart,
-              scalable technology solutions.
+              Cloud Solutions, and Digital Innovation. We help businesses
+              streamline operations, boost productivity, and build scalable,
+              future-ready systems.
             </p>
           </div>
 
-          {/* Contact Cards */}
-          <div className="space-y-4">
-            <div className="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm">
+          {/* CONTACT CARDS */}
+          <div className="grid sm:grid-cols-2 gap-4">
+
+            <div className="flex items-center gap-4 bg-white/70 backdrop-blur-md p-5 rounded-2xl shadow-md hover:shadow-xl transition">
               <div className="bg-orange-500 text-white p-3 rounded-xl">
                 <Phone size={20} />
               </div>
@@ -47,31 +47,32 @@ export default function DigitalTransformationSection() {
               </div>
             </div>
 
-            <div className="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm">
+            <div className="flex items-center gap-4 bg-white/70 backdrop-blur-md p-5 rounded-2xl shadow-md hover:shadow-xl transition">
               <div className="bg-orange-500 text-white p-3 rounded-xl">
                 <Mail size={20} />
               </div>
               <div>
                 <p className="text-sm text-gray-500">Email Address</p>
                 <p className="font-semibold text-gray-900">
-                Info@zisantech.com
+                  Info@zisantech.com
                 </p>
               </div>
             </div>
+
           </div>
 
-          {/* Buttons */}
-          <div className="flex gap-4 pt-4">
+          {/* BUTTONS */}
+          <div className="flex flex-wrap gap-4 pt-4">
             <a
               href="tel:+8797818499"
-              className="bg-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition"
+              className="bg-orange-500 text-white px-7 py-3 rounded-full font-semibold shadow-md hover:bg-orange-600 hover:scale-105 transition"
             >
               Call Now
             </a>
 
             <a
               href="mailto:Info@zisantech.com"
-              className="bg-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition"
+              className="border-2 border-orange-500 text-orange-500 px-7 py-3 rounded-full font-semibold hover:bg-orange-500 hover:text-white transition"
             >
               Send Email
             </a>
@@ -83,14 +84,18 @@ export default function DigitalTransformationSection() {
           initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex-1 flex items-center justify-center"
+          className="flex-1 flex justify-center"
         >
-          <div className="relative w-full h-full min-h-[400px]">
+          <div className="relative w-full max-w-md h-[420px]">
+
+            {/* Glow Effect */}
+            <div className="absolute inset-0 bg-teal-400/20 blur-3xl rounded-full"></div>
+
             <Image
               src="/images/digital_transformation.png"
               alt="Digital Transformation"
               fill
-              className="object-contain rounded-3xl"
+              className="object-contain relative z-10 drop-shadow-2xl"
               priority
             />
           </div>

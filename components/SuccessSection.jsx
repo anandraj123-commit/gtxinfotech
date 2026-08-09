@@ -41,7 +41,7 @@ export default function SuccessSection() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="grid md:grid-cols-2 gap-10 items-center mb-20"
+          className="grid md:grid-cols-2 gap-10  mb-20"
         >
           {/* TEXT */}
           <div>
@@ -56,6 +56,10 @@ export default function SuccessSection() {
             <p className="text-gray-600 leading-relaxed text-justify">
               Leveraging deep SAP expertise and modern IT solutions, we help you stay ahead in a rapidly evolving digital world.
             </p>
+
+            <p className="text-gray-600 leading-relaxed text-justify">
+  With a strong foundation in SAP technologies and innovative IT strategies, we empower businesses to adapt, grow, and succeed in today’s fast-changing digital landscape.
+</p>
           </div>
 
           {/* IMAGE */}

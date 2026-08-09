@@ -11,7 +11,7 @@ export default function StorySection() {
       {/* subtle gradient glow */}
       <div className="absolute inset-0 bg-gradient-to-tr from-orange-50 via-white to-teal-50 opacity-60 pointer-events-none" />
 
-      <div className="mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10 text-black">
+      <div className="mx-auto px-6 grid md:grid-cols-2 gap-16  relative z-10 text-black">
         
         {/* LEFT CONTENT */}
         <motion.div
@@ -30,16 +30,26 @@ export default function StorySection() {
           </motion.h2>
 
           <motion.p
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-black leading-relaxed mb-8 text-justify"
-          >
-            At the core of Zisan Tech Solutions is a commitment to empower organizations through next-generation SAP solutions and tailored IT services that align with strategic business goals, including SAP Training.
-            <br /><br />
-            Founded by a group of SAP experts, we leverage extensive industry knowledge to craft solutions that deliver measurable business benefits.
-            In a digital-first world, our approach focuses on agility, scalability, and long-term value for our clients.
-          </motion.p>
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.4, duration: 0.8 }}
+  className="text-black leading-relaxed mb-8 text-justify"
+>
+  Zisan Tech Solutions is dedicated to helping businesses embrace digital transformation through intelligent SAP solutions and modern IT services. Our focus is on aligning technology with real business objectives to improve efficiency, visibility, and decision-making.
+  <br /><br />
+  With a strong foundation in SAP consulting and training, we enable organizations to build capable teams while implementing systems that deliver long-term value. Our approach emphasizes clarity, adaptability, and measurable outcomes in every project we undertake.
+</motion.p>
+
+<motion.p
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.4, duration: 0.8 }}
+  className="text-black leading-relaxed mb-8 text-justify"
+>
+  What sets us apart is our commitment to delivering solutions that are not only technically sound but also practical and scalable. We work closely with clients to understand their workflows, challenges, and growth plans, ensuring every solution fits seamlessly into their ecosystem.
+  <br /><br />
+  From implementation to ongoing optimization, our team supports businesses at every stage of their journey. By combining innovation with reliability, we help organizations stay competitive, agile, and ready for the future.
+</motion.p>
 
           {/* PREMIUM BUTTON */}
           <motion.div

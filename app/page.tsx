@@ -2,8 +2,8 @@ import Hero from "@/components/Hero";
 import AboutSection from "@/components/AboutSection";
 import WorkSection from '@/components/WorkSection';
 import SkillSection from '@/components/SkillsSection';
-import  ServicesSection from '@/components/ServicesSection';
-import  TrainingSection from '@/components/trainingSection';
+import  ServicesSection from '@/components/ServicesSectionf';
+import  TrainingSection from '@/components/trainingSectionf';
 import CTASection from '@/components/CTASection';
 import ContactUs from '@/components/contact-us';
 import TeamSection from '@/components/TeamSection';
@@ -32,11 +32,12 @@ export default function Home() {
       <SuccessSection/>
       <WorkSection/>
       <SkillSection/>
-      <ServicesSection/>
-      <TrainingSection/>
+      <ServicesSection/> 
       <OfferSection/>
+      <TrainingSection/>
       {/* <TeamSection/> */}
       <img src="/images/stay-connected.png" alt="stay connected" className="w-full h-auto"/>
+      
       
       <TestimonialSection/> 
       <WhyChooseGTX/>

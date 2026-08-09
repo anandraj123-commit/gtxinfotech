@@ -1,172 +1,123 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import Image from "next/image";
+import { useState } from "react";
 
 const testimonials = [
   {
-    name: "Udit Singh",
+    name: "Amit Sharma",
     image: "/images/client1.jpg",
-    text: "My educational experience with Zisan Tech Solutions was excellent. The training featured real-world examples that are immediately applicable in the industry, and the course material was well-structured. Securing new opportunities was greatly aided by the career assistance and interview preparation.",
+    text: "My educational experience with Zisan Tech Solutions was excellent. The training featured real-world examples that are immediately applicable in the industry.",
   },
   {
-    name: "Mahesh",
+    name: "Priya Verma",
     image: "/images/client1.jpg",
-    text: "Zisan Tech Solutions SAP training surpassed my expectations.The instructor was very informed and always willing to answer questions. Case studies, practical projects, and in-the-moment project conversations made the learning process interesting and productive. To anyone hoping to pursue a career in SAP, I heartily recommend Zisan Tech Solutions.",
+    text: "Zisan Tech Solutions SAP training surpassed my expectations. The instructor was knowledgeable and the sessions were highly practical.",
   },
-  // {
-  //   name: "Monica Frazier",
-  //   image: "/images/client1.jpg",
-  //   text: "Superb IT Services to understand customer behaviour...",
-  // },
-  // {
-  //   name: "Ruben Houston",
-  //   image: "/images/client1.jpg",
-  //   text: "Superb IT Services to understand customer behaviour...",
-  // },
-  // {
-  //   name: "Monica Frazier",
-  //   image: "/images/client1.jpg",
-  //   text: "Superb IT Services to understand customer behaviour...",
-  // },
-  // {
-  //   name: "Ruben Houston",
-  //   image: "/images/client1.jpg",
-  //   text: "Superb IT Services to understand customer behaviour...",
-  // },
   {
-    name: "Rohini Mhake",
+    name: "Rahul Mehta",
     image: "/images/client1.jpg",
-    text: "Zisan Tech Solutions offered top-notch SAP training, emphasizing real-time business scenarios. The instructor gave insightful project experience and clarified difficult ideas. My confidence and SAP abilities improved as a result of the practical practice sessions.",
+    text: "Top-notch SAP training with real-time business scenarios. It significantly improved my confidence and practical skills.",
+  },
+  {
+    name: "Sneha Kapoor",
+    image: "/images/client1.jpg",
+    text: "The training sessions were interactive and industry-focused. I gained hands-on experience that helped me grow professionally.",
+  },
+  {
+    name: "Vikas Gupta",
+    image: "/images/client1.jpg",
+    text: "Excellent mentorship and structured learning approach. Highly recommended for anyone looking to build a career in SAP.",
+  },
+  {
+    name: "Neha Jain",
+    image: "/images/client1.jpg",
+    text: "The practical exposure and real-time projects made learning easy and effective. Great support from trainers.",
+  },
+  {
+    name: "Ankit Patel",
+    image: "/images/client1.jpg",
+    text: "Very well-designed course with deep insights into SAP modules. It helped me land better opportunities.",
+  },
+  {
+    name: "Pooja Nair",
+    image: "/images/client1.jpg",
+    text: "Amazing learning experience with real-world case studies. The trainers are very supportive and knowledgeable.",
+  },
+  {
+    name: "Karan Malhotra",
+    image: "/images/client1.jpg",
+    text: "Highly practical and career-oriented training. The sessions boosted my technical and analytical skills.",
+  },
+  {
+    name: "Ritika Singh",
+    image: "/images/client1.jpg",
+    text: "Best place to learn SAP with real-time examples and expert guidance. Truly a transformative experience.",
   },
 ];
 
+// duplicate for infinite loop
+const loopData = [...testimonials, ...testimonials];
+
 export default function StudentTestimonialSection() {
-  const [active, setActive] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActive((prev) => (prev + 1) % testimonials.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const getPosition = (index) => {
-    const total = testimonials.length;
-
-    if (index === active) return "center";
-    if (index === (active - 1 + total) % total) return "left";
-    if (index === (active + 1) % total) return "right";
-    return "hidden";
-  };
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section className="w-full px-6 py-20 bg-[#f3f4f6] text-center overflow-hidden">
+    <section className="py-16 bg-white overflow-hidden">
       
       {/* Heading */}
-      <p className="text-sm text-teal-300 font-semibold mb-2">
-        Student SAY
+      <p className="text-sm text-teal-400 font-semibold text-center mb-2">
+        STUDENT SAY
       </p>
 
-      <h2 className="text-4xl font-bold mb-4 text-black">
+      <h2 className="text-4xl font-bold text-black text-center mb-4">
         Reviews Of Students
       </h2>
 
-      <div className="w-16 h-1 bg-teal-400 mx-auto mb-12 rounded"></div>
+      <div className="w-16 h-1 bg-teal-500 mx-auto mb-12 rounded"></div>
 
-      {/* Slider */}
-      <div className="relative h-[400px] py-5 flex items-center justify-center">
-
-        {testimonials.map((item, index) => {
-          const position = getPosition(index);
-
-          return (
+      {/* SCROLL CONTAINER */}
+      <div
+        className="w-full overflow-hidden"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <div
+          className={`flex gap-6 w-max ${
+            isHovered ? "" : "animate-scroll"
+          }`}
+        >
+          {loopData.map((item, index) => (
             <div
               key={index}
-              className={`absolute transition-all duration-700 ease-in-out w-[280px] md:w-[340px] p-8 rounded-xl bg-teal-500
-                
-                ${
-                  position === "center"
-                    ? "z-20 scale-110 opacity-100 translate-x-0 shadow-2xl"
-                    : ""
-                }
-
-                ${
-                  position === "left"
-                    ? "z-10 scale-90 opacity-50 -translate-x-[120%]"
-                    : ""
-                }
-
-                ${
-                  position === "right"
-                    ? "z-10 scale-90 opacity-50 translate-x-[120%]"
-                    : ""
-                }
-
-                ${
-                  position === "hidden"
-                    ? "opacity-0 scale-75 translate-x-[200%]"
-                    : ""
-                }
-              `}
+              className="min-w-[300px] max-w-[300px] p-6 rounded-xl bg-teal-500 text-white shadow-md transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             >
-              {/* Avatar */}
-              {/* <div className="flex justify-center -mt-16 mb-4">
-                <div
-                  className={`w-20 h-20 rounded-full overflow-hidden border-4 border-white transition-all duration-700
-                  ${
-                    position === "center"
-                      ? "scale-110 shadow-lg"
-                      : "scale-90 opacity-70"
-                  }`}
-                >
-                  <Image
-                    src={item.image}
-                    alt={item.name}
-                    width={80}
-                    height={80}
-                    className="object-cover"
-                  />
-                </div>
-              </div> */}
-
-              {/* Text */}
-              <p
-                className={`italic mb-4 transition-all duration-700
-                ${
-                  position === "center"
-                    ? "text-white"
-                    : "text-white/70"
-                }`}
-              >
+              <p className="italic mb-4 text-white/90">
                 "{item.text}"
               </p>
 
-              {/* <p className="text-sm text-white/70 mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore.
-              </p> */}
-
-              {/* Name */}
-              <h3
-                className={`font-semibold  transition-all duration-500
-                ${
-                  position === "center"
-                    ? "text-white"
-                    : "text-white/70"
-                }`}
-              >
+              <h3 className="font-semibold mt-4">
                 {item.name}
               </h3>
-
-              {/* <p className="text-white/70 text-sm">
-                {item.role}
-              </p> */}
             </div>
-          );
-        })}
+          ))}
+        </div>
       </div>
+
+      {/* ANIMATION */}
+      <style jsx>{`
+        .animate-scroll {
+          animation: scroll 18s linear infinite;
+        }
+
+        @keyframes scroll {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
     </section>
   );
 }

@@ -2,22 +2,21 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import Image from "next/image";
 import { services } from "../data/services";
 
 export default function ServicesSection() {
   const [visibleCount, setVisibleCount] = useState(4);
 
   const allServices = services.flatMap((group) =>
-    group.category.map((item, index) => ({
+    group.category.map((item) => ({
       ...item,
       type: group.type,
     }))
   );
 
   return (
-    <section className="w-full bg-gray-50 py-20 px-6" id="services">
-      <div className="w-full mx-auto">
+    <section className="py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-6">
 
         {/* HEADER */}
         <div className="text-center mb-16">
@@ -45,17 +44,19 @@ export default function ServicesSection() {
                 "
               >
                 {/* IMAGE */}
-                <div className="w-full h-32 overflow-hidden">
+                <div className="w-full h-40 overflow-hidden">
                   <img
-                    src={`${service.image}` || "/default-service.jpg"}
+                    src={service.image || "/default-service.jpg"}
                     alt={service.title}
-                    layout="fill"
-                    objectFit="cover"
-                    className="transition duration-300 group-hover:scale-110 group-hover:brightness-75"
+                    className="
+                      w-full h-full object-cover
+                      transition duration-300
+                      group-hover:scale-110 group-hover:brightness-75
+                    "
                   />
                 </div>
 
-                {/* HOVER OVERLAY (TRANSPARENT) */}
+                {/* HOVER OVERLAY */}
                 <div
                   className={`
                     absolute inset-0 opacity-0 group-hover:opacity-90 transition duration-300
@@ -65,12 +66,12 @@ export default function ServicesSection() {
                         : "bg-gradient-to-t from-teal-400/80 via-teal-400/40 to-transparent"
                     }
                   `}
-                ></div>
+                />
 
                 {/* LEFT BORDER */}
                 <div
                   className={`
-                    absolute left-0 top-36 h-12 w-1
+                    absolute left-0 top-44 h-12 w-1
                     ${
                       service.id % 2 === 0
                         ? "bg-orange-500"
@@ -80,7 +81,7 @@ export default function ServicesSection() {
                 />
 
                 {/* CONTENT */}
-                <div className="relative z-10 p-5 flex flex-col flex-1 transition-colors duration-300">
+                <div className="relative z-10 p-5 flex flex-col flex-1">
                   
                   {/* TITLE */}
                   <h3 className="text-lg font-semibold text-gray-900 group-hover:text-white mb-1 transition">
@@ -93,9 +94,9 @@ export default function ServicesSection() {
                   </span>
 
                   {/* DESCRIPTION */}
-                  <p className="text-sm text-gray-700 group-hover:text-white/90 line-clamp-8 mt-2 transition">
+                  <p className="text-sm text-gray-700 group-hover:text-white/90 line-clamp-5 mt-2 transition">
                     {service.description ||
-                      "We deliver innovative, scalable, and user-focused digital solutions designed to enhance performance, improve engagement, and accelerate business growth across multiple platforms and industries."}
+                      "We deliver innovative, scalable, and user-focused digital solutions designed to enhance performance, improve engagement, and accelerate business growth."}
                   </p>
                 </div>
               </div>
@@ -103,7 +104,7 @@ export default function ServicesSection() {
           ))}
         </div>
 
-        {/* LOAD MORE BUTTON */}
+        {/* LOAD MORE */}
         {visibleCount < allServices.length && (
           <div className="text-center mt-12">
             <button
@@ -119,7 +120,6 @@ export default function ServicesSection() {
             </button>
           </div>
         )}
-
       </div>
     </section>
   );

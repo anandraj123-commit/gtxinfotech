@@ -30,7 +30,7 @@ export const training = [
     category:[
           {  
             id:1,
-            icon:"/images/services/icon.jpg",
+            icon:"https://cdn.jsdelivr.net/npm/@material-icons/svg@1.0.28/svg/point_of_sale/baseline.svg",
             image:'/images/services/service.jpg',
             title:'SAP SD- Overview',
             description: [
@@ -141,7 +141,7 @@ In real-world scenarios, SAP SD interacts with multiple modules:
           },
           {  
             id:2,
-            icon:"/images/services/icon.jpg",
+            icon:"https://cdn.jsdelivr.net/npm/@material-icons/svg@1.0.28/svg/inventory_2/baseline.svg",
             image:'/images/services/service.jpg',
             title:'SAP MM',
             description: [
@@ -275,7 +275,7 @@ In real-world scenarios, SAP SD interacts with multiple modules:
           },
           {  
             id:3,
-            icon:"/images/services/icon.jpg",
+            icon:"https://cdn.jsdelivr.net/npm/@material-icons/svg@1.0.28/svg/precision_manufacturing/baseline.svg",
             image:'/images/services/service.jpg',
             title:'SAP PP',
             description: [{
@@ -420,7 +420,7 @@ In real-world scenarios, SAP SD interacts with multiple modules:
           },
           {  
             id:4,
-            icon:"/images/services/icon.jpg",
+            icon:"https://cdn.jsdelivr.net/npm/@material-icons/svg@1.0.28/svg/verified/baseline.svg",
             image:'/images/services/service.jpg',
             title:'SAP QM',
             description: [{
@@ -557,7 +557,7 @@ In real-world scenarios, SAP SD interacts with multiple modules:
           },
           {  
             id:5,
-            icon:"/images/services/icon.jpg",
+            icon:"https://cdn.jsdelivr.net/npm/@material-icons/svg@1.0.28/svg/account_balance/baseline.svg",
             image:'/images/services/service.jpg',
             title:'SAP FICO',
             description: [{
@@ -695,7 +695,7 @@ With Zisan Tech Solutions, you gain the confidence to work on real-time SAP impl
           },
           {  
             id:6,
-            icon:"/images/services/icon.jpg",
+            icon:"https://cdn.jsdelivr.net/npm/@material-icons/svg@1.0.28/svg/groups/baseline.svg",
             image:'/images/services/service.jpg',
             title:'SAP HCM',
             description: [
@@ -850,7 +850,7 @@ With Zisan Tech Solutions, you gain the confidence to work on real-time SAP impl
           },
           {  
             id:7,
-            icon:"/images/services/icon.jpg",
+            icon:"https://cdn.jsdelivr.net/npm/@material-icons/svg@1.0.28/svg/local_shipping/baseline.svg",
             image:'/images/services/service.jpg',
             title:'SAP LE',
             description: [
@@ -1005,7 +1005,7 @@ With Zisan Tech Solutions, you gain the confidence to work on real-time SAP impl
           },
           {  
             id:8,
-            icon:"/images/services/icon.jpg",
+            icon:"https://cdn.jsdelivr.net/npm/@material-icons/svg@1.0.28/svg/alt_route/baseline.svg",
             image:'/images/services/service.jpg',
             title:'SAP TM',
             description: [
@@ -1160,7 +1160,7 @@ With Zisan Tech Solutions, you gain the confidence to work on real-time SAP impl
           },
           {  
             id:9,
-            icon:"/images/services/icon.jpg",
+            icon:"https://cdn.jsdelivr.net/npm/@material-icons/svg@1.0.28/svg/warehouse/baseline.svg",
             image:'/images/services/service.jpg',
             title:'SAP EWM',
             description: [
@@ -1316,7 +1316,7 @@ With Zisan Tech Solutions, you gain the confidence to work on real-time SAP impl
           },
           {  
             id:10,
-            icon:"/images/services/icon.jpg",
+            icon:"https://cdn.jsdelivr.net/npm/@material-icons/svg@1.0.28/svg/shopping_cart_checkout/baseline.svg",
             image:'/images/services/service.jpg',
             title:'SAP ARIBA',
             description: [
@@ -1539,7 +1539,7 @@ With Zisan Tech Solutions, you gain the confidence to work on real-time SAP impl
         category:[
               {  
                 id:1,
-                icon:"/images/services/icon.jpg",
+                icon:"https://cdn.jsdelivr.net/npm/@material-icons/svg@1.0.28/svg/code/baseline.svg",
                 image:'/images/services/service.jpg',
                 title:'SAP ABAP',
                 description: [
@@ -1684,7 +1684,7 @@ With Zisan Tech Solutions, you gain the confidence to work on real-time SAP impl
               },
               {  
                 id:2,
-                icon:"/images/services/icon.jpg",
+                icon:"https://cdn.jsdelivr.net/npm/@material-icons/svg@1.0.28/svg/dns/baseline.svg",
                 image:'/images/services/service.jpg',
                 title:'SAP BASIS',
                 description: [
@@ -1830,7 +1830,7 @@ With Zisan Tech Solutions, you gain the confidence to work on real-time SAP impl
             },
               {  
                 id:3,
-                icon:"/images/services/icon.jpg",
+                icon:"	https://cdn.jsdelivr.net/npm/@material-icons/svg@1.0.28/svg/sync_alt/baseline.svg",
                 image:'/images/services/service.jpg',
                 title:'SAP PI/PO',
                 description: [
@@ -1971,7 +1971,7 @@ With Zisan Tech Solutions, you gain the confidence to work on real-time SAP impl
               },
               {  
                 id:4,
-                icon:"/images/services/icon.jpg",
+                icon:"https://cdn.jsdelivr.net/npm/@material-icons/svg@1.0.28/svg/cloud_sync/baseline.svg",
                 image:'/images/services/service.jpg',
                 title:'SAP CPI',
                 description: [
@@ -2112,7 +2112,7 @@ With Zisan Tech Solutions, you gain the confidence to work on real-time SAP impl
               },
               {  
                 id:5,
-                icon:"/images/services/icon.jpg",
+                icon:"	https://cdn.jsdelivr.net/npm/@material-icons/svg@1.0.28/svg/dataset/baseline.svg",
                 image:'/images/services/service.jpg',
                 title:'SAP CIDS',
                 description: [
