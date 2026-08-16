@@ -6,7 +6,7 @@ return (
 
 {/* HERO IMAGE */}
 <img
-  src="/images/gtxinfotech-heroimage.jpeg"
+  src="/images/Home _ Header Page.png"
   alt="Hero"
   className="absolute inset-0 w-full h-full object-cover"
 />

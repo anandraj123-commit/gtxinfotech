@@ -50,18 +50,6 @@ From initial strategy and deployment to ongoing optimization and support, we ens
 At Zisan Tech Solutions, we are committed to delivering reliable, high-performance solutions that empower organizations to innovate, adapt, and lead in a rapidly evolving digital landscape.
 </p>
 
-
-<p className="text-black leading-relaxed mb-8 text-justify">
-Zisan Tech Solutions is a forward-thinking SAP and IT consulting company committed to helping businesses evolve in a digitally driven world.
-
-We deliver tailored SAP solutions that simplify complex operations, enhance productivity, and create meaningful business outcomes through smart technology.
-
-By combining technical expertise with a deep understanding of business needs, we build scalable systems that adapt, grow, and integrate seamlessly.
-
-Our end-to-end approach covers everything from strategic planning and implementation to ongoing support, ensuring consistent performance and long-term value.
-
-At Zisan Tech Solutions, we empower organizations to innovate confidently, optimize their processes, and stay ahead in an ever-changing technological landscape.
-</p>
   </motion.div>
 
   {/* RIGHT IMAGE */}
@@ -77,7 +65,7 @@ At Zisan Tech Solutions, we empower organizations to innovate confidently, optim
     {/* Image */}
     <div className="relative rounded-3xl overflow-hidden z-0 w-full">
       <Image
-        src="/images/services/handshake.jpg"
+        src="/images/We create best solution for you- service page images.png"
         alt="Handshake"
         width={600}
         height={500}

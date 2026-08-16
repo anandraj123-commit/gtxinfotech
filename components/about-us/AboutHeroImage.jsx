@@ -36,7 +36,7 @@ export default function AboutHeroImage() {
   return (
     <section className="relative min-h-[620px] w-full overflow-hidden">
       <Image
-        src="/images/about-hero-section.png"
+        src="/images/About _ Header Page.png"
         alt="Zisan Tech Solutions team"
         fill
         priority

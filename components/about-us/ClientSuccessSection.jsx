@@ -4,16 +4,16 @@ import { useState, useEffect, useCallback } from "react";
 
 const slides = [
   {
-    image: "/images/about-slider1.jpg",
-    caption: "Marketing consultation with Armaz",
+    image: "/images/business_strategy.png",
+    caption: "Bussiness Strategy Session",
   },
   {
-    image: "/images/about-slider2.jpg",
-    caption: "Business strategy session",
+    image: "/images/SAP Consultation.png",
+    caption: "SAP Consultation Session",
   },
   {
-    image: "/images/about-slider3.jpg",
-    caption: "Growth planning discussion",
+    image: "/images/Growth Planning.png",
+    caption: "Growth Planning Discussion",
   },
 ];
 

@@ -6,8 +6,12 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="w-full py-20 px-6 bg-[#0e1a4d]  text-white relative overflow-hidden">
-      
+<footer
+  className="w-full py-20 px-6  text-white relative overflow-hidden"
+  style={{
+    backgroundImage: "url('/images/footer-image.png')",
+  }}
+>      
       {/* Background world map */}
       <div className="absolute inset-0 opacity-10 bg-[url('/images/world-map.png')] bg-center bg-no-repeat bg-cover"></div>
 

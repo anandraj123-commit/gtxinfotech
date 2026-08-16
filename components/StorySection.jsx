@@ -95,7 +95,7 @@ export default function StorySection() {
           >
             <div className="rounded-2xl overflow-hidden">
               <Image
-                src="/images/team.jpg"
+                src="/images/know-our-story-zisan-tech-solutions.jpeg"
                 alt="Team"
                 width={600}
                 height={400}

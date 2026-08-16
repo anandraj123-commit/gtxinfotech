@@ -92,7 +92,7 @@ export default function DigitalTransformationSection() {
             <div className="absolute inset-0 bg-teal-400/20 blur-3xl rounded-full"></div>
 
             <Image
-              src="/images/digital_transformation.png"
+              src="/images/Start Your Digital Transformation Journey with Zisan Tech Solutions-images.png"
               alt="Digital Transformation"
               fill
               className="object-contain relative z-10 drop-shadow-2xl"
