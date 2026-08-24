@@ -18,6 +18,7 @@ import WhyChooseGTX from '@/components/WhyChooseGTX';
 import WorkforceBanner from '@/components/WorkforceBanner';
 
 import HeroSection from '@/components/HeroSection';
+import Gtxinfotechservices from '@/components/Gtxinfotechservice';
 
 export default function Home() {
   return (
@@ -28,7 +29,7 @@ export default function Home() {
       {/* <AboutSection /> */}
       <HeroSection />
       <StorySection/>
-      <img src="/images/SAP service - training program.png" alt="SAP Services Training Programmes" className="w-full h-auto"/>
+      <Gtxinfotechservices/>
       <SuccessSection/>
       <WorkSection/>
       <SkillSection/>

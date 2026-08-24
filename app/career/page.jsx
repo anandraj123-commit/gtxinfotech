@@ -23,30 +23,42 @@ export default function CareerPage() {
     <>
       {/* <Navbar /> */}
 
-      <div className="w-full text-white">
 
         {/* Hero Section */}
-        <section className="bg-[#0f1c4d] text-white flex flex-col md:flex-row items-center min-h-screen">
-          <div className="md:w-1/2 px-6">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Build Your Career With Us
-            </h1>
+        <section className="relative min-h-[620px] overflow-hidden">
 
-            <p className="mb-6 text-gray-300">
-              Join our team and work on exciting projects that make a real impact.
-              We believe in innovation, collaboration, and growth.
-            </p>
-          </div>
+{/* BACKGROUND IMAGE */}
+<Image
+  src="/images/Career _ Header_Image.png"
+  alt="Team"
+  fill
+  priority
+  className="object-cover"
+/>
 
-          <div className="w-full md:w-1/2 h-[400px] md:h-screen relative">
-            <Image
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978"
-              alt="team"
-              fill
-              className="object-cover"
-            />
-          </div>
-        </section>
+{/* DARK BLUE OVERLAY */}
+<div className="absolute inset-0 bg-black/60" />
+
+{/* CONTENT */}
+<div className="relative z-10 flex min-h-[620px] items-center">
+
+  {/* LEFT CONTENT */}
+  <div className="w-full px-6 md:w-1/2 md:px-10 lg:px-16">
+
+    <h1 className="text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
+      Build Your Career With Us
+    </h1>
+
+    <p className="mb-6 mt-6 max-w-xl text-gray-300">
+      Join our team and work on exciting projects that make a real impact.
+      We believe in innovation, collaboration, and growth.
+    </p>
+
+  </div>
+
+</div>
+
+</section>
 
         {/* Why Join Us */}
         <section className="py-16 px-6  text-black">
@@ -128,7 +140,7 @@ export default function CareerPage() {
 </Link>
         </section>
 
-      </div>
+    
     </>
   );
 }

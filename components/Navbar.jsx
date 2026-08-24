@@ -84,188 +84,207 @@ export default function Navbar() {
         </div>
 
         {/* DESKTOP MENU */}
-        <ul className="hidden md:flex gap-6 text-sm items-center absolute left-1/2 transform -translate-x-1/2">
-          <li>
-            <Link href="/" className={navLink("/")}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link href="/about" className={navLink("/about")}>
-              About
-            </Link>
-          </li>
+        <ul className="hidden md:flex items-center gap-8 text-lg font-bold absolute left-1/2 -translate-x-1/2">
 
-          {/* SERVICES */}
-          <li
-            className="relative"
-            onMouseEnter={() => setOpen(true)}
-            onMouseLeave={() => setOpen(false)}
-          >
-            <span className={navLink("#")}>Services ▾</span>
+{/* HOME */}
+<li>
+  <Link
+    href="/"
+    className={`${navLink("/")} font-bold`}
+  >
+    Home
+  </Link>
+</li>
 
-            <div
-              className={`absolute top-10 left-1/2 -translate-x-1/2 w-[900px] p-8 z-50 rounded-xl
-              bg-white text-[#1a2a6c] shadow-2xl
-              transition-all duration-300
-              ${
-                open
-                  ? "opacity-100 visible translate-y-0"
-                  : "opacity-0 invisible translate-y-4"
-              }`}
+{/* ABOUT */}
+<li>
+  <Link
+    href="/about"
+    className={`${navLink("/about")} font-bold`}
+  >
+    About
+  </Link>
+</li>
+
+{/* SERVICES */}
+<li
+  className="relative"
+  onMouseEnter={() => setOpen(true)}
+  onMouseLeave={() => setOpen(false)}
+>
+  <span className={`${navLink("#")} font-bold cursor-pointer`}>
+    Services ▾
+  </span>
+
+  <div
+    className={`absolute top-10 left-1/2 -translate-x-1/2 w-[900px] p-8 z-50 rounded-xl
+    bg-white text-[#1a2a6c] shadow-2xl
+    transition-all duration-300
+    ${
+      open
+        ? "opacity-100 visible translate-y-0"
+        : "opacity-0 invisible translate-y-4"
+    }`}
+  >
+    <div className="grid grid-cols-2 gap-10">
+
+      {/* SAP SERVICES */}
+      <div>
+        <h3 className="text-orange-500 font-bold mb-4 sticky top-0 bg-white z-10">
+          SAP SERVICES →
+        </h3>
+
+        <div className="relative">
+          <div className="max-h-[300px] overflow-y-auto pr-2 space-y-4 scrollbar-custom">
+            {services[0]?.category.map((item) => (
+              <Link
+                key={item.id}
+                href={`/services1/${services[0].type}/${item.id}`}
+                className="group relative block px-5 py-4 rounded-xl text-gray-700 bg-white
+                  font-bold
+                  shadow-sm border border-gray-200
+                  transition-all duration-300 ease-out
+                  hover:-translate-y-1 hover:shadow-lg
+                  hover:bg-[var(--color-teal-400)] hover:text-white
+                  after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-5px]
+                  after:w-[70%] after:h-[8px]
+                  after:bg-white/40 after:blur-lg after:rounded-full
+                  after:opacity-50 after:transition-all after:duration-300
+                  group-hover:after:w-[85%] group-hover:after:opacity-80"
+              >
+                <span className="flex items-center justify-between">
+                  {item.title}
+
+                  <span className="font-bold transition-transform duration-300 group-hover:translate-x-1">
+                    →
+                  </span>
+                </span>
+              </Link>
+            ))}
+          </div>
+
+          <div className="pointer-events-none absolute bottom-0 left-0 w-full h-10 bg-gradient-to-t from-white to-transparent" />
+        </div>
+      </div>
+
+      {/* OTHER SERVICES */}
+      <div>
+        <h3 className="text-orange-500 font-bold mb-4 sticky top-0 bg-white z-10">
+          OTHER SERVICES →
+        </h3>
+
+        <div className="max-h-[300px] overflow-y-auto pr-2 space-y-4 scrollbar-custom">
+          {services[1]?.category.map((item) => (
+            <Link
+              key={item.id}
+              href={`/services1/${services[1].type}/${item.id}`}
+              className="group relative block px-5 py-4 rounded-xl text-gray-700 bg-white
+                font-bold
+                shadow-sm border border-gray-200
+                transition-all duration-300 ease-out
+                hover:-translate-y-1 hover:shadow-lg
+                hover:bg-[var(--color-teal-400)] hover:text-white
+                after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-5px]
+                after:w-[70%] after:h-[8px]
+                after:bg-white/40 after:blur-lg after:rounded-full
+                after:opacity-50 after:transition-all after:duration-300
+                group-hover:after:w-[85%] group-hover:after:opacity-80"
             >
-              <div className="grid grid-cols-2 gap-10">
-                {/* SAP SERVICES */}
-                <div>
-  {/* Sticky Heading */}
-  <h3 className="text-orange-500 font-bold mb-4 sticky top-0 bg-white z-10">
-    SAP SERVICES →
-  </h3>
+              <span className="flex items-center justify-between">
+                {item.title}
 
-  {/* Scroll Container */}
-  <div className="relative">
-    <div className="max-h-[300px] overflow-y-auto pr-2 space-y-4 scrollbar-custom">
-      {services[0]?.category.map((item) => (
-        <Link
-          key={item.id}
-          href={`/services1/${services[0].type}/${item.id}`}
-          className="group relative block px-5 py-4 rounded-xl text-gray-700 bg-white
-                     
-                     shadow-sm border border-gray-200
-                     
-                     transition-all duration-300 ease-out
-                     hover:-translate-y-1 hover:shadow-lg
-                     hover:bg-[var(--color-teal-400)] hover:text-white
+                <span className="font-bold transition-transform duration-300 group-hover:translate-x-1">
+                  →
+                </span>
+              </span>
+            </Link>
+          ))}
+        </div>
+      </div>
 
-                     after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-5px]
-                     after:w-[70%] after:h-[8px]
-                     after:bg-white/40 after:blur-lg after:rounded-full
-                     after:opacity-50 after:transition-all after:duration-300
-                     
-                     group-hover:after:w-[85%] group-hover:after:opacity-80"
-        >
-          <span className="flex items-center justify-between">
-            {item.title}
-            <span className="transition-transform duration-300 group-hover:translate-x-1">
-              →
-            </span>
-          </span>
-        </Link>
-      ))}
-    </div>
-
-    {/* Bottom Fade Effect (premium touch) */}
-    <div className="pointer-events-none absolute bottom-0 left-0 w-full h-10 bg-gradient-to-t from-white to-transparent" />
-  </div>
-</div>
-
-                {/* OTHER SERVICES */}
-                <div>
-  <h3 className="text-orange-500 font-bold mb-4 sticky top-0 bg-white z-10">
-    OTHER SERVICES →
-  </h3>
-
-  <div className="max-h-[300px] overflow-y-auto pr-2 space-y-4 scrollbar-custom">
-    {services[1]?.category.map((item) => (
-      <Link
-        key={item.id}
-        href={`/services1/${services[1].type}/${item.id}`}
-        className="group relative block px-5 py-4 rounded-xl text-gray-700 bg-white
-                   
-                   shadow-sm border border-gray-200
-                   
-                   transition-all duration-300 ease-out
-                   hover:-translate-y-1 hover:shadow-lg
-                   hover:bg-[var(--color-teal-400)] hover:text-white
-
-                   after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-5px]
-                   after:w-[70%] after:h-[8px]
-                   after:bg-white/40 after:blur-lg after:rounded-full
-                   after:opacity-50 after:transition-all after:duration-300
-                   
-                   group-hover:after:w-[85%] group-hover:after:opacity-80"
-      >
-        <span className="flex items-center justify-between">
-          {item.title}
-          <span className="transition-transform duration-300 group-hover:translate-x-1">
-            →
-          </span>
-        </span>
-      </Link>
-    ))}
-  </div>
-</div>
-              </div>
-            </div>
-          </li>
-
-          {/* TRAINING */}
-          <li
-            className="relative"
-            onMouseEnter={() => setOpenTraining(true)}
-            onMouseLeave={() => setOpenTraining(false)}
-          >
-            <span className={navLink("#")}>Training ▾</span>
-
-            <div
-              className={`absolute top-10 left-1/2 -translate-x-1/2 w-[900px] p-8 z-50 rounded-xl
-              bg-white text-[#1a2a6c] shadow-2xl
-              transition-all duration-300
-              ${
-                openTraining
-                  ? "opacity-100 visible translate-y-0"
-                  : "opacity-0 invisible translate-y-4"
-              }`}
-            >
-              <div className="grid grid-cols-2 gap-10">
-              {training.map((group) => (
-  <div key={group.id}>
-    <h3 className="text-orange-500 font-bold mb-6">
-      {group.type} →
-    </h3>
-
-    {/* Scroll container */}
-    <div className="max-h-[300px] scrollbar-custom overflow-y-auto pr-2 space-y-4">
-      {group.category.map((item) => (
-        <Link
-          key={item.id}
-          href={`/trainingprogrammes/${group.type}/${item.id}`}
-          className="relative block px-5 py-4 rounded-xl text-gray-700 bg-white
-                     
-                     shadow-md border border-gray-200
-                     
-                     transition-all duration-300
-                     hover:-translate-y-1 hover:shadow-xl
-                     hover:bg-[var(--color-teal-400)] hover:text-white
-
-                     after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-6px]
-                     after:w-[80%] after:h-[10px]
-                     after:bg-white/60 after:blur-md after:rounded-full
-                     after:opacity-70
-                     
-                     hover:after:opacity-100"
-        >
-          {item.title}
-        </Link>
-      ))}
     </div>
   </div>
-))}
-              </div>
-            </div>
-          </li>
+</li>
 
-          <li>
-            <Link href="/contact" className={navLink("/contact")}>
-              Contact
-            </Link>
-          </li>
-          <li>
-            <Link href="/career" className={navLink("/career")}>
-              Career
-            </Link>
-          </li>
-        </ul>
+{/* TRAINING */}
+<li
+  className="relative"
+  onMouseEnter={() => setOpenTraining(true)}
+  onMouseLeave={() => setOpenTraining(false)}
+>
+  <span className={`${navLink("#")} font-bold cursor-pointer`}>
+    Training ▾
+  </span>
+
+  <div
+    className={`absolute top-10 left-1/2 -translate-x-1/2 w-[900px] p-8 z-50 rounded-xl
+    bg-white text-[#1a2a6c] shadow-2xl
+    transition-all duration-300
+    ${
+      openTraining
+        ? "opacity-100 visible translate-y-0"
+        : "opacity-0 invisible translate-y-4"
+    }`}
+  >
+    <div className="grid grid-cols-2 gap-10">
+
+      {training.map((group) => (
+        <div key={group.id}>
+
+          <h3 className="text-orange-500 font-bold mb-6">
+            {group.type} →
+          </h3>
+
+          <div className="max-h-[300px] scrollbar-custom overflow-y-auto pr-2 space-y-4">
+            {group.category.map((item) => (
+              <Link
+                key={item.id}
+                href={`/trainingprogrammes/${group.type}/${item.id}`}
+                className="relative block px-5 py-4 rounded-xl text-gray-700 bg-white
+                  font-bold
+                  shadow-md border border-gray-200
+                  transition-all duration-300
+                  hover:-translate-y-1 hover:shadow-xl
+                  hover:bg-[var(--color-teal-400)] hover:text-white
+                  after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-6px]
+                  after:w-[80%] after:h-[10px]
+                  after:bg-white/60 after:blur-md after:rounded-full
+                  after:opacity-70
+                  hover:after:opacity-100"
+              >
+                {item.title}
+              </Link>
+            ))}
+          </div>
+
+        </div>
+      ))}
+
+    </div>
+  </div>
+</li>
+
+{/* CONTACT */}
+<li>
+  <Link
+    href="/contact"
+    className={`${navLink("/contact")} font-bold`}
+  >
+    Contact
+  </Link>
+</li>
+
+{/* CAREER */}
+<li>
+  <Link
+    href="/career"
+    className={`${navLink("/career")} font-bold`}
+  >
+    Career
+  </Link>
+</li>
+
+</ul>
       </div>
 
       {/* OVERLAY */}
