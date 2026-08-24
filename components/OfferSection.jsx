@@ -44,7 +44,7 @@ const services = [
 
 export default function OfferSection() {
   return (
-    <section className="bg-[#0f1c4d] w-full py-20 px-6 relative overflow-hidden">
+    <section className="bg-white w-full py-20 px-6 relative overflow-hidden">
       
       {/* Decorative dots */}
       <div className="absolute top-10 right-10 grid grid-cols-10 gap-2 opacity-20">
@@ -57,10 +57,10 @@ export default function OfferSection() {
         
         {/* Heading */}
         <div className="mb-16 w-full">
-          <h2 className="text-4xl font-bold text-white mb-4">
+          <h2 className="text-4xl font-bold text-center text-black mb-4">
             What We Bring to Your Business
           </h2>
-          <p className="text-gray-300 leading-relaxed">
+          <p className="text-black leading-relaxed">
             At Zisan Tech Solutions , we provide dependable, business-focused solutions designed to simplify your operations and support sustainable growth. Our blend of SAP expertise and IT innovation ensures your business runs efficiently and adapts to changing needs. 
           </p>
         </div>
@@ -74,21 +74,21 @@ export default function OfferSection() {
               <div key={index} className="text-center group">
                 
                 {/* ICON */}
-                <div className="mx-auto mb-6 w-20 h-20 flex items-center justify-center rounded-full border-4 border-white relative">
+                <div className="mx-auto mb-6 w-20 h-20 flex items-center justify-center rounded-full border-4 border-teal-500 relative">
                   
                   {/* Rotating border */}
                   <div className="absolute w-full h-full rounded-full border-4 border-orange-500  border-t-transparent border-l-transparent animate-spin-slow"></div>
 
-                  <Icon className="text-2xl text-white relative z-10" />
+                  <Icon className="text-2xl text-teal-500 relative z-10" />
                 </div>
 
                 {/* TITLE */}
-                <h3 className="text-xl font-semibold text-white mb-3">
+                <h3 className="text-xl font-semibold text-black mb-3">
                   {item.title}
                 </h3>
 
                 {/* DESCRIPTION */}
-                <p className="text-gray-300 text-sm leading-relaxed">
+                <p className="text-black text-sm leading-relaxed">
                   {item.desc}
                 </p>
               </div>

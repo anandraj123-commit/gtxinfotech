@@ -13,7 +13,7 @@ export default function TrainingSection() {
         ...item,
         type: group.type,
       }))
-    );
+    ).slice(0,-3);
 
     setAllTraining(data);
   }, []);
@@ -21,7 +21,7 @@ export default function TrainingSection() {
   if (!allTraining.length) return null;
 
   return (
-    <section className="relative py-20 bg-[#0f172a] text-white">
+    <section className="relative py-20 bg-white text-white">
       <div className="max-w-full mx-auto px-6 text-center relative z-10">
         
         {/* HEADER */}
@@ -29,7 +29,7 @@ export default function TrainingSection() {
           Training We’re Offering
         </p>
 
-        <h2 className="text-4xl md:text-5xl font-bold mb-14 leading-tight">
+        <h2 className="text-4xl md:text-5xl text-black font-bold mb-14 leading-tight">
           We’re Dedicated to Serve <br /> you All Time
         </h2>
 

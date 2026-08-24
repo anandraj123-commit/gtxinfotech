@@ -11,15 +11,17 @@ export default function StorySection() {
       {/* subtle gradient glow */}
       <div className="absolute inset-0 bg-gradient-to-tr from-orange-50 via-white to-teal-50 opacity-60 pointer-events-none" />
 
-      <div className="mx-auto px-6 grid md:grid-cols-2 gap-16  relative z-10 text-black">
-        
+      <div className="mx-auto px-6 grid md:grid-cols-2 gap-16 items-stretch relative z-10 text-black">
+
         {/* LEFT CONTENT */}
         <motion.div
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.9 }}
           viewport={{ once: true }}
+          className="h-full flex flex-col"
         >
+
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -28,38 +30,52 @@ export default function StorySection() {
           >
             Know Our Story
           </motion.h2>
+           
+          <motion.p
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="text-black leading-relaxed  text-justify"
+          >
+            Zisan Tech Solutions is dedicated to helping businesses embrace
+            digital transformation through intelligent SAP solutions and
+            modern IT services. Our focus is on aligning technology with real
+            business objectives to improve efficiency, visibility, and
+            decision-making.
+
+            <br />
+            
+            With a strong foundation in SAP consulting and training, we enable
+            organizations to build capable teams while implementing systems
+            that deliver long-term value. Our approach emphasizes clarity,
+            adaptability, and measurable outcomes in every project we
+            undertake.
+          </motion.p>
 
           <motion.p
-  initial={{ opacity: 0, y: 40 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ delay: 0.4, duration: 0.8 }}
-  className="text-black leading-relaxed mb-8 text-justify"
->
-  Zisan Tech Solutions is dedicated to helping businesses embrace digital transformation through intelligent SAP solutions and modern IT services. Our focus is on aligning technology with real business objectives to improve efficiency, visibility, and decision-making.
-  <br /><br />
-  With a strong foundation in SAP consulting and training, we enable organizations to build capable teams while implementing systems that deliver long-term value. Our approach emphasizes clarity, adaptability, and measurable outcomes in every project we undertake.
-</motion.p>
-
-<motion.p
-  initial={{ opacity: 0, y: 40 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ delay: 0.4, duration: 0.8 }}
-  className="text-black leading-relaxed mb-8 text-justify"
->
-  What sets us apart is our commitment to delivering solutions that are not only technically sound but also practical and scalable. We work closely with clients to understand their workflows, challenges, and growth plans, ensuring every solution fits seamlessly into their ecosystem.
-  <br /><br />
-  From implementation to ongoing optimization, our team supports businesses at every stage of their journey. By combining innovation with reliability, we help organizations stay competitive, agile, and ready for the future.
-</motion.p>
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="text-black leading-relaxed  text-justify"
+          >
+            What sets us apart is our commitment to delivering solutions that
+            are not only technically sound but also practical and scalable. We
+            work closely with clients to understand their workflows,
+            challenges, and growth plans, ensuring every solution fits
+            seamlessly into their ecosystem.
+          </motion.p>
+          <br></br>
 
           {/* PREMIUM BUTTON */}
           <motion.div
             initial={{ opacity: 0, scale: 0.85 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.6, duration: 0.5 }}
+            className="mt-auto"
           >
             <Link href="/about">
               <button className="relative overflow-hidden bg-orange-500 px-6 py-3 rounded-md text-white font-semibold group shadow-lg hover:shadow-xl transition-all duration-300">
-                
+
                 <span className="relative z-10 group-hover:text-black transition duration-300">
                   Learn More
                 </span>
@@ -73,6 +89,7 @@ export default function StorySection() {
               </button>
             </Link>
           </motion.div>
+
         </motion.div>
 
         {/* RIGHT IMAGE */}
@@ -91,7 +108,7 @@ export default function StorySection() {
           <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{ repeat: Infinity, duration: 4 }}
-            className="relative  rounded-3xl p-2 shadow-xl bg-white/40 backdrop-blur-lg"
+            className="relative rounded-3xl p-2 shadow-xl bg-white/40 backdrop-blur-lg"
           >
             <div className="rounded-2xl overflow-hidden">
               <Image
@@ -104,10 +121,8 @@ export default function StorySection() {
             </div>
           </motion.div>
 
-        
-
-
         </motion.div>
+
       </div>
     </section>
   );

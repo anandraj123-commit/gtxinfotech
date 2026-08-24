@@ -4,20 +4,24 @@ import Link from "next/link";
 import { services } from "../data/services";
 
 export default function ServicesSection() {
-  const allServices = services.flatMap((group) =>
+  const allServices = services
+  .flatMap((group) =>
     group.category.map((item) => ({
       ...item,
       type: group.type,
     }))
-  );
+  )
+  .slice(0, -2);
+
+ 
 
   return (
-    <section className="py-20 bg-[#0f172a] text-white">
+    <section className="py-20 bg-gray-50 text-white">
       <div className="max-w-full mx-auto px-6">
 
         {/* HEADER */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-semibold">
+          <h2 className="text-3xl md:text-4xl font-semibold text-black">
             Our <span className="text-teal-400">Services</span>
           </h2>
           <div className="w-16 h-1 bg-teal-400 mx-auto mt-4 rounded" />
@@ -34,7 +38,7 @@ export default function ServicesSection() {
                 className="
                   group flex flex-col items-center justify-center
                   p-6 rounded-xl
-                  bg-white/10 backdrop-blur-lg border border-white/20
+                  bg-[#0f172a] backdrop-blur-lg border border-white/20
                   hover:scale-105 hover:shadow-xl
                   transition duration-300 cursor-pointer
                 "
