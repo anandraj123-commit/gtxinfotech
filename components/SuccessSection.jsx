@@ -70,7 +70,7 @@ export default function SuccessSection() {
             className="relative w-full h-[260px] md:h-[320px] rounded-2xl overflow-hidden shadow-lg"
           >
             <Image
-              src="/images/our work is for your success zisan tech solutions.png"
+              src="/images/our-work-is-for-your-success-zisan-tech-solutions.png"
               alt="Work"
               fill
               className="object-cover"

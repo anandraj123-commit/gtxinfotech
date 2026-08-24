@@ -34,7 +34,7 @@ export default function OfficeLocations() {
     <section className="max-w-7xl mx-auto px-4 py-12">
       {/* Header */}
       <div className="text-center mb-12">
-        <h1 className="text-3xl md:text-4xl font-bold">
+        <h1 className="text-4xl  font-bold">
           Get in touch
         </h1>
         <p className="text-gray-500 mt-3 max-w-2xl mx-auto">

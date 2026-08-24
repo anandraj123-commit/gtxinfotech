@@ -22,6 +22,7 @@ export default function AboutHeroImage() {
 
     const timer = setInterval(() => {
       start += step;
+
       if (start >= end) {
         setCount(end);
         clearInterval(timer);
@@ -35,8 +36,9 @@ export default function AboutHeroImage() {
 
   return (
     <section className="relative min-h-[620px] w-full overflow-hidden">
+
       <Image
-        src="/images/About _ Header Page.png"
+        src="/images/About _ Header_Image.png"
         alt="Zisan Tech Solutions team"
         fill
         priority
@@ -44,8 +46,10 @@ export default function AboutHeroImage() {
         className="object-cover object-center"
       />
 
-      <div className="absolute inset-0 bg-gradient-to-r from-[#03175A]/95 via-[#03175A]/75 to-[#03175A]/20" />
+      {/* DARK OVERLAY */}
+      <div className="absolute inset-0 bg-black/60" />
 
+      {/* TOP RIGHT DOTS */}
       <div className="absolute right-0 top-0 opacity-60">
         <svg width="320" height="120" viewBox="0 0 320 120" fill="none">
           <defs>
@@ -55,9 +59,15 @@ export default function AboutHeroImage() {
               height="12"
               patternUnits="userSpaceOnUse"
             >
-              <circle cx="3" cy="3" r="2" fill="#4DB7CC" />
+              <circle
+                cx="3"
+                cy="3"
+                r="2"
+                fill="#4DB7CC"
+              />
             </pattern>
           </defs>
+
           <path
             d="M100 0H320V120C240 70 180 50 100 0Z"
             fill="url(#about-hero-dots)"
@@ -66,31 +76,44 @@ export default function AboutHeroImage() {
       </div>
 
       <div className="relative mx-auto flex min-h-[620px] max-w-[1920px] items-center px-16 py-16">
+
         <div className="max-w-[780px] text-white">
-          {/* <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="mb-6 font-mono text-sm uppercase tracking-[0.28em] text-teal-300"
-          >
-            About Us
-          </motion.p> */}
 
           <h1 className="text-[40px] font-bold leading-[1.15] sm:text-[48px] lg:text-[58px]">
+
             {headingLines.map((line, index) => (
               <motion.span
                 key={index}
-                initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: line.delay }}
+                initial={{
+                  opacity: 0,
+                  x: -30,
+                }}
+                animate={{
+                  opacity: 1,
+                  x: 0,
+                }}
+                transition={{
+                  duration: 0.6,
+                  delay: line.delay,
+                }}
                 className="block"
               >
+
                 {index === 0 ? (
                   <>
                     <motion.span
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: 0.1 }}
+                      initial={{
+                        opacity: 0,
+                        scale: 0.8,
+                      }}
+                      animate={{
+                        opacity: 1,
+                        scale: 1,
+                      }}
+                      transition={{
+                        duration: 0.5,
+                        delay: 0.1,
+                      }}
                       className="inline-block text-orange-500"
                     >
                       {count}+
@@ -98,16 +121,29 @@ export default function AboutHeroImage() {
                     Years Excellence in
                   </>
                 ) : (
-                  <span className="animated-text">{line.text}</span>
+                  <span className="animated-text">
+                    {line.text}
+                  </span>
                 )}
+
               </motion.span>
             ))}
+
           </h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.45 }}
+            initial={{
+              opacity: 0,
+              y: 20,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.6,
+              delay: 0.45,
+            }}
             className="mt-6 max-w-[560px] text-[18px] text-white/85 lg:text-[20px]"
           >
             Zisan Tech Solutions is committed to delivering quality SAP Training
@@ -115,9 +151,18 @@ export default function AboutHeroImage() {
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+            initial={{
+              opacity: 0,
+              y: 20,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.6,
+              delay: 0.6,
+            }}
           >
             <Link href="/#services">
               <button className="mt-10 rounded-xl bg-orange-500 px-10 py-3 text-lg font-semibold text-white shadow-lg transition hover:scale-[1.05] hover:bg-orange-600">
@@ -125,6 +170,7 @@ export default function AboutHeroImage() {
               </button>
             </Link>
           </motion.div>
+
         </div>
       </div>
 
@@ -135,16 +181,19 @@ export default function AboutHeroImage() {
 
         @keyframes colorChange {
           0% {
-            color: var(--color-orange-500);
+            color: #f97316;
           }
+
           50% {
-            color: var(--color-teal-400);
+            color: #14b8a6;
           }
+
           100% {
-            color: var(--color-orange-500);
+            color: #f97316;
           }
         }
       `}</style>
+
     </section>
   );
 }

@@ -1,151 +1,244 @@
 "use client";
-import { useEffect, useState } from "react";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
+
 export default function WorkforceBannerAbout() {
-    
-
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    let start = 0;
-    const end = 10; // change to 25 if needed
-    const duration = 500; // 2 sec
-    const incrementTime = 50;
-
-    const step = Math.ceil(end / (duration / incrementTime));
-
-    const timer = setInterval(() => {
-      start += step;
-      if (start >= end) {
-        setCount(end);
-        clearInterval(timer);
-      } else {
-        setCount(start);
-      }
-    }, incrementTime);
-
-    return () => clearInterval(timer);
-  }, []);
   return (
-    <section className="relative overflow-hidden bg-[#03175A] min-h-[620px] w-full">
+    <section className="relative w-full min-h-[620px] overflow-hidden">
 
-      {/* Top Right Dots */}
-      <div className="absolute right-0 top-0 opacity-90">
-        <svg width="320" height="120" viewBox="0 0 320 120" fill="none">
-          <defs>
-            <pattern
-              id="dots"
-              width="12"
-              height="12"
-              patternUnits="userSpaceOnUse"
+      {/* BACKGROUND IMAGE */}
+      <img
+        src="/images/Home _ Header Page.png"
+        alt="SAP Consulting and Technology Services"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+
+      {/* DARK OVERLAY */}
+      <div className="absolute inset-0 bg-black/60" />
+
+      {/* CONTENT */}
+      <div className="relative z-10 mx-auto flex min-h-[620px] max-w-[1920px] items-center px-6 md:px-10 lg:px-16">
+
+        <div className="max-w-[900px] text-white">
+
+          {/* HEADING */}
+          <motion.h1
+            initial={{ opacity: 0, x: -100, filter: "blur(10px)" }}
+            animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+            transition={{
+              duration: 1.1,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="text-[44px] md:text-[52px] lg:text-[60px] font-bold leading-[1.1]"
+          >
+            Driving Business Growth{" "}
+            <motion.span
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{
+                delay: 0.45,
+                duration: 0.9,
+                ease: "easeOut",
+              }}
+              className="inline-block text-orange-500"
             >
-              <circle cx="3" cy="3" r="2" fill="#4DB7CC" />
-            </pattern>
-          </defs>
+              Through Technology
+            </motion.span>
+          </motion.h1>
 
-          <path
-            d="M100 0H320V120C240 70 180 50 100 0Z"
-            fill="url(#dots)"
-          />
-        </svg>
-      </div>
+          {/* DESCRIPTION */}
+          <motion.p
+            initial={{ opacity: 0, y: 35 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.8,
+              duration: 0.9,
+              ease: "easeOut",
+            }}
+            className="mt-6 text-[18px] lg:text-[22px] text-white/80 max-w-[800px] leading-relaxed"
+          >
+            Delivering reliable SAP consulting, implementation, support, and
+            custom IT solutions to help businesses succeed.
+          </motion.p>
 
-      <div className="mx-auto flex min-h-[620px] max-w-[1920px] items-center justify-between px-6">
+          {/* FEATURES */}
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-6">
+            <Feature
+              text="SAP Consulting & Support"
+              delay={1.05}
+              direction="left"
+            />
 
-        {/* LEFT CONTENT */}
-        <div className="max-w-[950px] text-white">
+            <Feature
+              text="Application Development"
+              delay={1.2}
+              direction="right"
+            />
 
-          {/* Heading */}
-          <h1 className="text-[44px] lg:text-[72px] font-bold leading-[1.1] max-w-[900px]" style={{ fontSize: "55px" }}>
-          Driving Business Growth{" "}
-  <span className="animated-text">
-   Through Technology
-  </span>
-</h1>
+            <Feature
+              text="System Integration"
+              delay={1.35}
+              direction="left"
+            />
 
-          {/* Description */}
-          <p className="mt-6 text-[18px] lg:text-[22px] text-white/80 max-w-[800px]">
-          Delivering reliable SAP consulting, implementation, support, and custom IT solutions to help businesses succeed.
-          </p>
-
-          {/* Features */}
-          <div className="mt-10 grid grid-cols-2 gap-x-12 gap-y-6">
-            <Feature text="SAP Consulting & Support" />
-            <Feature text="Application Development" />
-            <Feature text="System Integration" />
-            <Feature text="Managed IT Services" />
+            <Feature
+              text="Managed IT Services"
+              delay={1.5}
+              direction="right"
+            />
           </div>
 
-          {/* Button */}
-          <Link href="/#services">
-  <button
-    className="mt-12 rounded-xl px-10 py-3 text-lg font-semibold text-white shadow-lg transition hover:scale-[1.05]"
-    style={{ backgroundColor: "var(--color-orange-500)" }}
-  >
-    Explore Services
-  </button>
-</Link>
-        </div>
-
-        {/* RIGHT SIDE */}
-        <div className="hidden lg:flex flex-col items-center justify-center">
-
-          {/* 25 TEXT LOGO */}
-          <div
-            className="text-[260px] font-extrabold leading-none select-none"
-            style={{
-              color: "var(--color-orange-500)",
-              textShadow: "0 10px 30px rgba(0,0,0,0.25)"
+          {/* BUTTON */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.7, y: 30 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{
+              delay: 1.8,
+              duration: 0.8,
+              type: "spring",
+              stiffness: 140,
+              damping: 12,
             }}
           >
-            {count}+
-          </div>
+            <Link
+              href="/#services"
+              className="
+                group
+                relative
+                inline-flex
+                items-center
+                gap-3
+                mt-12
+                rounded-xl
+                px-10
+                py-3
+                text-lg
+                font-semibold
+                text-white
+                bg-orange-500
+                shadow-lg
+                shadow-orange-500/30
+                overflow-hidden
+                transition-all
+                duration-300
+                hover:bg-teal-500
+                hover:shadow-teal-500/40
+                hover:scale-[1.05]
+              "
+            >
+              <span className="relative z-10">
+                Explore Services
+              </span>
 
-          {/* YEARS */}
-          <div className="text-white text-5xl font-bold tracking-[12px] -mt-8">
-            YEARS
-          </div>
+              <motion.span
+                className="relative z-10 text-xl"
+                animate={{ x: [0, 6, 0] }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 1.4,
+                  ease: "easeInOut",
+                }}
+              >
+                →
+              </motion.span>
+
+              {/* SHINE */}
+              <span
+                className="
+                  absolute
+                  inset-y-0
+                  -left-20
+                  w-16
+                  bg-white/30
+                  skew-x-[-20deg]
+                  group-hover:left-[120%]
+                  transition-all
+                  duration-700
+                "
+              />
+            </Link>
+          </motion.div>
 
         </div>
       </div>
 
-      {/* ANIMATION STYLE */}
-      <style jsx>{`
-        .animated-text {
-          animation: colorChange 5s infinite;
-        }
-
-        @keyframes colorChange {
-          0% {
-            color: var(--color-orange-500);
-          }
-          50% {
-            color: var(--color-teal-400);
-          }
-          100% {
-            color: var(--color-orange-500);
-          }
-        }
-      `}</style>
+      {/* BOTTOM LIGHT */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.8, duration: 1.5 }}
+        className="
+          absolute
+          bottom-0
+          left-0
+          w-[500px]
+          h-[180px]
+          bg-orange-500/10
+          blur-[100px]
+          pointer-events-none
+        "
+      />
 
     </section>
   );
 }
 
-/* FEATURE COMPONENT */
-function Feature({ text }) {
-  return (
-    <div className="flex items-center gap-4">
-      <span
-        className="text-[24px]"
-        style={{ color: "var(--color-orange-500)" }}
-      >
-        ✔
-      </span>
+/* FEATURE */
+function Feature({ text, delay, direction }) {
+  const x = direction === "left" ? -60 : 60;
 
-      <span className="text-[18px] lg:text-[20px] text-white">
+  return (
+    <motion.div
+      initial={{
+        opacity: 0,
+        x,
+      }}
+      animate={{
+        opacity: 1,
+        x: 0,
+      }}
+      transition={{
+        delay,
+        duration: 0.8,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+      className="flex items-center gap-4 group"
+    >
+      <motion.span
+        initial={{ scale: 0, rotate: -90 }}
+        animate={{ scale: 1, rotate: 0 }}
+        transition={{
+          delay: delay + 0.15,
+          duration: 0.5,
+          type: "spring",
+          stiffness: 180,
+        }}
+        className="
+          flex
+          items-center
+          justify-center
+          w-8
+          h-8
+          rounded-full
+          bg-orange-500/15
+          border
+          border-orange-500/40
+          text-orange-500
+          text-sm
+          group-hover:bg-teal-500/20
+          group-hover:border-teal-400
+          group-hover:text-teal-400
+          transition-all
+          duration-300
+        "
+      >
+        ✓
+      </motion.span>
+
+      <span className="text-[18px] lg:text-[20px] text-white group-hover:text-teal-300 transition-colors duration-300">
         {text}
       </span>
-    </div>
+    </motion.div>
   );
 }

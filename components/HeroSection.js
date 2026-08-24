@@ -20,7 +20,7 @@ export default function HeroSection() {
       <div className="relative z-10 w-full">
         <div className="max-w-full mx-auto px-6 md:px-10 lg:px-16">
 
-          <div className="max-w-2xl">
+          <div className="max-w-[750px]">
 
             {/* SMALL TITLE - FROM LEFT */}
             <p className="text-teal-500 font-semibold text-lg md:text-xl mb-4 animate-[slideFromLeft_0.9s_ease-out_0.2s_forwards] opacity-0">

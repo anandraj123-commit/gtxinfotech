@@ -15,7 +15,7 @@ export default function VisionSection() {
       {/* HEADER */}
       <div className="mx-auto text-center mb-20">
         <h1
-          className={`text-4xl md:text-5xl font-bold transition-all duration-700 ${
+          className={`text-4xl font-bold transition-all duration-700 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >

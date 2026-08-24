@@ -26,7 +26,7 @@ export default function TeamSection() {
       
       {/* Header */}
       <div className="mx-auto mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <h2 className="text-4xl  font-bold mb-4">
         Our Team
         </h2>
         <p className="text-black max-w-2xl">

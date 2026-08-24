@@ -60,7 +60,7 @@ export default function ClientSuccessSection() {
       <div className="relative w-full max-w-7xl mx-auto">
         {/* TOP HEADING */}
         <div className="text-center mb-20">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-gray-900">
+          <h1 className="text-4xl  font-black leading-tight tracking-tight text-gray-900">
             Welcome to{" "}
             <span className="text-orange-500">Zisan</span>{" "}
             <span className="text-teal-400">Tech Solutions</span>
