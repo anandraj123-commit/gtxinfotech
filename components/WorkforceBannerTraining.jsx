@@ -73,7 +73,7 @@ export default function WorkforceBannerTraining() {
       </div>
 
       {/* CONTENT */}
-      <div className="relative z-20 mx-auto flex min-h-[620px] max-w-[1920px] items-center justify-between px-6">
+      <div className="relative mx-auto flex min-h-[620px] max-w-[1920px] items-center px-16 py-16">
 
         {/* LEFT CONTENT */}
         <div className="max-w-[750px] text-white">
@@ -84,7 +84,11 @@ export default function WorkforceBannerTraining() {
             style={{ fontSize: "55px" }}
           >
             Build Your SAP Career{" "}
-            <span className="animated-text">
+            <span
+              style={{
+                color: "var(--color-teal-400)",
+              }}
+            >
               with Expert-Led Training
             </span>
           </h1>
@@ -104,43 +108,20 @@ export default function WorkforceBannerTraining() {
           </div>
 
           {/* BUTTON */}
-          <Link href="/#training-programs">
-            <button
-              type="button"
-              className="mt-12 rounded-xl px-10 py-3 text-lg font-semibold text-white shadow-lg transition hover:scale-[1.05]"
-              style={{
-                backgroundColor: "var(--color-orange-500)",
-              }}
-            >
-              View Courses
-            </button>
-          </Link>
+          {/* BUTTON */}
+<Link href="/#training-programs">
+  <button
+    type="button"
+    className="mt-12 rounded-xl bg-teal-400 px-10 py-3 text-lg font-semibold text-white shadow-lg transition duration-300 hover:scale-[1.05] hover:bg-orange-500"
+  >
+    View Courses
+  </button>
+</Link>
         </div>
 
         {/* RIGHT SIDE */}
        
       </div>
-
-      {/* ANIMATION STYLE */}
-      <style jsx>{`
-        .animated-text {
-          animation: colorChange 5s infinite;
-        }
-
-        @keyframes colorChange {
-          0% {
-            color: var(--color-orange-500);
-          }
-
-          50% {
-            color: var(--color-teal-400);
-          }
-
-          100% {
-            color: var(--color-orange-500);
-          }
-        }
-      `}</style>
     </section>
   );
 }

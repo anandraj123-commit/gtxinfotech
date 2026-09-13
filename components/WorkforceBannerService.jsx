@@ -41,7 +41,7 @@ export default function WorkforceBannerAbout() {
                 duration: 0.9,
                 ease: "easeOut",
               }}
-              className="inline-block text-orange-500"
+              className="inline-block text-teal-300"
             >
               Through Technology
             </motion.span>
@@ -116,14 +116,14 @@ export default function WorkforceBannerAbout() {
                 text-lg
                 font-semibold
                 text-white
-                bg-orange-500
+                bg-teal-300
                 shadow-lg
                 shadow-orange-500/30
                 overflow-hidden
                 transition-all
                 duration-300
                 hover:bg-teal-500
-                hover:shadow-teal-500/40
+                hover:orange-500
                 hover:scale-[1.05]
               "
             >

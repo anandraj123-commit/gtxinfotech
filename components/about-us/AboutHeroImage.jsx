@@ -36,7 +36,6 @@ export default function AboutHeroImage() {
 
   return (
     <section className="relative min-h-[620px] w-full overflow-hidden">
-
       <Image
         src="/images/About _ Header_Image.png"
         alt="Zisan Tech Solutions team"
@@ -59,12 +58,7 @@ export default function AboutHeroImage() {
               height="12"
               patternUnits="userSpaceOnUse"
             >
-              <circle
-                cx="3"
-                cy="3"
-                r="2"
-                fill="#4DB7CC"
-              />
+              <circle cx="3" cy="3" r="2" fill="#4DB7CC" />
             </pattern>
           </defs>
 
@@ -76,11 +70,8 @@ export default function AboutHeroImage() {
       </div>
 
       <div className="relative mx-auto flex min-h-[620px] max-w-[1920px] items-center px-16 py-16">
-
         <div className="max-w-[780px] text-white">
-
           <h1 className="text-[40px] font-bold leading-[1.15] sm:text-[48px] lg:text-[58px]">
-
             {headingLines.map((line, index) => (
               <motion.span
                 key={index}
@@ -98,7 +89,6 @@ export default function AboutHeroImage() {
                 }}
                 className="block"
               >
-
                 {index === 0 ? (
                   <>
                     <motion.span
@@ -121,14 +111,10 @@ export default function AboutHeroImage() {
                     Years Excellence in
                   </>
                 ) : (
-                  <span className="animated-text">
-                    {line.text}
-                  </span>
+                  <span className="text-teal-500">{line.text}</span>
                 )}
-
               </motion.span>
             ))}
-
           </h1>
 
           <motion.p
@@ -165,35 +151,13 @@ export default function AboutHeroImage() {
             }}
           >
             <Link href="/#services">
-              <button className="mt-10 rounded-xl bg-orange-500 px-10 py-3 text-lg font-semibold text-white shadow-lg transition hover:scale-[1.05] hover:bg-orange-600">
-                Explore Services
-              </button>
+            <button className="mt-10 rounded-xl bg-teal-500 px-6 py-3 text-lg font-semibold text-white shadow-lg transition hover:scale-[1.05] hover:bg-orange-500">
+  Explore Services
+</button>
             </Link>
           </motion.div>
-
         </div>
       </div>
-
-      <style jsx>{`
-        .animated-text {
-          animation: colorChange 4s infinite;
-        }
-
-        @keyframes colorChange {
-          0% {
-            color: #f97316;
-          }
-
-          50% {
-            color: #14b8a6;
-          }
-
-          100% {
-            color: #f97316;
-          }
-        }
-      `}</style>
-
     </section>
   );
 }

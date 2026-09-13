@@ -7,11 +7,14 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer
-      className="w-full py-20 px-6 text-white relative overflow-hidden"
-      style={{
-        backgroundImage: "url('/images/footer-image.png')",
-      }}
-    >
+    className="w-full py-20 px-6 text-white relative overflow-hidden"
+    style={{
+      backgroundImage: "url('/images/footer-image.png')",
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}
+  >
       {/* Background world map */}
       <div className="absolute inset-0 opacity-10 bg-[url('/images/world-map.png')] bg-center bg-no-repeat bg-cover"></div>
 
@@ -24,7 +27,7 @@ export default function Footer() {
           {/* LOGO */}
           <div className="mb-6">
             <Image
-              src="/images/logo.jpg"
+              src="/images/logo/ZisanTech_Solutions_logo.png"
               alt="Zisan Tech Solutions"
               width={150}
               height={50}

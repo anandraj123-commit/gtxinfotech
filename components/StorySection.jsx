@@ -44,12 +44,17 @@ export default function StorySection() {
             decision-making.
 
             <br />
-            
+            <br />
             With a strong foundation in SAP consulting and training, we enable
             organizations to build capable teams while implementing systems
             that deliver long-term value. Our approach emphasizes clarity,
             adaptability, and measurable outcomes in every project we
             undertake.
+
+            <br/>
+            <br />
+            We believe successful digital transformation goes beyond technology—it requires the right strategy, expertise, and continuous support. By combining industry knowledge with a client-focused approach, we help businesses adapt confidently to evolving technology and market demands. Our goal is to build lasting partnerships and empower organizations with solutions that support sustainable growth and long-term success.
+
           </motion.p>
 
           <motion.p
