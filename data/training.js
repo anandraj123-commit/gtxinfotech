@@ -32,7 +32,7 @@ export const training = [
             id:1,
             icon:"https://cdn.jsdelivr.net/npm/@material-icons/svg@1.0.28/svg/point_of_sale/baseline.svg",
             image:'/images/services/service.jpg',
-            title:'SAP SD- Overview',
+            title:'SAP SD',
             description: [
              { 
               title:`<h2 class="">SAP SD (Sales & Distribution) Training Program-Learn How Real Businesses Run Their Sales with SAP</h2>`,

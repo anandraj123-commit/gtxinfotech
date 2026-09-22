@@ -101,62 +101,10 @@ export default function WorkforceBannerAbout() {
               damping: 12,
             }}
           >
-            <Link
-              href="/#services"
-              className="
-                group
-                relative
-                inline-flex
-                items-center
-                gap-3
-                mt-12
-                rounded-xl
-                px-10
-                py-3
-                text-lg
-                font-semibold
-                text-white
-                bg-teal-300
-                shadow-lg
-                shadow-orange-500/30
-                overflow-hidden
-                transition-all
-                duration-300
-                hover:bg-teal-500
-                hover:orange-500
-                hover:scale-[1.05]
-              "
-            >
-              <span className="relative z-10">
-                Explore Services
-              </span>
-
-              <motion.span
-                className="relative z-10 text-xl"
-                animate={{ x: [0, 6, 0] }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 1.4,
-                  ease: "easeInOut",
-                }}
-              >
-                →
-              </motion.span>
-
-              {/* SHINE */}
-              <span
-                className="
-                  absolute
-                  inset-y-0
-                  -left-20
-                  w-16
-                  bg-white/30
-                  skew-x-[-20deg]
-                  group-hover:left-[120%]
-                  transition-all
-                  duration-700
-                "
-              />
+                <Link href="/#services">
+            <button className="mt-10 rounded-xl bg-teal-500 px-6 py-3 text-lg font-semibold text-white shadow-lg transition hover:scale-[1.05] hover:bg-orange-500">
+  Explore Services
+</button>
             </Link>
           </motion.div>
 

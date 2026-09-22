@@ -54,9 +54,9 @@ export default function ContactSection() {
           {/* LEFT CONTENT */}
           <div className="max-w-[750px] text-white">
             <h1 className="text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
-              Masterminds To{" "}
+            Let’s Build What’s Next{" "}
               <span className="text-teal-400">
-                Your Positive Goal
+              Connect for SAP, IT & Digital Solutions
               </span>
             </h1>
 

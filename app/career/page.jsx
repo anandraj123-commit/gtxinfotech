@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Navbar from "../../components/Navbar";
 import Link from "next/link";
+import CareerOpenings from "../../components/CareerOpenings";
 
 export default function CareerPage() {
   const cards = [
@@ -83,34 +84,7 @@ export default function CareerPage() {
       </section>
 
       {/* Image Section */}
-      <section className="bg-[#0f1c4d] py-16 px-6 text-white">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div className="relative h-[300px] md:h-[400px]">
-            <Image
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
-              alt="office"
-              fill
-              className="object-cover rounded-2xl"
-            />
-          </div>
-
-          <div>
-            <h2 className="text-3xl font-bold mb-4">
-              Work With Amazing People
-            </h2>
-
-            <p className="text-gray-300 mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              facilisi. Vivamus vel elit ut turpis blandit placerat.
-            </p>
-
-            <p className="text-gray-300">
-              Curabitur at lacus ac velit ornare lobortis. Donec pede justo,
-              fringilla vel, aliquet nec.
-            </p>
-          </div>
-        </div>
-      </section>
+      <CareerOpenings/>
 
       {/* CTA Section */}
       <section className="py-16 px-6 text-center text-black">

@@ -49,3 +49,9 @@ export default async function Service({ params }) {
     </>
   );
 }
+
+<Link href="/#services">
+<button className="mt-10 rounded-xl bg-teal-500 px-6 py-3 text-lg font-semibold text-white shadow-lg transition hover:scale-[1.05] hover:bg-orange-500">
+Explore Services
+</button>
+</Link>

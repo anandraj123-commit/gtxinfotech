@@ -66,7 +66,8 @@ export default function Navbar() {
             alt="logo"
             className={`w-27 h-13 object-contain transition duration-300 
             group-hover:scale-110 group-hover:brightness-125
-            `}
+            `} style={{    height: '62px',
+              width: '191px'}}
           />
         </Link>
 

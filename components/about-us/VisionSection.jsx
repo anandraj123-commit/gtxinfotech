@@ -100,7 +100,7 @@ export default function VisionSection() {
       </div>
 
       {/* DECORATIVE BLUR ELEMENTS */}
-      <div className="absolute top-10 left-10 w-72 h-72 bg-orange-300/30 rounded-full blur-3xl"></div>
+      <div className="absolute top-10 left-10 w-72 h-72  rounded-full blur-3xl"></div>
       <div className="absolute bottom-10 right-10 w-72 h-72 bg-indigo-300/30 rounded-full blur-3xl"></div>
 
     </section>

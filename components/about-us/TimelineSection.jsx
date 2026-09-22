@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import Achievements from "../Achievements";
 
 export default function TimelineSection() {
   const sectionRef = useRef(null);
@@ -58,7 +59,7 @@ export default function TimelineSection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-[#0f1c4d] text-white px-6 py-20 relative overflow-hidden"
+      className="w-full  text-white px-6 py-20 relative overflow-hidden"
     >
       {/* SCAN LINE */}
       <div className="absolute inset-0 pointer-events-none">
@@ -75,55 +76,7 @@ export default function TimelineSection() {
           ></span>
         ))}
       </div>
-
-      <div className=" max-w-7xl  mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
-        {/* LEFT */}
-        <div>
-          <h1 className="text-4xl font-bold mb-6">
-            Our Achievements
-          </h1>
-
-          <p className="text-gray-300 leading-relaxed max-w-xl">
-            Our milestones at Zisan Tech Solutions showcase our unwavering commitment to excellence, client-focused results, and continual advancement.
-          </p>
-
-          <br />
-
-          {/* STATS */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
-            {stats.map((item, i) => (
-              <div
-                key={i}
-                className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center shadow-lg border border-white/10 stat-card"
-                style={{ animationDelay: `${i * 0.3}s` }}
-              >
-                <h2 className="text-3xl font-bold text-blue-400">
-                  {Math.floor(counts[i])}
-                  {item.suffix}
-                </h2>
-                <p className="text-sm text-gray-300 mt-2">
-                  {item.label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* RIGHT */}
-        <div className="relative flex justify-center">
-          <div className="relative rounded-2xl overflow-hidden max-w-md w-full shadow-2xl z-10 animate-imagePhase">
-            <div className="relative w-full h-[420px]">
-              <Image
-                src="/images/TimelineSection.jpg"
-                alt="timeline"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+     <Achievements/>
 
       {/* ANIMATIONS */}
       <style jsx>{`
