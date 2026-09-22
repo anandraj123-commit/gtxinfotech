@@ -22,7 +22,7 @@ export default function ContactUsForm() {
       {/* Right Side */}
       <div className="w-full md:w-1/2 p-6 md:p-16 bg-[white]  flex">
         <div className="w-full flex flex-col justify-center">
-          <h1 className="text-2xl md:text-3xl font-bold mb-8 text-white">
+          <h1 className="text-2xl md:text-3xl font-bold mb-8 text-black">
             We Will Be Happy To Help You
           </h1>
 
