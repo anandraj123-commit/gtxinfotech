@@ -8,7 +8,7 @@ import Navbar from "@/components/Navbar";
 import WorkforceBannerService from "@/components/WorkforceBannerService";
 import DeliveryMethodology from "@/components/DeliveryMethodology";
 import WhyChooseGTX from "@/components/WhyChooseGTX";
-import Link from "next/Link";
+import Link from "next/link";
 export default async function Service({ params }) {
   // ✅ Await params (IMPORTANT)
   const resolvedParams = await params;
