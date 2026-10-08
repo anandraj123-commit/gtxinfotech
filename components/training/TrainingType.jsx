@@ -1,61 +1,150 @@
+
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
+
+const colors = [
+  "from-orange-100 to-orange-200",
+  "from-blue-100 to-blue-200",
+  "from-green-100 to-green-200",
+  "from-purple-100 to-purple-200",
+  "from-pink-100 to-pink-200",
+  "from-yellow-100 to-yellow-200",
+];
 
 export default function TrainingType({ training }) {
+  const reduceMotion = useReducedMotion();
+
   if (!training) return null;
 
-  const colors = [
-    "from-orange-100 to-orange-200",
-    "from-blue-100 to-blue-200",
-    "from-green-100 to-green-200",
-    "from-purple-100 to-purple-200",
-    "from-pink-100 to-pink-200",
-    "from-yellow-100 to-yellow-200",
-  ];
+  const items = Array.isArray(training.items)
+    ? training.items
+    : [];
 
   return (
-    <section className="relative w-full bg-[#f3f4f6] py-20 px-6 overflow-hidden font-sans">
-
-      {/* GRID BACKGROUND */}
-      <div className="absolute inset-0 opacity-[0.04]" />
-
-      <div className=" mx-auto relative z-10">
-
+    <section
+      className="
+        relative w-full overflow-hidden
+        bg-[#f3f4f6] font-sans
+        px-4 py-12
+        sm:px-6 sm:py-14
+        md:px-8 md:py-16
+        lg:px-12 lg:py-20
+        xl:px-16
+        2xl:px-20
+      "
+    >
+      {/* MAIN CONTAINER */}
+      <div className="relative z-10 mx-auto w-full max-w-[1600px]">
         <motion.div
-          initial={{ opacity: 0, y: 80 }}
+          initial={
+            reduceMotion
+              ? false
+              : { opacity: 0, y: 30 }
+          }
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.1 }}
         >
-          
           {/* HEADING */}
-          <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="flex items-center justify-center gap-4 mb-10 text-center"
-          >
-            <h2 className="text-4xl  font-semibold mb-4 text-gray-900 opacity-100 translate-y-0">
+          <div className="mb-7 text-center sm:mb-9 lg:mb-10">
+            <motion.h2
+              initial={
+                reduceMotion
+                  ? false
+                  : { opacity: 0, y: 20 }
+              }
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="
+                mx-auto max-w-4xl
+                break-words
+                text-3xl font-semibold
+                leading-tight tracking-tight
+                text-gray-900
+                sm:text-4xl
+                lg:text-[44px]
+                xl:text-5xl
+              "
+            >
               {training.type}
-            </h2>
-          </motion.div>
+            </motion.h2>
+
+            {/* ACCENT LINE */}
+            <div
+              className="
+                mx-auto mt-5 h-1 w-20
+                rounded-full
+                bg-gradient-to-r
+                from-orange-500 to-teal-400
+              "
+            />
+          </div>
 
           {/* DESCRIPTION */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={
+              reduceMotion
+                ? false
+                : { opacity: 0, y: 20 }
+            }
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, amount: 0.1 }}
             className="
-              text-gray-600 text-base leading-relaxed mb-10
+              mb-8 min-w-0
+              break-words
+              text-sm leading-7
+              text-gray-600
+              sm:mb-10 sm:text-base
+              sm:leading-8
+              lg:mb-12
 
-              [&_h1]:text-3xl [&_h1]:font-bold [&_h1]:text-gray-900 [&_h1]:mb-4
-              [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:text-gray-900 [&_h2]:mb-3
-              [&_h3]:text-xl [&_h3]:font-medium [&_h3]:text-gray-800 [&_h3]:mb-2
+              [&_h1]:mb-4
+              [&_h1]:text-2xl
+              [&_h1]:font-bold
+              [&_h1]:text-gray-900
+              sm:[&_h1]:text-3xl
 
-              [&_p]:mb-4 [&_p]:text-gray-600
+              [&_h2]:mb-3
+              [&_h2]:text-xl
+              [&_h2]:font-semibold
+              [&_h2]:text-gray-900
+              sm:[&_h2]:text-2xl
 
-              [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:mt-3
-              [&_li]:mb-2 [&_li]:text-gray-700
+              [&_h3]:mb-3
+              [&_h3]:text-lg
+              [&_h3]:font-semibold
+              [&_h3]:text-gray-800
+              sm:[&_h3]:text-xl
+
+              [&_p]:mb-4
+              [&_p]:text-gray-600
+
+              [&_ul]:mb-4
+              [&_ul]:mt-3
+              [&_ul]:list-disc
+              [&_ul]:pl-5
+              sm:[&_ul]:pl-6
+
+              [&_ol]:mb-4
+              [&_ol]:list-decimal
+              [&_ol]:pl-5
+
+              [&_li]:mb-2
+              [&_li]:text-gray-700
+
+              [&_a]:break-all
+              [&_a]:text-teal-600
+              [&_a]:underline
+
+              [&_img]:h-auto
+              [&_img]:max-w-full
+
+              [&_table]:block
+              [&_table]:max-w-full
+              [&_table]:overflow-x-auto
             "
             dangerouslySetInnerHTML={{
               __html:
@@ -64,33 +153,84 @@ export default function TrainingType({ training }) {
             }}
           />
 
-          {/* FEATURES */}
-          <motion.div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
-  {(training.items || []).map((item, i) => (
-    <motion.div
-      key={i}
-      initial={{ opacity: 0, x: -30 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      whileHover={{ scale: 1.05, y: -5 }}
-      transition={{ duration: 0.3 }}
-      className={`p-5 rounded-xl shadow-md bg-gradient-to-br ${
-        colors[i % colors.length]
-      }`}
-    >
-      <p className="text-gray-800 font-medium">{item}</p>
-    </motion.div>
-  ))}
-</motion.div>
+          {/* TRAINING FEATURES */}
+          {items.length > 0 && (
+            <div
+              className="
+                grid grid-cols-1
+                gap-4
+                sm:grid-cols-2 sm:gap-5
+                lg:gap-6
+              "
+            >
+              {items.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={
+                    reduceMotion
+                      ? false
+                      : { opacity: 0, y: 20 }
+                  }
+                  whileInView={{ opacity: 1, y: 0 }}
+                  whileHover={
+                    reduceMotion
+                      ? undefined
+                      : { y: -4 }
+                  }
+                  transition={{
+                    duration: 0.35,
+                    delay: Math.min(index * 0.05, 0.3),
+                  }}
+                  viewport={{
+                    once: true,
+                    amount: 0.1,
+                  }}
+                  className={`
+                    group flex min-w-0
+                    items-center
+                    rounded-xl
+                    border border-white/60
+                    bg-gradient-to-br
+                    ${colors[index % colors.length]}
+                    p-5
+                    shadow-sm
+                    transition-shadow duration-300
+                    hover:shadow-md
+                    sm:p-6
+                    lg:min-h-[100px]
+                  `}
+                >
+                  {/* NUMBER */}
+                  <div
+                    className="
+                      mr-4 flex h-10 w-10
+                      shrink-0 items-center
+                      justify-center
+                      rounded-full
+                      bg-white/80
+                      text-sm font-bold
+                      text-gray-900
+                      sm:h-11 sm:w-11
+                    "
+                  >
+                    {index + 1}
+                  </div>
 
-          {/* BUTTON */}
-          {/* <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-orange-500 hover:bg-orange-600 text-white px-7 py-3 rounded-xl font-semibold"
-          >
-            Join Us
-          </motion.button> */}
-
+                  {/* FEATURE TEXT */}
+                  <p
+                    className="
+                      min-w-0 break-words
+                      text-sm font-medium
+                      leading-6 text-gray-800
+                      sm:text-base sm:leading-7
+                    "
+                  >
+                    {item}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          )}
         </motion.div>
       </div>
     </section>

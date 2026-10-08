@@ -1,134 +1,263 @@
+
 "use client";
+
 import { useEffect, useState } from "react";
 import Link from "next/link";
-export default function WorkforceBannerAbout() {
-    
 
+const features = [
+  "SAP Certified Trainers",
+  "Real-Time Project Exposure",
+  "Corporate Training Programs",
+  "End-to-End IT Services",
+];
+
+export default function WorkforceBannerAbout() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    let start = 0;
-    const end = 10; // change to 25 if needed
-    const duration = 500; // 2 sec
+    let current = 0;
+    const end = 10;
     const incrementTime = 50;
 
-    const step = Math.ceil(end / (duration / incrementTime));
-
     const timer = setInterval(() => {
-      start += step;
-      if (start >= end) {
-        setCount(end);
+      current += 1;
+      setCount(Math.min(current, end));
+
+      if (current >= end) {
         clearInterval(timer);
-      } else {
-        setCount(start);
       }
     }, incrementTime);
 
     return () => clearInterval(timer);
   }, []);
-  return (
-    <section className="relative w-full overflow-hidden bg-[#03175A] px-6 min-h-[620px]">
 
-      {/* Top Right Dots */}
-      <div className="absolute right-0 top-0 opacity-90">
-        <svg width="320" height="120" viewBox="0 0 320 120" fill="none">
+  return (
+    <section
+      className="
+        relative isolate flex w-full
+        min-h-[480px] items-center
+        overflow-hidden bg-[#03175A]
+        sm:min-h-[520px]
+        md:min-h-[580px]
+        lg:min-h-[620px]
+        xl:min-h-[680px]
+      "
+    >
+      {/* DECORATIVE DOTS */}
+      <div
+        aria-hidden="true"
+        className="
+          pointer-events-none
+          absolute right-0 top-0
+          z-0 hidden opacity-70
+          sm:block
+        "
+      >
+        <svg
+          width="320"
+          height="120"
+          viewBox="0 0 320 120"
+          fill="none"
+        >
           <defs>
             <pattern
-              id="dots"
+              id="about-banner-dots"
               width="12"
               height="12"
               patternUnits="userSpaceOnUse"
             >
-              <circle cx="3" cy="3" r="2" fill="#4DB7CC" />
+              <circle
+                cx="3"
+                cy="3"
+                r="2"
+                fill="#4DB7CC"
+              />
             </pattern>
           </defs>
 
           <path
             d="M100 0H320V120C240 70 180 50 100 0Z"
-            fill="url(#dots)"
+            fill="url(#about-banner-dots)"
           />
         </svg>
       </div>
 
-      <div className="mx-auto flex min-h-[620px]  items-center justify-between">
-
+      {/* MAIN CONTAINER */}
+      <div
+        className="
+          relative z-10 mx-auto
+          grid w-full max-w-[1600px]
+          grid-cols-1 items-center
+          gap-10
+          px-4 py-12
+          sm:px-6 sm:py-14
+          md:px-8 md:py-16
+          lg:grid-cols-[minmax(0,1fr)_auto]
+          lg:gap-12
+          lg:px-12 lg:py-20
+          xl:gap-16 xl:px-16
+          2xl:px-20
+        "
+      >
         {/* LEFT CONTENT */}
-        <div className="text-white">
+        <div className="min-w-0 text-white">
+          {/* HEADING */}
+          <h1
+            className="
+              max-w-[900px]
+              text-[30px] font-bold
+              leading-[1.18] tracking-tight
+              text-white
+              min-[400px]:text-[34px]
+              sm:text-[42px]
+              md:text-[50px]
+              lg:text-[52px]
+              xl:text-[60px]
+              2xl:text-[64px]
+            "
+          >
+            10+ Years of Excellence in{" "}
+            <span className="animated-text">
+              Technology &amp; Learning
+            </span>
+          </h1>
 
-          {/* Heading */}
-          <h1 className="text-[44px] lg:text-[72px] font-bold leading-[1.1] max-w-[900px]" style={{ fontSize: "55px" }}>
-  10+ Years of Excellence 
-  in{" "}
-  <span className="animated-text">
-    Technology & Learning
-  </span>
-</h1>
-
-          {/* Description */}
-          <p className="mt-6 text-[18px] lg:text-[22px] text-white/80 max-w-[800px]">
-          Zisan Tech Solutions is committed to delivering quality SAP Training and innovative IT services that create lasting business value.
+          {/* DESCRIPTION */}
+          <p
+            className="
+              mt-5 max-w-[800px]
+              text-sm leading-7
+              text-white/80
+              sm:mt-6 sm:text-base
+              sm:leading-8
+              md:text-lg
+              lg:text-xl
+            "
+          >
+            Zisan Tech Solutions is committed to
+            delivering quality SAP Training and
+            innovative IT services that create
+            lasting business value.
           </p>
 
-          {/* Features */}
-          <div className="mt-10 grid grid-cols-2 gap-x-12 gap-y-6">
-            <Feature text="SAP Certified Trainers" />
-            <Feature text="Real-Time Project Exposure" />
-            <Feature text="Corporate Training Programs" />
-            <Feature text="End-to-End IT Services" />
+          {/* FEATURES */}
+          <div
+            className="
+              mt-7 grid grid-cols-1
+              gap-x-8 gap-y-4
+              min-[400px]:grid-cols-2
+              sm:mt-8 sm:gap-x-10
+              sm:gap-y-5
+              lg:mt-10 lg:gap-x-12
+            "
+          >
+            {features.map((feature, index) => (
+              <Feature
+                key={index}
+                text={feature}
+              />
+            ))}
           </div>
 
-          {/* Button */}
-          <Link href="/#services">
-  <button
-    className="mt-12 rounded-xl px-10 py-3 text-lg font-semibold text-white shadow-lg transition hover:scale-[1.05]"
-    style={{ backgroundColor: "var(--color-orange-500)" }}
-  >
-    Explore Services
-  </button>
-</Link>
+          {/* BUTTON */}
+          <div className="mt-8 sm:mt-10 lg:mt-12">
+            <Link
+              href="/#services"
+              className="
+                inline-flex min-h-12
+                items-center justify-center
+                rounded-lg bg-orange-500
+                px-7 py-3
+                text-sm font-semibold
+                text-white shadow-lg
+                transition-all duration-300
+                hover:-translate-y-0.5
+                hover:bg-teal-400
+                hover:shadow-xl
+                focus-visible:outline
+                focus-visible:outline-2
+                focus-visible:outline-offset-2
+                focus-visible:outline-orange-500
+                sm:px-8 sm:text-base
+              "
+            >
+              Explore Services
+            </Link>
+          </div>
         </div>
 
-        {/* RIGHT SIDE */}
-        <div className="hidden lg:flex flex-col items-center justify-center">
-
-          {/* 25 TEXT LOGO */}
+        {/* YEARS COUNTER */}
+        <div
+          className="
+            flex min-w-0
+            flex-col items-center
+            justify-center
+            text-center
+            lg:pl-4
+          "
+        >
           <div
-            className="text-[260px] font-extrabold leading-none select-none"
+            className="
+              select-none font-extrabold
+              leading-none tracking-tight
+              text-orange-500
+              text-[100px]
+              min-[400px]:text-[120px]
+              sm:text-[150px]
+              md:text-[180px]
+              lg:text-[170px]
+              xl:text-[220px]
+              2xl:text-[250px]
+            "
             style={{
-              color: "var(--color-orange-500)",
-              textShadow: "0 10px 30px rgba(0,0,0,0.25)"
+              textShadow:
+                "0 10px 30px rgba(0,0,0,0.25)",
             }}
           >
             {count}+
           </div>
 
-          {/* YEARS */}
-          <div className="text-white text-5xl font-bold tracking-[12px] -mt-8">
+          <div
+            className="
+              mt-1 text-2xl
+              font-bold tracking-[6px]
+              text-white
+              sm:text-3xl
+              sm:tracking-[8px]
+              lg:-mt-2
+              lg:text-4xl
+              xl:text-5xl
+            "
+          >
             YEARS
           </div>
-
         </div>
       </div>
 
-      {/* ANIMATION STYLE */}
+      {/* HEADING COLOR ANIMATION */}
       <style jsx>{`
         .animated-text {
-          animation: colorChange 5s infinite;
+          animation: aboutColorChange 5s infinite;
         }
 
-        @keyframes colorChange {
-          0% {
-            color: var(--color-orange-500);
-          }
-          50% {
-            color: var(--color-teal-400);
-          }
+        @keyframes aboutColorChange {
+          0%,
           100% {
-            color: var(--color-orange-500);
+            color: #f97316;
+          }
+
+          50% {
+            color: #2dd4bf;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .animated-text {
+            animation: none;
+            color: #2dd4bf;
           }
         }
       `}</style>
-
     </section>
   );
 }
@@ -136,15 +265,36 @@ export default function WorkforceBannerAbout() {
 /* FEATURE COMPONENT */
 function Feature({ text }) {
   return (
-    <div className="flex items-center gap-4">
+    <div
+      className="
+        flex min-w-0
+        items-start gap-3
+        sm:gap-4
+      "
+    >
+      {/* CHECK ICON */}
       <span
-        className="text-[24px]"
-        style={{ color: "var(--color-orange-500)" }}
+        aria-hidden="true"
+        className="
+          mt-0.5 shrink-0
+          text-lg font-bold
+          leading-6 text-orange-500
+          sm:text-xl
+        "
       >
         ✔
       </span>
 
-      <span className="text-[18px] lg:text-[20px] text-white">
+      {/* FEATURE TEXT */}
+      <span
+        className="
+          min-w-0 text-sm
+          font-medium leading-6
+          text-white
+          sm:text-base sm:leading-7
+          lg:text-lg
+        "
+      >
         {text}
       </span>
     </div>

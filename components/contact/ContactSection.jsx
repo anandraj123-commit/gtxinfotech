@@ -1,124 +1,150 @@
+
 "use client";
 
-import Navbar from "../../components/Navbar";
-import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ContactSection() {
-  const [counts, setCounts] = useState({
-    clients: 0,
-    projects: 0,
-    team: 0,
-    revenue: 0,
-  });
-
-  useEffect(() => {
-    const duration = 2000;
-    const steps = 60;
-    const intervalTime = duration / steps;
-
-    let step = 0;
-
-    const interval = setInterval(() => {
-      step++;
-
-      setCounts({
-        clients: Math.min(Math.floor((160 / steps) * step), 160),
-        projects: Math.min(Math.floor((340 / steps) * step), 340),
-        team: Math.min(Math.floor((300 / steps) * step), 300),
-        revenue: Math.min(Math.floor((82 / steps) * step), 82),
-      });
-
-      if (step >= steps) clearInterval(interval);
-    }, intervalTime);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <>
-      <section className="relative min-h-[620px] w-full overflow-hidden">
-        <Image
-          src="/images/Contact _ Header_Image.png"
-          alt="Zisan Tech Solutions team"
-          fill
-          priority
-          unoptimized
-          className="object-cover object-center"
-        />
+    <section
+      className="
+        relative isolate flex w-full
+        min-h-[420px] items-center
+        overflow-hidden bg-gray-900
+        sm:min-h-[480px]
+        md:min-h-[540px]
+        lg:min-h-[620px]
+        xl:min-h-[680px]
+      "
+    >
+      {/* BACKGROUND IMAGE */}
+      <Image
+        src="/images/Contact _ Header_Image.png"
+        alt="Zisan Tech Solutions team"
+        fill
+        priority
+        sizes="100vw"
+        className="
+          object-cover
+          object-center
+        "
+      />
 
-        <div className="absolute inset-0 bg-black/60" />
+      {/* DARK OVERLAY */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-black/60"
+      />
 
-        {/* CONTENT */}
-        <div className="relative mx-auto flex min-h-[620px] max-w-[1920px] items-center px-16 py-16">
-          {/* LEFT CONTENT */}
-          <div className="max-w-[750px] text-white">
-            <h1 className="text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
-            Let’s Build What’s Next{" "}
-              <span className="text-teal-400">
-              Connect for SAP, IT & Digital Solutions
-              </span>
-            </h1>
+      {/* GRADIENT OVERLAY FOR READABILITY */}
+      <div
+        aria-hidden="true"
+        className="
+          absolute inset-0
+          bg-gradient-to-r
+          from-black/60
+          via-black/25
+          to-transparent
+        "
+      />
 
-            <p className="mb-8 mt-6 max-w-lg text-gray-300">
-              Experience a rise in your pursuits with our expert consulting.
-              We excel in tailoring success strategies to your unique goals,
-              covering diverse fields for maximum impact, professionally and
-              delightfully.
-            </p>
-
-            <div className="flex gap-4">
-              <button
-                type="button"
-                className="mt-8 rounded-lg bg-teal-400 px-6 py-3 font-semibold text-white shadow-lg transition duration-300 hover:bg-orange-500"
-              >
-                Contact Us
-              </button>
-            </div>
+      {/* MAIN CONTENT CONTAINER */}
+      <div
+        className="
+          relative z-10 mx-auto
+          flex w-full max-w-[1600px]
+          items-center
+          px-4 py-14
+          sm:px-6 sm:py-16
+          md:px-8 md:py-20
+          lg:px-12 lg:py-24
+          xl:px-16
+          2xl:px-20
+        "
+      >
+        {/* LEFT CONTENT */}
+        <div className="w-full min-w-0 max-w-[800px] text-white">
+          {/* SMALL LABEL */}
+          <div
+            className="
+              mb-5 inline-flex w-fit
+              items-center rounded-full
+              border border-white/30
+              bg-white/10
+              px-4 py-2
+              text-xs font-semibold
+              tracking-wide text-teal-300
+              backdrop-blur-sm
+              sm:mb-6 sm:text-sm
+            "
+          >
+            Get in Touch
           </div>
 
-          {/* RIGHT IMAGE DECORATION */}
-        </div>
-      </section>
+          {/* MAIN HEADING */}
+          <h1
+            className="
+              max-w-[780px]
+              text-[30px] font-bold
+              leading-[1.18] tracking-tight
+              text-white
+              min-[400px]:text-[34px]
+              sm:text-[42px]
+              md:text-[50px]
+              lg:text-[58px]
+              xl:text-[64px]
+            "
+          >
+            Let&apos;s Build What&apos;s Next{" "}
+            <span className="block text-teal-400">
+              Connect for SAP, IT &amp; Digital Solutions
+            </span>
+          </h1>
 
-      {/* ================= STATS SECTION ================= */}
-
-      {/*
-      <div className="text-black mx-auto px-6 py-16 border-t border-gray-700 flex flex-nowrap justify-between items-center gap-8 overflow-x-auto">
-        
-        <div className="min-w-[250px]">
-          <h2 className="text-3xl font-bold mb-2 whitespace-nowrap">
-            This Is Our Result
-          </h2>
-          <p className="text-black whitespace-nowrap">
-            How capable we are at work shines through in every endeavor.
+          {/* DESCRIPTION */}
+          <p
+            className="
+              mt-5 max-w-xl
+              text-sm leading-7
+              text-gray-200
+              sm:mt-6 sm:text-base
+              sm:leading-8
+              md:text-lg
+            "
+          >
+            Experience a rise in your pursuits with our expert
+            consulting. We excel in tailoring success strategies
+            to your unique goals, covering diverse fields for
+            maximum impact, professionally and delightfully.
           </p>
-        </div>
 
-        <div className="text-center min-w-[150px]">
-          <h3 className="text-5xl font-bold">{counts.clients}</h3>
-          <p className="text-black mt-2 whitespace-nowrap">Client Projects</p>
+          {/* CONTACT BUTTON */}
+          <div className="mt-7 flex flex-wrap gap-4 sm:mt-8">
+            <Link
+              href="#contact-form"
+              className="
+                inline-flex min-h-12
+                items-center justify-center
+                rounded-lg bg-teal-400
+                px-7 py-3
+                text-sm font-semibold
+                text-white shadow-lg
+                transition-all duration-300
+                hover:-translate-y-0.5
+                hover:bg-orange-500
+                hover:shadow-xl
+                focus-visible:outline
+                focus-visible:outline-2
+                focus-visible:outline-offset-2
+                focus-visible:outline-teal-400
+                sm:px-8 sm:text-base
+              "
+            >
+              Contact Us
+            </Link>
+          </div>
         </div>
-
-        <div className="text-center min-w-[150px]">
-          <h3 className="text-5xl font-bold">{counts.projects}</h3>
-          <p className="text-black mt-2 whitespace-nowrap">
-            Successful Projects
-          </p>
-        </div>
-
-        <div className="text-center min-w-[150px]">
-          <h3 className="text-5xl font-bold">{counts.team}+</h3>
-          <p className="text-black mt-2 whitespace-nowrap">Team Members</p>
-        </div>
-
-        <div className="text-center min-w-[150px]">
-          <h3 className="text-5xl font-bold">{counts.revenue}M</h3>
-          <p className="text-black mt-2 whitespace-nowrap">Total Revenue</p>
-        </div>
-
       </div>
-      */}
-    </>
+    </section>
   );
 }

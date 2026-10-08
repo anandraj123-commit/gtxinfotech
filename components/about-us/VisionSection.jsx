@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useState } from "react";
@@ -10,99 +11,328 @@ export default function VisionSection() {
   }, []);
 
   return (
-    <section className="w-full bg-gradient-to-br from-[#f8fafc] to-[#eef2ff] py-20 px-6  overflow-hidden">
-      
-      {/* HEADER */}
-      <div className="mx-auto text-center mb-20">
-        <h1
-          className={`text-4xl font-bold transition-all duration-700 ${
-            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
-          <span className="text-orange-500">Our Vision & </span><span className="text-teal-400">Mission</span> 
-        </h1>
-
-        <p
-          className={`mt-6 text-gray-600 max-w-2xl mx-auto transition-all duration-700 delay-200 ${
-            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
-          Driving innovation, empowering businesses, and shaping the future through intelligent SAP solutions.
-        </p>
-      </div>
-
-      {/* GRID */}
-      <div className="mx-auto grid md:grid-cols-2 gap-10">
-
-        {/* MISSION CARD */}
-        <div
-          className={`group relative p-[1px] rounded-3xl bg-gradient-to-r from-orange-500 to-pink-500 transition-all duration-700 ${
-            visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
-          }`}
-        >
-          <div className="rounded-3xl bg-white/70 backdrop-blur-xl p-8 h-full shadow-xl group-hover:shadow-2xl transition duration-500">
-
-            <h2 className="text-2xl font-bold mb-6 text-gray-800">
-              🚀 Mission
-            </h2>
-
-            <ul className="space-y-4 text-gray-600 leading-relaxed">
-              <li>
-                We empower organizations with dependable SAP consulting, training, and IT solutions.
-              </li>
-              <li>
-                ✔ Drive real-world business problem solving
-              </li>
-              <li>
-                ✔ Build industry-ready professionals
-              </li>
-              <li>
-                ✔ Deliver scalable and efficient systems
-              </li>
-              <li>
-                ✔ Foster long-term partnerships
-              </li>
-            </ul>
-
-          </div>
-        </div>
-
-        {/* VISION CARD */}
-        <div
-          className={`group relative p-[1px] rounded-3xl bg-gradient-to-r from-blue-500 to-indigo-500 transition-all duration-700 delay-200 ${
-            visible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
-          }`}
-        >
-          <div className="rounded-3xl bg-white/70 backdrop-blur-xl p-8 h-full shadow-xl group-hover:shadow-2xl transition duration-500">
-
-            <h2 className="text-2xl font-bold mb-6 text-gray-800">
-              🌍 Vision
-            </h2>
-
-            <ul className="space-y-4 text-gray-600 leading-relaxed">
-              <li>
-                To become a trusted global leader in technology solutions.
-              </li>
-              <li>
-                ✔ Empowering growth through innovation
-              </li>
-              <li>
-                ✔ Bridging global practices with local needs
-              </li>
-              <li>
-                ✔ Creating future-ready enterprises
-              </li>
-            </ul>
-
-          </div>
-        </div>
-
-      </div>
-
+    <section
+      className="
+        relative
+        isolate
+        w-full
+        overflow-hidden
+        bg-gradient-to-br
+        from-[#f8fafc]
+        to-[#eef2ff]
+        px-4
+        py-12
+        sm:px-6
+        sm:py-14
+        md:px-8
+        md:py-16
+        lg:px-12
+        lg:py-20
+        xl:px-16
+        2xl:px-20
+      "
+    >
       {/* DECORATIVE BLUR ELEMENTS */}
-      <div className="absolute top-10 left-10 w-72 h-72  rounded-full blur-3xl"></div>
-      <div className="absolute bottom-10 right-10 w-72 h-72 bg-indigo-300/30 rounded-full blur-3xl"></div>
+      <div
+        aria-hidden="true"
+        className="
+          pointer-events-none
+          absolute
+          left-0
+          top-10
+          -z-10
+          h-40
+          w-40
+          rounded-full
+          blur-3xl
+          sm:left-10
+          sm:h-56
+          sm:w-56
+          lg:h-72
+          lg:w-72
+        "
+      />
 
+      <div
+        aria-hidden="true"
+        className="
+          pointer-events-none
+          absolute
+          bottom-10
+          right-0
+          -z-10
+          h-40
+          w-40
+          rounded-full
+          bg-indigo-300/30
+          blur-3xl
+          sm:right-10
+          sm:h-56
+          sm:w-56
+          lg:h-72
+          lg:w-72
+        "
+      />
+
+      {/* MAIN CONTAINER */}
+      <div className="relative z-10 mx-auto w-full max-w-[1600px]">
+        {/* HEADER */}
+        <div
+          className="
+            mx-auto
+            mb-10
+            text-center
+            sm:mb-12
+            md:mb-14
+            lg:mb-16
+          "
+        >
+          <h1
+            className={`
+              text-3xl
+              font-bold
+              leading-tight
+              transition-all
+              duration-700
+              sm:text-4xl
+              lg:text-[42px]
+              ${
+                visible
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-10 opacity-0"
+              }
+            `}
+          >
+            <span className="text-orange-500">
+              Our Vision &amp;{" "}
+            </span>
+            <span className="text-teal-400">
+              Mission
+            </span>
+          </h1>
+
+          {/* UNDERLINE */}
+          <div
+            className="
+              mx-auto
+              mt-4
+              h-1
+              w-20
+              rounded-full
+              bg-gradient-to-r
+              from-orange-500
+              to-teal-400
+              sm:mt-5
+            "
+          />
+
+          <p
+            className={`
+              mx-auto
+              mt-5
+              max-w-2xl
+              text-sm
+              leading-7
+              text-gray-600
+              transition-all
+              delay-200
+              duration-700
+              sm:mt-6
+              sm:text-base
+              sm:leading-8
+              md:text-lg
+              ${
+                visible
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-10 opacity-0"
+              }
+            `}
+          >
+            Driving innovation, empowering businesses,
+            and shaping the future through intelligent
+            SAP solutions.
+          </p>
+        </div>
+
+        {/* VISION AND MISSION GRID */}
+        <div
+          className="
+            grid
+            grid-cols-1
+            items-stretch
+            gap-6
+            sm:gap-8
+            md:grid-cols-2
+            md:gap-8
+            lg:gap-10
+          "
+        >
+          {/* MISSION CARD */}
+          <div
+            className={`
+              group
+              relative
+              min-w-0
+              rounded-3xl
+              bg-gradient-to-r
+              from-orange-500
+              to-pink-500
+              p-[1px]
+              transition-all
+              duration-700
+              ${
+                visible
+                  ? "translate-x-0 opacity-100"
+                  : "-translate-x-10 opacity-0"
+              }
+            `}
+          >
+            <div
+              className="
+                h-full
+                rounded-3xl
+                bg-white/70
+                p-5
+                shadow-xl
+                backdrop-blur-xl
+                transition-all
+                duration-500
+                sm:p-6
+                md:p-7
+                lg:p-8
+                group-hover:shadow-2xl
+              "
+            >
+              <h2
+                className="
+                  mb-5
+                  text-xl
+                  font-bold
+                  leading-snug
+                  text-gray-800
+                  sm:mb-6
+                  sm:text-2xl
+                "
+              >
+                🚀 Mission
+              </h2>
+
+              <ul
+                className="
+                  space-y-4
+                  text-sm
+                  leading-7
+                  text-gray-600
+                  sm:text-base
+                  sm:leading-8
+                "
+              >
+                <li>
+                  We empower organizations with dependable
+                  SAP consulting, training, and IT solutions.
+                </li>
+
+                <li>
+                  ✔ Drive real-world business problem solving
+                </li>
+
+                <li>
+                  ✔ Build industry-ready professionals
+                </li>
+
+                <li>
+                  ✔ Deliver scalable and efficient systems
+                </li>
+
+                <li>
+                  ✔ Foster long-term partnerships
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* VISION CARD */}
+          <div
+            className={`
+              group
+              relative
+              min-w-0
+              rounded-3xl
+              bg-gradient-to-r
+              from-blue-500
+              to-indigo-500
+              p-[1px]
+              transition-all
+              delay-200
+              duration-700
+              ${
+                visible
+                  ? "translate-x-0 opacity-100"
+                  : "translate-x-10 opacity-0"
+              }
+            `}
+          >
+            <div
+              className="
+                h-full
+                rounded-3xl
+                bg-white/70
+                p-5
+                shadow-xl
+                backdrop-blur-xl
+                transition-all
+                duration-500
+                sm:p-6
+                md:p-7
+                lg:p-8
+                group-hover:shadow-2xl
+              "
+            >
+              <h2
+                className="
+                  mb-5
+                  text-xl
+                  font-bold
+                  leading-snug
+                  text-gray-800
+                  sm:mb-6
+                  sm:text-2xl
+                "
+              >
+                🌍 Vision
+              </h2>
+
+              <ul
+                className="
+                  space-y-4
+                  text-sm
+                  leading-7
+                  text-gray-600
+                  sm:text-base
+                  sm:leading-8
+                "
+              >
+                <li>
+                  To become a trusted global leader
+                  in technology solutions.
+                </li>
+
+                <li>
+                  ✔ Empowering growth through innovation
+                </li>
+
+                <li>
+                  ✔ Bridging global practices with local needs
+                </li>
+
+                <li>
+                  ✔ Creating future-ready enterprises
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

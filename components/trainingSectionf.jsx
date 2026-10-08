@@ -8,12 +8,14 @@ export default function TrainingSection() {
   const [allTraining, setAllTraining] = useState([]);
 
   useEffect(() => {
-    const data = training.flatMap((group) =>
-      group.category.map((item) => ({
-        ...item,
-        type: group.type,
-      }))
-    ).slice(0,-3);
+    const data = training
+      .flatMap((group) =>
+        group.category.map((item) => ({
+          ...item,
+          type: group.type,
+        }))
+      )
+      .slice(0, -3);
 
     setAllTraining(data);
   }, []);
@@ -21,71 +23,234 @@ export default function TrainingSection() {
   if (!allTraining.length) return null;
 
   return (
-    <section className="relative py-20 bg-white text-white">
-      <div className="max-w-full mx-auto px-6 text-center relative z-10">
-        
+    <section
+      className="
+        relative
+        w-full
+        overflow-hidden
+        bg-white
+        py-12
+        sm:py-14
+        md:py-16
+        lg:py-20
+      "
+    >
+      {/* MAIN CONTAINER */}
+      <div
+        className="
+          relative
+          z-10
+          mx-auto
+          w-full
+          max-w-[1600px]
+          px-4
+          text-center
+          sm:px-6
+          md:px-8
+          lg:px-12
+          xl:px-16
+        "
+      >
         {/* HEADER */}
-        <p className="text-orange-500 uppercase tracking-widest text-sm mb-3">
-          Training We’re Offering
-        </p>
+        <div
+          className="
+            mx-auto
+            mb-9
+            w-full
+            max-w-4xl
+            sm:mb-10
+            md:mb-12
+            lg:mb-14
+          "
+        >
+          {/* SMALL HEADING */}
+          <p
+            className="
+              mb-2
+              text-xs
+              font-semibold
+              uppercase
+              tracking-[0.15em]
+              text-orange-500
+              sm:mb-3
+              sm:text-sm
+              sm:tracking-widest
+            "
+          >
+            Training We’re Offering
+          </p>
 
-        <h2 className="text-4xl md:text-5xl text-black font-bold mb-14 leading-tight">
-          We’re Dedicated to Serve <br /> you All Time
-        </h2>
+          {/* MAIN HEADING */}
+          <h2
+            className="
+              text-3xl
+              font-bold
+              leading-tight
+              text-black
+              sm:text-4xl
+              md:text-[42px]
+              lg:text-5xl
+            "
+          >
+            We’re Dedicated to Serve
+            <br className="hidden sm:block" />
+            <span className="sm:hidden"> </span>
+            you All Time
+          </h2>
 
-        {/* GRID */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-          
+          {/* HEADING LINE */}
+          <div
+            className="
+              mx-auto
+              mt-5
+              h-1
+              w-16
+              rounded-full
+              bg-teal-400
+              sm:mt-6
+            "
+          />
+        </div>
+
+        {/* TRAINING GRID */}
+        <div
+          className="
+            grid
+            grid-cols-2
+            gap-3
+
+            min-[420px]:gap-4
+
+            sm:grid-cols-3
+            sm:gap-5
+
+            md:grid-cols-4
+            md:gap-5
+
+            lg:grid-cols-5
+            lg:gap-6
+
+            xl:grid-cols-6
+          "
+        >
           {allTraining.map((item) => (
             <Link
               key={`${item.type}-${item.id}`}
               href={`/trainingprogrammes/${encodeURIComponent(
                 item.type
               )}/${item.id}`}
+              className="
+                group
+                block
+                h-full
+                rounded-xl
+                focus:outline-none
+                focus-visible:ring-2
+                focus-visible:ring-teal-400
+                focus-visible:ring-offset-2
+              "
             >
+              {/* TRAINING CARD */}
               <div
                 className="
-                  group
-                  bg-[#1a2236]
+                  flex
+                  h-[145px]
+                  w-full
+                  flex-col
+                  items-center
+                  justify-center
                   rounded-xl
-                  p-6
-                  flex flex-col items-center justify-center
+                  border
+                  border-white/5
+                  bg-[#1a2236]
+                  px-3
+                  py-4
                   text-center
-                  h-[180px]
+                  text-white
+                  shadow-md
+                  transition-all
+                  duration-300
 
-                  border border-white/5
-                  shadow-lg
+                  min-[420px]:h-[155px]
 
-                  hover:bg-teal-400
+                  sm:h-[165px]
+                  sm:px-4
+                  sm:py-5
+
+                  md:h-[175px]
+
+                  lg:h-[180px]
+                  lg:p-5
+
+                  xl:p-6
+
                   hover:-translate-y-2
-                  transition duration-300
-                  cursor-pointer
+                  hover:bg-teal-400
+                  hover:shadow-xl
                 "
               >
-                {/* ✅ ICON FIXED HERE */}
-                <div className="mb-4">
+                {/* ICON */}
+                <div
+                  className="
+                    mb-3
+                    flex
+                    h-11
+                    w-11
+                    shrink-0
+                    items-center
+                    justify-center
+
+                    sm:mb-4
+                    sm:h-12
+                    sm:w-12
+                  "
+                >
                   {item.icon && (
-                   <img
-                   src={item.icon}
-                   alt={item.title}
-                   className="
-                     w-10 h-10 object-contain mx-auto
-                     filter brightness-0 invert
-                     transition duration-300
-                     group-hover:scale-110
-                   "
-                 />
+                    <img
+                      src={item.icon}
+                      alt={item.title}
+                      loading="lazy"
+                      className="
+                        mx-auto
+                        h-9
+                        w-9
+                        object-contain
+                        brightness-0
+                        invert
+                        transition-transform
+                        duration-300
+
+                        sm:h-10
+                        sm:w-10
+
+                        group-hover:scale-110
+                      "
+                    />
                   )}
                 </div>
 
                 {/* TITLE */}
-                <p className="text-sm font-semibold leading-snug">
+                <p
+                  className="
+                    w-full
+                    break-words
+                    text-xs
+                    font-semibold
+                    leading-5
+                    text-white
+
+                    min-[420px]:text-sm
+
+                    sm:leading-6
+
+                    lg:text-[14px]
+                  "
+                >
                   {item.title}
                 </p>
               </div>
             </Link>
           ))}
-
         </div>
       </div>
     </section>
