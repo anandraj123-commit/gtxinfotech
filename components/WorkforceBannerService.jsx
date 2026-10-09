@@ -63,7 +63,7 @@ export default function WorkforceBannerAbout() {
           </motion.p>
 
           {/* FEATURES */}
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-6">
+          {/* <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-6">
             <Feature
               text="SAP Consulting & Support"
               delay={1.05}
@@ -87,7 +87,7 @@ export default function WorkforceBannerAbout() {
               delay={1.5}
               direction="right"
             />
-          </div>
+          </div> */}
 
           {/* BUTTON */}
           <motion.div
