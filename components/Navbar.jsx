@@ -297,49 +297,138 @@ export default function Navbar() {
       />
 
       {/* SIDEBAR */}
-      <div
-        className={`fixed top-0 left-0 h-full w-[280px] bg-[#111827] z-[9999] p-6 transition-transform
-        ${mobileMenu ? "translate-x-0" : "-translate-x-full"}`}
-      >
-        <div className="flex justify-between items-center mb-6">
-          <img src="/images/logo.jpg" className="w-16" />
-          <button
-            onClick={() => setMobileMenu(false)}
-            className="text-white text-xl"
-          >
-            ✕
-          </button>
-        </div>
+     
+{/* SIDEBAR */}
+<div
+  className={`fixed top-0 left-0 h-full w-[280px] bg-[#111827] z-[9999] p-6 transition-transform overflow-y-auto
+  ${mobileMenu ? "translate-x-0" : "-translate-x-full"}`}
+>
+  <div className="flex justify-between items-center mb-6">
+    <img src="/images/logo.jpg" alt="Logo" className="w-16" />
 
-        <Link
-          href="/"
-          onClick={() => setMobileMenu(false)}
-          className={mobileNavLink("/")}
-        >
-          Home
-        </Link>
-        <Link
-          href="/about"
-          onClick={() => setMobileMenu(false)}
-          className={mobileNavLink("/about")}
-        >
-          About
-        </Link>
-        <Link
-          href="/contact"
-          onClick={() => setMobileMenu(false)}
-          className={mobileNavLink("/contact")}
-        >
-          Contact
-        </Link>
-        <Link
-          href="/career"
-          onClick={() => setMobileMenu(false)}
-          className={mobileNavLink("/career")}
-        >
-          Career
-        </Link>
+    <button
+      onClick={() => setMobileMenu(false)}
+      className="text-white text-xl"
+    >
+      ✕
+    </button>
+  </div>
+
+  {/* HOME */}
+  <Link
+    href="/"
+    onClick={() => setMobileMenu(false)}
+    className={mobileNavLink("/")}
+  >
+    Home
+  </Link>
+
+  {/* ABOUT */}
+  <Link
+    href="/about"
+    onClick={() => setMobileMenu(false)}
+    className={mobileNavLink("/about")}
+  >
+    About
+  </Link>
+
+  {/* SERVICES */}
+  <div className="mt-1">
+    <button
+      type="button"
+      onClick={() => setOpen((prev) => !prev)}
+      aria-expanded={open}
+      className="flex w-full items-center justify-between rounded px-3 py-2 text-left text-gray-300 transition-all duration-200 hover:bg-gray-700 hover:text-white"
+    >
+      Services
+      <span>{open ? "▴" : "▾"}</span>
+    </button>
+
+    {open && (
+      <div className="ml-3 mt-2 space-y-3 border-l border-gray-700 pl-3">
+        {services.map((group, groupIndex) => (
+          <div key={group.type ?? groupIndex}>
+            <h3 className="mb-2 text-sm font-bold text-orange-500">
+              {groupIndex === 0
+                ? "SAP SERVICES"
+                : "OTHER SERVICES"}
+            </h3>
+
+            <div className="space-y-1">
+              {group.category?.map((item) => (
+                <Link
+                  key={item.id}
+                  href={`/services1/${group.type}/${item.id}`}
+                  onClick={() => setMobileMenu(false)}
+                  className="block rounded px-3 py-2 text-sm text-gray-300 transition-all duration-200 hover:bg-[var(--color-teal-400)] hover:text-white"
+                >
+                  {item.title}
+                </Link>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
+    )}
+  </div>
+
+  {/* TRAINING */}
+  <div className="mt-1">
+    <button
+      type="button"
+      onClick={() => setOpenTraining((prev) => !prev)}
+      aria-expanded={openTraining}
+      className="flex w-full items-center justify-between rounded px-3 py-2 text-left text-gray-300 transition-all duration-200 hover:bg-gray-700 hover:text-white"
+    >
+      Training
+      <span>{openTraining ? "▴" : "▾"}</span>
+    </button>
+
+    {openTraining && (
+      <div className="ml-3 mt-2 space-y-3 border-l border-gray-700 pl-3">
+        {training.map((group) => (
+          <div key={group.id}>
+            <h3 className="mb-2 text-sm font-bold text-orange-500">
+              {group.type}
+            </h3>
+
+            <div className="space-y-1">
+              {group.category?.map((item) => (
+                <Link
+                  key={item.id}
+                  href={`/trainingprogrammes/${group.type}/${item.id}`}
+                  onClick={() => setMobileMenu(false)}
+                  className="block rounded px-3 py-2 text-sm text-gray-300 transition-all duration-200 hover:bg-[var(--color-teal-400)] hover:text-white"
+                >
+                  {item.title}
+                </Link>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    )}
+  </div>
+
+  {/* CONTACT */}
+  <Link
+    href="/contact"
+    onClick={() => setMobileMenu(false)}
+    className={mobileNavLink("/contact")}
+  >
+    Contact
+  </Link>
+
+  {/* CAREER */}
+  <Link
+    href="/career"
+    onClick={() => setMobileMenu(false)}
+    className={mobileNavLink("/career")}
+  >
+    Career
+  </Link>
+</div>
+
     </>
   );
 }

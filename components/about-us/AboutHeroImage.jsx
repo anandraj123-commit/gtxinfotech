@@ -1,56 +1,106 @@
+
 "use client";
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
-
-const headingLines = [
-  { delay: 0 },
-  { text: "SAP Consulting Technology & Learning", highlight: true, delay: 0.2 },
-];
 
 export default function AboutHeroImage() {
   const [count, setCount] = useState(0);
+  const reduceMotion = useReducedMotion();
 
   useEffect(() => {
-    let start = 0;
+    if (reduceMotion) {
+      setCount(10);
+      return;
+    }
+
+    let current = 0;
     const end = 10;
     const duration = 1200;
-    const incrementTime = 40;
-    const step = Math.ceil(end / (duration / incrementTime));
+    const intervalTime = 40;
+    const totalSteps = duration / intervalTime;
+    const step = end / totalSteps;
 
     const timer = setInterval(() => {
-      start += step;
+      current += step;
 
-      if (start >= end) {
+      if (current >= end) {
         setCount(end);
         clearInterval(timer);
       } else {
-        setCount(start);
+        setCount(Math.floor(current));
       }
-    }, incrementTime);
+    }, intervalTime);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [reduceMotion]);
+
+  const fadeFromLeft = reduceMotion
+    ? false
+    : { opacity: 0, x: -30 };
+
+  const fadeFromBottom = reduceMotion
+    ? false
+    : { opacity: 0, y: 20 };
 
   return (
-    <section className="relative min-h-[620px] w-full overflow-hidden">
+    <section
+      className="
+        relative isolate flex w-full
+        min-h-[420px] items-center
+        overflow-hidden bg-gray-900
+        sm:min-h-[480px]
+        md:min-h-[540px]
+        lg:min-h-[620px]
+        xl:min-h-[680px]
+      "
+    >
+      {/* BACKGROUND IMAGE */}
       <Image
         src="/images/About _ Header_Image.png"
         alt="Zisan Tech Solutions team"
         fill
         priority
-        unoptimized
+        sizes="100vw"
         className="object-cover object-center"
       />
 
       {/* DARK OVERLAY */}
-      <div className="absolute inset-0 bg-black/60" />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-black/60"
+      />
 
-      {/* TOP RIGHT DOTS */}
-      <div className="absolute right-0 top-0 opacity-60">
-        <svg width="320" height="120" viewBox="0 0 320 120" fill="none">
+      {/* GRADIENT OVERLAY */}
+      <div
+        aria-hidden="true"
+        className="
+          absolute inset-0
+          bg-gradient-to-r
+          from-black/60
+          via-black/25
+          to-transparent
+        "
+      />
+
+      {/* TOP RIGHT DECORATIVE DOTS */}
+      <div
+        aria-hidden="true"
+        className="
+          pointer-events-none
+          absolute right-0 top-0 z-10
+          hidden opacity-60
+          sm:block
+        "
+      >
+        <svg
+          width="320"
+          height="120"
+          viewBox="0 0 320 120"
+          fill="none"
+        >
           <defs>
             <pattern
               id="about-hero-dots"
@@ -58,7 +108,12 @@ export default function AboutHeroImage() {
               height="12"
               patternUnits="userSpaceOnUse"
             >
-              <circle cx="3" cy="3" r="2" fill="#4DB7CC" />
+              <circle
+                cx="3"
+                cy="3"
+                r="2"
+                fill="#4DB7CC"
+              />
             </pattern>
           </defs>
 
@@ -69,91 +124,134 @@ export default function AboutHeroImage() {
         </svg>
       </div>
 
-      <div className="relative mx-auto flex min-h-[620px] max-w-[1920px] items-center px-16 py-16">
-        <div className="max-w-[780px] text-white">
-          <h1 className="text-[40px] font-bold leading-[1.15] sm:text-[48px] lg:text-[58px]">
-            {headingLines.map((line, index) => (
+      {/* MAIN CONTENT CONTAINER */}
+      <div
+        className="
+          relative z-10 mx-auto
+          flex w-full max-w-[1600px]
+          items-center
+          px-4 py-14
+          sm:px-6 sm:py-16
+          md:px-8 md:py-20
+          lg:px-12 lg:py-24
+          xl:px-16
+          2xl:px-20
+        "
+      >
+        {/* LEFT CONTENT */}
+        <div className="w-full min-w-0 max-w-[850px] text-white">
+
+          {/* MAIN HEADING */}
+          <h1
+            className="
+              max-w-[850px]
+              text-[30px] font-bold
+              leading-[1.18] tracking-tight
+              text-white
+              min-[400px]:text-[34px]
+              sm:text-[42px]
+              md:text-[50px]
+              lg:text-[58px]
+              xl:text-[64px]
+            "
+          >
+            {/* FIRST HEADING LINE */}
+            <motion.span
+              initial={fadeFromLeft}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{
+                duration: 0.6,
+                delay: 0,
+              }}
+              className="block"
+            >
               <motion.span
-                key={index}
-                initial={{
-                  opacity: 0,
-                  x: -30,
-                }}
-                animate={{
-                  opacity: 1,
-                  x: 0,
-                }}
+                initial={
+                  reduceMotion
+                    ? false
+                    : { opacity: 0, scale: 0.8 }
+                }
+                animate={{ opacity: 1, scale: 1 }}
                 transition={{
-                  duration: 0.6,
-                  delay: line.delay,
+                  duration: 0.5,
+                  delay: 0.1,
                 }}
-                className="block"
+                className="inline-block text-orange-500"
               >
-                {index === 0 ? (
-                  <>
-                    <motion.span
-                      initial={{
-                        opacity: 0,
-                        scale: 0.8,
-                      }}
-                      animate={{
-                        opacity: 1,
-                        scale: 1,
-                      }}
-                      transition={{
-                        duration: 0.5,
-                        delay: 0.1,
-                      }}
-                      className="inline-block text-orange-500"
-                    >
-                      {count}+
-                    </motion.span>{" "}
-                    Years Excellence in
-                  </>
-                ) : (
-                  <span className="text-teal-500">{line.text}</span>
-                )}
-              </motion.span>
-            ))}
+                {count}+
+              </motion.span>{" "}
+              Years Excellence in
+            </motion.span>
+
+            {/* SECOND HEADING LINE */}
+            <motion.span
+              initial={fadeFromLeft}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{
+                duration: 0.6,
+                delay: 0.2,
+              }}
+              className="block text-teal-400"
+            >
+              SAP Consulting Technology &amp; Learning
+            </motion.span>
           </h1>
 
+          {/* DESCRIPTION */}
           <motion.p
-            initial={{
-              opacity: 0,
-              y: 20,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
+            initial={fadeFromBottom}
+            animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.6,
               delay: 0.45,
             }}
-            className="mt-6 max-w-[560px] text-[18px] text-white/85 lg:text-[20px]"
+            className="
+              mt-5 max-w-[650px]
+              text-sm leading-7
+              text-gray-200
+              sm:mt-6 sm:text-base
+              sm:leading-8
+              md:text-lg
+              lg:text-xl
+            "
           >
-            Zisan Tech Solutions is committed to delivering quality SAP Training
-            and innovative IT services that create lasting business value.
+            Zisan Tech Solutions is committed to
+            delivering quality SAP Training and
+            innovative IT services that create
+            lasting business value.
           </motion.p>
 
+          {/* EXPLORE SERVICES BUTTON */}
           <motion.div
-            initial={{
-              opacity: 0,
-              y: 20,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
+            initial={fadeFromBottom}
+            animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.6,
               delay: 0.6,
             }}
+            className="mt-7 sm:mt-8 lg:mt-10"
           >
-            <Link href="/#services">
-            <button className="mt-10 rounded-xl bg-teal-500 px-6 py-3 text-lg font-semibold text-white shadow-lg transition hover:scale-[1.05] hover:bg-orange-500">
-  Explore Services
-</button>
+            <Link
+              href="/#services"
+              className="
+                inline-flex min-h-12
+                items-center justify-center
+                rounded-lg bg-teal-400
+                px-7 py-3
+                text-sm font-semibold
+                text-white shadow-lg
+                transition-all duration-300
+                hover:-translate-y-0.5
+                hover:bg-orange-500
+                hover:shadow-xl
+                focus-visible:outline
+                focus-visible:outline-2
+                focus-visible:outline-offset-2
+                focus-visible:outline-teal-400
+                sm:px-8 sm:text-base
+              "
+            >
+              Explore Services
             </Link>
           </motion.div>
         </div>

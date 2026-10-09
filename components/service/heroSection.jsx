@@ -66,7 +66,7 @@ At Zisan Tech Solutions, we are committed to delivering reliable, high-performan
     className="relative flex justify-start"
   >
     {/* Border Frame */}
-    <div className="absolute inset-0 border-2 border-orange-500 rounded-3xl translate-x-4 translate-y-4 z-10"></div>
+    {/* <div className="absolute inset-0 border-2 border-orange-500 rounded-3xl translate-x-4 translate-y-4 z-10"></div> */}
 
     {/* Image */}
     <div className="relative rounded-3xl overflow-hidden z-0 w-full">
