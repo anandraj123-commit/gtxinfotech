@@ -221,23 +221,23 @@ export default function Footer() {
                 </Link>
               </li>
 
-              <li>
+              {/* <li>
                 <Link
                   href="/#services"
                   className="transition-colors duration-300 hover:text-teal-400"
                 >
                   Services
                 </Link>
-              </li>
+              </li> */}
 
-              <li>
+              {/* <li>
                 <Link
                   href="/#training-programs"
                   className="transition-colors duration-300 hover:text-teal-400"
                 >
                   Training Programs
                 </Link>
-              </li>
+              </li> */}
 
               <li>
                 <Link
