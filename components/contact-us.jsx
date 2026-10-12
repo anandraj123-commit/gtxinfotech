@@ -140,7 +140,7 @@ export default function ContactPage() {
               "
             >
               Ready to transform your business with innovative technology
-              solutions? Contact Zisan Tech Solutions today and let our experts
+              solutions? Contact ZisanTech Solutions today and let our experts
               help you achieve your goals.
             </p>
 

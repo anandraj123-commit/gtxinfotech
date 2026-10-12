@@ -53,7 +53,7 @@ export default function ServiceCategory({ category }) {
     </p>
   )}
 
-<h2 className="py-5 font-semibold text-teal-500">Benefits of {category.title} with Zisan Tech Solutions</h2>
+<h2 className="py-5 font-semibold text-teal-500">Benefits of {category.title} with ZisanTech Solutions</h2>
   
   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
   

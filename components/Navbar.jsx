@@ -135,11 +135,11 @@ export default function Navbar() {
         <Link
           href="/"
           className="group relative z-10 flex shrink-0 items-center"
-          aria-label="Zisan Tech Solutions Home"
+          aria-label="ZisanTech Solutions Home"
         >
           <img
             src="/images/logo/ZisanTech_Solutions_logo.png"
-            alt="Zisan Tech Solutions logo"
+            alt="ZisanTech Solutions logo"
             className="
               h-[48px] w-[145px]
               object-contain
@@ -518,7 +518,7 @@ export default function Navbar() {
         >
           <img
             src="/images/logo/ZisanTech_Solutions_logo.png"
-            alt="Zisan Tech Solutions"
+            alt="ZisanTech Solutions"
             className="w-16 object-contain"
           />
 

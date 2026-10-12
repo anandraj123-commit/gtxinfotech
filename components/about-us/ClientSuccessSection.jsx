@@ -262,7 +262,7 @@ export default function ClientSuccessSection() {
                 md:text-justify
               "
             >
-              At Zisan Tech Solutions, we measure success
+              At ZisanTech Solutions, we measure success
               by client outcomes. Every project—whether
               solution design, implementation, or training—is
               focused on real business impact.

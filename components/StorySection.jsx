@@ -182,7 +182,7 @@ export default function StorySection() {
               lg:leading-8
             "
           >
-            Zisan Tech Solutions is dedicated to helping businesses embrace
+            ZisanTech Solutions is dedicated to helping businesses embrace
             digital transformation through intelligent SAP solutions and
             modern IT services. Our focus is on aligning technology with real
             business objectives to improve efficiency, visibility, and
@@ -284,7 +284,7 @@ export default function StorySection() {
                   group-hover:text-black
                 "
               >
-                Learn More
+                See More
               </span>
 
               <span

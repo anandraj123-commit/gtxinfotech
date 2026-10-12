@@ -72,7 +72,7 @@ export default function DigitalTransformationSection() {
             >
               Start Your Digital Transformation Journey with{" "}
               <span className="text-teal-400">
-                Zisan Tech Solutions
+                ZisanTech Solutions
               </span>
             </h2>
 
@@ -277,7 +277,7 @@ export default function DigitalTransformationSection() {
                   "
                 >
                   <Image
-                    src="/images/Start Your Digital Transformation Journey with Zisan Tech Solutions-images.png"
+                    src="/images/Start Your Digital Transformation Journey with ZisanTech Solutions-images.png"
                     alt="Digital Transformation"
                     fill
                     sizes="(max-width: 1023px) 100vw, 50vw"

@@ -20,7 +20,7 @@ export default function ContactSection() {
       {/* BACKGROUND IMAGE */}
       <Image
         src="/images/Contact _ Header_Image.png"
-        alt="Zisan Tech Solutions team"
+        alt="ZisanTech Solutions team"
         fill
         priority
         sizes="100vw"

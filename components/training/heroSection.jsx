@@ -18,12 +18,12 @@ export default function HeroSection() {
   Enhance Your Expertise with Career-Ready Training
 </h1>
 <p className="text-black  leading-relaxed mb-8 text-justify">
-Zisan Tech Solutions believes in empowering you with skills that matter. Our courses combine real-world experience, seasoned guidance, and industry-focused curriculum to accelerate your journey toward a thriving SAP career.<br></br>
+ZisanTech Solutions believes in empowering you with skills that matter. Our courses combine real-world experience, seasoned guidance, and industry-focused curriculum to accelerate your journey toward a thriving SAP career.<br></br>
 We don’t just teach concepts — we prepare you to confidently handle real SAP challenges in the workplace. 
 </p>
 <p className="text-black leading-relaxed mb-8 text-justify">
-Zisan Tech Solutions is committed to shaping future-ready professionals by delivering training that goes beyond traditional learning. Our programs are designed to bridge the gap between theoretical knowledge and real-world application, ensuring you gain skills that are directly relevant to today’s SAP industry.
-At Zisan Tech Solutions, we focus not just on teaching, but on transforming your career. We empower you with the knowledge, tools, and mindset required to succeed in dynamic workplace environments and achieve long-term professional growth.
+ZisanTech Solutions is committed to shaping future-ready professionals by delivering training that goes beyond traditional learning. Our programs are designed to bridge the gap between theoretical knowledge and real-world application, ensuring you gain skills that are directly relevant to today’s SAP industry.
+At ZisanTech Solutions, we focus not just on teaching, but on transforming your career. We empower you with the knowledge, tools, and mindset required to succeed in dynamic workplace environments and achieve long-term professional growth.
 </p>
 <button className="relative overflow-hidden bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg  font-semibold transition mt-2 group">
   

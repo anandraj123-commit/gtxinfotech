@@ -92,7 +92,7 @@ export default function Footer() {
             <div className="mb-5 sm:mb-6">
               <Image
                 src="/images/logo/ZisanTech_Solutions_logo.png"
-                alt="Zisan Tech Solutions"
+                alt="ZisanTech Solutions"
                 width={150}
                 height={50}
                 sizes="150px"
@@ -116,7 +116,7 @@ export default function Footer() {
                 sm:leading-8
               "
             >
-              Zisan Tech Solutions is a leading technology
+              ZisanTech Solutions is a leading technology
               solutions provider specializing in SAP consulting,
               training, and enterprise software solutions.
             </p>
@@ -369,7 +369,7 @@ export default function Footer() {
             lg:mt-16
           "
         >
-          © 2026 Zisan Tech Solutions. All rights reserved.
+          © 2026 ZisanTech Solutions. All rights reserved.
         </div>
       </div>
     </footer>

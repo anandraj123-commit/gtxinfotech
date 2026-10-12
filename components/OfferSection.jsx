@@ -161,7 +161,7 @@ export default function OfferSection() {
               text-justify
             "
           >
-            At Zisan Tech Solutions, we provide dependable, business-focused
+            At ZisanTech Solutions, we provide dependable, business-focused
             solutions designed to simplify your operations and support
             sustainable growth. Our blend of SAP expertise and IT innovation
             ensures your business runs efficiently and adapts to changing

@@ -90,7 +90,7 @@ export default function CareerOpenings() {
               sm:text-base sm:leading-8
             "
           >
-            Explore exciting career opportunities at Zisan Tech
+            Explore exciting career opportunities at ZisanTech
             and become part of our growing SAP consulting team.
           </p>
         </div>
@@ -113,7 +113,7 @@ export default function CareerOpenings() {
             );
 
             const emailBody = encodeURIComponent(
-              `Hello Zisan Tech Team,
+              `Hello ZisanTech Team,
 
 I would like to apply for the ${job.title} position.
 

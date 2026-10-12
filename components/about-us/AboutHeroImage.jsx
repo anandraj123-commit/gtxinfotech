@@ -60,7 +60,7 @@ export default function AboutHeroImage() {
       {/* BACKGROUND IMAGE */}
       <Image
         src="/images/About _ Header_Image.png"
-        alt="Zisan Tech Solutions team"
+        alt="ZisanTech Solutions team"
         fill
         priority
         sizes="100vw"

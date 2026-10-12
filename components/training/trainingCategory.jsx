@@ -507,7 +507,7 @@ export default function TrainingCategory({ category }) {
           >
             Key Benefits of Training with{" "}
             <span className="text-teal-500">
-              Zisan Tech Solutions
+              ZisanTech Solutions
             </span>
           </motion.h3>
 

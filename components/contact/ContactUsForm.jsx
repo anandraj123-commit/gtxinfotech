@@ -63,7 +63,7 @@ export default function ContactUsForm() {
           >
             <img
               src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
-              alt="Zisan Tech Solutions team collaboration"
+              alt="ZisanTech Solutions team collaboration"
               className="
                 absolute inset-0
                 h-full w-full object-cover

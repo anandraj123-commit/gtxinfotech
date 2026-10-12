@@ -130,7 +130,7 @@ export default function TimelineSection() {
                   lg:text-5xl
                 "
               >
-                Zisan Tech{" "}
+                ZisanTech{" "}
                 <span className="text-teal-400">
                   at a Glance
                 </span>

@@ -32,7 +32,7 @@ export default function PlacementSupport() {
         {/* HEADING */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900">
-            Zisan Tech Solutions Placement Support
+            ZisanTech Solutions Placement Support
           </h2>
           <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
             Build your resume, practice interviews, and apply for real SAP roles 

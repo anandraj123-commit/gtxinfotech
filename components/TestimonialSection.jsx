@@ -7,7 +7,7 @@ const testimonials = [
   {
     name: "Rahul Sharma",
     role: "IT Manager",
-    text: "Zisan Tech Solutions delivered exceptional SAP consulting services.",
+    text: "ZisanTech Solutions delivered exceptional SAP consulting services.",
   },
   {
     name: "Amit Singh",

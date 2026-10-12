@@ -45,7 +45,7 @@ export default function CareerPage() {
         {/* BACKGROUND IMAGE */}
         <Image
           src="/images/Career _ Header_Image.png"
-          alt="Zisan Tech Solutions career opportunities"
+          alt="ZisanTech Solutions career opportunities"
           fill
           priority
           sizes="100vw"
@@ -95,7 +95,7 @@ export default function CareerPage() {
                 sm:mb-6 sm:text-sm
               "
             >
-              Careers at Zisan Tech Solutions
+              Careers at ZisanTech Solutions
             </div>
 
             {/* HEADING */}

@@ -205,7 +205,7 @@ export const services = [
             image: "/images/services/SAP Consulting.png",
             title: "SAP Consulting",
             description:
-              "Transforming Companies to Smart Business Zisan Tech Solutions is an end-to-end SAP consulting service provider who matches technology and business objectives. Certified SAP experts help businesses navigate every phase of digital transformation, from legacy system modernization to cloud-first strategies and intelligent automation integration. It’s not about implementing, but about collaboratively building intelligent organisations that are powered by real-time information, efficient processes and future-proof designs.",
+              "Transforming Companies to Smart Business ZisanTech Solutions is an end-to-end SAP consulting service provider who matches technology and business objectives. Certified SAP experts help businesses navigate every phase of digital transformation, from legacy system modernization to cloud-first strategies and intelligent automation integration. It’s not about implementing, but about collaboratively building intelligent organisations that are powered by real-time information, efficient processes and future-proof designs.",
             items: [
               {
                 title: "SAP S/4HANA Support & Migration",
@@ -272,7 +272,7 @@ export const services = [
             image: "/images/services/SAP E-Invoice & E-way bill.png",
             title: "SAP E-Invoice & E-Way Bill",
             description:
-              "Intelligent automation simplifies GST compliance. Integrated SAP E-Invoice and E-Way Bill solutions by Zisan Tech Solutions help businesses achieve seamless GST compliance. These systems are designed for precision, speed, and scalability, ensuring real-time data exchange with government portals, automating tax processes, and eliminating human error. The solution integrates easily with SAP S/4HANA, SAP ECC, and SAP Business One, enabling automated invoice generation, validation, submission, and E-Way Bill management within SAP.",
+              "Intelligent automation simplifies GST compliance. Integrated SAP E-Invoice and E-Way Bill solutions by ZisanTech Solutions help businesses achieve seamless GST compliance. These systems are designed for precision, speed, and scalability, ensuring real-time data exchange with government portals, automating tax processes, and eliminating human error. The solution integrates easily with SAP S/4HANA, SAP ECC, and SAP Business One, enabling automated invoice generation, validation, submission, and E-Way Bill management within SAP.",
             items: [
               {
                 title: "E-Way Bill Automation",
@@ -354,7 +354,7 @@ export const services = [
             image: "/images/services/SAP AI.png",
             title: "SAP AI",
             description:
-              "At Zisan Tech Solutions, SAP AI is about delivering real results—not just algorithms. We help businesses move faster, work smarter, and make better decisions by combining SAP’s powerful AI capabilities with practical business insight. From generative automation to predictive intelligence, we turn data into decisive action and complexity into clarity.",
+              "At ZisanTech Solutions, SAP AI is about delivering real results—not just algorithms. We help businesses move faster, work smarter, and make better decisions by combining SAP’s powerful AI capabilities with practical business insight. From generative automation to predictive intelligence, we turn data into decisive action and complexity into clarity.",
             items: [
               {
                 title: "Smarter Decisions",

@@ -134,7 +134,7 @@ export default function WorkforceBannerAbout() {
               lg:text-xl
             "
           >
-            Zisan Tech Solutions is committed to
+            ZisanTech Solutions is committed to
             delivering quality SAP Training and
             innovative IT services that create
             lasting business value.

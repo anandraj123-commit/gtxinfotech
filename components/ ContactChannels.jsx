@@ -49,7 +49,7 @@ export default function ContactChannels() {
 
           <div className="lg:flex lg:justify-end">
             <p className="max-w-md text-sm leading-6 text-gray-500">
-              Connect with the Zisan Tech Solutions team for consulting, support,
+              Connect with the ZisanTech Solutions team for consulting, support,
               product enquiries, and transformation discussions across
               industries and SAP solution areas.
             </p>

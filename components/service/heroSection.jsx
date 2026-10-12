@@ -10,7 +10,7 @@ export default function HeroSection() {
 
         {/* TOP H1 */}
         <h1 className="text-4xl text-center font-semibold mb-4 text-gray-900 opacity-100 translate-y-0">
-          <span className="text-orange-500">Welcome to </span> <span className="text-teal-500">Zisan Tech Solutions</span>
+          <span className="text-orange-500">Welcome to </span> <span className="text-teal-500">ZisanTech Solutions</span>
         </h1>
 
         <div className="grid md:grid-cols-2 gap-10 items-start mt-20">
@@ -27,7 +27,7 @@ export default function HeroSection() {
     </h2>
 
     <p className="text-black leading-relaxed mb-8 text-justify">
-Zisan Tech Solutions is a leading SAP and IT consulting firm dedicated to transforming business operations through innovative technology and strategic expertise.
+ZisanTech Solutions is a leading SAP and IT consulting firm dedicated to transforming business operations through innovative technology and strategic expertise.
 
 We specialize in delivering end-to-end SAP solutions that enhance efficiency, optimize workflows, and drive measurable business growth.
 
@@ -35,15 +35,15 @@ Our team partners with organizations to implement scalable digital solutions, en
 
 From system implementation to continuous support, we empower businesses to navigate their digital transformation journey with confidence.
 
-With a focus on performance and reliability, Zisan Tech Solutions helps enterprises unlock their full potential through smart and future-ready IT solutions.    </p>
+With a focus on performance and reliability, ZisanTech Solutions helps enterprises unlock their full potential through smart and future-ready IT solutions.    </p>
 
 
 <p className="text-black leading-relaxed mb-8 text-justify">
-Zisan Tech Solutions stands at the forefront of SAP and IT consulting, helping businesses modernize their operations through intelligent and future-ready technologies.
+ZisanTech Solutions stands at the forefront of SAP and IT consulting, helping businesses modernize their operations through intelligent and future-ready technologies.
 
 We bring deep industry expertise to design and implement customized SAP solutions that streamline processes, improve productivity, and accelerate digital growth.
 
-At Zisan Tech Solutions, we are committed to delivering reliable, high-performance solutions that empower organizations to innovate, adapt, and lead in a rapidly evolving digital landscape.
+At ZisanTech Solutions, we are committed to delivering reliable, high-performance solutions that empower organizations to innovate, adapt, and lead in a rapidly evolving digital landscape.
 </p>
 {/* <p className="text-black leading-relaxed mb-8 text-justify">
   Zisan Tech Solutions stands at the forefront of SAP and IT consulting,
