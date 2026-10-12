@@ -1,32 +1,29 @@
-import Hero from "@/components/Hero";
-import AboutSection from "@/components/AboutSection";
 import WorkSection from '@/components/WorkSection';
 import SkillSection from '@/components/SkillsSection';
-import  ServicesSection from '@/components/ServicesSectionf';
-import  TrainingSection from '@/components/trainingSectionf';
+import ServicesSection from '@/components/ServicesSectionf';
+import TrainingSection from '@/components/trainingSectionf';
 import CTASection from '@/components/CTASection';
 import ContactUs from '@/components/contact-us';
-import TeamSection from '@/components/TeamSection';
-import LatestPost from '@/components/LatestPost';
 import TestimonialSection from '@/components/TestimonialSection';
 import StatsSection from '@/components/StatsSection';
 import OfferSection from '@/components/OfferSection';
 import StorySection from '@/components/StorySection';
 import SuccessSection from '@/components/SuccessSection';
-import FAQ from '@/components/Faqs';
 import WhyChooseGTX from '@/components/WhyChooseGTX';
-import WorkforceBanner from '@/components/WorkforceBanner';
 
 import HeroSection from '@/components/HeroSection';
 import Gtxinfotechservices from '@/components/Gtxinfotechservice';
 
+export const metadata = {
+  title: "SAP Consulting, IT Services & Training in India | ZisanTech Solutions",
+
+  description:
+    "Explore SAP consulting, IT services, ERP and software development, and practical SAP training at ZisanTech Solutions. Supporting businesses and learners across India through online services.",
+};
+
 export default function Home() {
   return (
     <main>
-
-      {/* <WorkforceBanner/> */}
-      {/* <Hero /> */}
-      {/* <AboutSection /> */}
       <HeroSection />
       <StorySection/>
       <Gtxinfotechservices/>
@@ -36,16 +33,10 @@ export default function Home() {
       <ServicesSection/> 
       <OfferSection/>
       <TrainingSection/>
-      {/* <TeamSection/> */}
       <img src="/images/stay-connected.png" alt="stay connected" className="w-full h-auto"/>
-      
-      
       <TestimonialSection/> 
       <WhyChooseGTX/>
       <StatsSection/>
-      {/* <LatestPost/> */}
-      
-      {/* <FAQ/> */}
       <CTASection/>
       <ContactUs/>
     </main>

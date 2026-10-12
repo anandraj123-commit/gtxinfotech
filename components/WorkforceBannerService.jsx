@@ -101,7 +101,7 @@ export default function WorkforceBannerAbout() {
               damping: 12,
             }}
           >
-                <Link href="/#services">
+                <Link href="/#services-list">
             <button className="mt-10 rounded-xl bg-teal-500 px-6 py-3 text-lg font-semibold text-white shadow-lg transition hover:scale-[1.05] hover:bg-orange-500">
   Explore Services
 </button>

@@ -28,7 +28,6 @@ export default function TrainingSection() {
   return (
     <section
       className="w-full bg-gradient-to-br from-gray-50 via-white to-gray-100 py-20 px-6"
-      id="training-programs"
     >
       <div className="mx-auto">
 

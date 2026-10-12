@@ -1,28 +1,34 @@
+
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { FaSmile, FaBox, FaThumbsUp, FaGift } from "react-icons/fa";
+import {
+  FaUsers,
+  FaBriefcase,
+  FaGraduationCap,
+  FaHeadset,
+} from "react-icons/fa";
 
 const stats = [
   {
-    icon: FaSmile,
-    value: 320,
-    label: "Happy Clients",
+    icon: FaUsers,
+    value: 95,
+    label: "Clients Served",
   },
   {
-    icon: FaBox,
-    value: 350,
-    label: "Projects Completed",
+    icon: FaBriefcase,
+    value: 55,
+    label: "Projects Delivered",
   },
   {
-    icon: FaThumbsUp,
+    icon: FaGraduationCap,
     value: 158,
-    label: "Positive Feedback",
+    label: "Professionals Trained",
   },
   {
-    icon: FaGift,
+    icon: FaHeadset,
     value: 250,
-    label: "Cups of Coffee",
+    label: "Support & Consulting",
   },
 ];
 
@@ -122,7 +128,7 @@ function Card({ icon: Icon, value, label, start }) {
     const duration = 2000;
 
     const animate = (timestamp) => {
-      if (!startTime) {
+      if (startTime === null) {
         startTime = timestamp;
       }
 

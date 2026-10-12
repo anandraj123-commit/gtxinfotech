@@ -32,8 +32,7 @@ export default function TrainingSection() {
         py-12
         sm:py-14
         md:py-16
-        lg:py-20
-      "
+        lg:py-20" id="training-programs-courses"
     >
       {/* MAIN CONTAINER */}
       <div
@@ -64,7 +63,7 @@ export default function TrainingSection() {
           "
         >
           {/* SMALL HEADING */}
-          <p
+          <h2
             className="
               mb-2
               text-xs
@@ -77,11 +76,11 @@ export default function TrainingSection() {
               sm:tracking-widest
             "
           >
-            Training We’re Offering
-          </p>
+            Explore Our Training
+          </h2>
 
           {/* MAIN HEADING */}
-          <h2
+          <p
             className="
               text-3xl
               font-bold
@@ -92,17 +91,11 @@ export default function TrainingSection() {
               lg:text-5xl
             "
           >
-            We’re Dedicated to Serve
-            <br className="hidden sm:block" />
-            <span className="sm:hidden"> </span>
-            you All Time
-          </h2>
-
-          {/* HEADING LINE */}
-          <div
+            Learn . Evolve . Excel
+            <div
             className="
               mx-auto
-              mt-5
+              mt-2
               h-1
               w-16
               rounded-full
@@ -110,7 +103,13 @@ export default function TrainingSection() {
               sm:mt-6
             "
           />
+          </p>
+          <p>Industry Focussed Sap Training to Advance Your Career</p>
+
+          {/* HEADING LINE */}
+       
         </div>
+       
 
         {/* TRAINING GRID */}
         <div

@@ -134,7 +134,7 @@ Regards,
                   flex-col overflow-hidden
                   rounded-2xl
                   border border-teal-500
-                  bg-teal-400
+                  bg-white 
                   p-5
                   shadow-md
                   transition-all duration-300

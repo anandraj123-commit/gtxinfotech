@@ -176,16 +176,20 @@ export default function Navbar() {
         </button>
 
         {/* ================= DESKTOP MENU ================= */}
-        <nav
-          aria-label="Desktop navigation"
-          className="
-            hidden min-w-0
-            items-center justify-center
-            gap-5 text-base font-bold
-            xl:flex
-            2xl:gap-8 2xl:text-lg
-          "
-        >
+       
+{/* ================= DESKTOP MENU ================= */}
+<nav
+  aria-label="Desktop navigation"
+  className="
+    absolute left-1/2 -translate-x-1/2
+    hidden min-w-0
+    items-center justify-center
+    gap-5 text-base font-bold
+    xl:flex
+    2xl:gap-8 2xl:text-lg
+  "
+>
+
           {/* HOME */}
           <Link
             href="/"
@@ -513,7 +517,7 @@ export default function Navbar() {
           "
         >
           <img
-            src="/images/logo.jpg"
+            src="/images/logo/ZisanTech_Solutions_logo.png"
             alt="Zisan Tech Solutions"
             className="w-16 object-contain"
           />

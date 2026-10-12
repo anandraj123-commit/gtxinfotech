@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Footer from '@/components/Footer';
 import "./globals.css";
-import TopBar from '../components/TopBar';
 import Navbar from '../components/Navbar';
-import WhatsAppButton from '../components/WhatsAppButton';
 import RouteLoader from "@/components/RouteLoader";
 import SocialSidebar from "@/components/SocialSidebar";
-import SocialExpandable from "@/components/SocialExpandable";
+import HashScrollHandler from "@/components/HashScrollHandler";
+
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,14 +34,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <HashScrollHandler />
         <RouteLoader />
-        {/* <TopBar/> */}
         <Navbar/>
-        {/* <SocialSidebar /> */}
-        <SocialExpandable/>
+        <SocialSidebar/>
         {children}
         <Footer/>
-        <WhatsAppButton/>
+        {/* <WhatsAppButton/> */}
       </body>
     </html>
   );

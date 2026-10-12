@@ -16,7 +16,7 @@ export default function ServicesSection() {
  
 
   return (
-    <section className="py-20 bg-gray-50 text-white">
+    <section className="py-20 bg-gray-50 text-white" id="services-list">
       <div className="max-w-full mx-auto px-6">
 
         {/* HEADER */}

@@ -24,17 +24,14 @@ export default function BlogDetails() {
   if (!post) return notFound();
 
   // ✅ Share Data
-  const shareUrl = `http://localhost:3000/blog/${post.id}`;
+  const shareUrl =
+  typeof window !== "undefined" ? `${window.location.origin}/blog/${post.id}` : `/blog/${post.id}`;
   const shareText = post.shortDesc;
 
   return (
     <>
-      {/* <Navbar /> */}
-
       <section className="bg-[#343f48] min-h-screen py-20 px-6">
         <div className="max-w-4xl mx-auto text-white">
-
-          {/* Image */}
           <div className="relative w-full h-[400px] mb-8">
             <Image
               src={post.imgSrc}

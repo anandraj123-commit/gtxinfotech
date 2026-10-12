@@ -7,6 +7,12 @@ import StudentTestimonialSection from "@/components/StudentTestimonial";
 import Navbar from "@/components/Navbar";
 import WorkforceBannerTraining from '@/components/WorkforceBannerTraining.jsx'
 
+export const metadata = {
+  title: "SAP Training in India: SD, MM, TM, CPI & FICO | ZisanTech",
+  description:
+    "Explore online SAP training in SD, MM, TM, CPI, ABAP, BASIS, PP/QM, FICO, PI/PO, and CI-DS.",
+};
+
 export default async function TrainingPage({ params }) {
   // ✅ unwrap params
   const resolvedParams = await params;
@@ -45,7 +51,6 @@ export default async function TrainingPage({ params }) {
     <>
       {/* <Navbar /> */}
       <WorkforceBannerTraining/>
-    
       <HeroSection />
       <TrainingType training={selectedTraining} />
       <TrainingCategory category={selectedCategory} />

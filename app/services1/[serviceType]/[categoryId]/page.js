@@ -1,14 +1,19 @@
 import { services } from "@/data/services";
 import  HeroSection from "@/components/service/heroSection";
-import ServiceType from "@/components/service/ServiceType";
 import ServiceCategory from "@/components/service/serviceCategory";
-import ClientsSection from "@/components/service/ClientsSection";
+
 import TestimonialSection from "@/components/TestimonialSection";
-import Navbar from "@/components/Navbar";
+
 import WorkforceBannerService from "@/components/WorkforceBannerService";
 import DeliveryMethodology from "@/components/DeliveryMethodology";
 import WhyChooseGTX from "@/components/WhyChooseGTX";
 import Link from "next/link";
+
+export const metadata = {
+  title: "SAP Consulting, Integration & ERP Development | ZisanTech",
+  description: "Explore SAP consulting, rollouts, custom solutions, integration, E-Way Bill, AI-enabled solutions, CRM and ERP development, HRMS, e-commerce, and digital marketing services"
+};
+
 export default async function Service({ params }) {
   // ✅ Await params (IMPORTANT)
   const resolvedParams = await params;

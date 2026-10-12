@@ -165,7 +165,7 @@ export default function AboutHeroImage() {
               }}
               className="block"
             >
-              <motion.span
+              {/* <motion.span
                 initial={
                   reduceMotion
                     ? false
@@ -179,12 +179,12 @@ export default function AboutHeroImage() {
                 className="inline-block text-orange-500"
               >
                 {count}+
-              </motion.span>{" "}
-              Years Excellence in
+              </motion.span>{" "} */}
+              Digital Excellence <span className="text-teal-400">SAP Consulting &amp; Learning</span>
             </motion.span>
 
             {/* SECOND HEADING LINE */}
-            <motion.span
+            {/* <motion.span
               initial={fadeFromLeft}
               animate={{ opacity: 1, x: 0 }}
               transition={{
@@ -193,9 +193,11 @@ export default function AboutHeroImage() {
               }}
               className="block text-teal-400"
             >
-              SAP Consulting Technology &amp; Learning
-            </motion.span>
+              Turning business challenges into smarter technology solutions.
+            </motion.span> */}
           </h1>
+
+          {/* Digital Excellence SAP Consulting & Learning Turning business challenges into smarter technology solutions. */}
 
           {/* DESCRIPTION */}
           <motion.p
@@ -215,10 +217,7 @@ export default function AboutHeroImage() {
               lg:text-xl
             "
           >
-            Zisan Tech Solutions is committed to
-            delivering quality SAP Training and
-            innovative IT services that create
-            lasting business value.
+           Turning business challenges into smarter technology solutions.
           </motion.p>
 
           {/* EXPLORE SERVICES BUTTON */}

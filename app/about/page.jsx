@@ -8,6 +8,13 @@ import TeamSection from "../../components/about-us/TeamSection";
 import OfficeLocations from "../../components/about-us/OfficeLocations";
 import AboutHeroImage from "../../components/about-us/AboutHeroImage";
 import DigitalTransformationSection from '../../components/DigitalTransformationSection';
+
+export const metadata = {
+  title: "About ZisanTech Solutions | SAP, IT & ERP Expertise",
+  description:
+    "Learn about ZisanTech Solutions and our approach to SAP consulting, IT services, ERP and software development, and practical SAP training for businesses and learners across India.",
+};
+
 export default function About() {
   return (
    <>

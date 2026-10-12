@@ -7,9 +7,9 @@ export default function TimelineSection() {
       label: "Years of Consulting Excellence",
     },
     {
-      value: "45",
+      value: "20",
       suffix: "+",
-      label: "Customers Across the Globe",
+      label: "Bussiness Client",
     },
     {
       value: "90",
@@ -17,15 +17,20 @@ export default function TimelineSection() {
       label: "Business from Repeat Customers",
     },
     {
-      value: "25",
+      value: "3000",
       suffix: "+",
-      label: "SAP Implementations Participated In",
+      label: "Happy Learner",
     },
     {
-      value: "150",
-      suffix: "+",
-      label: "SAP Consultants",
+      value: "100",
+      suffix: "%",
+      label: "Client Focus",
     },
+    {
+      value: "100",
+      suffix: "%",
+      label: "Passion & Commitment",
+    }
   ];
 
   return (
@@ -147,15 +152,16 @@ export default function TimelineSection() {
 
             {/* STATISTICS */}
             <div
-              className="
-                grid w-full min-w-0
-                grid-cols-1 gap-3
-                min-[360px]:grid-cols-2
-                sm:gap-4
-                md:grid-cols-3
-                lg:grid-cols-5
-                lg:gap-0
-              "
+             className="
+             grid w-full min-w-0
+             grid-cols-1 gap-3
+             min-[360px]:grid-cols-2
+             sm:gap-4
+             md:grid-cols-6
+             md:gap-2
+             lg:grid-cols-6
+             lg:gap-0
+           "
             >
               {stats.map((item, index) => (
                 <div

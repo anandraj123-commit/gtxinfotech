@@ -48,7 +48,7 @@ html, body {
 }
 
 .scrollbar-custom::-webkit-scrollbar-track {
-  background: #f1f5f9; /* light gray */
+  background: #f97316; /* light gray */
   border-radius: 10px;
 }
 
@@ -65,4 +65,8 @@ html, body {
 .scrollbar-custom {
   scrollbar-width: thin;
   scrollbar-color: #f97316 #f1f5f9;
+}
+
+html {
+  scroll-behavior: smooth;
 }

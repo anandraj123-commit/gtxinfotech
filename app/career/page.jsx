@@ -3,6 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import CareerOpenings from "../../components/CareerOpenings";
 
+export const metadata = {
+  title: "Careers at ZisanTech Solutions | SAP & IT Opportunities",
+  description:
+    "Explore career opportunities at ZisanTech Solutions in SAP consulting, IT services, software development, and technology. Connect with us to share your skills and professional interests.",
+};
+
 const cards = [
   {
     title: "Growth",
@@ -325,7 +331,7 @@ export default function CareerPage() {
             </p>
 
             <Link
-              href="/contact"
+              href="/contact/#contact-form"
               className="
                 mt-8 inline-flex min-h-12
                 items-center justify-center

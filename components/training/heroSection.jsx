@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -26,9 +27,11 @@ At Zisan Tech Solutions, we focus not just on teaching, but on transforming your
 </p>
 <button className="relative overflow-hidden bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg  font-semibold transition mt-2 group">
   
-  <span className="relative z-10 group-hover:text-black transition duration-300">
+<Link href="/contact#contact-us-form" className="group">
+  <span className="relative z-10 transition duration-300 group-hover:text-black">
     Join Us
   </span>
+</Link>
 
   <span className="absolute inset-0 bg-[var(--color-teal-400)] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
 

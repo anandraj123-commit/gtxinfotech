@@ -146,7 +146,7 @@ export default function WorkforceBannerTraining() {
           </p>
 
           {/* FEATURES */}
-          <div
+          {/* <div
             className="
               mt-7 grid grid-cols-1
               gap-x-8 gap-y-4
@@ -159,33 +159,36 @@ export default function WorkforceBannerTraining() {
             {features.map((feature, index) => (
               <Feature key={index} text={feature} />
             ))}
-          </div>
+          </div> */}
 
           {/* VIEW COURSES BUTTON */}
-          <div className="mt-8 sm:mt-10 lg:mt-12">
-            <Link
-              href="/#training-programs"
-              className="
-                inline-flex min-h-12
-                items-center justify-center
-                rounded-lg bg-teal-400
-                px-7 py-3
-                text-sm font-semibold
-                text-white shadow-lg
-                transition-all duration-300
-                hover:-translate-y-0.5
-                hover:bg-orange-500
-                hover:shadow-xl
-                focus-visible:outline
-                focus-visible:outline-2
-                focus-visible:outline-offset-2
-                focus-visible:outline-teal-400
-                sm:px-8 sm:text-base
-              "
-            >
-              View Courses
-            </Link>
-          </div>
+          
+<div className="mt-8 sm:mt-10 lg:mt-12">
+  <Link
+    href="/#training-programs-courses"
+    scroll={true}
+    className="
+      inline-flex min-h-12
+      items-center justify-center
+      rounded-lg bg-teal-400
+      px-7 py-3
+      text-sm font-semibold
+      text-white shadow-lg
+      transition-all duration-300
+      hover:-translate-y-0.5
+      hover:bg-orange-500
+      hover:shadow-xl
+      focus-visible:outline
+      focus-visible:outline-2
+      focus-visible:outline-offset-2
+      focus-visible:outline-teal-400
+      sm:px-8 sm:text-base
+    "
+  >
+    View Courses
+  </Link>
+</div>
+
         </div>
       </div>
     </section>
