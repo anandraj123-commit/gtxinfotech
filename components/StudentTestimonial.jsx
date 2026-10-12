@@ -6,12 +6,12 @@ const testimonials = [
   {
     name: "Amit Sharma",
     image: "/images/client1.jpg",
-    text: "My educational experience with Zisan Tech Solutions was excellent. The training featured real-world examples that are immediately applicable in the industry.",
+    text: "My educational experience with ZisanTech Solutions was excellent. The training featured real-world examples that are immediately applicable in the industry.",
   },
   {
     name: "Priya Verma",
     image: "/images/client1.jpg",
-    text: "Zisan Tech Solutions SAP training surpassed my expectations. The instructor was knowledgeable and the sessions were highly practical.",
+    text: "ZisanTech Solutions SAP training surpassed my expectations. The instructor was knowledgeable and the sessions were highly practical.",
   },
   {
     name: "Rahul Mehta",
