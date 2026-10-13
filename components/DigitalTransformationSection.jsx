@@ -277,7 +277,7 @@ export default function DigitalTransformationSection() {
                   "
                 >
                   <Image
-                    src="/images/Start Your Digital Transformation Journey with ZisanTech Solutions-images.png"
+                    src="/images/digital_transformation.png"
                     alt="Digital Transformation"
                     fill
                     sizes="(max-width: 1023px) 100vw, 50vw"
