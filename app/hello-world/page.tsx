@@ -1,6 +1,7 @@
 import { ArrowRight, Code2, Sparkles } from "lucide-react";
 
 export const metadata = {
+  robots: { index: false, follow: false },
   title: "Hello World | GTX Infotech",
 };
 

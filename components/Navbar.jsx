@@ -69,9 +69,7 @@ export default function Navbar() {
     `cursor-pointer transition-all duration-200 ${
       pathname === path
         ? "font-semibold text-[var(--color-teal-400)]"
-        : scrolled
-        ? "text-black hover:text-[var(--color-teal-400)]"
-        : "text-white hover:text-[var(--color-teal-400)]"
+        : "text-gray-900 hover:text-[var(--color-teal-400)]"
     }`;
 
   // MOBILE NAV LINK STYLE
@@ -124,11 +122,7 @@ export default function Navbar() {
           lg:px-8
           xl:px-12
           2xl:px-16
-          ${
-            scrolled
-              ? "bg-white/95 shadow-lg backdrop-blur-md"
-              : "bg-transparent"
-          }
+         bg-white shadow-md
         `}
       >
         {/* LOGO */}
@@ -165,11 +159,7 @@ export default function Navbar() {
             justify-center rounded-lg
             text-2xl
             xl:hidden
-            ${
-              scrolled
-                ? "text-black"
-                : "text-white"
-            }
+            text-gray-900
           `}
         >
           ☰
@@ -184,9 +174,9 @@ export default function Navbar() {
     absolute left-1/2 -translate-x-1/2
     hidden min-w-0
     items-center justify-center
-    gap-5 text-base font-bold
+    gap-12 text-base font-bold
     xl:flex
-    2xl:gap-8 2xl:text-lg
+    2xl:gap-16 2xl:text-lg
   "
 >
 

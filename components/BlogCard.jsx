@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/site-url";
 import Link from "next/link";
 import {
   FaFacebookF,
@@ -8,7 +9,7 @@ import {
 } from "react-icons/fa";
 
 const BlogCard = ({ post }) => {
-  const shareUrl = `http://localhost:3000/blog/${post.id}`; // change in production
+  const shareUrl = `${SITE_URL}/blog/${post.id}`;
   const shareText = post.shortDesc;
 
   return (

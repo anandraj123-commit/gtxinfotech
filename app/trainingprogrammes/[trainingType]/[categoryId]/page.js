@@ -1,3 +1,5 @@
+import { createMetadata } from "@/lib/metadata";
+import { notFound } from "next/navigation";
 import { training } from "@/data/training";
 import HeroSection from "@/components/training/heroSection";
 import TrainingType from "@/components/training/TrainingType";
@@ -7,11 +9,19 @@ import StudentTestimonialSection from "@/components/StudentTestimonial";
 import Navbar from "@/components/Navbar";
 import WorkforceBannerTraining from '@/components/WorkforceBannerTraining.jsx'
 
-export const metadata = {
-  title: "SAP Training in India: SD, MM, TM, CPI & FICO | ZisanTech",
-  description:
-    "Explore online SAP training in SD, MM, TM, CPI, ABAP, BASIS, PP/QM, FICO, PI/PO, and CI-DS.",
-};
+export async function generateMetadata({ params }) {
+  const resolved = await params;
+  const requestedType = decodeURIComponent(resolved.trainingType).replace(/\s+/g, " ").trim().toLowerCase();
+  const group = training.find((item) => item.type.replace(/\s+/g, " ").trim().toLowerCase() === requestedType);
+  const category = group?.category.find((item) => String(item.id) === String(resolved.categoryId));
+  if (!group || !category) notFound();
+  return createMetadata({
+    title: `${category.title} Training | ZisanTech Solutions`,
+    description: `Build practical ${category.title} skills with SAP training from ZisanTech Solutions. Explore hands-on learning for your professional development.`,
+    path: `/trainingprogrammes/${encodeURIComponent(group.type)}/${category.id}`,
+    image: category.image,
+  });
+}
 
 export default async function TrainingPage({ params }) {
   // ✅ unwrap params
@@ -36,7 +46,7 @@ export default async function TrainingPage({ params }) {
 
   if (!selectedTraining) {
     console.log("Available types:", training.map(t => t.type));
-    return <div>Training type not found</div>;
+    notFound();
   }
 
   const selectedCategory = selectedTraining.category.find(
@@ -44,7 +54,7 @@ export default async function TrainingPage({ params }) {
   );
 
   if (!selectedCategory) {
-    return <div>Category not found</div>;
+    notFound();
   }
 
   return (

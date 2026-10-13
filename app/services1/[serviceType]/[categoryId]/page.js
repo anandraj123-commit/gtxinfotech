@@ -1,3 +1,5 @@
+import { createMetadata } from "@/lib/metadata";
+import { notFound } from "next/navigation";
 import { services } from "@/data/services";
 import  HeroSection from "@/components/service/heroSection";
 import ServiceCategory from "@/components/service/serviceCategory";
@@ -9,10 +11,19 @@ import DeliveryMethodology from "@/components/DeliveryMethodology";
 import WhyChooseGTX from "@/components/WhyChooseGTX";
 import Link from "next/link";
 
-export const metadata = {
-  title: "SAP Consulting, Integration & ERP Development | ZisanTech",
-  description: "Explore SAP consulting, rollouts, custom solutions, integration, E-Way Bill, AI-enabled solutions, CRM and ERP development, HRMS, e-commerce, and digital marketing services"
-};
+export async function generateMetadata({ params }) {
+  const resolved = await params;
+  const requestedType = decodeURIComponent(resolved.serviceType).replace(/\s+/g, " ").trim().toLowerCase();
+  const group = services.find((item) => item.type.replace(/\s+/g, " ").trim().toLowerCase() === requestedType);
+  const category = group?.category.find((item) => String(item.id) === String(resolved.categoryId));
+  if (!group || !category) notFound();
+  return createMetadata({
+    title: `${category.title} | ZisanTech Solutions`,
+    description: `Explore ${category.title} services from ZisanTech Solutions. Get expert guidance and practical solutions tailored to your business needs.`,
+    path: `/services1/${encodeURIComponent(group.type)}/${category.id}`,
+    image: category.image,
+  });
+}
 
 export default async function Service({ params }) {
   // ✅ Await params (IMPORTANT)
@@ -29,7 +40,7 @@ export default async function Service({ params }) {
   );
 
   if (!selectedService) {
-    return <div>Service type not found</div>;
+    notFound();
   }
 
   // ✅ Find category
@@ -38,7 +49,7 @@ export default async function Service({ params }) {
   );
 
   if (!selectedCategory) {
-    return <div>Category not found</div>;
+    notFound();
   }
 
   return (

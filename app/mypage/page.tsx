@@ -1,4 +1,5 @@
 export const metadata = {
+  robots: { index: false, follow: false },
   title: "My Page | GTX Infotech",
 };
 

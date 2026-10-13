@@ -1,5 +1,16 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Sitemap
+
+`/sitemap.xml` includes the main public pages and all blog, service, and training
+detail pages from `data/`. `/robots.txt` points search engines to this sitemap.
+The starter pages `/hello-world` and `/mypage` are omitted.
+
+Canonical URLs, social metadata, sitemap URLs, and blog sharing links use
+`https://zisantech.com`, configured in `lib/site-url.ts`. Page metadata is built
+with `lib/metadata.ts`; detail pages derive it from the content in `data/`.
+Starter pages are marked `noindex`.
+
 ## Getting Started
 
 First, run the development server:

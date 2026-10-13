@@ -2,7 +2,7 @@ export const posts = [
   {
     id: 1,
     title: "How SAP Consulting Helps Businesses Work Smarter",
-    imgSrc: "/blog/blog1.jpg",
+    imgSrc: "/blog/1.jpeg",
     shortDesc: "Running a business involves managing multiple activities, from customer orders and inventory to financial operations and reporting. ",
     fullDesc:
       `Running a business involves managing multiple activities, from customer orders and inventory to financial operations and reporting. When these processes are disconnected, employees may spend more time resolving issues than focusing on important business goals. SAP consulting helps organizations understand these challenges and identify practical ways to improve their operations.
@@ -12,7 +12,7 @@ SAP consulting is not just about software configuration. It is about connecting 
   {
     id: 2,
     title: "Why Reliable IT Services Matter for Growing Businesses",
-    imgSrc: "/blog/blog2.jpg",
+    imgSrc: "/blog/2.jpeg",
     shortDesc: "Technology plays an important role in how modern businesses operate. From email and communication systems to software applications and digital infrastructure, companies depend on reliable technology to keep their daily activities running smoothly.",
     fullDesc:
       `Technology plays an important role in how modern businesses operate. From email and communication systems to software applications and digital infrastructure, companies depend on reliable technology to keep their daily activities running smoothly. Even a small technical problem can affect productivity when the right support is not available.
@@ -22,7 +22,7 @@ At ZisanTech Solutions, our approach is centered on understanding the challenges
   {
     id: 3,
     title: "Building Your Career Through Practical SAP Training",
-    imgSrc: "/blog/blog3.jpg",
+    imgSrc: "/blog/3.jpeg",
     shortDesc: "Starting a career in SAP can feel challenging when you are learning new terminology, business processes, and system functions at the same time. Many learners understand the theory but find it difficult to connect what they have learned with the situations they may encounter in a real working environment.",
     fullDesc:
       `Starting a career in SAP can feel challenging when you are learning new terminology, business processes, and system functions at the same time. Many learners understand the theory but find it difficult to connect what they have learned with the situations they may encounter in a real working environment.
@@ -32,7 +32,7 @@ At ZisanTech Solutions, we believe that effective training should focus on both 
   {
     id: 4,
     title: "Digital Transformation Starts with Understanding Your Business",
-    imgSrc: "/blog/blog3.jpg",
+    imgSrc: "/blog/4.jpeg",
     shortDesc: "Digital transformation is about more than introducing new software or upgrading existing systems. It begins with understanding how a business works, where problems occur, and what needs to change to achieve better results. Without this understanding, even advanced technology may fail to deliver the expected value.",
     fullDesc:
       `Digital transformation is about more than introducing new software or upgrading existing systems. It begins with understanding how a business works, where problems occur, and what needs to change to achieve better results. Without this understanding, even advanced technology may fail to deliver the expected value.
@@ -42,7 +42,7 @@ At ZisanTech Solutions, we believe that every digital initiative should have a c
   {
     id: 5,
     title: "Technology Success Doesn't End After Implementation",
-    imgSrc: "/blog/blog2.jpg",
+    imgSrc: "/blog/5.jpeg",
     shortDesc: "Launching a new system or digital solution is an important milestone, but it is not the end of the journey. Once a solution is in use, employees may have questions, technical issues may arise, and business requirements may change. Without ongoing support, even a well-planned implementation can become difficult to maintain.",
     fullDesc:
       `Launching a new system or digital solution is an important milestone, but it is not the end of the journey. Once a solution is in use, employees may have questions, technical issues may arise, and business requirements may change. Without ongoing support, even a well-planned implementation can become difficult to maintain.
@@ -52,7 +52,7 @@ At ZisanTech Solutions, we believe that technology services should focus on long
   {
     id: 6,
     title: "Why Continuous Learning Matters in the IT Industry",
-    imgSrc: "/blog/blog1.jpg",
+    imgSrc: "/blog/6.jpeg",
     shortDesc: "The technology industry is constantly changing. New tools, updated systems, and evolving business requirements create opportunities for professionals to expand their knowledge and improve their skills. For this reason, learning should not stop after completing a course, earning a qualification, or securing a job.",
     fullDesc:
       `The technology industry is constantly changing. New tools, updated systems, and evolving business requirements create opportunities for professionals to expand their knowledge and improve their skills. For this reason, learning should not stop after completing a course, earning a qualification, or securing a job.
@@ -62,7 +62,7 @@ At ZisanTech Solutions, we believe professional growth comes from combining know
   {
     id: 7,
     title: "Connecting Business Systems with SAP CPI: A Smarter Approach to Integration",
-    imgSrc: "/blog/blog1.jpg",
+    imgSrc: "/blog/7.jpeg",
     shortDesc: "Modern businesses often use different applications to manage sales, finance, procurement, inventory, customer information, and reporting. When these systems do not communicate properly, employees may need to enter the same information multiple times or spend valuable time correcting data. This is where SAP Cloud Platform Integration, commonly known as SAP CPI and now part of SAP Integration Suite, can help.",
     fullDesc:
       `Modern businesses often use different applications to manage sales, finance, procurement, inventory, customer information, and reporting. When these systems do not communicate properly, employees may need to enter the same information multiple times or spend valuable time correcting data. This is where SAP Cloud Platform Integration, commonly known as SAP CPI and now part of SAP Integration Suite, can help.
@@ -73,7 +73,7 @@ With the right integration strategy, businesses can reduce repetitive work, impr
   {
     id: 8,
     title: "Understanding SAP S/4HANA Public Cloud: A Modern Way to Run Your Business",
-    imgSrc: "/blog/blog2.jpg",
+    imgSrc: "/blog/8.jpeg",
     shortDesc: "As businesses grow, managing daily operations through disconnected applications and manual processes can become increasingly difficult. Organizations need a reliable way to connect finance, sales, procurement, inventory, and other business functions while keeping their processes efficient. ",
     fullDesc:
       `As businesses grow, managing daily operations through disconnected applications and manual processes can become increasingly difficult. Organizations need a reliable way to connect finance, sales, procurement, inventory, and other business functions while keeping their processes efficient. SAP S/4HANA Cloud Public Edition offers a cloud-based ERP approach designed to help businesses manage these activities using standardized processes and regular innovation.

@@ -1,13 +1,15 @@
+import { createMetadata } from "@/lib/metadata";
 
 import Image from "next/image";
 import Link from "next/link";
 import CareerOpenings from "../../components/CareerOpenings";
 
-export const metadata = {
+export const metadata = createMetadata({
+  path: "/career",
   title: "Careers at ZisanTech Solutions | SAP & IT Opportunities",
   description:
     "Explore career opportunities at ZisanTech Solutions in SAP consulting, IT services, software development, and technology. Connect with us to share your skills and professional interests.",
-};
+});
 
 const cards = [
   {
